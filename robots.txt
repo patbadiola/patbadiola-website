@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://patbadiola.com/sitemap.xml
