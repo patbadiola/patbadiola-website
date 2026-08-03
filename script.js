@@ -26,6 +26,28 @@ An external Loom or YouTube URL may be used instead.
 */
 
 /*
+CURRENT FUNNEL PROJECT SLUGS:
+elite-realty-buyer
+elite-realty-seller
+elite-realty-home-valuation
+elite-realty-property-showing
+elite-realty-client-review
+brightsmile-appointment-booking
+brightsmile-patient-feedback
+elevate-coaching-application
+elevate-course-sales
+elevate-program-feedback
+
+WALKTHROUGH THUMBNAIL NAMING:
+assets/images/video-walkthroughs/[project-slug]-walkthrough-thumbnail.webp
+
+Elevate Academy thumbnails currently use:
+assets/images/video-walkthroughs/elevate-academy/[project-slug]-walkthrough-thumbnail.webp
+
+Recommended thumbnail size: 1600 x 1000 px, WebP, 16:10 ratio.
+*/
+
+/*
 LIVE FUNNEL URL PLACEHOLDERS
 
 Replace each empty liveUrl value with the published URL of that complete funnel.
@@ -366,6 +388,91 @@ const funnelProjects = [
     "fullPageAlt": "Complete full-page preview of the Patient Feedback Funnel",
     "liveUrl": "",
     "walkthroughUrl": ""
+  },
+  {
+    "id": "elevate-coaching-application",
+    "slug": "elevate-coaching-application",
+    "title": "Coaching Application Funnel",
+    "category": "Elevate Academy · Fictional Project",
+    "type": "Application & Discovery Call System",
+    "stepCount": 3,
+    "description": "A three-step coaching application funnel that helps prospects compare coaching options, submit a detailed application, and book a discovery call through a connected GoHighLevel calendar.",
+    "goal": "Capture qualified coaching applications and guide suitable prospects toward a discovery call.",
+    "audience": "Online coaches, consultants, and education businesses.",
+    "tools": ["GoHighLevel", "HTML", "CSS", "JavaScript"],
+    "tags": ["Application Survey", "Discovery Call", "Calendar Booking", "CRM Automation"],
+    "coverImage": "assets/images/funnels/elevate-coaching-application/cover.webp",
+    "images": [
+      "assets/images/funnels/elevate-coaching-application/step-01.webp",
+      "assets/images/funnels/elevate-coaching-application/step-02.webp",
+      "assets/images/funnels/elevate-coaching-application/step-03.webp"
+    ],
+    "imageAlts": [
+      "Elevate Academy Coaching Application step",
+      "Elevate Academy Application Confirmation step",
+      "Elevate Academy Discovery Call Booking step"
+    ],
+    "stepUrls": ["", "", ""],
+    "fullPageImage": "assets/images/funnels/elevate-coaching-application/full-page.webp",
+    "fullPageAlt": "Complete full-page preview of the Coaching Application Funnel",
+    "liveUrl": "",
+    "walkthroughUrl": ""
+  },
+  {
+    "id": "elevate-course-sales",
+    "slug": "elevate-course-sales",
+    "title": "Self-Paced Course Sales Funnel",
+    "category": "Elevate Academy · Fictional Project",
+    "type": "Course Sales & Enrollment System",
+    "stepCount": 3,
+    "description": "A three-step sales funnel that introduces the Self-Paced Course, collects secure payment through a connected GoHighLevel order form, and guides the buyer through confirmation and onboarding.",
+    "goal": "Present a self-paced course and create a clear purchase-to-onboarding journey.",
+    "audience": "Course creators, coaches, and online education businesses.",
+    "tools": ["GoHighLevel", "HTML", "CSS", "JavaScript"],
+    "tags": ["Course Sales", "Order Form", "Enrollment", "Client Onboarding"],
+    "coverImage": "assets/images/funnels/elevate-course-sales/cover.webp",
+    "images": [
+      "assets/images/funnels/elevate-course-sales/step-01.webp",
+      "assets/images/funnels/elevate-course-sales/step-02.webp",
+      "assets/images/funnels/elevate-course-sales/step-03.webp"
+    ],
+    "imageAlts": [
+      "Elevate Academy Self-Paced Course Sales Page step",
+      "Elevate Academy Course Checkout step",
+      "Elevate Academy Purchase Confirmation step"
+    ],
+    "stepUrls": ["", "", ""],
+    "fullPageImage": "assets/images/funnels/elevate-course-sales/full-page.webp",
+    "fullPageAlt": "Complete full-page preview of the Self-Paced Course Sales Funnel",
+    "liveUrl": "",
+    "walkthroughUrl": ""
+  },
+  {
+    "id": "elevate-program-feedback",
+    "slug": "elevate-program-feedback",
+    "title": "Program Feedback Funnel",
+    "category": "Elevate Academy · Fictional Project",
+    "type": "Feedback & Improvement System",
+    "stepCount": 2,
+    "description": "A two-step post-program funnel that collects structured participant feedback, records satisfaction and improvement insights, and confirms successful submission.",
+    "goal": "Collect organized participant feedback and improvement insights after program completion.",
+    "audience": "Coaches, course creators, and online education teams.",
+    "tools": ["GoHighLevel", "HTML", "CSS", "JavaScript"],
+    "tags": ["Program Feedback", "Satisfaction Survey", "Follow-Up", "CRM Records"],
+    "coverImage": "assets/images/funnels/elevate-program-feedback/cover.webp",
+    "images": [
+      "assets/images/funnels/elevate-program-feedback/step-01.webp",
+      "assets/images/funnels/elevate-program-feedback/step-02.webp"
+    ],
+    "imageAlts": [
+      "Elevate Academy Program Feedback survey step",
+      "Elevate Academy Feedback Confirmation step"
+    ],
+    "stepUrls": ["", ""],
+    "fullPageImage": "assets/images/funnels/elevate-program-feedback/full-page.webp",
+    "fullPageAlt": "Complete full-page preview of the Program Feedback Funnel",
+    "liveUrl": "",
+    "walkthroughUrl": ""
   }
 ];
 
@@ -565,6 +672,9 @@ function initFunnelCarousel() {
   const nextButton = document.querySelector(".funnel-carousel-next");
   if (!viewport || !track || !previousButton || !nextButton) return;
 
+  const originalCards = [...track.querySelectorAll(".funnel-card")];
+  if (!originalCards.length) return;
+
   let isPointerDown = false;
   let pointerId = null;
   let startX = 0;
@@ -573,7 +683,29 @@ function initFunnelCarousel() {
   let hasDragged = false;
   let suppressClick = false;
   let scrollFrame = 0;
+  let scrollSettleTimer = 0;
+  let loopWidth = 0;
+  let middleStart = 0;
+  let lastPointerX = 0;
+  let lastPointerTime = 0;
+  let dragVelocity = 0;
+  let glideFrame = 0;
+  let isGliding = false;
   const dragThreshold = 8;
+
+  const createLoopClone = (card) => {
+    const clone = card.cloneNode(true);
+    clone.dataset.carouselClone = "true";
+    clone.tabIndex = -1;
+    clone.setAttribute("aria-hidden", "true");
+    clone.querySelectorAll("img[data-fallback-ready]").forEach((image) => delete image.dataset.fallbackReady);
+    return clone;
+  };
+  const leadingCards = originalCards.map(createLoopClone);
+  const trailingCards = originalCards.map(createLoopClone);
+  track.prepend(...leadingCards);
+  track.append(...trailingCards);
+  initImageFallbacks(track);
 
   const cardDistance = () => {
     const card = track.querySelector(".funnel-card");
@@ -581,15 +713,79 @@ function initFunnelCarousel() {
     const gap = Number.parseFloat(getComputedStyle(track).columnGap || getComputedStyle(track).gap || "0");
     return card.getBoundingClientRect().width + gap;
   };
-  const updateControls = () => {
-    const maxScroll = Math.max(0, viewport.scrollWidth - viewport.clientWidth);
-    previousButton.disabled = viewport.scrollLeft <= 2;
-    nextButton.disabled = viewport.scrollLeft >= maxScroll - 2;
+  const refreshLoopMetrics = () => {
+    const trackStyles = getComputedStyle(track);
+    const inlineInset = Number.parseFloat(trackStyles.paddingInlineStart || trackStyles.paddingLeft || "0");
+    middleStart = Math.max(0, originalCards[0].offsetLeft - inlineInset);
+    loopWidth = trailingCards[0].offsetLeft - originalCards[0].offsetLeft;
+    if (loopWidth <= 0) loopWidth = cardDistance() * originalCards.length;
   };
-  const scrollByCards = (direction) => viewport.scrollBy({ left: direction * cardDistance() * 2, behavior: prefersReducedMotion() ? "auto" : "smooth" });
+  const jumpWithoutAnimation = (position) => {
+    const previousBehavior = viewport.style.scrollBehavior;
+    viewport.style.scrollBehavior = "auto";
+    viewport.scrollLeft = position;
+    viewport.style.scrollBehavior = previousBehavior;
+  };
+  const normalizeLoopPosition = () => {
+    if (!loopWidth || isPointerDown || isGliding) return;
+    let normalizedPosition = viewport.scrollLeft;
+    const lowerBoundary = middleStart - loopWidth * .5;
+    const upperBoundary = middleStart + loopWidth * .5;
+    while (normalizedPosition < lowerBoundary) normalizedPosition += loopWidth;
+    while (normalizedPosition > upperBoundary) normalizedPosition -= loopWidth;
+    if (Math.abs(normalizedPosition - viewport.scrollLeft) > 1) {
+      jumpWithoutAnimation(normalizedPosition);
+    }
+  };
+  const cancelGlide = () => {
+    cancelAnimationFrame(glideFrame);
+    glideFrame = 0;
+    isGliding = false;
+    viewport.classList.remove("is-gliding");
+  };
+  const settleToNearestCard = () => {
+    normalizeLoopPosition();
+    const distance = cardDistance();
+    const target = middleStart + Math.round((viewport.scrollLeft - middleStart) / distance) * distance;
+    viewport.scrollTo({ left: target, behavior: prefersReducedMotion() ? "auto" : "smooth" });
+  };
+  const startGlide = (initialVelocity) => {
+    cancelGlide();
+    if (prefersReducedMotion() || Math.abs(initialVelocity) < .04) {
+      settleToNearestCard();
+      return;
+    }
+
+    isGliding = true;
+    viewport.classList.add("is-gliding");
+    let velocity = Math.max(-2.8, Math.min(2.8, initialVelocity));
+    let previousTime = performance.now();
+    const startedAt = previousTime;
+
+    const glide = (now) => {
+      const elapsed = Math.min(32, Math.max(1, now - previousTime));
+      previousTime = now;
+      viewport.scrollLeft += velocity * elapsed;
+      velocity *= Math.pow(.95, elapsed / 16.67);
+
+      if (Math.abs(velocity) < .025 || now - startedAt > 1100) {
+        cancelGlide();
+        settleToNearestCard();
+        return;
+      }
+      glideFrame = requestAnimationFrame(glide);
+    };
+    glideFrame = requestAnimationFrame(glide);
+  };
+  const scrollByCards = (direction) => {
+    cancelGlide();
+    viewport.scrollBy({ left: direction * cardDistance() * 2, behavior: prefersReducedMotion() ? "auto" : "smooth" });
+  };
   const endPointerInteraction = (event) => {
     if (!isPointerDown || (event && pointerId !== event.pointerId)) return;
     const releasedPointerId = pointerId;
+    const shouldGlide = hasDragged && event?.type === "pointerup";
+    const releaseVelocity = dragVelocity;
     isPointerDown = false;
     viewport.classList.remove("is-dragging");
     if (releasedPointerId !== null && viewport.hasPointerCapture?.(releasedPointerId)) {
@@ -597,7 +793,9 @@ function initFunnelCarousel() {
     }
     pointerId = null;
     suppressClick = hasDragged;
-    updateControls();
+    if (shouldGlide) startGlide(releaseVelocity);
+    else if (hasDragged) settleToNearestCard();
+    else normalizeLoopPosition();
     window.setTimeout(() => {
       hasDragged = false;
       suppressClick = false;
@@ -606,11 +804,15 @@ function initFunnelCarousel() {
 
   viewport.addEventListener("pointerdown", (event) => {
     if (event.button !== 0 || event.target.closest(".funnel-carousel-button")) return;
+    cancelGlide();
     isPointerDown = true;
     pointerId = event.pointerId;
     startX = event.clientX;
     startY = event.clientY;
     startScrollLeft = viewport.scrollLeft;
+    lastPointerX = event.clientX;
+    lastPointerTime = performance.now();
+    dragVelocity = 0;
     hasDragged = false;
     suppressClick = false;
   });
@@ -618,6 +820,12 @@ function initFunnelCarousel() {
     if (!isPointerDown || pointerId !== event.pointerId) return;
     const movementX = event.clientX - startX;
     const movementY = event.clientY - startY;
+    const now = performance.now();
+    const elapsed = Math.max(1, now - lastPointerTime);
+    const instantaneousVelocity = -(event.clientX - lastPointerX) / elapsed;
+    dragVelocity = dragVelocity * .68 + instantaneousVelocity * .32;
+    lastPointerX = event.clientX;
+    lastPointerTime = now;
     if (!hasDragged && Math.abs(movementX) > dragThreshold && Math.abs(movementX) > Math.abs(movementY)) {
       hasDragged = true;
       suppressClick = true;
@@ -634,14 +842,17 @@ function initFunnelCarousel() {
     if (isPointerDown && event.pointerId === pointerId) endPointerInteraction(event);
   });
   track.addEventListener("dragstart", (event) => event.preventDefault());
-  track.querySelectorAll(".funnel-card").forEach((card) => {
-    card.addEventListener("click", (event) => {
-      if (hasDragged || suppressClick) {
-        event.preventDefault();
-        return;
-      }
-      openFunnelModal(card.dataset.funnelId, card);
-    });
+  track.addEventListener("click", (event) => {
+    const card = event.target.closest(".funnel-card");
+    if (!card || !track.contains(card)) return;
+    if (hasDragged || suppressClick) {
+      event.preventDefault();
+      return;
+    }
+    const focusReturnCard = card.dataset.carouselClone === "true"
+      ? originalCards.find((originalCard) => originalCard.dataset.funnelId === card.dataset.funnelId)
+      : card;
+    openFunnelModal(card.dataset.funnelId, focusReturnCard || card);
   });
   viewport.addEventListener("keydown", (event) => {
     if (event.key !== "ArrowLeft" && event.key !== "ArrowRight") return;
@@ -652,10 +863,26 @@ function initFunnelCarousel() {
   nextButton.addEventListener("click", () => scrollByCards(1));
   viewport.addEventListener("scroll", () => {
     cancelAnimationFrame(scrollFrame);
-    scrollFrame = requestAnimationFrame(updateControls);
+    window.clearTimeout(scrollSettleTimer);
+    scrollFrame = requestAnimationFrame(() => {
+      scrollSettleTimer = window.setTimeout(normalizeLoopPosition, 140);
+    });
   }, { passive: true });
-  window.addEventListener("resize", updateControls, { passive: true });
-  updateControls();
+  window.addEventListener("resize", () => {
+    cancelGlide();
+    cancelAnimationFrame(scrollFrame);
+    scrollFrame = requestAnimationFrame(() => {
+      refreshLoopMetrics();
+      jumpWithoutAnimation(middleStart);
+    });
+  }, { passive: true });
+
+  previousButton.disabled = false;
+  nextButton.disabled = false;
+  requestAnimationFrame(() => {
+    refreshLoopMetrics();
+    jumpWithoutAnimation(middleStart);
+  });
 }
 
 /* =============================================
