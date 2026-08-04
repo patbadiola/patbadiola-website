@@ -35,7 +35,7 @@ elite-realty-client-review
 brightsmile-appointment-booking
 brightsmile-patient-feedback
 elevate-coaching-application
-elevate-course-sales
+elevate-lead-magnet
 elevate-program-feedback
 
 WALKTHROUGH THUMBNAIL NAMING:
@@ -48,34 +48,13 @@ Recommended thumbnail size: 1600 x 1000 px, WebP, 16:10 ratio.
 */
 
 /*
-LIVE FUNNEL URL PLACEHOLDERS
+LOCAL FUNNEL PAGE PATHS
 
-Replace each empty liveUrl value with the published URL of that complete funnel.
-
-Examples:
-
-Buyer Consultation Funnel:
-https://yourdomain.com/buyer-consultation
-
-Seller Consultation Funnel:
-https://yourdomain.com/seller-consultation
-
-Home Valuation Funnel:
-https://yourdomain.com/home-valuation
-
-Property Showing Funnel:
-https://yourdomain.com/property-showing
-
-Client Review Funnel:
-https://yourdomain.com/client-review
-
-Appointment Booking Funnel:
-https://yourdomain.com/dental-booking
-
-Patient Feedback Funnel:
-https://yourdomain.com/patient-feedback
-
-Keep liveUrl as an empty string until the actual funnel is published.
+Each step screenshot now opens a permanent local HTML page instead of an
+expiring GoHighLevel preview URL. Replace the placeholder index.html inside
+each matching funnels/[project-slug]/step-XX/ directory with the completed
+hard-coded funnel page. Keep the directory names unchanged so the portfolio
+modal and the Previous/Next links continue to work after deployment.
 */
 
 const funnelProjects = [
@@ -101,7 +80,7 @@ const funnelProjects = [
       "Responsive Design",
       "CRM Integration"
     ],
-    "coverImage": "https://assets.cdn.filesafe.space/6LJVbOy4V4hjoCRqMxVd/media/6a6133ba1dd882f807cc7bf6.png",
+"coverImage": "assets/images/funnels/elite-realty-buyer/cover.webp",
     "images": [
       "assets/images/funnels/elite-realty-buyer/step-01.webp",
       "assets/images/funnels/elite-realty-buyer/step-02.webp",
@@ -117,15 +96,15 @@ const funnelProjects = [
       "Buyer Consultation Funnel confirmation step"
     ],
     "stepUrls": [
-      "https://sites.leadconnectorhq.com/preview/P8icrqPDum0vsJjbDxRw",
-      "https://sites.leadconnectorhq.com/preview/tlZZZDfVyCIgyt4UId5E",
-      "https://sites.leadconnectorhq.com/preview/5oU4EavDqTQ2Cf6JyY9G",
-      "https://sites.leadconnectorhq.com/preview/UrPgQdyQzeRY9PB9idk1",
-      "https://sites.leadconnectorhq.com/preview/Rj37I3oGWcNBPnZYoQZV"
+      "funnels/elite-realty-buyer/step-01/index.html",
+      "funnels/elite-realty-buyer/step-02/index.html",
+      "funnels/elite-realty-buyer/step-03/index.html",
+      "funnels/elite-realty-buyer/step-04/index.html",
+      "funnels/elite-realty-buyer/step-05/index.html"
     ],
     "fullPageImage": "assets/images/funnels/elite-realty-buyer/full-page.webp",
     "fullPageAlt": "Complete full-page preview of the Buyer Consultation Funnel",
-    "liveUrl": "",
+    "liveUrl": "funnels/elite-realty-buyer/step-01/index.html",
     "walkthroughUrl": ""
   },
   {
@@ -166,15 +145,15 @@ const funnelProjects = [
       "Seller consultation preferences step"
     ],
     "stepUrls": [
-      "https://sites.leadconnectorhq.com/preview/q1IYtcM5sFIIA07GUTxz",
-      "https://sites.leadconnectorhq.com/preview/yyUEmN35YxpHIiWsqRGs",
-      "https://sites.leadconnectorhq.com/preview/TfAuQbOWybsiF0LWQS26",
-      "https://sites.leadconnectorhq.com/preview/MPuiQ3LJUVtwpvkJe8YM",
-      "https://sites.leadconnectorhq.com/preview/iUMSZUGKOi4oE8Vc55f3"
+      "funnels/elite-realty-seller/step-01/index.html",
+      "funnels/elite-realty-seller/step-02/index.html",
+      "funnels/elite-realty-seller/step-03/index.html",
+      "funnels/elite-realty-seller/step-04/index.html",
+      "funnels/elite-realty-seller/step-05/index.html"
     ],
     "fullPageImage": "assets/images/funnels/elite-realty-seller/full-page.webp",
     "fullPageAlt": "Complete full-page preview of the Seller Consultation Funnel",
-    "liveUrl": "",
+    "liveUrl": "funnels/elite-realty-seller/step-01/index.html",
     "walkthroughUrl": ""
   },
   {
@@ -213,14 +192,14 @@ const funnelProjects = [
       "Home valuation contact information step"
     ],
     "stepUrls": [
-      "https://sites.leadconnectorhq.com/preview/K3AIWHIazc2QUZnAaRus",
-      "https://sites.leadconnectorhq.com/preview/91ESSNBPQ1mwjZfpM8IG",
-      "https://sites.leadconnectorhq.com/preview/hERVNSOqmd1zsB64Dmj7",
-      "https://sites.leadconnectorhq.com/preview/SSZHb8alcBVI9OcKV9SN"
+      "funnels/elite-realty-home-valuation/step-01/index.html",
+      "funnels/elite-realty-home-valuation/step-02/index.html",
+      "funnels/elite-realty-home-valuation/step-03/index.html",
+      "funnels/elite-realty-home-valuation/step-04/index.html"
     ],
     "fullPageImage": "assets/images/funnels/elite-realty-home-valuation/full-page.webp",
     "fullPageAlt": "Complete full-page preview of the Home Valuation Funnel",
-    "liveUrl": "",
+    "liveUrl": "funnels/elite-realty-home-valuation/step-01/index.html",
     "walkthroughUrl": ""
   },
   {
@@ -257,13 +236,13 @@ const funnelProjects = [
       "Property showing schedule step"
     ],
     "stepUrls": [
-      "https://sites.leadconnectorhq.com/preview/IruJzspij9zdJm5j1oWq",
-      "https://sites.leadconnectorhq.com/preview/wC1bauvABX3vWbXAnyjx",
-      "https://sites.leadconnectorhq.com/preview/yBaVnCimUaeKKL1yQcj7"
+      "funnels/elite-realty-property-showing/step-01/index.html",
+      "funnels/elite-realty-property-showing/step-02/index.html",
+      "funnels/elite-realty-property-showing/step-03/index.html"
     ],
     "fullPageImage": "assets/images/funnels/elite-realty-property-showing/full-page.webp",
     "fullPageAlt": "Complete full-page preview of the Property Showing Funnel",
-    "liveUrl": "",
+    "liveUrl": "funnels/elite-realty-property-showing/step-01/index.html",
     "walkthroughUrl": ""
   },
   {
@@ -300,13 +279,13 @@ const funnelProjects = [
       "Client review confirmation step"
     ],
     "stepUrls": [
-      "https://sites.leadconnectorhq.com/preview/8Ae6ky3TcyDNUIuQt8jm",
-      "https://sites.leadconnectorhq.com/preview/m4ehudGqxGDdohjaJ7SH",
-      "https://sites.leadconnectorhq.com/preview/NyhEnxkAk2rDldIzfG1K"
+      "funnels/elite-realty-client-review/step-01/index.html",
+      "funnels/elite-realty-client-review/step-02/index.html",
+      "funnels/elite-realty-client-review/step-03/index.html"
     ],
     "fullPageImage": "assets/images/funnels/elite-realty-client-review/full-page.webp",
     "fullPageAlt": "Complete full-page preview of the Client Review Funnel",
-    "liveUrl": "",
+    "liveUrl": "funnels/elite-realty-client-review/step-01/index.html",
     "walkthroughUrl": ""
   },
   {
@@ -341,13 +320,13 @@ const funnelProjects = [
       "Dental appointment confirmation step"
     ],
     "stepUrls": [
-      "https://sites.leadconnectorhq.com/preview/0qKukur3k2iZEOdseael",
-      "https://sites.leadconnectorhq.com/preview/44wcKJyJceiUa7LPvfpN"
+      "funnels/brightsmile-appointment-booking/step-01/index.html",
+      "funnels/brightsmile-appointment-booking/step-02/index.html"
     ],
     "fullPageImage": "assets/images/funnels/brightsmile-appointment-booking/full-page.webp",
     "fullPageAlt": "Complete full-page preview of the Appointment Booking Funnel",
-    "liveUrl": "",
-    "walkthroughUrl": ""
+    "liveUrl": "funnels/brightsmile-appointment-booking/step-01/index.html",
+    "walkthroughUrl": "assets/videos/funnels/brightsmile-dental-walkthrough.mp4"
   },
   {
     "id": "brightsmile-patient-feedback",
@@ -381,12 +360,12 @@ const funnelProjects = [
       "Patient feedback confirmation step"
     ],
     "stepUrls": [
-      "https://sites.leadconnectorhq.com/preview/jEcqkvgJbQ9Mq1aI9UC9",
-      "https://sites.leadconnectorhq.com/preview/YC0by77Tt7BrUH519Ueg"
+      "funnels/brightsmile-patient-feedback/step-01/index.html",
+      "funnels/brightsmile-patient-feedback/step-02/index.html"
     ],
     "fullPageImage": "assets/images/funnels/brightsmile-patient-feedback/full-page.webp",
     "fullPageAlt": "Complete full-page preview of the Patient Feedback Funnel",
-    "liveUrl": "",
+    "liveUrl": "funnels/brightsmile-patient-feedback/step-01/index.html",
     "walkthroughUrl": ""
   },
   {
@@ -412,39 +391,47 @@ const funnelProjects = [
       "Elevate Academy Application Confirmation step",
       "Elevate Academy Discovery Call Booking step"
     ],
-    "stepUrls": ["", "", ""],
+    "stepUrls": [
+      "funnels/elevate-coaching-application/step-01/index.html",
+      "funnels/elevate-coaching-application/step-02/index.html",
+      "funnels/elevate-coaching-application/step-03/index.html"
+    ],
     "fullPageImage": "assets/images/funnels/elevate-coaching-application/full-page.webp",
     "fullPageAlt": "Complete full-page preview of the Coaching Application Funnel",
-    "liveUrl": "",
+    "liveUrl": "funnels/elevate-coaching-application/step-01/index.html",
     "walkthroughUrl": ""
   },
   {
-    "id": "elevate-course-sales",
-    "slug": "elevate-course-sales",
-    "title": "Self-Paced Course Sales Funnel",
+    "id": "elevate-lead-magnet",
+    "slug": "elevate-lead-magnet",
+    "title": "Lead Magnet Funnel",
     "category": "Elevate Academy · Fictional Project",
-    "type": "Course Sales & Enrollment System",
+    "type": "Lead Capture & Nurture System",
     "stepCount": 3,
-    "description": "A three-step sales funnel that introduces the Self-Paced Course, collects secure payment through a connected GoHighLevel order form, and guides the buyer through confirmation and onboarding.",
-    "goal": "Present a self-paced course and create a clear purchase-to-onboarding journey.",
-    "audience": "Course creators, coaches, and online education businesses.",
+    "description": "A three-step lead magnet funnel designed to attract coaching prospects, capture their contact information in exchange for a practical resource, and guide new leads toward the most relevant Elevate Academy program or next step.",
+    "goal": "Turn resource interest into organized leads and begin a clear nurture journey inside the CRM.",
+    "audience": "Coaches, course creators, and online education businesses building an audience.",
     "tools": ["GoHighLevel", "HTML", "CSS", "JavaScript"],
-    "tags": ["Course Sales", "Order Form", "Enrollment", "Client Onboarding"],
-    "coverImage": "assets/images/funnels/elevate-course-sales/cover.webp",
+    "tags": ["Lead Magnet", "Lead Capture", "Resource Delivery", "Email Nurture"],
+    "coverImage": "assets/images/funnels/elevate-lead-magnet/cover.webp",
     "images": [
-      "assets/images/funnels/elevate-course-sales/step-01.webp",
-      "assets/images/funnels/elevate-course-sales/step-02.webp",
-      "assets/images/funnels/elevate-course-sales/step-03.webp"
+      "assets/images/funnels/elevate-lead-magnet/step-01.webp",
+      "assets/images/funnels/elevate-lead-magnet/step-02.webp",
+      "assets/images/funnels/elevate-lead-magnet/step-03.webp"
     ],
     "imageAlts": [
-      "Elevate Academy Self-Paced Course Sales Page step",
-      "Elevate Academy Course Checkout step",
-      "Elevate Academy Purchase Confirmation step"
+      "Elevate Academy Lead Magnet Landing Page step",
+      "Elevate Academy Resource Request Confirmation step",
+      "Elevate Academy Resource Access and Next Steps page"
     ],
-    "stepUrls": ["", "", ""],
-    "fullPageImage": "assets/images/funnels/elevate-course-sales/full-page.webp",
-    "fullPageAlt": "Complete full-page preview of the Self-Paced Course Sales Funnel",
-    "liveUrl": "",
+    "stepUrls": [
+      "funnels/elevate-lead-magnet/step-01/index.html",
+      "funnels/elevate-lead-magnet/step-02/index.html",
+      "funnels/elevate-lead-magnet/step-03/index.html"
+    ],
+    "fullPageImage": "assets/images/funnels/elevate-lead-magnet/full-page.webp",
+    "fullPageAlt": "Complete full-page preview of the Lead Magnet Funnel",
+    "liveUrl": "funnels/elevate-lead-magnet/step-01/index.html",
     "walkthroughUrl": ""
   },
   {
@@ -468,10 +455,13 @@ const funnelProjects = [
       "Elevate Academy Program Feedback survey step",
       "Elevate Academy Feedback Confirmation step"
     ],
-    "stepUrls": ["", ""],
+    "stepUrls": [
+      "funnels/elevate-program-feedback/step-01/index.html",
+      "funnels/elevate-program-feedback/step-02/index.html"
+    ],
     "fullPageImage": "assets/images/funnels/elevate-program-feedback/full-page.webp",
     "fullPageAlt": "Complete full-page preview of the Program Feedback Funnel",
-    "liveUrl": "",
+    "liveUrl": "funnels/elevate-program-feedback/step-01/index.html",
     "walkthroughUrl": ""
   }
 ];
@@ -485,15 +475,29 @@ document.addEventListener("DOMContentLoaded", () => {
   initNavigation();
   initRevealAnimations();
   initTypingEffect();
+  initProofCount();
   initCounters();
   initCardEffects();
   initRippleEffects();
+  initAnalyticsEvents();
+  initVideoModal();
   initFunnelCarousel();
   initFunnelModal();
+  initSystemTabs();
   initPlanSelection();
+  initServiceSelection();
   initContactForm();
+  initMobileProjectCta();
+  initDynamicYear();
   initBackToTop();
 });
+
+function initProofCount() {
+  const output = document.querySelector("[data-project-count]");
+  if (!output) return;
+  const crmProjects = document.querySelectorAll(".projects-stack .project-card").length;
+  output.textContent = String(crmProjects + funnelProjects.length);
+}
 
 /* =============================================
    Navigation: sticky state, mobile menu, scroll spy
@@ -628,6 +632,7 @@ function initImageFallbacks(root) {
     const image = wrapper.querySelector("img");
     if (!image || image.dataset.fallbackReady === "true") return;
     image.dataset.fallbackReady = "true";
+    if (!image.hasAttribute("decoding")) image.decoding = "async";
     const showFallback = () => wrapper.classList.add("image-fallback");
     const showImage = () => wrapper.classList.remove("image-fallback");
     image.addEventListener("error", showFallback);
@@ -657,6 +662,160 @@ function initRippleEffects() {
 }
 
 /* =============================================
+   Analytics: privacy-safe portfolio interactions
+   ============================================= */
+function trackPortfolioInteraction(interactionType, interactionLabel) {
+  if (!interactionType) return;
+  try {
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({
+      event: "portfolio_interaction",
+      interaction_type: interactionType,
+      interaction_label: interactionLabel || ""
+    });
+  } catch (error) {
+    console.debug("Analytics event unavailable:", error);
+  }
+}
+
+function initAnalyticsEvents() {
+  document.querySelectorAll("[data-interaction]").forEach((element) => {
+    if (element.dataset.analyticsInitialized === "true") return;
+    element.dataset.analyticsInitialized = "true";
+    element.addEventListener("click", () => {
+      trackPortfolioInteraction(element.dataset.interaction, element.dataset.interactionLabel);
+    });
+  });
+}
+
+/* =============================================
+   Project walkthroughs: accessible video modal
+   ============================================= */
+function initVideoModal() {
+  const modal = document.querySelector(".video-modal");
+  const dialog = modal?.querySelector(".video-modal__dialog");
+  const title = modal?.querySelector("#video-modal-title");
+  const media = modal?.querySelector(".video-modal__media");
+  const closeButton = modal?.querySelector(".video-modal__close");
+  const backdrop = modal?.querySelector("[data-video-modal-close]");
+  const triggers = [...document.querySelectorAll("[data-video-url]")];
+  if (!modal || !dialog || !title || !media || !closeButton || !backdrop || !triggers.length) return;
+
+  let lastFocusedElement = null;
+  const backgroundElements = [...document.querySelectorAll(".site-header, main, .site-footer, .back-to-top, .mobile-project-cta")];
+  const setBackgroundInert = (isInert) => backgroundElements.forEach((element) => { element.inert = isInert; });
+  const closeModal = () => {
+    if (modal.hidden) return;
+    modal.hidden = true;
+    media.replaceChildren();
+    document.body.classList.remove("modal-open");
+    setBackgroundInert(false);
+    if (lastFocusedElement?.isConnected) lastFocusedElement.focus();
+  };
+  const trapFocus = (event) => {
+    const focusable = [...dialog.querySelectorAll('button:not([disabled]), a[href], [tabindex]:not([tabindex="-1"])')]
+      .filter((element) => element.offsetParent !== null);
+    if (!focusable.length) return;
+    const first = focusable[0];
+    const last = focusable[focusable.length - 1];
+    if (event.shiftKey && document.activeElement === first) {
+      event.preventDefault();
+      last.focus();
+    } else if (!event.shiftKey && document.activeElement === last) {
+      event.preventDefault();
+      first.focus();
+    }
+  };
+  const openModal = (trigger) => {
+    const url = trigger.dataset.videoUrl || "";
+    const type = trigger.dataset.videoType || "mp4";
+    if (!isValidWalkthroughUrl(url)) return;
+
+    const mediaElement = type === "youtube" ? document.createElement("iframe") : document.createElement("video");
+    if (type === "youtube") {
+      mediaElement.src = url;
+      mediaElement.title = trigger.dataset.videoTitle || "Project video walkthrough";
+      mediaElement.allow = "accelerometer; encrypted-media; gyroscope; picture-in-picture";
+      mediaElement.allowFullscreen = true;
+    } else {
+      mediaElement.src = url;
+      mediaElement.controls = true;
+      mediaElement.preload = "metadata";
+      mediaElement.playsInline = true;
+      if (trigger.dataset.videoPoster) mediaElement.poster = trigger.dataset.videoPoster;
+      mediaElement.addEventListener("error", () => {
+        const unavailable = document.createElement("div");
+        const eyebrow = document.createElement("span");
+        const heading = document.createElement("strong");
+        const message = document.createElement("p");
+        unavailable.className = "video-modal__unavailable";
+        eyebrow.textContent = "Project Walkthrough";
+        heading.textContent = "Video coming soon";
+        message.textContent = "This walkthrough is being prepared and will be available here after the video is uploaded.";
+        unavailable.append(eyebrow, heading, message);
+        media.replaceChildren(unavailable);
+      }, { once: true });
+    }
+
+    lastFocusedElement = trigger;
+    title.textContent = trigger.dataset.videoTitle || "Project walkthrough";
+    media.replaceChildren(mediaElement);
+    modal.hidden = false;
+    document.body.classList.add("modal-open");
+    setBackgroundInert(true);
+    trackPortfolioInteraction("project_video_open", title.textContent);
+    window.requestAnimationFrame(() => closeButton.focus());
+  };
+
+  triggers.forEach((trigger) => trigger.addEventListener("click", () => openModal(trigger)));
+  closeButton.addEventListener("click", closeModal);
+  backdrop.addEventListener("click", closeModal);
+  document.addEventListener("keydown", (event) => {
+    if (modal.hidden) return;
+    if (event.key === "Escape") {
+      event.preventDefault();
+      closeModal();
+    } else if (event.key === "Tab") {
+      trapFocus(event);
+    }
+  });
+}
+
+/* =============================================
+   Consolidated system explanation tabs
+   ============================================= */
+function initSystemTabs() {
+  const tabList = document.querySelector(".system-tabs__list");
+  const tabs = [...tabList?.querySelectorAll('[role="tab"]') || []];
+  if (!tabList || !tabs.length) return;
+
+  const activateTab = (activeTab, { focus = false } = {}) => {
+    tabs.forEach((tab) => {
+      const selected = tab === activeTab;
+      const panel = document.getElementById(tab.getAttribute("aria-controls"));
+      tab.setAttribute("aria-selected", String(selected));
+      tab.tabIndex = selected ? 0 : -1;
+      if (panel) panel.hidden = !selected;
+    });
+    if (focus) activeTab.focus();
+  };
+
+  tabs.forEach((tab) => tab.addEventListener("click", () => activateTab(tab)));
+  tabList.addEventListener("keydown", (event) => {
+    const currentIndex = tabs.indexOf(document.activeElement);
+    if (currentIndex < 0) return;
+    let nextIndex = null;
+    if (event.key === "ArrowRight") nextIndex = (currentIndex + 1) % tabs.length;
+    if (event.key === "ArrowLeft") nextIndex = (currentIndex - 1 + tabs.length) % tabs.length;
+    if (event.key === "Home") nextIndex = 0;
+    if (event.key === "End") nextIndex = tabs.length - 1;
+    if (nextIndex === null) return;
+    event.preventDefault();
+    activateTab(tabs[nextIndex], { focus: true });
+  });
+}
+
+/* =============================================
    Funnel portfolio carousel
    ============================================= */
 let funnelModalController = null;
@@ -674,6 +833,21 @@ function initFunnelCarousel() {
 
   const originalCards = [...track.querySelectorAll(".funnel-card")];
   if (!originalCards.length) return;
+
+  originalCards.forEach((card) => {
+    const project = funnelProjects.find((item) => item.id === card.dataset.funnelId);
+    const content = card.querySelector(".funnel-card-content");
+    const openLabel = card.querySelector(".funnel-card-open");
+    if (!project || !content || !openLabel || content.querySelector(".funnel-card-summary")) return;
+    const summary = document.createElement("span");
+    const audience = document.createElement("span");
+    summary.className = "funnel-card-summary";
+    audience.className = "funnel-card-audience";
+    summary.textContent = project.goal;
+    audience.textContent = `For: ${project.audience}`;
+    content.insertBefore(summary, openLabel);
+    content.insertBefore(audience, openLabel);
+  });
 
   let isPointerDown = false;
   let pointerId = null;
@@ -918,19 +1092,25 @@ function initFunnelModal() {
   let swipePointerId = null;
   let swipeStartX = 0;
   let swipeStartY = 0;
-  const backgroundElements = [...document.querySelectorAll(".site-header, main, .site-footer, .back-to-top")];
+  const backgroundElements = [...document.querySelectorAll(".site-header, main, .site-footer, .back-to-top, .mobile-project-cta")];
 
   const setBackgroundInert = (isInert) => backgroundElements.forEach((element) => { element.inert = isInert; });
-  const isValidExternalUrl = (value) => {
+  const isValidProjectUrl = (value) => {
+    if (typeof value !== "string" || !value.trim()) return false;
+    const normalizedValue = value.trim();
+    const isLocalFunnelStep = /^funnels\/[a-z0-9-]+\/step-\d{2}\/index\.html$/.test(normalizedValue);
+    const isLocalWalkthrough = /^assets\/videos\/[a-z0-9/_-]+\.(?:mp4|webm)$/i.test(normalizedValue);
+    if (isLocalFunnelStep || isLocalWalkthrough) return true;
+
     try {
-      const url = new URL(value);
+      const url = new URL(normalizedValue);
       return url.protocol === "http:" || url.protocol === "https:";
     } catch {
       return false;
     }
   };
   const setOptionalLink = (link, url, label) => {
-    const isValid = isValidExternalUrl(url);
+    const isValid = isValidProjectUrl(url);
     link.hidden = !isValid;
     if (isValid) {
       link.href = url;
@@ -942,10 +1122,10 @@ function initFunnelModal() {
   };
   const updateCurrentStepLinks = () => {
     if (!currentProject) return;
-    const stepUrl = currentProject.stepUrls?.[currentImageIndex] || currentProject.liveUrl || "";
-    const label = `Open step ${currentImageIndex + 1} of the ${currentProject.title} in a new tab`;
-    setOptionalLink(fullPageButton, stepUrl, label);
-    setOptionalLink(liveLink, stepUrl, label);
+    const firstStepUrl = currentProject.liveUrl || currentProject.stepUrls?.[0] || "";
+    const label = `Open the ${currentProject.title} from step 1 in a new tab`;
+    setOptionalLink(fullPageButton, firstStepUrl, label);
+    setOptionalLink(liveLink, firstStepUrl, label);
   };
   const updateGallery = (index, focusThumbnail = false) => {
     if (!currentProject || fullPageActive) return;
@@ -953,6 +1133,8 @@ function initFunnelModal() {
     stage.classList.add("is-changing");
     stage.classList.remove("image-fallback");
     image.alt = currentProject.imageAlts[currentImageIndex];
+    image.width = 1600;
+    image.height = 900;
     image.src = currentProject.images[currentImageIndex];
     modal.querySelector(".funnel-modal-fallback-initials").textContent = getInitials(currentProject.title);
     modal.querySelector(".funnel-modal-fallback-title").textContent = currentProject.title;
@@ -981,7 +1163,10 @@ function initFunnelModal() {
       button.setAttribute("aria-label", `Show funnel step ${index + 1}`);
       thumbnail.src = src;
       thumbnail.alt = "";
+      thumbnail.width = 160;
+      thumbnail.height = 200;
       thumbnail.loading = "lazy";
+      thumbnail.decoding = "async";
       thumbnail.addEventListener("error", () => {
         thumbnail.hidden = true;
         button.classList.add("image-fallback");
@@ -995,6 +1180,7 @@ function initFunnelModal() {
     const project = funnelProjects.find((item) => item.id === projectId);
     if (!project) return;
     currentProject = project;
+    trackPortfolioInteraction("project_view", project.title);
     currentImageIndex = 0;
     lastFocusedElement = trigger || document.activeElement;
     fullPageActive = false;
@@ -1082,6 +1268,9 @@ function initFunnelModal() {
     closeModal({ returnFocus: false });
     document.querySelector("#connect")?.scrollIntoView({ behavior: prefersReducedMotion() ? "auto" : "smooth" });
   });
+  walkthroughLink.addEventListener("click", () => {
+    if (currentProject) trackPortfolioInteraction("project_video_open", currentProject.title);
+  });
   document.addEventListener("keydown", (event) => {
     if (modal.hidden) return;
     if (event.key === "Escape") {
@@ -1103,33 +1292,98 @@ function initFunnelModal() {
    Contact form: client-side validation and feedback
    ============================================= */
 function initContactForm() {
-  const form = document.querySelector("#contact-form");
-  if (!form) return;
-  const fields = [...form.querySelectorAll("input, select, textarea")];
+  const inquiryForm = document.getElementById("inquiry-form");
+  if (!inquiryForm || inquiryForm.dataset.formspreeInitialized === "true") return;
+
+  inquiryForm.dataset.formspreeInitialized = "true";
+
+  const fields = [
+    ...inquiryForm.querySelectorAll(
+      'input:not([type="hidden"]):not([name="_gotcha"]), select, textarea'
+    )
+  ];
+  const submitButton = inquiryForm.querySelector('button[type="submit"]');
+  const formStatus = document.getElementById("form-status");
+
   fields.forEach((field) => {
+    const error = field.parentElement?.querySelector(".field-error");
+    if (error && field.name) {
+      error.id = `${field.name}-error`;
+      field.setAttribute("aria-describedby", error.id);
+    }
     field.addEventListener("blur", () => validateField(field));
     field.addEventListener("input", () => { if (field.classList.contains("invalid")) validateField(field); });
   });
-  form.addEventListener("submit", (event) => {
+
+  inquiryForm.addEventListener("submit", async (event) => {
     event.preventDefault();
+
     const isValid = fields.every(validateField);
-    const message = form.querySelector(".form-message");
-    if (!message) return;
+
     if (!isValid) {
-      message.textContent = "Please review the highlighted fields before sending.";
-      message.style.color = "#a83c3a";
-      form.querySelector(".invalid")?.focus();
+      if (formStatus) {
+        formStatus.textContent = "Please review the highlighted fields before sending.";
+        formStatus.className = "form-status error";
+      }
+
+      inquiryForm.querySelector(".invalid")?.focus();
       return;
     }
-    const submitButton = form.querySelector(".form-submit");
-    if (!submitButton) return;
-    const originalLabel = submitButton.innerHTML;
-    submitButton.disabled = true;
-    submitButton.innerHTML = "Inquiry Ready <span>✓</span>";
-    message.style.color = "#4a8453";
-    message.textContent = "Thanks! This demo form is validated and ready to connect to your preferred inbox or CRM.";
-    form.reset();
-    window.setTimeout(() => { submitButton.disabled = false; submitButton.innerHTML = originalLabel; }, 2600);
+
+    const originalButtonContent = submitButton ? submitButton.innerHTML : "";
+
+    if (submitButton) {
+      submitButton.disabled = true;
+      submitButton.textContent = "Sending…";
+    }
+
+    if (formStatus) {
+      formStatus.textContent = "";
+      formStatus.className = "form-status";
+    }
+
+    try {
+      const response = await fetch(inquiryForm.action, {
+        method: "POST",
+        body: new FormData(inquiryForm),
+        headers: {
+          Accept: "application/json"
+        }
+      });
+
+      if (!response.ok) {
+        throw new Error("Form submission failed.");
+      }
+
+      inquiryForm.reset();
+      fields.forEach((field) => {
+        field.classList.remove("invalid");
+        field.setAttribute("aria-invalid", "false");
+        const error = field.parentElement?.querySelector(".field-error");
+        if (error) error.textContent = "";
+      });
+
+      if (formStatus) {
+        formStatus.textContent =
+          "Thank you! Your inquiry has been sent. I’ll respond within 24 hours.";
+        formStatus.className = "form-status success";
+      }
+      trackPortfolioInteraction("inquiry_form_success", "Connect inquiry form");
+    } catch (error) {
+      console.error("Inquiry form error:", error);
+
+      if (formStatus) {
+        formStatus.textContent =
+          "Sorry, your inquiry could not be sent. Please email contact@patbadiola.com.";
+        formStatus.className = "form-status error";
+      }
+      trackPortfolioInteraction("inquiry_form_error", "Connect inquiry form");
+    } finally {
+      if (submitButton) {
+        submitButton.disabled = false;
+        submitButton.innerHTML = originalButtonContent;
+      }
+    }
   });
 }
 
@@ -1138,7 +1392,7 @@ function initContactForm() {
    ============================================= */
 function initPlanSelection() {
   const planButtons = [...document.querySelectorAll("#plans [data-plan]")];
-  const form = document.querySelector("#contact-form");
+  const form = document.getElementById("inquiry-form");
   if (!planButtons.length || !form) return;
 
   const serviceSelect = form.querySelector('select[name="service"]');
@@ -1165,6 +1419,30 @@ function initPlanSelection() {
 
       if (!messageField.value.trim()) {
         messageField.value = `I’m interested in the ${planName} plan.`;
+        messageField.dispatchEvent(new Event("input", { bubbles: true }));
+      }
+    });
+  });
+}
+
+function initServiceSelection() {
+  const buttons = [...document.querySelectorAll("[data-service]")];
+  const form = document.getElementById("inquiry-form");
+  if (!buttons.length || !form) return;
+  const serviceSelect = form.querySelector('select[name="service"]');
+  const messageField = form.querySelector('textarea[name="message"]');
+  if (!serviceSelect || !messageField) return;
+
+  buttons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const service = button.dataset.service || "";
+      if ([...serviceSelect.options].some((option) => option.value === service)) {
+        serviceSelect.value = service;
+        serviceSelect.dispatchEvent(new Event("change", { bubbles: true }));
+      }
+      if (!messageField.value.trim()) {
+        const label = button.dataset.serviceLabel || button.textContent.replace("↗", "").trim();
+        messageField.value = `I’m interested in this service: ${label}.`;
         messageField.dispatchEvent(new Event("input", { bubbles: true }));
       }
     });
@@ -1198,6 +1476,22 @@ function initBackToTop() {
   button.addEventListener("click", () => window.scrollTo({ top: 0, behavior: prefersReducedMotion() ? "auto" : "smooth" }));
   window.addEventListener("scroll", update, { passive: true });
   update();
+}
+
+function initMobileProjectCta() {
+  const cta = document.querySelector(".mobile-project-cta");
+  const contact = document.querySelector("#connect");
+  if (!cta || !contact || !("IntersectionObserver" in window)) return;
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => cta.classList.toggle("is-hidden", entry.isIntersecting));
+  }, { threshold: .08 });
+  observer.observe(contact);
+}
+
+function initDynamicYear() {
+  document.querySelectorAll("[data-current-year]").forEach((element) => {
+    element.textContent = String(new Date().getFullYear());
+  });
 }
 
 function createFunnelImages(slug, count) {

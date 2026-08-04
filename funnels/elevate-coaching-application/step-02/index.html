@@ -1,0 +1,4146 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Your Elevate Academy coaching application has been received. Review the next steps and continue to discovery-call booking.">
+  <title>Elevate Coaching Application Confirmation | Step 02</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+  <style>
+    html {
+      min-width: 320px;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      min-width: 320px;
+      margin: 0;
+      background: #ffffff;
+    }
+
+    .funnel-next-button {
+      position: fixed;
+      z-index: 99999;
+      right: 24px;
+      bottom: 24px;
+      display: inline-flex;
+      min-height: 54px;
+      padding: 0 20px 0 10px;
+      align-items: center;
+      gap: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      border-radius: 999px;
+      background: linear-gradient(135deg, #676cc2, #4b4f9e);
+      box-shadow: 0 15px 36px rgba(75, 79, 158, 0.3);
+      color: #ffffff;
+      font: 700 0.88rem/1 Inter, Arial, sans-serif;
+      text-decoration: none;
+      transition: transform 180ms ease, box-shadow 180ms ease;
+    }
+
+    .funnel-next-button:hover {
+      color: #ffffff;
+      box-shadow: 0 20px 44px rgba(75, 79, 158, 0.4);
+      transform: translateY(-3px);
+    }
+
+    .funnel-next-button:focus-visible {
+      outline: 3px solid #e87862;
+      outline-offset: 4px;
+    }
+
+    .funnel-next-button__icon {
+      display: grid;
+      width: 34px;
+      height: 34px;
+      place-items: center;
+      border-radius: 50%;
+      background: #fbeae6;
+      color: #4b4f9e;
+      font-size: 1.1rem;
+    }
+
+    @media (max-width: 640px) {
+      .funnel-next-button {
+        right: 16px;
+        bottom: 16px;
+        min-height: 50px;
+        padding-right: 16px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      .funnel-next-button {
+        transition: none;
+      }
+    }
+  </style>
+</head>
+<body>
+<!-- Section 1: Application Confirmation Hero Start -->
+<section
+  class="ea-application-confirmation-hero"
+  id="ea-application-confirmation-hero"
+  aria-labelledby="ea-application-confirmation-hero-heading"
+>
+  <style>
+    .ea-application-confirmation-hero {
+      position: relative;
+      width: 100%;
+      max-width: 100%;
+      overflow-x: hidden;
+      background: #faf6f0;
+      color: #4c4f61;
+      font-family: Inter, Arial, sans-serif;
+    }
+
+    .ea-application-confirmation-hero * {
+      box-sizing: border-box;
+    }
+
+    .ea-application-confirmation-hero a {
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .ea-application-confirmation-hero .ea-application-confirmation-hero__header {
+      position: relative;
+      z-index: 10;
+      border-bottom: 1px solid #dddff0;
+      background: rgba(255, 255, 255, 0.95);
+    }
+
+    .ea-application-confirmation-hero .ea-application-confirmation-hero__header-container {
+      display: flex;
+      width: min(100% - 64px, 1180px);
+      min-height: 74px;
+      margin-inline: auto;
+      align-items: center;
+      justify-content: space-between;
+      gap: 26px;
+    }
+
+    .ea-application-confirmation-hero .ea-application-confirmation-hero__brand {
+      display: inline-flex;
+      min-width: 0;
+      align-items: center;
+      gap: 11px;
+      color: #292d67;
+      font-family: Sora, Arial, sans-serif;
+      font-size: 19px;
+      font-weight: 800;
+      line-height: 1.2;
+      letter-spacing: -0.025em;
+      white-space: nowrap;
+    }
+
+    .ea-application-confirmation-hero .ea-application-confirmation-hero__brand-icon {
+      display: grid;
+      width: 39px;
+      height: 39px;
+      flex: 0 0 39px;
+      place-items: center;
+      border: 1px solid #ced0eb;
+      border-radius: 12px;
+      background: #ebecfa;
+      color: #4b4f9e;
+    }
+
+    .ea-application-confirmation-hero .ea-application-confirmation-hero__brand-icon svg {
+      width: 26px;
+      height: 26px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 1.65;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .ea-application-confirmation-hero .ea-application-confirmation-hero__navigation {
+      display: flex;
+      min-width: 0;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 7px;
+    }
+
+    .ea-application-confirmation-hero .ea-application-confirmation-hero__nav-link {
+      display: inline-flex;
+      min-height: 44px;
+      align-items: center;
+      justify-content: center;
+      padding: 9px 13px;
+      border-radius: 10px;
+      color: #4c4f61;
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 1.35;
+      text-align: center;
+      text-decoration: none;
+      transition:
+        background-color 170ms ease,
+        color 170ms ease,
+        transform 170ms ease;
+    }
+
+    .ea-application-confirmation-hero .ea-application-confirmation-hero__nav-link:hover {
+      background: #ebecfa;
+      color: #292d67;
+    }
+
+    .ea-application-confirmation-hero .ea-application-confirmation-hero__nav-link:active {
+      transform: translateY(1px);
+    }
+
+    .ea-application-confirmation-hero .ea-application-confirmation-hero__nav-link:focus-visible {
+      outline: 3px solid #676cc2;
+      outline-offset: 3px;
+    }
+
+    .ea-application-confirmation-hero .ea-application-confirmation-hero__nav-button {
+      display: inline-flex;
+      min-height: 44px;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 18px;
+      border: 1px solid #bc5544;
+      border-radius: 12px;
+      background: #e87862;
+      color: #ffffff;
+      font-family: Sora, Arial, sans-serif;
+      font-size: 14px;
+      font-weight: 800;
+      line-height: 1.35;
+      text-align: center;
+      text-decoration: none;
+      box-shadow: 0 8px 18px rgba(188, 85, 68, 0.17);
+      transition:
+        background-color 170ms ease,
+        border-color 170ms ease,
+        box-shadow 170ms ease,
+        transform 170ms ease;
+    }
+
+    .ea-application-confirmation-hero .ea-application-confirmation-hero__nav-button:hover {
+      border-color: #9d4537;
+      background: #bc5544;
+      box-shadow: 0 11px 23px rgba(188, 85, 68, 0.23);
+      transform: translateY(-1px);
+    }
+
+    .ea-application-confirmation-hero .ea-application-confirmation-hero__nav-button:active {
+      transform: translateY(1px);
+    }
+
+    .ea-application-confirmation-hero .ea-application-confirmation-hero__nav-button:focus-visible {
+      outline: 3px solid #4b4f9e;
+      outline-offset: 3px;
+    }
+
+    .ea-application-confirmation-hero .ea-application-confirmation-hero__body {
+      position: relative;
+      isolation: isolate;
+      padding: 76px 0 82px;
+    }
+
+    .ea-application-confirmation-hero .ea-application-confirmation-hero__body::before {
+      position: absolute;
+      z-index: -2;
+      top: 68px;
+      left: -110px;
+      width: 280px;
+      height: 280px;
+      border: 23px solid rgba(235, 236, 250, 0.78);
+      border-radius: 50%;
+      content: "";
+    }
+
+    .ea-application-confirmation-hero .ea-application-confirmation-hero__body::after {
+      position: absolute;
+      z-index: -2;
+      right: -110px;
+      bottom: -145px;
+      width: 335px;
+      height: 335px;
+      border-radius: 50%;
+      background: rgba(251, 234, 230, 0.78);
+      content: "";
+    }
+
+    .ea-application-confirmation-hero .ea-application-confirmation-hero__pattern {
+      position: absolute;
+      z-index: -1;
+      top: 48px;
+      right: 4%;
+      width: 150px;
+      height: 150px;
+      opacity: 0.34;
+      background-image: radial-gradient(
+        circle,
+        rgba(75, 79, 158, 0.3) 1.3px,
+        transparent 1.5px
+      );
+      background-size: 16px 16px;
+      pointer-events: none;
+    }
+
+    .ea-application-confirmation-hero .ea-application-confirmation-hero__container {
+      display: grid;
+      width: min(100% - 64px, 1180px);
+      margin-inline: auto;
+      grid-template-columns: minmax(0, 1.16fr) minmax(390px, 0.84fr);
+      gap: clamp(48px, 7vw, 88px);
+      align-items: center;
+    }
+
+    .ea-application-confirmation-hero .ea-application-confirmation-hero__content {
+      min-width: 0;
+    }
+
+    .ea-application-confirmation-hero .ea-application-confirmation-hero__success-icon {
+      display: grid;
+      width: 70px;
+      height: 70px;
+      margin-bottom: 24px;
+      place-items: center;
+      border: 1px solid #c4e2d3;
+      border-radius: 50%;
+      background: #e6f3ec;
+      color: #3a8b68;
+      box-shadow: 0 12px 28px rgba(58, 139, 104, 0.14);
+    }
+
+    .ea-application-confirmation-hero .ea-application-confirmation-hero__success-icon svg {
+      width: 39px;
+      height: 39px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 1.9;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .ea-application-confirmation-hero .ea-application-confirmation-hero__eyebrow {
+      display: inline-flex;
+      margin: 0 0 16px;
+      align-items: center;
+      gap: 9px;
+      color: #3a8b68;
+      font-family: Sora, Arial, sans-serif;
+      font-size: 13px;
+      font-weight: 800;
+      line-height: 1.4;
+      letter-spacing: 0.12em;
+    }
+
+    .ea-application-confirmation-hero .ea-application-confirmation-hero__eyebrow::before {
+      width: 27px;
+      height: 2px;
+      border-radius: 999px;
+      background: #3a8b68;
+      content: "";
+    }
+
+    .ea-application-confirmation-hero .ea-application-confirmation-hero__heading {
+      max-width: 720px;
+      margin: 0;
+      color: #292d67;
+      font-family: Sora, Arial, sans-serif;
+      font-size: clamp(40px, 5vw, 61px);
+      font-weight: 800;
+      line-height: 1.07;
+      letter-spacing: -0.045em;
+      text-wrap: balance;
+    }
+
+    .ea-application-confirmation-hero .ea-application-confirmation-hero__greeting {
+      margin: 22px 0 0;
+      color: #4b4f9e;
+      font-family: Sora, Arial, sans-serif;
+      font-size: 21px;
+      font-weight: 750;
+      line-height: 1.45;
+    }
+
+    .ea-application-confirmation-hero .ea-application-confirmation-hero__description {
+      max-width: 700px;
+      margin: 15px 0 0;
+      color: #4c4f61;
+      font-size: 17px;
+      line-height: 1.72;
+    }
+
+    .ea-application-confirmation-hero .ea-application-confirmation-hero__description + .ea-application-confirmation-hero__description {
+      margin-top: 11px;
+    }
+
+    .ea-application-confirmation-hero .ea-application-confirmation-hero__expectation {
+      display: flex;
+      max-width: 700px;
+      margin: 21px 0 0;
+      padding: 15px 17px;
+      align-items: flex-start;
+      gap: 11px;
+      border: 1px solid #f0c8c0;
+      border-radius: 14px;
+      background: rgba(251, 234, 230, 0.88);
+      color: #654c51;
+      font-size: 14px;
+      font-weight: 650;
+      line-height: 1.62;
+    }
+
+    .ea-application-confirmation-hero .ea-application-confirmation-hero__expectation-icon {
+      display: grid;
+      width: 26px;
+      height: 26px;
+      flex: 0 0 26px;
+      margin-top: 1px;
+      place-items: center;
+      border-radius: 9px;
+      background: #ffffff;
+      color: #bc5544;
+    }
+
+    .ea-application-confirmation-hero .ea-application-confirmation-hero__expectation-icon svg {
+      width: 16px;
+      height: 16px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .ea-application-confirmation-hero .ea-application-confirmation-hero__status-panel {
+      max-width: 700px;
+      margin-top: 25px;
+      padding: 21px;
+      border: 1px solid #dddff0;
+      border-radius: 18px;
+      background: #ffffff;
+      box-shadow: 0 12px 28px rgba(41, 45, 103, 0.07);
+    }
+
+    .ea-application-confirmation-hero .ea-application-confirmation-hero__status-label {
+      display: inline-flex;
+      margin: 0 0 14px;
+      align-items: center;
+      gap: 8px;
+      color: #4b4f9e;
+      font-family: Sora, Arial, sans-serif;
+      font-size: 11px;
+      font-weight: 800;
+      line-height: 1.4;
+      letter-spacing: 0.1em;
+    }
+
+    .ea-application-confirmation-hero .ea-application-confirmation-hero__status-label::before {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #3a8b68;
+      content: "";
+      box-shadow: 0 0 0 4px #e6f3ec;
+    }
+
+    .ea-application-confirmation-hero .ea-application-confirmation-hero__status-list {
+      margin: 0;
+    }
+
+    .ea-application-confirmation-hero .ea-application-confirmation-hero__status-row {
+      display: grid;
+      min-width: 0;
+      padding: 11px 0;
+      grid-template-columns: minmax(150px, 0.42fr) minmax(0, 0.58fr);
+      gap: 18px;
+      border-top: 1px solid #e9eaf4;
+    }
+
+    .ea-application-confirmation-hero .ea-application-confirmation-hero__status-row:first-child {
+      border-top: 0;
+    }
+
+    .ea-application-confirmation-hero .ea-application-confirmation-hero__status-term {
+      color: #777a8a;
+      font-size: 13px;
+      font-weight: 650;
+      line-height: 1.55;
+    }
+
+    .ea-application-confirmation-hero .ea-application-confirmation-hero__status-value {
+      min-width: 0;
+      margin: 0;
+      color: #292d67;
+      font-size: 13px;
+      font-weight: 750;
+      line-height: 1.55;
+      overflow-wrap: anywhere;
+    }
+
+    .ea-application-confirmation-hero .ea-application-confirmation-hero__submitted {
+      display: inline-flex;
+      width: fit-content;
+      align-items: center;
+      gap: 7px;
+      color: #347a5e;
+    }
+
+    .ea-application-confirmation-hero .ea-application-confirmation-hero__submitted::before {
+      width: 8px;
+      height: 8px;
+      flex: 0 0 8px;
+      border-radius: 50%;
+      background: #3a8b68;
+      content: "";
+    }
+
+    .ea-application-confirmation-hero .ea-application-confirmation-hero__placeholder-value {
+      color: #626577;
+      font-weight: 650;
+    }
+
+    .ea-application-confirmation-hero .ea-application-confirmation-hero__actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 27px;
+    }
+
+    .ea-application-confirmation-hero .ea-application-confirmation-hero__primary-cta {
+      display: inline-flex;
+      min-height: 50px;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      padding: 13px 22px;
+      border: 1px solid #bc5544;
+      border-radius: 13px;
+      background: #e87862;
+      color: #ffffff;
+      font-family: Sora, Arial, sans-serif;
+      font-size: 15px;
+      font-weight: 800;
+      line-height: 1.4;
+      text-align: center;
+      text-decoration: none;
+      box-shadow: 0 11px 24px rgba(188, 85, 68, 0.19);
+      transition:
+        background-color 180ms ease,
+        border-color 180ms ease,
+        box-shadow 180ms ease,
+        transform 180ms ease;
+    }
+
+    .ea-application-confirmation-hero .ea-application-confirmation-hero__primary-cta:hover {
+      border-color: #9d4537;
+      background: #bc5544;
+      box-shadow: 0 14px 29px rgba(188, 85, 68, 0.25);
+      transform: translateY(-2px);
+    }
+
+    .ea-application-confirmation-hero .ea-application-confirmation-hero__primary-cta:active {
+      transform: translateY(1px);
+    }
+
+    .ea-application-confirmation-hero .ea-application-confirmation-hero__primary-cta:focus-visible {
+      outline: 3px solid #4b4f9e;
+      outline-offset: 4px;
+    }
+
+    .ea-application-confirmation-hero .ea-application-confirmation-hero__secondary-cta {
+      display: inline-flex;
+      min-height: 50px;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 13px 20px;
+      border: 1px solid #aaadd8;
+      border-radius: 13px;
+      background: #ffffff;
+      color: #4b4f9e;
+      font-family: Sora, Arial, sans-serif;
+      font-size: 15px;
+      font-weight: 800;
+      line-height: 1.4;
+      text-align: center;
+      text-decoration: none;
+      transition:
+        background-color 180ms ease,
+        border-color 180ms ease,
+        color 180ms ease,
+        transform 180ms ease;
+    }
+
+    .ea-application-confirmation-hero .ea-application-confirmation-hero__secondary-cta:hover {
+      border-color: #676cc2;
+      background: #ebecfa;
+      color: #292d67;
+      transform: translateY(-2px);
+    }
+
+    .ea-application-confirmation-hero .ea-application-confirmation-hero__secondary-cta:active {
+      transform: translateY(1px);
+    }
+
+    .ea-application-confirmation-hero .ea-application-confirmation-hero__secondary-cta:focus-visible {
+      outline: 3px solid #e87862;
+      outline-offset: 4px;
+    }
+
+    .ea-application-confirmation-hero .ea-application-confirmation-hero__primary-cta svg {
+      width: 18px;
+      height: 18px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .ea-application-confirmation-hero .ea-application-confirmation-hero__secondary-cta svg {
+      width: 18px;
+      height: 18px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .ea-application-confirmation-hero .ea-application-confirmation-hero__cta-note {
+      display: flex;
+      margin: 15px 0 0;
+      align-items: flex-start;
+      gap: 8px;
+      color: #777a8a;
+      font-size: 12px;
+      line-height: 1.6;
+    }
+
+    .ea-application-confirmation-hero .ea-application-confirmation-hero__cta-note svg {
+      width: 18px;
+      height: 18px;
+      flex: 0 0 18px;
+      fill: none;
+      stroke: #4b4f9e;
+      stroke-width: 1.9;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .ea-application-confirmation-hero .ea-application-confirmation-hero__reassurance {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 18px;
+      margin: 19px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .ea-application-confirmation-hero .ea-application-confirmation-hero__reassurance-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      color: #707385;
+      font-size: 12px;
+      font-weight: 700;
+      line-height: 1.5;
+    }
+
+    .ea-application-confirmation-hero .ea-application-confirmation-hero__reassurance-icon {
+      display: grid;
+      width: 20px;
+      height: 20px;
+      flex: 0 0 20px;
+      place-items: center;
+      border-radius: 50%;
+      background: #e6f3ec;
+      color: #3a8b68;
+    }
+
+    .ea-application-confirmation-hero .ea-application-confirmation-hero__reassurance-icon svg {
+      width: 12px;
+      height: 12px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 2.1;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .ea-application-confirmation-hero .ea-application-confirmation-hero__visual {
+      position: relative;
+      min-width: 0;
+    }
+
+    .ea-application-confirmation-hero .ea-application-confirmation-hero__visual::before {
+      position: absolute;
+      top: -28px;
+      right: -31px;
+      width: 110px;
+      height: 110px;
+      border: 17px solid rgba(232, 120, 98, 0.12);
+      border-radius: 50%;
+      content: "";
+      pointer-events: none;
+    }
+
+    .ea-application-confirmation-hero .ea-application-confirmation-hero__visual::after {
+      position: absolute;
+      bottom: -24px;
+      left: -24px;
+      width: 74px;
+      height: 74px;
+      border: 2px dashed rgba(75, 79, 158, 0.2);
+      border-radius: 50%;
+      content: "";
+      pointer-events: none;
+    }
+
+    .ea-application-confirmation-hero .ea-application-confirmation-hero__dashboard {
+      position: relative;
+      z-index: 1;
+      min-width: 0;
+      padding: clamp(24px, 3.3vw, 35px);
+      border: 1px solid #dddff0;
+      border-radius: 26px;
+      background: #ffffff;
+      box-shadow: 0 24px 55px rgba(41, 45, 103, 0.12);
+    }
+
+    .ea-application-confirmation-hero .ea-application-confirmation-hero__dashboard-header {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 18px;
+      padding-bottom: 21px;
+      border-bottom: 1px solid #e8e9f3;
+    }
+
+    .ea-application-confirmation-hero .ea-application-confirmation-hero__dashboard-brand {
+      margin: 0;
+      color: #676cc2;
+      font-family: Sora, Arial, sans-serif;
+      font-size: 11px;
+      font-weight: 800;
+      line-height: 1.4;
+      letter-spacing: 0.08em;
+    }
+
+    .ea-application-confirmation-hero .ea-application-confirmation-hero__dashboard-title {
+      margin: 5px 0 0;
+      color: #292d67;
+      font-family: Sora, Arial, sans-serif;
+      font-size: 23px;
+      font-weight: 800;
+      line-height: 1.3;
+      letter-spacing: -0.025em;
+    }
+
+    .ea-application-confirmation-hero .ea-application-confirmation-hero__received {
+      display: inline-flex;
+      flex: 0 0 auto;
+      align-items: center;
+      gap: 7px;
+      padding: 7px 10px;
+      border: 1px solid #c4e2d3;
+      border-radius: 999px;
+      background: #e6f3ec;
+      color: #347a5e;
+      font-size: 11px;
+      font-weight: 800;
+      line-height: 1.4;
+    }
+
+    .ea-application-confirmation-hero .ea-application-confirmation-hero__received::before {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #3a8b68;
+      content: "";
+      box-shadow: 0 0 0 3px rgba(58, 139, 104, 0.14);
+    }
+
+    .ea-application-confirmation-hero .ea-application-confirmation-hero__dashboard-label {
+      margin: 20px 0 0;
+      color: #777a8a;
+      font-family: Sora, Arial, sans-serif;
+      font-size: 11px;
+      font-weight: 800;
+      line-height: 1.4;
+      letter-spacing: 0.08em;
+    }
+
+    .ea-application-confirmation-hero .ea-application-confirmation-hero__progress {
+      position: relative;
+      display: grid;
+      margin-top: 16px;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .ea-application-confirmation-hero .ea-application-confirmation-hero__progress::before {
+      position: absolute;
+      top: 18px;
+      right: 16.5%;
+      left: 16.5%;
+      height: 2px;
+      background: #dddff0;
+      content: "";
+    }
+
+    .ea-application-confirmation-hero .ea-application-confirmation-hero__progress::after {
+      position: absolute;
+      top: 18px;
+      left: 16.5%;
+      width: 33.5%;
+      height: 2px;
+      background: #e87862;
+      content: "";
+    }
+
+    .ea-application-confirmation-hero .ea-application-confirmation-hero__stage {
+      position: relative;
+      z-index: 1;
+      min-width: 0;
+      text-align: center;
+    }
+
+    .ea-application-confirmation-hero .ea-application-confirmation-hero__stage-marker {
+      display: grid;
+      width: 36px;
+      height: 36px;
+      margin: 0 auto 10px;
+      place-items: center;
+      border: 2px solid #d2d4e9;
+      border-radius: 50%;
+      background: #ffffff;
+      color: #777a8a;
+      font-family: Sora, Arial, sans-serif;
+      font-size: 11px;
+      font-weight: 800;
+    }
+
+    .ea-application-confirmation-hero .ea-application-confirmation-hero__stage--complete .ea-application-confirmation-hero__stage-marker {
+      border-color: #3a8b68;
+      background: #3a8b68;
+      color: #ffffff;
+    }
+
+    .ea-application-confirmation-hero .ea-application-confirmation-hero__stage--possible .ea-application-confirmation-hero__stage-marker {
+      border-color: #e87862;
+      background: #fbeae6;
+      color: #bc5544;
+    }
+
+    .ea-application-confirmation-hero .ea-application-confirmation-hero__stage-marker svg {
+      width: 18px;
+      height: 18px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 2.1;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .ea-application-confirmation-hero .ea-application-confirmation-hero__stage-name {
+      margin: 0;
+      color: #6c6f81;
+      font-size: 11px;
+      font-weight: 700;
+      line-height: 1.45;
+    }
+
+    .ea-application-confirmation-hero .ea-application-confirmation-hero__stage--complete .ea-application-confirmation-hero__stage-name {
+      color: #347a5e;
+    }
+
+    .ea-application-confirmation-hero .ea-application-confirmation-hero__stage--possible .ea-application-confirmation-hero__stage-name {
+      color: #a14839;
+    }
+
+    .ea-application-confirmation-hero .ea-application-confirmation-hero__review-areas {
+      display: grid;
+      margin-top: 25px;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+    }
+
+    .ea-application-confirmation-hero .ea-application-confirmation-hero__review-area {
+      display: flex;
+      min-width: 0;
+      min-height: 58px;
+      padding: 12px;
+      align-items: center;
+      gap: 9px;
+      border: 1px solid #dddff0;
+      border-radius: 13px;
+      background: #f7f7fb;
+      color: #4c4f61;
+      font-size: 12px;
+      font-weight: 750;
+      line-height: 1.4;
+    }
+
+    .ea-application-confirmation-hero .ea-application-confirmation-hero__review-icon {
+      display: grid;
+      width: 29px;
+      height: 29px;
+      flex: 0 0 29px;
+      place-items: center;
+      border-radius: 9px;
+      background: #ebecfa;
+      color: #4b4f9e;
+    }
+
+    .ea-application-confirmation-hero .ea-application-confirmation-hero__review-icon svg {
+      width: 17px;
+      height: 17px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 1.9;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .ea-application-confirmation-hero .ea-application-confirmation-hero__dashboard-note {
+      display: flex;
+      margin: 20px 0 0;
+      padding: 14px;
+      align-items: flex-start;
+      gap: 10px;
+      border: 1px solid #f0c8c0;
+      border-radius: 13px;
+      background: #fbeae6;
+      color: #654c51;
+      font-size: 12px;
+      line-height: 1.6;
+    }
+
+    .ea-application-confirmation-hero .ea-application-confirmation-hero__dashboard-note-icon {
+      width: 20px;
+      height: 20px;
+      flex: 0 0 20px;
+      color: #bc5544;
+    }
+
+    .ea-application-confirmation-hero .ea-application-confirmation-hero__dashboard-note-icon svg {
+      width: 100%;
+      height: 100%;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 1.9;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    @media (max-width: 1020px) {
+      .ea-application-confirmation-hero .ea-application-confirmation-hero__header-container {
+        gap: 18px;
+      }
+
+      .ea-application-confirmation-hero .ea-application-confirmation-hero__navigation {
+        gap: 3px;
+      }
+
+      .ea-application-confirmation-hero .ea-application-confirmation-hero__nav-link {
+        padding-inline: 9px;
+      }
+
+      .ea-application-confirmation-hero .ea-application-confirmation-hero__container {
+        grid-template-columns: minmax(0, 1.08fr) minmax(365px, 0.92fr);
+        gap: 40px;
+      }
+    }
+
+    @media (max-width: 880px) {
+      .ea-application-confirmation-hero .ea-application-confirmation-hero__header-container {
+        width: min(100% - 40px, 1180px);
+      }
+
+      .ea-application-confirmation-hero .ea-application-confirmation-hero__nav-link:not(.ea-application-confirmation-hero__nav-button) {
+        display: none;
+      }
+
+      .ea-application-confirmation-hero .ea-application-confirmation-hero__container {
+        width: min(100% - 40px, 760px);
+        grid-template-columns: minmax(0, 1fr);
+        gap: 50px;
+      }
+
+      .ea-application-confirmation-hero .ea-application-confirmation-hero__visual {
+        width: min(100%, 590px);
+        margin-inline: auto;
+      }
+    }
+
+    @media (max-width: 599px) {
+      .ea-application-confirmation-hero .ea-application-confirmation-hero__header-container {
+        width: min(100% - 32px, 1180px);
+        min-height: 68px;
+        gap: 12px;
+      }
+
+      .ea-application-confirmation-hero .ea-application-confirmation-hero__brand {
+        gap: 8px;
+        font-size: 16px;
+      }
+
+      .ea-application-confirmation-hero .ea-application-confirmation-hero__brand-icon {
+        width: 34px;
+        height: 34px;
+        flex-basis: 34px;
+        border-radius: 10px;
+      }
+
+      .ea-application-confirmation-hero .ea-application-confirmation-hero__nav-button {
+        max-width: 130px;
+        padding-inline: 12px;
+        font-size: 12px;
+      }
+
+      .ea-application-confirmation-hero .ea-application-confirmation-hero__body {
+        padding: 58px 0 62px;
+      }
+
+      .ea-application-confirmation-hero .ea-application-confirmation-hero__container {
+        width: min(100% - 32px, 760px);
+        gap: 43px;
+      }
+
+      .ea-application-confirmation-hero .ea-application-confirmation-hero__success-icon {
+        width: 62px;
+        height: 62px;
+      }
+
+      .ea-application-confirmation-hero .ea-application-confirmation-hero__success-icon svg {
+        width: 34px;
+        height: 34px;
+      }
+
+      .ea-application-confirmation-hero .ea-application-confirmation-hero__heading {
+        font-size: clamp(35px, 11vw, 47px);
+      }
+
+      .ea-application-confirmation-hero .ea-application-confirmation-hero__description {
+        font-size: 16px;
+      }
+
+      .ea-application-confirmation-hero .ea-application-confirmation-hero__status-panel {
+        padding: 18px 16px;
+      }
+
+      .ea-application-confirmation-hero .ea-application-confirmation-hero__status-row {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 4px;
+      }
+
+      .ea-application-confirmation-hero .ea-application-confirmation-hero__actions {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .ea-application-confirmation-hero .ea-application-confirmation-hero__primary-cta {
+        width: 100%;
+      }
+
+      .ea-application-confirmation-hero .ea-application-confirmation-hero__secondary-cta {
+        width: 100%;
+      }
+
+      .ea-application-confirmation-hero .ea-application-confirmation-hero__reassurance {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .ea-application-confirmation-hero .ea-application-confirmation-hero__dashboard {
+        padding: 22px 17px;
+        border-radius: 21px;
+      }
+
+      .ea-application-confirmation-hero .ea-application-confirmation-hero__dashboard-header {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .ea-application-confirmation-hero .ea-application-confirmation-hero__progress {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 10px;
+      }
+
+      .ea-application-confirmation-hero .ea-application-confirmation-hero__progress::before {
+        top: 18px;
+        bottom: 18px;
+        left: 17px;
+        width: 2px;
+        height: auto;
+      }
+
+      .ea-application-confirmation-hero .ea-application-confirmation-hero__progress::after {
+        top: 18px;
+        left: 17px;
+        width: 2px;
+        height: 57px;
+      }
+
+      .ea-application-confirmation-hero .ea-application-confirmation-hero__stage {
+        display: grid;
+        min-height: 47px;
+        grid-template-columns: 36px minmax(0, 1fr);
+        gap: 12px;
+        align-items: center;
+        text-align: left;
+      }
+
+      .ea-application-confirmation-hero .ea-application-confirmation-hero__stage-marker {
+        margin: 0;
+      }
+
+      .ea-application-confirmation-hero .ea-application-confirmation-hero__review-areas {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    @media (max-width: 374px) {
+      .ea-application-confirmation-hero .ea-application-confirmation-hero__header-container {
+        width: min(100% - 24px, 1180px);
+      }
+
+      .ea-application-confirmation-hero .ea-application-confirmation-hero__brand {
+        max-width: 145px;
+        white-space: normal;
+      }
+
+      .ea-application-confirmation-hero .ea-application-confirmation-hero__nav-button {
+        max-width: 110px;
+        padding-inline: 9px;
+      }
+
+      .ea-application-confirmation-hero .ea-application-confirmation-hero__container {
+        width: min(100% - 24px, 760px);
+      }
+
+      .ea-application-confirmation-hero .ea-application-confirmation-hero__expectation {
+        padding: 13px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .ea-application-confirmation-hero .ea-application-confirmation-hero__nav-link {
+        transition: none;
+      }
+
+      .ea-application-confirmation-hero .ea-application-confirmation-hero__nav-button {
+        transition: none;
+      }
+
+      .ea-application-confirmation-hero .ea-application-confirmation-hero__primary-cta {
+        transition: none;
+      }
+
+      .ea-application-confirmation-hero .ea-application-confirmation-hero__secondary-cta {
+        transition: none;
+      }
+    }
+  </style>
+
+  <header class="ea-application-confirmation-hero__header">
+    <div class="ea-application-confirmation-hero__header-container">
+      <div
+        class="ea-application-confirmation-hero__brand"
+        aria-label="Elevate Academy"
+      >
+        <span
+          class="ea-application-confirmation-hero__brand-icon"
+          aria-hidden="true"
+        >
+          <svg viewBox="0 0 32 32" focusable="false">
+            <rect x="4" y="4" width="17" height="22" rx="3"></rect>
+            <path d="M9 10h7"></path>
+            <path d="M9 15h7"></path>
+            <path d="m9 20 2 2 4-4"></path>
+            <path d="M21 12c4 1 7 4 8 8"></path>
+            <path d="m25 18 4 2-2 4"></path>
+          </svg>
+        </span>
+        <span>Elevate Academy</span>
+      </div>
+
+      <nav
+        class="ea-application-confirmation-hero__navigation"
+        aria-label="Application confirmation navigation"
+      >
+        <a
+          class="ea-application-confirmation-hero__nav-link"
+          href="#ea-application-confirmation-status"
+        >
+          Application Status
+        </a>
+
+        <a
+          class="ea-application-confirmation-hero__nav-link"
+          href="#ea-application-next-steps"
+        >
+          What Happens Next
+        </a>
+
+        <a
+          class="ea-application-confirmation-hero__nav-button"
+          href="#ea-discovery-call-cta"
+        >
+          Discovery Call
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <div
+    class="ea-application-confirmation-hero__body"
+    id="ea-application-confirmation-status"
+  >
+    <span
+      class="ea-application-confirmation-hero__pattern"
+      aria-hidden="true"
+    ></span>
+
+    <div class="ea-application-confirmation-hero__container">
+      <div class="ea-application-confirmation-hero__content">
+        <span
+          class="ea-application-confirmation-hero__success-icon"
+          aria-hidden="true"
+        >
+          <svg viewBox="0 0 48 48" focusable="false">
+            <circle cx="24" cy="24" r="19"></circle>
+            <path d="m15 24 6 6 13-14"></path>
+          </svg>
+        </span>
+
+        <p class="ea-application-confirmation-hero__eyebrow">
+          APPLICATION SUBMITTED
+        </p>
+
+        <h1
+          class="ea-application-confirmation-hero__heading"
+          id="ea-application-confirmation-hero-heading"
+        >
+          Thank You for Completing Your Coaching Application
+        </h1>
+
+        <p class="ea-application-confirmation-hero__greeting">
+          Thank you, {{contact.first_name}}.
+        </p>
+
+        <p class="ea-application-confirmation-hero__description">
+          Your coaching application has been submitted successfully.
+        </p>
+
+        <p class="ea-application-confirmation-hero__description">
+          Your responses will help Elevate Academy understand your current
+          business situation, challenges, goals, preferred program, and
+          readiness for coaching.
+        </p>
+
+        <p class="ea-application-confirmation-hero__expectation">
+          <span
+            class="ea-application-confirmation-hero__expectation-icon"
+            aria-hidden="true"
+          >
+            <svg viewBox="0 0 24 24" focusable="false">
+              <circle cx="12" cy="12" r="9"></circle>
+              <path d="M12 11v5"></path>
+              <path d="M12 8h.01"></path>
+            </svg>
+          </span>
+          <span>
+            Submitting an application does not guarantee acceptance,
+            availability, enrollment, or a discovery call.
+          </span>
+        </p>
+
+        <div class="ea-application-confirmation-hero__status-panel">
+          <p class="ea-application-confirmation-hero__status-label">
+            APPLICATION STATUS
+          </p>
+
+          <dl class="ea-application-confirmation-hero__status-list">
+            <div class="ea-application-confirmation-hero__status-row">
+              <dt class="ea-application-confirmation-hero__status-term">
+                Application:
+              </dt>
+              <dd class="ea-application-confirmation-hero__status-value">
+                <span class="ea-application-confirmation-hero__submitted">
+                  Submitted
+                </span>
+              </dd>
+            </div>
+
+            <div class="ea-application-confirmation-hero__status-row">
+              <dt class="ea-application-confirmation-hero__status-term">
+                Applicant:
+              </dt>
+              <dd class="ea-application-confirmation-hero__status-value">
+                {{contact.first_name}} {{contact.last_name}}
+              </dd>
+            </div>
+
+            <div class="ea-application-confirmation-hero__status-row">
+              <dt class="ea-application-confirmation-hero__status-term">
+                Email:
+              </dt>
+              <dd class="ea-application-confirmation-hero__status-value">
+                {{contact.email}}
+              </dd>
+            </div>
+
+            <div class="ea-application-confirmation-hero__status-row">
+              <dt class="ea-application-confirmation-hero__status-term">
+                Preferred Program:
+              </dt>
+              <dd class="ea-application-confirmation-hero__status-value">
+                <!--
+                PREFERRED PROGRAM MERGE FIELD PLACEHOLDER
+
+                Insert the verified GoHighLevel custom value for:
+
+                Preferred Program
+
+                Use the GoHighLevel custom-value selector.
+
+                Do not manually type an unverified merge field.
+
+                Keep the visible placeholder when the correct custom value has not yet been confirmed.
+                -->
+                <span class="ea-application-confirmation-hero__placeholder-value">
+                  [Preferred Program selected in the submitted application]
+                </span>
+              </dd>
+            </div>
+          </dl>
+        </div>
+
+        <div class="ea-application-confirmation-hero__actions">
+          <a
+            class="ea-application-confirmation-hero__primary-cta"
+            href="#ea-application-next-steps"
+          >
+            See What Happens Next
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path d="M5 12h14"></path>
+              <path d="m14 7 5 5-5 5"></path>
+            </svg>
+          </a>
+
+          <a
+            class="ea-application-confirmation-hero__secondary-cta"
+            href="#ea-discovery-call-cta"
+          >
+            Book a Discovery Call
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <rect x="4" y="5" width="16" height="15" rx="2"></rect>
+              <path d="M8 3v4"></path>
+              <path d="M16 3v4"></path>
+              <path d="M4 10h16"></path>
+            </svg>
+          </a>
+        </div>
+
+        <p class="ea-application-confirmation-hero__cta-note">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <circle cx="12" cy="12" r="9"></circle>
+            <path d="M12 11v5"></path>
+            <path d="M12 8h.01"></path>
+          </svg>
+          <span>
+            Booking a discovery call does not guarantee coaching acceptance
+            or enrollment.
+          </span>
+        </p>
+
+        <ul
+          class="ea-application-confirmation-hero__reassurance"
+          aria-label="Application confirmation details"
+        >
+          <li class="ea-application-confirmation-hero__reassurance-item">
+            <span
+              class="ea-application-confirmation-hero__reassurance-icon"
+              aria-hidden="true"
+            >
+              <svg viewBox="0 0 20 20" focusable="false">
+                <path d="m4 10 3.5 3.5L16 5"></path>
+              </svg>
+            </span>
+            <span>Application received</span>
+          </li>
+
+          <li class="ea-application-confirmation-hero__reassurance-item">
+            <span
+              class="ea-application-confirmation-hero__reassurance-icon"
+              aria-hidden="true"
+            >
+              <svg viewBox="0 0 20 20" focusable="false">
+                <rect x="4" y="4" width="12" height="12" rx="2"></rect>
+                <path d="M7 8h6"></path>
+                <path d="M7 11h4"></path>
+              </svg>
+            </span>
+            <span>Information reviewed for fit</span>
+          </li>
+
+          <li class="ea-application-confirmation-hero__reassurance-item">
+            <span
+              class="ea-application-confirmation-hero__reassurance-icon"
+              aria-hidden="true"
+            >
+              <svg viewBox="0 0 20 20" focusable="false">
+                <path d="M4 10h12"></path>
+                <path d="m12 6 4 4-4 4"></path>
+              </svg>
+            </span>
+            <span>Next steps explained below</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="ea-application-confirmation-hero__visual">
+        <article
+          class="ea-application-confirmation-hero__dashboard"
+          aria-label="Coaching Application status dashboard"
+        >
+          <header class="ea-application-confirmation-hero__dashboard-header">
+            <div>
+              <p class="ea-application-confirmation-hero__dashboard-brand">
+                ELEVATE ACADEMY
+              </p>
+
+              <h2 class="ea-application-confirmation-hero__dashboard-title">
+                Coaching Application
+              </h2>
+            </div>
+
+            <span class="ea-application-confirmation-hero__received">
+              Received
+            </span>
+          </header>
+
+          <p class="ea-application-confirmation-hero__dashboard-label">
+            APPLICATION STATUS
+          </p>
+
+          <div
+            class="ea-application-confirmation-hero__progress"
+            aria-label="Possible application stages"
+          >
+            <div class="ea-application-confirmation-hero__stage ea-application-confirmation-hero__stage--complete">
+              <span class="ea-application-confirmation-hero__stage-marker">
+                <svg viewBox="0 0 20 20" aria-hidden="true" focusable="false">
+                  <path d="m4 10 3.5 3.5L16 5"></path>
+                </svg>
+              </span>
+              <p class="ea-application-confirmation-hero__stage-name">
+                Application Submitted
+              </p>
+            </div>
+
+            <div class="ea-application-confirmation-hero__stage ea-application-confirmation-hero__stage--possible">
+              <span class="ea-application-confirmation-hero__stage-marker">
+                2
+              </span>
+              <p class="ea-application-confirmation-hero__stage-name">
+                Discovery Conversation
+              </p>
+            </div>
+
+            <div class="ea-application-confirmation-hero__stage">
+              <span class="ea-application-confirmation-hero__stage-marker">
+                3
+              </span>
+              <p class="ea-application-confirmation-hero__stage-name">
+                Coaching Decision
+              </p>
+            </div>
+          </div>
+
+          <div class="ea-application-confirmation-hero__review-areas">
+            <div class="ea-application-confirmation-hero__review-area">
+              <span
+                class="ea-application-confirmation-hero__review-icon"
+                aria-hidden="true"
+              >
+                <svg viewBox="0 0 24 24" focusable="false">
+                  <path d="M4 20h16"></path>
+                  <path d="M6 20V9l6-5 6 5v11"></path>
+                  <path d="M10 20v-5h4v5"></path>
+                </svg>
+              </span>
+              <span>Business Situation</span>
+            </div>
+
+            <div class="ea-application-confirmation-hero__review-area">
+              <span
+                class="ea-application-confirmation-hero__review-icon"
+                aria-hidden="true"
+              >
+                <svg viewBox="0 0 24 24" focusable="false">
+                  <path d="M12 3 3 20h18L12 3Z"></path>
+                  <path d="M12 9v5"></path>
+                  <path d="M12 17h.01"></path>
+                </svg>
+              </span>
+              <span>Current Challenge</span>
+            </div>
+
+            <div class="ea-application-confirmation-hero__review-area">
+              <span
+                class="ea-application-confirmation-hero__review-icon"
+                aria-hidden="true"
+              >
+                <svg viewBox="0 0 24 24" focusable="false">
+                  <rect x="4" y="4" width="16" height="16" rx="2"></rect>
+                  <path d="m8 12 2.5 2.5L16 9"></path>
+                </svg>
+              </span>
+              <span>Program Preference</span>
+            </div>
+
+            <div class="ea-application-confirmation-hero__review-area">
+              <span
+                class="ea-application-confirmation-hero__review-icon"
+                aria-hidden="true"
+              >
+                <svg viewBox="0 0 24 24" focusable="false">
+                  <path d="M4 18v-5"></path>
+                  <path d="M10 18V9"></path>
+                  <path d="M16 18V5"></path>
+                  <path d="m3 8 5-3 5 2 7-4"></path>
+                </svg>
+              </span>
+              <span>Support Readiness</span>
+            </div>
+          </div>
+
+          <p class="ea-application-confirmation-hero__dashboard-note">
+            <span
+              class="ea-application-confirmation-hero__dashboard-note-icon"
+              aria-hidden="true"
+            >
+              <svg viewBox="0 0 24 24" focusable="false">
+                <circle cx="12" cy="12" r="9"></circle>
+                <path d="M12 11v5"></path>
+                <path d="M12 8h.01"></path>
+              </svg>
+            </span>
+            <span>
+              Your application helps guide the next conversation but does not
+              guarantee a coaching placement.
+            </span>
+          </p>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Section 1: Application Confirmation Hero End -->
+<!-- Section 2: What Happens Next Start -->
+<section
+  class="ea-application-next-steps"
+  id="ea-application-next-steps"
+  aria-labelledby="ea-application-next-steps-heading"
+>
+  <style>
+    .ea-application-next-steps {
+      position: relative;
+      width: 100%;
+      max-width: 100%;
+      overflow-x: hidden;
+      padding: 84px 0;
+      background: #f7f7fb;
+      color: #4c4f61;
+      font-family: Inter, Arial, sans-serif;
+    }
+
+    .ea-application-next-steps * {
+      box-sizing: border-box;
+    }
+
+    .ea-application-next-steps a {
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .ea-application-next-steps .ea-application-next-steps__decoration {
+      position: absolute;
+      top: 78px;
+      right: -92px;
+      width: 230px;
+      height: 230px;
+      border: 24px solid rgba(235, 236, 250, 0.75);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    .ea-application-next-steps .ea-application-next-steps__decoration::before {
+      position: absolute;
+      bottom: -108px;
+      left: -138px;
+      width: 136px;
+      height: 136px;
+      border: 1px dashed rgba(232, 120, 98, 0.25);
+      border-radius: 50%;
+      content: "";
+    }
+
+    .ea-application-next-steps .ea-application-next-steps__container {
+      position: relative;
+      z-index: 1;
+      width: min(100% - 64px, 1180px);
+      margin-inline: auto;
+    }
+
+    .ea-application-next-steps .ea-application-next-steps__introduction {
+      max-width: 860px;
+      margin: 0 auto 46px;
+      text-align: center;
+    }
+
+    .ea-application-next-steps .ea-application-next-steps__eyebrow {
+      display: inline-flex;
+      margin: 0 0 16px;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      color: #bc5544;
+      font-family: Sora, Arial, sans-serif;
+      font-size: 13px;
+      font-weight: 800;
+      line-height: 1.4;
+      letter-spacing: 0.12em;
+    }
+
+    .ea-application-next-steps .ea-application-next-steps__eyebrow::before {
+      width: 25px;
+      height: 2px;
+      border-radius: 999px;
+      background: #e87862;
+      content: "";
+    }
+
+    .ea-application-next-steps .ea-application-next-steps__eyebrow::after {
+      width: 25px;
+      height: 2px;
+      border-radius: 999px;
+      background: #e87862;
+      content: "";
+    }
+
+    .ea-application-next-steps .ea-application-next-steps__heading {
+      margin: 0;
+      color: #292d67;
+      font-family: Sora, Arial, sans-serif;
+      font-size: clamp(34px, 4.4vw, 52px);
+      font-weight: 800;
+      line-height: 1.12;
+      letter-spacing: -0.04em;
+      text-wrap: balance;
+    }
+
+    .ea-application-next-steps .ea-application-next-steps__description {
+      max-width: 790px;
+      margin: 21px auto 0;
+      color: #4c4f61;
+      font-size: 17px;
+      line-height: 1.75;
+    }
+
+    .ea-application-next-steps .ea-application-next-steps__supporting-note {
+      display: inline-flex;
+      max-width: 760px;
+      margin: 17px auto 0;
+      padding: 12px 15px;
+      align-items: flex-start;
+      gap: 10px;
+      border: 1px solid #d5d7ed;
+      border-radius: 13px;
+      background: #ebecfa;
+      color: #454970;
+      font-size: 13px;
+      line-height: 1.65;
+      text-align: left;
+    }
+
+    .ea-application-next-steps .ea-application-next-steps__supporting-icon {
+      display: grid;
+      width: 23px;
+      height: 23px;
+      flex: 0 0 23px;
+      margin-top: 1px;
+      place-items: center;
+      border-radius: 50%;
+      background: #ffffff;
+      color: #4b4f9e;
+    }
+
+    .ea-application-next-steps .ea-application-next-steps__supporting-icon svg {
+      width: 14px;
+      height: 14px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .ea-application-next-steps .ea-application-next-steps__process {
+      position: relative;
+    }
+
+    .ea-application-next-steps .ea-application-next-steps__process-path {
+      position: absolute;
+      z-index: 0;
+      top: 49px;
+      right: 11%;
+      left: 11%;
+      height: 3px;
+      border-radius: 999px;
+      background: linear-gradient(
+        90deg,
+        #676cc2 0%,
+        #e87862 34%,
+        #676cc2 67%,
+        #e87862 100%
+      );
+      opacity: 0.42;
+      pointer-events: none;
+    }
+
+    .ea-application-next-steps .ea-application-next-steps__process-path::before {
+      position: absolute;
+      top: 50%;
+      left: 33.33%;
+      width: 9px;
+      height: 9px;
+      border: 3px solid #f7f7fb;
+      border-radius: 50%;
+      background: #e87862;
+      content: "";
+      transform: translate(-50%, -50%);
+    }
+
+    .ea-application-next-steps .ea-application-next-steps__process-path::after {
+      position: absolute;
+      top: 50%;
+      left: 66.66%;
+      width: 9px;
+      height: 9px;
+      border: 3px solid #f7f7fb;
+      border-radius: 50%;
+      background: #676cc2;
+      content: "";
+      transform: translate(-50%, -50%);
+    }
+
+    .ea-application-next-steps .ea-application-next-steps__cards {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 18px;
+      align-items: stretch;
+    }
+
+    .ea-application-next-steps .ea-application-next-steps__card {
+      position: relative;
+      display: flex;
+      min-width: 0;
+      padding: 24px 21px 22px;
+      flex-direction: column;
+      border: 1px solid #dddff0;
+      border-radius: 20px;
+      background: #ffffff;
+      box-shadow: 0 12px 28px rgba(41, 45, 103, 0.065);
+    }
+
+    .ea-application-next-steps .ea-application-next-steps__card::before {
+      position: absolute;
+      top: 0;
+      left: 20px;
+      width: 52px;
+      height: 4px;
+      border-radius: 0 0 999px 999px;
+      background: #e87862;
+      content: "";
+    }
+
+    .ea-application-next-steps .ea-application-next-steps__card-header {
+      display: flex;
+      margin-bottom: 19px;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .ea-application-next-steps .ea-application-next-steps__number {
+      display: inline-flex;
+      min-width: 45px;
+      min-height: 32px;
+      align-items: center;
+      justify-content: center;
+      padding: 6px 10px;
+      border: 1px solid #f0c6bd;
+      border-radius: 999px;
+      background: #fbeae6;
+      color: #bc5544;
+      font-family: Sora, Arial, sans-serif;
+      font-size: 12px;
+      font-weight: 800;
+      line-height: 1.4;
+      letter-spacing: 0.06em;
+    }
+
+    .ea-application-next-steps .ea-application-next-steps__card-icon {
+      display: grid;
+      width: 45px;
+      height: 45px;
+      flex: 0 0 45px;
+      place-items: center;
+      border: 1px solid #d2d4eb;
+      border-radius: 14px;
+      background: #ebecfa;
+      color: #4b4f9e;
+    }
+
+    .ea-application-next-steps .ea-application-next-steps__card-icon svg {
+      width: 26px;
+      height: 26px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 1.7;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .ea-application-next-steps .ea-application-next-steps__card-title {
+      margin: 0;
+      color: #292d67;
+      font-family: Sora, Arial, sans-serif;
+      font-size: 18px;
+      font-weight: 800;
+      line-height: 1.36;
+      letter-spacing: -0.02em;
+    }
+
+    .ea-application-next-steps .ea-application-next-steps__card-description {
+      margin: 11px 0 0;
+      color: #4c4f61;
+      font-size: 14px;
+      line-height: 1.67;
+    }
+
+    .ea-application-next-steps .ea-application-next-steps__details {
+      display: grid;
+      gap: 10px;
+      margin: auto 0 0;
+      padding: 20px 0 0;
+      list-style: none;
+    }
+
+    .ea-application-next-steps .ea-application-next-steps__detail {
+      display: flex;
+      align-items: flex-start;
+      gap: 9px;
+      color: #656879;
+      font-size: 12px;
+      line-height: 1.55;
+    }
+
+    .ea-application-next-steps .ea-application-next-steps__detail-icon {
+      display: grid;
+      width: 19px;
+      height: 19px;
+      flex: 0 0 19px;
+      margin-top: 1px;
+      place-items: center;
+      border-radius: 6px;
+      background: #ebecfa;
+      color: #4b4f9e;
+    }
+
+    .ea-application-next-steps .ea-application-next-steps__detail-icon svg {
+      width: 11px;
+      height: 11px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 2.2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .ea-application-next-steps .ea-application-next-steps__information-grid {
+      display: grid;
+      margin-top: 30px;
+      grid-template-columns: minmax(0, 1.18fr) minmax(330px, 0.82fr);
+      gap: 20px;
+      align-items: stretch;
+    }
+
+    .ea-application-next-steps .ea-application-next-steps__preparation-panel {
+      position: relative;
+      min-width: 0;
+      padding: clamp(27px, 3.6vw, 39px);
+      overflow: hidden;
+      border: 1px solid #d4d6ec;
+      border-radius: 22px;
+      background: #ebecfa;
+    }
+
+    .ea-application-next-steps .ea-application-next-steps__preparation-panel::after {
+      position: absolute;
+      top: -62px;
+      right: -56px;
+      width: 165px;
+      height: 165px;
+      border: 21px solid rgba(232, 120, 98, 0.09);
+      border-radius: 50%;
+      content: "";
+      pointer-events: none;
+    }
+
+    .ea-application-next-steps .ea-application-next-steps__preparation-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    .ea-application-next-steps .ea-application-next-steps__panel-header {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+    }
+
+    .ea-application-next-steps .ea-application-next-steps__panel-icon {
+      display: grid;
+      width: 51px;
+      height: 51px;
+      flex: 0 0 51px;
+      place-items: center;
+      border: 1px solid #f0c8c0;
+      border-radius: 16px;
+      background: #ffffff;
+      color: #bc5544;
+    }
+
+    .ea-application-next-steps .ea-application-next-steps__panel-icon svg {
+      width: 29px;
+      height: 29px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 1.7;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .ea-application-next-steps .ea-application-next-steps__panel-eyebrow {
+      margin: 0 0 8px;
+      color: #bc5544;
+      font-family: Sora, Arial, sans-serif;
+      font-size: 11px;
+      font-weight: 800;
+      line-height: 1.4;
+      letter-spacing: 0.1em;
+    }
+
+    .ea-application-next-steps .ea-application-next-steps__panel-heading {
+      margin: 0;
+      color: #292d67;
+      font-family: Sora, Arial, sans-serif;
+      font-size: clamp(24px, 3vw, 32px);
+      font-weight: 800;
+      line-height: 1.25;
+      letter-spacing: -0.03em;
+    }
+
+    .ea-application-next-steps .ea-application-next-steps__preparation-list {
+      display: grid;
+      margin: 23px 0 0;
+      padding: 0;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px 20px;
+      list-style: none;
+    }
+
+    .ea-application-next-steps .ea-application-next-steps__preparation-item {
+      display: flex;
+      min-width: 0;
+      align-items: flex-start;
+      gap: 9px;
+      color: #4c4f61;
+      font-size: 13px;
+      line-height: 1.55;
+    }
+
+    .ea-application-next-steps .ea-application-next-steps__preparation-check {
+      display: grid;
+      width: 22px;
+      height: 22px;
+      flex: 0 0 22px;
+      margin-top: 1px;
+      place-items: center;
+      border-radius: 7px;
+      background: #ffffff;
+      color: #4b4f9e;
+    }
+
+    .ea-application-next-steps .ea-application-next-steps__preparation-check svg {
+      width: 13px;
+      height: 13px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 2.1;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .ea-application-next-steps .ea-application-next-steps__call-note {
+      display: flex;
+      margin: 23px 0 0;
+      padding: 15px;
+      align-items: flex-start;
+      gap: 10px;
+      border: 1px solid #f0c8c0;
+      border-radius: 14px;
+      background: #ffffff;
+      color: #654c51;
+      font-size: 13px;
+      font-weight: 650;
+      line-height: 1.65;
+    }
+
+    .ea-application-next-steps .ea-application-next-steps__call-note-icon {
+      width: 21px;
+      height: 21px;
+      flex: 0 0 21px;
+      color: #bc5544;
+    }
+
+    .ea-application-next-steps .ea-application-next-steps__call-note-icon svg {
+      width: 100%;
+      height: 100%;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 1.9;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .ea-application-next-steps .ea-application-next-steps__alternative-panel {
+      display: flex;
+      min-width: 0;
+      padding: clamp(27px, 3.6vw, 36px);
+      flex-direction: column;
+      border: 1px solid #f0c8c0;
+      border-radius: 22px;
+      background: #fbeae6;
+    }
+
+    .ea-application-next-steps .ea-application-next-steps__alternative-icon {
+      display: grid;
+      width: 50px;
+      height: 50px;
+      margin-bottom: 17px;
+      place-items: center;
+      border: 1px solid #d4d6ec;
+      border-radius: 15px;
+      background: #ffffff;
+      color: #4b4f9e;
+    }
+
+    .ea-application-next-steps .ea-application-next-steps__alternative-icon svg {
+      width: 28px;
+      height: 28px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 1.7;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .ea-application-next-steps .ea-application-next-steps__alternative-heading {
+      margin: 0;
+      color: #292d67;
+      font-family: Sora, Arial, sans-serif;
+      font-size: 26px;
+      font-weight: 800;
+      line-height: 1.3;
+      letter-spacing: -0.03em;
+    }
+
+    .ea-application-next-steps .ea-application-next-steps__alternative-description {
+      margin: 13px 0 0;
+      color: #654c51;
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    .ea-application-next-steps .ea-application-next-steps__alternative-action {
+      margin-top: auto;
+      padding-top: 23px;
+    }
+
+    .ea-application-next-steps .ea-application-next-steps__alternative-link {
+      display: inline-flex;
+      width: 100%;
+      min-height: 49px;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 12px 17px;
+      border: 1px solid #676cc2;
+      border-radius: 13px;
+      background: #ffffff;
+      color: #4b4f9e;
+      font-family: Sora, Arial, sans-serif;
+      font-size: 13px;
+      font-weight: 800;
+      line-height: 1.4;
+      text-align: center;
+      text-decoration: none;
+      transition:
+        background-color 180ms ease,
+        border-color 180ms ease,
+        color 180ms ease,
+        transform 180ms ease;
+    }
+
+    .ea-application-next-steps .ea-application-next-steps__alternative-link:hover {
+      border-color: #4b4f9e;
+      background: #ebecfa;
+      color: #292d67;
+      transform: translateY(-2px);
+    }
+
+    .ea-application-next-steps .ea-application-next-steps__alternative-link:active {
+      transform: translateY(1px);
+    }
+
+    .ea-application-next-steps .ea-application-next-steps__alternative-link:focus-visible {
+      outline: 3px solid #e87862;
+      outline-offset: 4px;
+    }
+
+    .ea-application-next-steps .ea-application-next-steps__alternative-link svg {
+      width: 17px;
+      height: 17px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .ea-application-next-steps .ea-application-next-steps__primary-action {
+      display: flex;
+      margin-top: 30px;
+      justify-content: center;
+    }
+
+    .ea-application-next-steps .ea-application-next-steps__primary-cta {
+      display: inline-flex;
+      min-height: 50px;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      padding: 13px 23px;
+      border: 1px solid #bc5544;
+      border-radius: 13px;
+      background: #e87862;
+      color: #ffffff;
+      font-family: Sora, Arial, sans-serif;
+      font-size: 15px;
+      font-weight: 800;
+      line-height: 1.4;
+      text-align: center;
+      text-decoration: none;
+      box-shadow: 0 11px 24px rgba(188, 85, 68, 0.19);
+      transition:
+        background-color 180ms ease,
+        border-color 180ms ease,
+        box-shadow 180ms ease,
+        transform 180ms ease;
+    }
+
+    .ea-application-next-steps .ea-application-next-steps__primary-cta:hover {
+      border-color: #9d4537;
+      background: #bc5544;
+      box-shadow: 0 14px 29px rgba(188, 85, 68, 0.25);
+      transform: translateY(-2px);
+    }
+
+    .ea-application-next-steps .ea-application-next-steps__primary-cta:active {
+      transform: translateY(1px);
+    }
+
+    .ea-application-next-steps .ea-application-next-steps__primary-cta:focus-visible {
+      outline: 3px solid #4b4f9e;
+      outline-offset: 4px;
+    }
+
+    .ea-application-next-steps .ea-application-next-steps__primary-cta svg {
+      width: 18px;
+      height: 18px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    @media (max-width: 1080px) {
+      .ea-application-next-steps .ea-application-next-steps__cards {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .ea-application-next-steps .ea-application-next-steps__process-path {
+        display: none;
+      }
+
+      .ea-application-next-steps .ea-application-next-steps__card {
+        padding: 25px;
+      }
+    }
+
+    @media (max-width: 880px) {
+      .ea-application-next-steps {
+        padding: 72px 0;
+      }
+
+      .ea-application-next-steps .ea-application-next-steps__container {
+        width: min(100% - 40px, 780px);
+      }
+
+      .ea-application-next-steps .ea-application-next-steps__information-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    @media (max-width: 599px) {
+      .ea-application-next-steps {
+        padding: 58px 0;
+      }
+
+      .ea-application-next-steps .ea-application-next-steps__container {
+        width: min(100% - 32px, 780px);
+      }
+
+      .ea-application-next-steps .ea-application-next-steps__introduction {
+        margin-bottom: 34px;
+        text-align: left;
+      }
+
+      .ea-application-next-steps .ea-application-next-steps__eyebrow {
+        justify-content: flex-start;
+      }
+
+      .ea-application-next-steps .ea-application-next-steps__eyebrow::after {
+        display: none;
+      }
+
+      .ea-application-next-steps .ea-application-next-steps__heading {
+        font-size: clamp(32px, 10vw, 42px);
+      }
+
+      .ea-application-next-steps .ea-application-next-steps__description {
+        font-size: 16px;
+      }
+
+      .ea-application-next-steps .ea-application-next-steps__cards {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .ea-application-next-steps .ea-application-next-steps__card {
+        padding: 23px 20px 21px;
+        border-left: 4px solid #e87862;
+      }
+
+      .ea-application-next-steps .ea-application-next-steps__card::before {
+        display: none;
+      }
+
+      .ea-application-next-steps .ea-application-next-steps__information-grid {
+        margin-top: 24px;
+      }
+
+      .ea-application-next-steps .ea-application-next-steps__preparation-panel {
+        padding: 23px 18px;
+      }
+
+      .ea-application-next-steps .ea-application-next-steps__panel-header {
+        gap: 12px;
+      }
+
+      .ea-application-next-steps .ea-application-next-steps__panel-icon {
+        width: 45px;
+        height: 45px;
+        flex-basis: 45px;
+      }
+
+      .ea-application-next-steps .ea-application-next-steps__preparation-list {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .ea-application-next-steps .ea-application-next-steps__alternative-panel {
+        padding: 23px 18px;
+      }
+
+      .ea-application-next-steps .ea-application-next-steps__alternative-link {
+        width: 100%;
+      }
+
+      .ea-application-next-steps .ea-application-next-steps__primary-cta {
+        width: 100%;
+      }
+    }
+
+    @media (max-width: 374px) {
+      .ea-application-next-steps .ea-application-next-steps__container {
+        width: min(100% - 24px, 780px);
+      }
+
+      .ea-application-next-steps .ea-application-next-steps__card {
+        padding-inline: 17px;
+      }
+
+      .ea-application-next-steps .ea-application-next-steps__preparation-panel {
+        padding-inline: 16px;
+      }
+
+      .ea-application-next-steps .ea-application-next-steps__panel-header {
+        display: block;
+      }
+
+      .ea-application-next-steps .ea-application-next-steps__panel-icon {
+        margin-bottom: 14px;
+      }
+
+      .ea-application-next-steps .ea-application-next-steps__alternative-panel {
+        padding-inline: 16px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .ea-application-next-steps .ea-application-next-steps__alternative-link {
+        transition: none;
+      }
+
+      .ea-application-next-steps .ea-application-next-steps__primary-cta {
+        transition: none;
+      }
+    }
+  </style>
+
+  <span
+    class="ea-application-next-steps__decoration"
+    aria-hidden="true"
+  ></span>
+
+  <div class="ea-application-next-steps__container">
+    <header class="ea-application-next-steps__introduction">
+      <p class="ea-application-next-steps__eyebrow">
+        WHAT HAPPENS NEXT
+      </p>
+
+      <h2
+        class="ea-application-next-steps__heading"
+        id="ea-application-next-steps-heading"
+      >
+        Your Application Is the First Step in the Coaching Process
+      </h2>
+
+      <p class="ea-application-next-steps__description">
+        The application provides context for a discovery conversation and
+        helps determine whether coaching may be appropriate for your current
+        situation.
+      </p>
+
+      <p class="ea-application-next-steps__supporting-note">
+        <span
+          class="ea-application-next-steps__supporting-icon"
+          aria-hidden="true"
+        >
+          <svg viewBox="0 0 24 24" focusable="false">
+            <circle cx="12" cy="12" r="9"></circle>
+            <path d="M12 11v5"></path>
+            <path d="M12 8h.01"></path>
+          </svg>
+        </span>
+        <span>
+          The final next step depends on fit, availability, program
+          requirements, and the information you submitted.
+        </span>
+      </p>
+    </header>
+
+    <div class="ea-application-next-steps__process">
+      <span
+        class="ea-application-next-steps__process-path"
+        aria-hidden="true"
+      ></span>
+
+      <div class="ea-application-next-steps__cards">
+        <article class="ea-application-next-steps__card">
+          <div class="ea-application-next-steps__card-header">
+            <span class="ea-application-next-steps__number">
+              01
+            </span>
+
+            <span
+              class="ea-application-next-steps__card-icon"
+              aria-hidden="true"
+            >
+              <svg viewBox="0 0 32 32" focusable="false">
+                <rect x="4" y="4" width="18" height="23" rx="3"></rect>
+                <path d="M9 10h8"></path>
+                <path d="M9 15h8"></path>
+                <path d="M9 20h5"></path>
+                <circle cx="24" cy="22" r="5"></circle>
+                <path d="m21.8 22 1.5 1.5 2.9-3"></path>
+              </svg>
+            </span>
+          </div>
+
+          <h3 class="ea-application-next-steps__card-title">
+            Your Application Is Recorded
+          </h3>
+
+          <p class="ea-application-next-steps__card-description">
+            Your contact information and application responses are stored in
+            the Elevate Academy CRM for review and follow-up.
+          </p>
+
+          <ul class="ea-application-next-steps__details">
+            <li class="ea-application-next-steps__detail">
+              <span class="ea-application-next-steps__detail-icon" aria-hidden="true">
+                <svg viewBox="0 0 16 16" focusable="false">
+                  <path d="m3 8 2.5 2.5L13 3"></path>
+                </svg>
+              </span>
+              <span>
+                Your submitted application is connected to your contact record
+              </span>
+            </li>
+
+            <li class="ea-application-next-steps__detail">
+              <span class="ea-application-next-steps__detail-icon" aria-hidden="true">
+                <svg viewBox="0 0 16 16" focusable="false">
+                  <path d="m3 8 2.5 2.5L13 3"></path>
+                </svg>
+              </span>
+              <span>Your preferred program is recorded</span>
+            </li>
+
+            <li class="ea-application-next-steps__detail">
+              <span class="ea-application-next-steps__detail-icon" aria-hidden="true">
+                <svg viewBox="0 0 16 16" focusable="false">
+                  <path d="m3 8 2.5 2.5L13 3"></path>
+                </svg>
+              </span>
+              <span>Your business situation and goals provide context</span>
+            </li>
+          </ul>
+        </article>
+
+        <article class="ea-application-next-steps__card">
+          <div class="ea-application-next-steps__card-header">
+            <span class="ea-application-next-steps__number">
+              02
+            </span>
+
+            <span
+              class="ea-application-next-steps__card-icon"
+              aria-hidden="true"
+            >
+              <svg viewBox="0 0 32 32" focusable="false">
+                <circle cx="7" cy="16" r="4"></circle>
+                <path d="M11 16h5"></path>
+                <path d="M16 16 23 7"></path>
+                <path d="M16 16h10"></path>
+                <path d="m16 16 7 9"></path>
+                <circle cx="25" cy="6" r="3"></circle>
+                <circle cx="28" cy="16" r="3"></circle>
+                <circle cx="25" cy="26" r="3"></circle>
+              </svg>
+            </span>
+          </div>
+
+          <h3 class="ea-application-next-steps__card-title">
+            Your Information Helps Determine Fit
+          </h3>
+
+          <p class="ea-application-next-steps__card-description">
+            Your responses help identify whether your preferred program may
+            match your current goals and support needs.
+          </p>
+
+          <ul class="ea-application-next-steps__details">
+            <li class="ea-application-next-steps__detail">
+              <span class="ea-application-next-steps__detail-icon" aria-hidden="true">
+                <svg viewBox="0 0 16 16" focusable="false">
+                  <path d="m3 8 2.5 2.5L13 3"></path>
+                </svg>
+              </span>
+              <span>
+                One-on-One Coaching may suit focused individual support
+              </span>
+            </li>
+
+            <li class="ea-application-next-steps__detail">
+              <span class="ea-application-next-steps__detail-icon" aria-hidden="true">
+                <svg viewBox="0 0 16 16" focusable="false">
+                  <path d="m3 8 2.5 2.5L13 3"></path>
+                </svg>
+              </span>
+              <span>
+                Group Coaching may suit guided group learning and
+                accountability
+              </span>
+            </li>
+
+            <li class="ea-application-next-steps__detail">
+              <span class="ea-application-next-steps__detail-icon" aria-hidden="true">
+                <svg viewBox="0 0 16 16" focusable="false">
+                  <path d="m3 8 2.5 2.5L13 3"></path>
+                </svg>
+              </span>
+              <span>
+                The Self-Paced Course may suit independent structured learning
+              </span>
+            </li>
+          </ul>
+        </article>
+
+        <article class="ea-application-next-steps__card">
+          <div class="ea-application-next-steps__card-header">
+            <span class="ea-application-next-steps__number">
+              03
+            </span>
+
+            <span
+              class="ea-application-next-steps__card-icon"
+              aria-hidden="true"
+            >
+              <svg viewBox="0 0 32 32" focusable="false">
+                <rect x="3" y="5" width="19" height="18" rx="3"></rect>
+                <path d="M7 3v5"></path>
+                <path d="M18 3v5"></path>
+                <path d="M3 11h19"></path>
+                <path
+                  d="M19 16h9a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-4l-4 3v-3h-1"
+                ></path>
+              </svg>
+            </span>
+          </div>
+
+          <h3 class="ea-application-next-steps__card-title">
+            You May Book a Discovery Call
+          </h3>
+
+          <p class="ea-application-next-steps__card-description">
+            The discovery call provides an opportunity to discuss your
+            application, goals, challenges, expectations, and possible next
+            step.
+          </p>
+
+          <ul class="ea-application-next-steps__details">
+            <li class="ea-application-next-steps__detail">
+              <span class="ea-application-next-steps__detail-icon" aria-hidden="true">
+                <svg viewBox="0 0 16 16" focusable="false">
+                  <path d="m3 8 2.5 2.5L13 3"></path>
+                </svg>
+              </span>
+              <span>Review your application before the call</span>
+            </li>
+
+            <li class="ea-application-next-steps__detail">
+              <span class="ea-application-next-steps__detail-icon" aria-hidden="true">
+                <svg viewBox="0 0 16 16" focusable="false">
+                  <path d="m3 8 2.5 2.5L13 3"></path>
+                </svg>
+              </span>
+              <span>Prepare your main questions</span>
+            </li>
+
+            <li class="ea-application-next-steps__detail">
+              <span class="ea-application-next-steps__detail-icon" aria-hidden="true">
+                <svg viewBox="0 0 16 16" focusable="false">
+                  <path d="m3 8 2.5 2.5L13 3"></path>
+                </svg>
+              </span>
+              <span>Be ready to discuss your current priorities</span>
+            </li>
+
+            <li class="ea-application-next-steps__detail">
+              <span class="ea-application-next-steps__detail-icon" aria-hidden="true">
+                <svg viewBox="0 0 16 16" focusable="false">
+                  <path d="m3 8 2.5 2.5L13 3"></path>
+                </svg>
+              </span>
+              <span>Booking does not guarantee acceptance</span>
+            </li>
+          </ul>
+        </article>
+
+        <article class="ea-application-next-steps__card">
+          <div class="ea-application-next-steps__card-header">
+            <span class="ea-application-next-steps__number">
+              04
+            </span>
+
+            <span
+              class="ea-application-next-steps__card-icon"
+              aria-hidden="true"
+            >
+              <svg viewBox="0 0 32 32" focusable="false">
+                <circle cx="7" cy="16" r="4"></circle>
+                <path d="M11 16h5"></path>
+                <path d="M16 16 23 7"></path>
+                <path d="M16 16h10"></path>
+                <path d="m16 16 7 9"></path>
+                <path d="m22 7 2-2 2 2"></path>
+                <path d="m25 14 3 2-3 2"></path>
+                <path d="m22 25 2 2 2-2"></path>
+              </svg>
+            </span>
+          </div>
+
+          <h3 class="ea-application-next-steps__card-title">
+            A Coaching Decision Is Made
+          </h3>
+
+          <p class="ea-application-next-steps__card-description">
+            After the application and discovery conversation, the appropriate
+            next step may be discussed based on fit and availability.
+          </p>
+
+          <ul class="ea-application-next-steps__details">
+            <li class="ea-application-next-steps__detail">
+              <span class="ea-application-next-steps__detail-icon" aria-hidden="true">
+                <svg viewBox="0 0 16 16" focusable="false">
+                  <path d="m3 8 2.5 2.5L13 3"></path>
+                </svg>
+              </span>
+              <span>You may be invited to a suitable coaching option</span>
+            </li>
+
+            <li class="ea-application-next-steps__detail">
+              <span class="ea-application-next-steps__detail-icon" aria-hidden="true">
+                <svg viewBox="0 0 16 16" focusable="false">
+                  <path d="m3 8 2.5 2.5L13 3"></path>
+                </svg>
+              </span>
+              <span>You may be directed to the Self-Paced Course</span>
+            </li>
+
+            <li class="ea-application-next-steps__detail">
+              <span class="ea-application-next-steps__detail-icon" aria-hidden="true">
+                <svg viewBox="0 0 16 16" focusable="false">
+                  <path d="m3 8 2.5 2.5L13 3"></path>
+                </svg>
+              </span>
+              <span>
+                You may be advised that coaching is not currently the best fit
+              </span>
+            </li>
+
+            <li class="ea-application-next-steps__detail">
+              <span class="ea-application-next-steps__detail-icon" aria-hidden="true">
+                <svg viewBox="0 0 16 16" focusable="false">
+                  <path d="m3 8 2.5 2.5L13 3"></path>
+                </svg>
+              </span>
+              <span>No outcome is guaranteed</span>
+            </li>
+          </ul>
+        </article>
+      </div>
+    </div>
+
+    <div class="ea-application-next-steps__information-grid">
+      <article
+        class="ea-application-next-steps__preparation-panel"
+        aria-labelledby="ea-application-preparation-heading"
+      >
+        <div class="ea-application-next-steps__preparation-content">
+          <header class="ea-application-next-steps__panel-header">
+            <span
+              class="ea-application-next-steps__panel-icon"
+              aria-hidden="true"
+            >
+              <svg viewBox="0 0 32 32" focusable="false">
+                <rect x="5" y="4" width="18" height="24" rx="3"></rect>
+                <path d="M10 4.5V3h8v1.5"></path>
+                <path d="m9 11 2 2 4-4"></path>
+                <path d="M17 11h3"></path>
+                <path d="m9 19 2 2 4-4"></path>
+                <path d="M17 19h3"></path>
+                <path
+                  d="M22 18h7a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2h-3l-3 2v-2h-1"
+                ></path>
+              </svg>
+            </span>
+
+            <div>
+              <p class="ea-application-next-steps__panel-eyebrow">
+                PREPARE FOR THE CONVERSATION
+              </p>
+
+              <h3
+                class="ea-application-next-steps__panel-heading"
+                id="ea-application-preparation-heading"
+              >
+                What to Prepare Before Booking Your Discovery Call
+              </h3>
+            </div>
+          </header>
+
+          <ul class="ea-application-next-steps__preparation-list">
+            <li class="ea-application-next-steps__preparation-item">
+              <span class="ea-application-next-steps__preparation-check" aria-hidden="true">
+                <svg viewBox="0 0 20 20" focusable="false">
+                  <path d="m4 10 3.5 3.5L16 5"></path>
+                </svg>
+              </span>
+              <span>Your primary business goal</span>
+            </li>
+
+            <li class="ea-application-next-steps__preparation-item">
+              <span class="ea-application-next-steps__preparation-check" aria-hidden="true">
+                <svg viewBox="0 0 20 20" focusable="false">
+                  <path d="m4 10 3.5 3.5L16 5"></path>
+                </svg>
+              </span>
+              <span>The challenge creating the most difficulty</span>
+            </li>
+
+            <li class="ea-application-next-steps__preparation-item">
+              <span class="ea-application-next-steps__preparation-check" aria-hidden="true">
+                <svg viewBox="0 0 20 20" focusable="false">
+                  <path d="m4 10 3.5 3.5L16 5"></path>
+                </svg>
+              </span>
+              <span>What you have already tried</span>
+            </li>
+
+            <li class="ea-application-next-steps__preparation-item">
+              <span class="ea-application-next-steps__preparation-check" aria-hidden="true">
+                <svg viewBox="0 0 20 20" focusable="false">
+                  <path d="m4 10 3.5 3.5L16 5"></path>
+                </svg>
+              </span>
+              <span>The type of support you believe you need</span>
+            </li>
+
+            <li class="ea-application-next-steps__preparation-item">
+              <span class="ea-application-next-steps__preparation-check" aria-hidden="true">
+                <svg viewBox="0 0 20 20" focusable="false">
+                  <path d="m4 10 3.5 3.5L16 5"></path>
+                </svg>
+              </span>
+              <span>
+                Questions about One-on-One Coaching or Group Coaching
+              </span>
+            </li>
+
+            <li class="ea-application-next-steps__preparation-item">
+              <span class="ea-application-next-steps__preparation-check" aria-hidden="true">
+                <svg viewBox="0 0 20 20" focusable="false">
+                  <path d="m4 10 3.5 3.5L16 5"></path>
+                </svg>
+              </span>
+              <span>
+                Your realistic availability and readiness to participate
+              </span>
+            </li>
+          </ul>
+
+          <p class="ea-application-next-steps__call-note">
+            <span
+              class="ea-application-next-steps__call-note-icon"
+              aria-hidden="true"
+            >
+              <svg viewBox="0 0 24 24" focusable="false">
+                <circle cx="12" cy="12" r="9"></circle>
+                <path d="M12 11v5"></path>
+                <path d="M12 8h.01"></path>
+              </svg>
+            </span>
+            <span>
+              The discovery call is an exploratory conversation and does not
+              guarantee coaching enrollment.
+            </span>
+          </p>
+        </div>
+      </article>
+
+      <aside
+        class="ea-application-next-steps__alternative-panel"
+        aria-labelledby="ea-application-alternative-heading"
+      >
+        <span
+          class="ea-application-next-steps__alternative-icon"
+          aria-hidden="true"
+        >
+          <svg viewBox="0 0 32 32" focusable="false">
+            <rect x="4" y="5" width="24" height="19" rx="3"></rect>
+            <path d="m13 11 7 4-7 4Z"></path>
+            <path d="M10 28h12"></path>
+            <path d="M16 24v4"></path>
+          </svg>
+        </span>
+
+        <h3
+          class="ea-application-next-steps__alternative-heading"
+          id="ea-application-alternative-heading"
+        >
+          Prefer to Learn Independently?
+        </h3>
+
+        <p class="ea-application-next-steps__alternative-description">
+          The Self-Paced Course may be a more suitable option when you want
+          structured educational guidance without direct coaching.
+        </p>
+
+        <div class="ea-application-next-steps__alternative-action">
+          <!-- Replace with: EA | FUN | Course Sales Step 01 published URL -->
+          <a
+            class="ea-application-next-steps__alternative-link"
+            href="https://sites.leadconnectorhq.com/preview/gjqJJWfkRF5aR1yygI8T"
+          >
+            Explore the Self-Paced Course
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path d="M5 12h14"></path>
+              <path d="m14 7 5 5-5 5"></path>
+            </svg>
+          </a>
+        </div>
+      </aside>
+    </div>
+
+    <div class="ea-application-next-steps__primary-action">
+      <a
+        class="ea-application-next-steps__primary-cta"
+        href="#ea-discovery-call-cta"
+      >
+        Continue to Discovery Call Booking
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M5 12h14"></path>
+          <path d="m14 7 5 5-5 5"></path>
+        </svg>
+      </a>
+    </div>
+  </div>
+</section>
+<!-- Section 2: What Happens Next End -->
+<!-- Section 3: Discovery Call CTA and Footer Start -->
+<section
+  class="ea-discovery-call-cta-section"
+  id="ea-discovery-call-cta-section"
+  aria-labelledby="ea-discovery-call-cta-heading"
+>
+  <style>
+    .ea-discovery-call-cta-section {
+      width: 100%;
+      max-width: 100%;
+      overflow-x: hidden;
+      background: #faf6f0;
+      color: #4c4f61;
+      font-family: Inter, Arial, sans-serif;
+    }
+
+    .ea-discovery-call-cta-section * {
+      box-sizing: border-box;
+    }
+
+    .ea-discovery-call-cta-section a {
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .ea-discovery-call-cta-section .ea-discovery-call-cta-section__main {
+      position: relative;
+      padding: 78px 0;
+      background:
+        radial-gradient(
+          circle at 5% 12%,
+          rgba(235, 236, 250, 0.82) 0,
+          rgba(235, 236, 250, 0.82) 105px,
+          transparent 106px
+        ),
+        radial-gradient(
+          circle at 96% 88%,
+          rgba(251, 234, 230, 0.82) 0,
+          rgba(251, 234, 230, 0.82) 125px,
+          transparent 126px
+        ),
+        #faf6f0;
+    }
+
+    .ea-discovery-call-cta-section .ea-discovery-call-cta-section__pattern {
+      position: absolute;
+      top: 48px;
+      right: 4%;
+      width: 145px;
+      height: 145px;
+      opacity: 0.34;
+      background-image: radial-gradient(
+        circle,
+        rgba(75, 79, 158, 0.3) 1.3px,
+        transparent 1.5px
+      );
+      background-size: 16px 16px;
+      pointer-events: none;
+    }
+
+    .ea-discovery-call-cta-section .ea-discovery-call-cta-section__container {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      width: min(100% - 64px, 1180px);
+      margin-inline: auto;
+      padding: clamp(34px, 5vw, 58px);
+      grid-template-columns: minmax(0, 1.1fr) minmax(370px, 0.9fr);
+      gap: clamp(42px, 6vw, 72px);
+      align-items: center;
+      border: 1px solid #d5d7ed;
+      border-radius: 28px;
+      background: #ebecfa;
+      box-shadow: 0 22px 50px rgba(41, 45, 103, 0.1);
+    }
+
+    .ea-discovery-call-cta-section .ea-discovery-call-cta-section__content {
+      min-width: 0;
+    }
+
+    .ea-discovery-call-cta-section .ea-discovery-call-cta-section__eyebrow {
+      display: inline-flex;
+      margin: 0 0 15px;
+      align-items: center;
+      gap: 9px;
+      color: #bc5544;
+      font-family: Sora, Arial, sans-serif;
+      font-size: 12px;
+      font-weight: 800;
+      line-height: 1.4;
+      letter-spacing: 0.12em;
+    }
+
+    .ea-discovery-call-cta-section .ea-discovery-call-cta-section__eyebrow::before {
+      width: 27px;
+      height: 2px;
+      border-radius: 999px;
+      background: #e87862;
+      content: "";
+    }
+
+    .ea-discovery-call-cta-section .ea-discovery-call-cta-section__heading {
+      max-width: 670px;
+      margin: 0;
+      color: #292d67;
+      font-family: Sora, Arial, sans-serif;
+      font-size: clamp(35px, 4.7vw, 54px);
+      font-weight: 800;
+      line-height: 1.1;
+      letter-spacing: -0.04em;
+      text-wrap: balance;
+    }
+
+    .ea-discovery-call-cta-section .ea-discovery-call-cta-section__description {
+      max-width: 680px;
+      margin: 20px 0 0;
+      color: #4c4f61;
+      font-size: 16px;
+      line-height: 1.72;
+    }
+
+    .ea-discovery-call-cta-section .ea-discovery-call-cta-section__description + .ea-discovery-call-cta-section__description {
+      margin-top: 10px;
+    }
+
+    .ea-discovery-call-cta-section .ea-discovery-call-cta-section__expectation {
+      display: flex;
+      max-width: 680px;
+      margin: 20px 0 0;
+      padding: 14px 15px;
+      align-items: flex-start;
+      gap: 10px;
+      border: 1px solid #f0c8c0;
+      border-radius: 13px;
+      background: #fbeae6;
+      color: #654c51;
+      font-size: 13px;
+      font-weight: 650;
+      line-height: 1.65;
+    }
+
+    .ea-discovery-call-cta-section .ea-discovery-call-cta-section__expectation-icon {
+      display: grid;
+      width: 24px;
+      height: 24px;
+      flex: 0 0 24px;
+      margin-top: 1px;
+      place-items: center;
+      border-radius: 8px;
+      background: #ffffff;
+      color: #bc5544;
+    }
+
+    .ea-discovery-call-cta-section .ea-discovery-call-cta-section__expectation-icon svg {
+      width: 14px;
+      height: 14px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .ea-discovery-call-cta-section .ea-discovery-call-cta-section__checklist-title {
+      margin: 25px 0 0;
+      color: #292d67;
+      font-family: Sora, Arial, sans-serif;
+      font-size: 17px;
+      font-weight: 800;
+      line-height: 1.4;
+    }
+
+    .ea-discovery-call-cta-section .ea-discovery-call-cta-section__checklist {
+      display: grid;
+      margin: 16px 0 0;
+      padding: 0;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 11px 18px;
+      list-style: none;
+    }
+
+    .ea-discovery-call-cta-section .ea-discovery-call-cta-section__checklist-item {
+      display: flex;
+      min-width: 0;
+      align-items: flex-start;
+      gap: 9px;
+      color: #4c4f61;
+      font-size: 13px;
+      line-height: 1.55;
+    }
+
+    .ea-discovery-call-cta-section .ea-discovery-call-cta-section__check-icon {
+      display: grid;
+      width: 21px;
+      height: 21px;
+      flex: 0 0 21px;
+      margin-top: 1px;
+      place-items: center;
+      border-radius: 7px;
+      background: #ffffff;
+      color: #4b4f9e;
+    }
+
+    .ea-discovery-call-cta-section .ea-discovery-call-cta-section__check-icon svg {
+      width: 12px;
+      height: 12px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 2.1;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .ea-discovery-call-cta-section .ea-discovery-call-cta-section__actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 27px;
+    }
+
+    .ea-discovery-call-cta-section .ea-discovery-call-cta-section__primary-cta {
+      display: inline-flex;
+      min-height: 50px;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      padding: 13px 22px;
+      border: 1px solid #bc5544;
+      border-radius: 13px;
+      background: #e87862;
+      color: #ffffff;
+      font-family: Sora, Arial, sans-serif;
+      font-size: 15px;
+      font-weight: 800;
+      line-height: 1.4;
+      text-align: center;
+      text-decoration: none;
+      box-shadow: 0 11px 24px rgba(188, 85, 68, 0.2);
+      transition:
+        background-color 180ms ease,
+        border-color 180ms ease,
+        box-shadow 180ms ease,
+        transform 180ms ease;
+    }
+
+    .ea-discovery-call-cta-section .ea-discovery-call-cta-section__primary-cta:hover {
+      border-color: #9d4537;
+      background: #bc5544;
+      box-shadow: 0 14px 29px rgba(188, 85, 68, 0.26);
+      transform: translateY(-2px);
+    }
+
+    .ea-discovery-call-cta-section .ea-discovery-call-cta-section__primary-cta:active {
+      transform: translateY(1px);
+    }
+
+    .ea-discovery-call-cta-section .ea-discovery-call-cta-section__primary-cta:focus-visible {
+      outline: 3px solid #4b4f9e;
+      outline-offset: 4px;
+    }
+
+    .ea-discovery-call-cta-section .ea-discovery-call-cta-section__secondary-cta {
+      display: inline-flex;
+      min-height: 50px;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 13px 20px;
+      border: 1px solid #aaadd8;
+      border-radius: 13px;
+      background: #ffffff;
+      color: #4b4f9e;
+      font-family: Sora, Arial, sans-serif;
+      font-size: 14px;
+      font-weight: 800;
+      line-height: 1.4;
+      text-align: center;
+      text-decoration: none;
+      transition:
+        background-color 180ms ease,
+        border-color 180ms ease,
+        color 180ms ease,
+        transform 180ms ease;
+    }
+
+    .ea-discovery-call-cta-section .ea-discovery-call-cta-section__secondary-cta:hover {
+      border-color: #676cc2;
+      background: #f7f7fb;
+      color: #292d67;
+      transform: translateY(-2px);
+    }
+
+    .ea-discovery-call-cta-section .ea-discovery-call-cta-section__secondary-cta:active {
+      transform: translateY(1px);
+    }
+
+    .ea-discovery-call-cta-section .ea-discovery-call-cta-section__secondary-cta:focus-visible {
+      outline: 3px solid #e87862;
+      outline-offset: 4px;
+    }
+
+    .ea-discovery-call-cta-section .ea-discovery-call-cta-section__primary-cta svg {
+      width: 18px;
+      height: 18px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .ea-discovery-call-cta-section .ea-discovery-call-cta-section__secondary-cta svg {
+      width: 18px;
+      height: 18px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .ea-discovery-call-cta-section .ea-discovery-call-cta-section__attendance-note {
+      display: flex;
+      max-width: 680px;
+      margin: 15px 0 0;
+      align-items: flex-start;
+      gap: 8px;
+      color: #6d7082;
+      font-size: 12px;
+      line-height: 1.65;
+    }
+
+    .ea-discovery-call-cta-section .ea-discovery-call-cta-section__attendance-note svg {
+      width: 18px;
+      height: 18px;
+      flex: 0 0 18px;
+      fill: none;
+      stroke: #4b4f9e;
+      stroke-width: 1.9;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .ea-discovery-call-cta-section .ea-discovery-call-cta-section__visual {
+      position: relative;
+      min-width: 0;
+    }
+
+    .ea-discovery-call-cta-section .ea-discovery-call-cta-section__visual::before {
+      position: absolute;
+      top: -25px;
+      right: -26px;
+      width: 96px;
+      height: 96px;
+      border: 15px solid rgba(232, 120, 98, 0.13);
+      border-radius: 50%;
+      content: "";
+      pointer-events: none;
+    }
+
+    .ea-discovery-call-cta-section .ea-discovery-call-cta-section__preparation-card {
+      position: relative;
+      z-index: 1;
+      min-width: 0;
+      padding: clamp(23px, 3vw, 33px);
+      border: 1px solid #dddff0;
+      border-radius: 23px;
+      background: #ffffff;
+      box-shadow: 0 20px 44px rgba(41, 45, 103, 0.12);
+    }
+
+    .ea-discovery-call-cta-section .ea-discovery-call-cta-section__visual-header {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 16px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid #e8e9f3;
+    }
+
+    .ea-discovery-call-cta-section .ea-discovery-call-cta-section__visual-label {
+      margin: 0;
+      color: #676cc2;
+      font-family: Sora, Arial, sans-serif;
+      font-size: 11px;
+      font-weight: 800;
+      line-height: 1.4;
+      letter-spacing: 0.08em;
+    }
+
+    .ea-discovery-call-cta-section .ea-discovery-call-cta-section__visual-title {
+      margin: 5px 0 0;
+      color: #292d67;
+      font-family: Sora, Arial, sans-serif;
+      font-size: 23px;
+      font-weight: 800;
+      line-height: 1.3;
+      letter-spacing: -0.025em;
+    }
+
+    .ea-discovery-call-cta-section .ea-discovery-call-cta-section__booking-status {
+      display: inline-flex;
+      flex: 0 0 auto;
+      align-items: center;
+      gap: 7px;
+      padding: 7px 10px;
+      border: 1px solid #f0c8c0;
+      border-radius: 999px;
+      background: #fbeae6;
+      color: #a14839;
+      font-size: 10px;
+      font-weight: 800;
+      line-height: 1.4;
+    }
+
+    .ea-discovery-call-cta-section .ea-discovery-call-cta-section__booking-status::before {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #e87862;
+      content: "";
+    }
+
+    .ea-discovery-call-cta-section .ea-discovery-call-cta-section__agenda {
+      position: relative;
+      display: grid;
+      gap: 9px;
+      margin-top: 20px;
+    }
+
+    .ea-discovery-call-cta-section .ea-discovery-call-cta-section__agenda::before {
+      position: absolute;
+      top: 18px;
+      bottom: 18px;
+      left: 17px;
+      width: 2px;
+      background: #dddff0;
+      content: "";
+    }
+
+    .ea-discovery-call-cta-section .ea-discovery-call-cta-section__agenda-item {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      min-width: 0;
+      min-height: 44px;
+      grid-template-columns: 35px minmax(0, 1fr);
+      gap: 11px;
+      align-items: center;
+    }
+
+    .ea-discovery-call-cta-section .ea-discovery-call-cta-section__agenda-number {
+      display: grid;
+      width: 35px;
+      height: 35px;
+      place-items: center;
+      border: 2px solid #d3d5eb;
+      border-radius: 50%;
+      background: #ffffff;
+      color: #4b4f9e;
+      font-family: Sora, Arial, sans-serif;
+      font-size: 10px;
+      font-weight: 800;
+    }
+
+    .ea-discovery-call-cta-section .ea-discovery-call-cta-section__agenda-item:first-child .ea-discovery-call-cta-section__agenda-number {
+      border-color: #e87862;
+      background: #fbeae6;
+      color: #bc5544;
+    }
+
+    .ea-discovery-call-cta-section .ea-discovery-call-cta-section__agenda-name {
+      margin: 0;
+      color: #4c4f61;
+      font-size: 12px;
+      font-weight: 750;
+      line-height: 1.45;
+    }
+
+    .ea-discovery-call-cta-section .ea-discovery-call-cta-section__calendar-note {
+      display: flex;
+      margin: 20px 0 0;
+      padding: 13px;
+      align-items: flex-start;
+      gap: 9px;
+      border: 1px solid #d5d7ed;
+      border-radius: 12px;
+      background: #ebecfa;
+      color: #55596f;
+      font-size: 11px;
+      line-height: 1.6;
+    }
+
+    .ea-discovery-call-cta-section .ea-discovery-call-cta-section__calendar-note svg {
+      width: 19px;
+      height: 19px;
+      flex: 0 0 19px;
+      fill: none;
+      stroke: #4b4f9e;
+      stroke-width: 1.8;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .ea-discovery-call-cta-section .ea-discovery-call-cta-section__reminders {
+      display: grid;
+      gap: 9px;
+      margin-top: 16px;
+    }
+
+    .ea-discovery-call-cta-section .ea-discovery-call-cta-section__reminder {
+      display: flex;
+      min-width: 0;
+      padding: 10px 11px;
+      align-items: center;
+      gap: 9px;
+      border: 1px solid #e5e6f2;
+      border-radius: 11px;
+      background: #fdfbf8;
+      color: #626577;
+      font-size: 11px;
+      font-weight: 700;
+      line-height: 1.45;
+    }
+
+    .ea-discovery-call-cta-section .ea-discovery-call-cta-section__reminder-icon {
+      display: grid;
+      width: 25px;
+      height: 25px;
+      flex: 0 0 25px;
+      place-items: center;
+      border-radius: 8px;
+      background: #fbeae6;
+      color: #bc5544;
+    }
+
+    .ea-discovery-call-cta-section .ea-discovery-call-cta-section__reminder-icon svg {
+      width: 14px;
+      height: 14px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 1.9;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .ea-discovery-call-cta-section .ea-discovery-call-cta-section__footer {
+      padding: 58px 0 26px;
+      background: #292d67;
+      color: #ffffff;
+    }
+
+    .ea-discovery-call-cta-section .ea-discovery-call-cta-section__footer-container {
+      width: min(100% - 64px, 1180px);
+      margin-inline: auto;
+    }
+
+    .ea-discovery-call-cta-section .ea-discovery-call-cta-section__footer-columns {
+      display: grid;
+      grid-template-columns:
+        minmax(0, 1.25fr)
+        minmax(210px, 0.75fr)
+        minmax(220px, 0.8fr);
+      gap: clamp(38px, 7vw, 82px);
+      padding-bottom: 37px;
+    }
+
+    .ea-discovery-call-cta-section .ea-discovery-call-cta-section__footer-column {
+      min-width: 0;
+    }
+
+    .ea-discovery-call-cta-section .ea-discovery-call-cta-section__brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .ea-discovery-call-cta-section .ea-discovery-call-cta-section__brand-icon {
+      display: grid;
+      width: 43px;
+      height: 43px;
+      flex: 0 0 43px;
+      place-items: center;
+      border: 1px solid rgba(251, 234, 230, 0.24);
+      border-radius: 14px;
+      background: rgba(235, 236, 250, 0.11);
+      color: #f09886;
+    }
+
+    .ea-discovery-call-cta-section .ea-discovery-call-cta-section__brand-icon svg {
+      width: 28px;
+      height: 28px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 1.7;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .ea-discovery-call-cta-section .ea-discovery-call-cta-section__brand-name {
+      margin: 0;
+      color: #ffffff;
+      font-family: Sora, Arial, sans-serif;
+      font-size: 22px;
+      font-weight: 800;
+      line-height: 1.3;
+      letter-spacing: -0.025em;
+    }
+
+    .ea-discovery-call-cta-section .ea-discovery-call-cta-section__brand-accent {
+      width: 46px;
+      height: 3px;
+      margin-top: 17px;
+      border-radius: 999px;
+      background: #e87862;
+    }
+
+    .ea-discovery-call-cta-section .ea-discovery-call-cta-section__brand-description {
+      max-width: 430px;
+      margin: 17px 0 0;
+      color: #ebecfa;
+      font-size: 14px;
+      line-height: 1.7;
+      opacity: 0.86;
+    }
+
+    .ea-discovery-call-cta-section .ea-discovery-call-cta-section__footer-heading {
+      margin: 4px 0 17px;
+      color: #ffffff;
+      font-family: Sora, Arial, sans-serif;
+      font-size: 16px;
+      font-weight: 800;
+      line-height: 1.4;
+    }
+
+    .ea-discovery-call-cta-section .ea-discovery-call-cta-section__footer-links {
+      display: grid;
+      gap: 7px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .ea-discovery-call-cta-section .ea-discovery-call-cta-section__footer-link {
+      display: inline-flex;
+      width: fit-content;
+      min-height: 44px;
+      align-items: center;
+      border-radius: 6px;
+      color: #ebecfa;
+      font-size: 13px;
+      line-height: 1.5;
+      text-decoration: none;
+      text-underline-offset: 4px;
+      transition:
+        color 160ms ease,
+        text-decoration-color 160ms ease,
+        transform 160ms ease;
+    }
+
+    .ea-discovery-call-cta-section .ea-discovery-call-cta-section__footer-link:hover {
+      color: #f09886;
+      text-decoration: underline;
+      text-decoration-color: #e87862;
+      transform: translateX(2px);
+    }
+
+    .ea-discovery-call-cta-section .ea-discovery-call-cta-section__footer-link:active {
+      color: #fbeae6;
+      transform: translateX(0);
+    }
+
+    .ea-discovery-call-cta-section .ea-discovery-call-cta-section__footer-link:focus-visible {
+      outline: 3px solid #f09886;
+      outline-offset: 3px;
+    }
+
+    .ea-discovery-call-cta-section .ea-discovery-call-cta-section__footer-bottom {
+      padding-top: 24px;
+      border-top: 1px solid rgba(235, 236, 250, 0.17);
+    }
+
+    .ea-discovery-call-cta-section .ea-discovery-call-cta-section__copyright {
+      margin: 0;
+      color: #ebecfa;
+      font-size: 12px;
+      line-height: 1.6;
+      opacity: 0.84;
+    }
+
+    .ea-discovery-call-cta-section .ea-discovery-call-cta-section__disclaimers {
+      display: grid;
+      max-width: 990px;
+      gap: 5px;
+      margin: 17px 0 0;
+    }
+
+    .ea-discovery-call-cta-section .ea-discovery-call-cta-section__disclaimer {
+      margin: 0;
+      color: #ebecfa;
+      font-size: 11px;
+      line-height: 1.65;
+      opacity: 0.66;
+    }
+
+    @media (max-width: 960px) {
+      .ea-discovery-call-cta-section .ea-discovery-call-cta-section__container {
+        width: min(100% - 48px, 820px);
+        grid-template-columns: minmax(0, 1fr);
+        gap: 43px;
+      }
+
+      .ea-discovery-call-cta-section .ea-discovery-call-cta-section__visual {
+        width: min(100%, 590px);
+        margin-inline: auto;
+      }
+
+      .ea-discovery-call-cta-section .ea-discovery-call-cta-section__footer-columns {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .ea-discovery-call-cta-section .ea-discovery-call-cta-section__footer-column:first-child {
+        grid-column: 1 / -1;
+      }
+
+      .ea-discovery-call-cta-section .ea-discovery-call-cta-section__brand-description {
+        max-width: 620px;
+      }
+    }
+
+    @media (max-width: 767px) {
+      .ea-discovery-call-cta-section .ea-discovery-call-cta-section__main {
+        padding: 66px 0;
+      }
+
+      .ea-discovery-call-cta-section .ea-discovery-call-cta-section__container {
+        width: min(100% - 40px, 820px);
+      }
+
+      .ea-discovery-call-cta-section .ea-discovery-call-cta-section__footer-container {
+        width: min(100% - 40px, 1180px);
+      }
+    }
+
+    @media (max-width: 599px) {
+      .ea-discovery-call-cta-section .ea-discovery-call-cta-section__main {
+        padding: 56px 0;
+      }
+
+      .ea-discovery-call-cta-section .ea-discovery-call-cta-section__container {
+        width: min(100% - 32px, 820px);
+        padding: 27px 18px;
+        border-radius: 22px;
+      }
+
+      .ea-discovery-call-cta-section .ea-discovery-call-cta-section__heading {
+        font-size: clamp(32px, 10vw, 43px);
+      }
+
+      .ea-discovery-call-cta-section .ea-discovery-call-cta-section__checklist {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .ea-discovery-call-cta-section .ea-discovery-call-cta-section__actions {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .ea-discovery-call-cta-section .ea-discovery-call-cta-section__primary-cta {
+        width: 100%;
+      }
+
+      .ea-discovery-call-cta-section .ea-discovery-call-cta-section__secondary-cta {
+        width: 100%;
+      }
+
+      .ea-discovery-call-cta-section .ea-discovery-call-cta-section__preparation-card {
+        padding: 22px 17px;
+        border-radius: 20px;
+      }
+
+      .ea-discovery-call-cta-section .ea-discovery-call-cta-section__visual-header {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .ea-discovery-call-cta-section .ea-discovery-call-cta-section__footer {
+        padding-top: 50px;
+      }
+
+      .ea-discovery-call-cta-section .ea-discovery-call-cta-section__footer-container {
+        width: min(100% - 32px, 1180px);
+      }
+
+      .ea-discovery-call-cta-section .ea-discovery-call-cta-section__footer-columns {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 32px;
+      }
+
+      .ea-discovery-call-cta-section .ea-discovery-call-cta-section__footer-column:first-child {
+        grid-column: auto;
+      }
+
+      .ea-discovery-call-cta-section .ea-discovery-call-cta-section__footer-link {
+        width: 100%;
+      }
+    }
+
+    @media (max-width: 374px) {
+      .ea-discovery-call-cta-section .ea-discovery-call-cta-section__container {
+        width: min(100% - 24px, 820px);
+        padding-inline: 15px;
+      }
+
+      .ea-discovery-call-cta-section .ea-discovery-call-cta-section__footer-container {
+        width: min(100% - 24px, 1180px);
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .ea-discovery-call-cta-section .ea-discovery-call-cta-section__primary-cta {
+        transition: none;
+      }
+
+      .ea-discovery-call-cta-section .ea-discovery-call-cta-section__secondary-cta {
+        transition: none;
+      }
+
+      .ea-discovery-call-cta-section .ea-discovery-call-cta-section__footer-link {
+        transition: none;
+      }
+    }
+  </style>
+
+  <div
+    class="ea-discovery-call-cta-section__main"
+    id="ea-discovery-call-cta"
+  >
+    <span
+      class="ea-discovery-call-cta-section__pattern"
+      aria-hidden="true"
+    ></span>
+
+    <div class="ea-discovery-call-cta-section__container">
+      <div class="ea-discovery-call-cta-section__content">
+        <p class="ea-discovery-call-cta-section__eyebrow">
+          NEXT STEP
+        </p>
+
+        <h2
+          class="ea-discovery-call-cta-section__heading"
+          id="ea-discovery-call-cta-heading"
+        >
+          Continue to Discovery Call Booking
+        </h2>
+
+        <p class="ea-discovery-call-cta-section__description">
+          Choose an available time to discuss your application, business
+          situation, goals, and preferred coaching option.
+        </p>
+
+        <p class="ea-discovery-call-cta-section__description">
+          The discovery call is an exploratory conversation intended to
+          clarify fit and possible next steps.
+        </p>
+
+        <p class="ea-discovery-call-cta-section__expectation">
+          <span
+            class="ea-discovery-call-cta-section__expectation-icon"
+            aria-hidden="true"
+          >
+            <svg viewBox="0 0 24 24" focusable="false">
+              <circle cx="12" cy="12" r="9"></circle>
+              <path d="M12 11v5"></path>
+              <path d="M12 8h.01"></path>
+            </svg>
+          </span>
+          <span>
+            Booking a discovery call does not guarantee coaching acceptance,
+            enrollment, availability, or a specific recommendation.
+          </span>
+        </p>
+
+        <h3 class="ea-discovery-call-cta-section__checklist-title">
+          Use the Discovery Call To Discuss
+        </h3>
+
+        <ul class="ea-discovery-call-cta-section__checklist">
+          <li class="ea-discovery-call-cta-section__checklist-item">
+            <span
+              class="ea-discovery-call-cta-section__check-icon"
+              aria-hidden="true"
+            >
+              <svg viewBox="0 0 20 20" focusable="false">
+                <path d="m4 10 3.5 3.5L16 5"></path>
+              </svg>
+            </span>
+            <span>Your current business situation</span>
+          </li>
+
+          <li class="ea-discovery-call-cta-section__checklist-item">
+            <span
+              class="ea-discovery-call-cta-section__check-icon"
+              aria-hidden="true"
+            >
+              <svg viewBox="0 0 20 20" focusable="false">
+                <path d="m4 10 3.5 3.5L16 5"></path>
+              </svg>
+            </span>
+            <span>Your main challenge or priority</span>
+          </li>
+
+          <li class="ea-discovery-call-cta-section__checklist-item">
+            <span
+              class="ea-discovery-call-cta-section__check-icon"
+              aria-hidden="true"
+            >
+              <svg viewBox="0 0 20 20" focusable="false">
+                <path d="m4 10 3.5 3.5L16 5"></path>
+              </svg>
+            </span>
+            <span>The result you want to work toward</span>
+          </li>
+
+          <li class="ea-discovery-call-cta-section__checklist-item">
+            <span
+              class="ea-discovery-call-cta-section__check-icon"
+              aria-hidden="true"
+            >
+              <svg viewBox="0 0 20 20" focusable="false">
+                <path d="m4 10 3.5 3.5L16 5"></path>
+              </svg>
+            </span>
+            <span>Your preferred type of support</span>
+          </li>
+
+          <li class="ea-discovery-call-cta-section__checklist-item">
+            <span
+              class="ea-discovery-call-cta-section__check-icon"
+              aria-hidden="true"
+            >
+              <svg viewBox="0 0 20 20" focusable="false">
+                <path d="m4 10 3.5 3.5L16 5"></path>
+              </svg>
+            </span>
+            <span>Questions about the coaching process</span>
+          </li>
+
+          <li class="ea-discovery-call-cta-section__checklist-item">
+            <span
+              class="ea-discovery-call-cta-section__check-icon"
+              aria-hidden="true"
+            >
+              <svg viewBox="0 0 20 20" focusable="false">
+                <path d="m4 10 3.5 3.5L16 5"></path>
+              </svg>
+            </span>
+            <span>Your readiness to participate and implement</span>
+          </li>
+        </ul>
+
+        <div class="ea-discovery-call-cta-section__actions">
+          <!-- Replace with: EA | FUN | Coaching Application Step 03 - Discovery Call Booking published URL -->
+          <a
+            class="ea-discovery-call-cta-section__primary-cta"
+            href="#"
+          >
+            Book Your Discovery Call
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path d="M5 12h14"></path>
+              <path d="m14 7 5 5-5 5"></path>
+            </svg>
+          </a>
+
+          <a
+            class="ea-discovery-call-cta-section__secondary-cta"
+            href="#ea-application-next-steps"
+          >
+            Review What Happens Next
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path d="M7 17 17 7"></path>
+              <path d="M8 7h9v9"></path>
+            </svg>
+          </a>
+        </div>
+
+        <p class="ea-discovery-call-cta-section__attendance-note">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <rect x="4" y="5" width="16" height="15" rx="2"></rect>
+            <path d="M8 3v4"></path>
+            <path d="M16 3v4"></path>
+            <path d="M4 10h16"></path>
+            <path d="m9 15 2 2 4-4"></path>
+          </svg>
+          <span>
+            Only book a time that you can realistically attend. Use the
+            rescheduling or cancellation option if your availability changes.
+          </span>
+        </p>
+      </div>
+
+      <div class="ea-discovery-call-cta-section__visual">
+        <article
+          class="ea-discovery-call-cta-section__preparation-card"
+          aria-label="Discovery Call preparation"
+        >
+          <header class="ea-discovery-call-cta-section__visual-header">
+            <div>
+              <p class="ea-discovery-call-cta-section__visual-label">
+                DISCOVERY CALL
+              </p>
+
+              <h3 class="ea-discovery-call-cta-section__visual-title">
+                Application Discussion
+              </h3>
+            </div>
+
+            <span class="ea-discovery-call-cta-section__booking-status">
+              Booking required
+            </span>
+          </header>
+
+          <div
+            class="ea-discovery-call-cta-section__agenda"
+            aria-label="Discovery Call agenda"
+          >
+            <div class="ea-discovery-call-cta-section__agenda-item">
+              <span class="ea-discovery-call-cta-section__agenda-number">
+                1
+              </span>
+              <p class="ea-discovery-call-cta-section__agenda-name">
+                Introductions
+              </p>
+            </div>
+
+            <div class="ea-discovery-call-cta-section__agenda-item">
+              <span class="ea-discovery-call-cta-section__agenda-number">
+                2
+              </span>
+              <p class="ea-discovery-call-cta-section__agenda-name">
+                Current Situation
+              </p>
+            </div>
+
+            <div class="ea-discovery-call-cta-section__agenda-item">
+              <span class="ea-discovery-call-cta-section__agenda-number">
+                3
+              </span>
+              <p class="ea-discovery-call-cta-section__agenda-name">
+                Goals and Challenges
+              </p>
+            </div>
+
+            <div class="ea-discovery-call-cta-section__agenda-item">
+              <span class="ea-discovery-call-cta-section__agenda-number">
+                4
+              </span>
+              <p class="ea-discovery-call-cta-section__agenda-name">
+                Coaching Fit
+              </p>
+            </div>
+
+            <div class="ea-discovery-call-cta-section__agenda-item">
+              <span class="ea-discovery-call-cta-section__agenda-number">
+                5
+              </span>
+              <p class="ea-discovery-call-cta-section__agenda-name">
+                Possible Next Step
+              </p>
+            </div>
+          </div>
+
+          <p class="ea-discovery-call-cta-section__calendar-note">
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <rect x="4" y="5" width="16" height="15" rx="2"></rect>
+              <path d="M8 3v4"></path>
+              <path d="M16 3v4"></path>
+              <path d="M4 10h16"></path>
+            </svg>
+            <span>
+              Available dates and times will be shown on the official
+              Discovery Call calendar.
+            </span>
+          </p>
+
+          <div
+            class="ea-discovery-call-cta-section__reminders"
+            aria-label="Discovery Call preparation reminders"
+          >
+            <div class="ea-discovery-call-cta-section__reminder">
+              <span
+                class="ea-discovery-call-cta-section__reminder-icon"
+                aria-hidden="true"
+              >
+                <svg viewBox="0 0 20 20" focusable="false">
+                  <path d="M4 16V7l6-4 6 4v9"></path>
+                  <path d="M7 16v-5h6v5"></path>
+                </svg>
+              </span>
+              <span>Join from a quiet location</span>
+            </div>
+
+            <div class="ea-discovery-call-cta-section__reminder">
+              <span
+                class="ea-discovery-call-cta-section__reminder-icon"
+                aria-hidden="true"
+              >
+                <svg viewBox="0 0 20 20" focusable="false">
+                  <path
+                    d="M4 4h12a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2h-5l-4 3v-3H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Z"
+                  ></path>
+                  <path d="M7 8h6"></path>
+                  <path d="M7 11h4"></path>
+                </svg>
+              </span>
+              <span>Prepare your main questions</span>
+            </div>
+
+            <div class="ea-discovery-call-cta-section__reminder">
+              <span
+                class="ea-discovery-call-cta-section__reminder-icon"
+                aria-hidden="true"
+              >
+                <svg viewBox="0 0 20 20" focusable="false">
+                  <rect x="4" y="3" width="12" height="14" rx="2"></rect>
+                  <path d="M7 7h6"></path>
+                  <path d="M7 10h6"></path>
+                  <path d="M7 13h3"></path>
+                </svg>
+              </span>
+              <span>Review your application beforehand</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+
+  <footer class="ea-discovery-call-cta-section__footer">
+    <div class="ea-discovery-call-cta-section__footer-container">
+      <div class="ea-discovery-call-cta-section__footer-columns">
+        <div class="ea-discovery-call-cta-section__footer-column">
+          <div class="ea-discovery-call-cta-section__brand">
+            <span
+              class="ea-discovery-call-cta-section__brand-icon"
+              aria-hidden="true"
+            >
+              <svg viewBox="0 0 32 32" focusable="false">
+                <path
+                  d="M5 6h15a4 4 0 0 1 4 4v6a4 4 0 0 1-4 4h-6l-5 5v-5H5a4 4 0 0 1-4-4v-6a4 4 0 0 1 4-4Z"
+                ></path>
+                <path d="M10 15c3-4 6-5 11-5"></path>
+                <path d="m18 7 3 3-3 3"></path>
+                <circle cx="25" cy="23" r="5"></circle>
+                <path d="m23 25 1.5-4 4-1.5-1.5 4Z"></path>
+              </svg>
+            </span>
+
+            <p class="ea-discovery-call-cta-section__brand-name">
+              Elevate Academy
+            </p>
+          </div>
+
+          <div
+            class="ea-discovery-call-cta-section__brand-accent"
+            aria-hidden="true"
+          ></div>
+
+          <p class="ea-discovery-call-cta-section__brand-description">
+            Practical courses and coaching designed to help business owners
+            build clearer strategies, stronger systems, and more consistent
+            progress.
+          </p>
+        </div>
+
+        <nav
+          class="ea-discovery-call-cta-section__footer-column"
+          aria-labelledby="ea-discovery-call-footer-journey"
+        >
+          <h3
+            class="ea-discovery-call-cta-section__footer-heading"
+            id="ea-discovery-call-footer-journey"
+          >
+            Application Journey
+          </h3>
+
+          <ul class="ea-discovery-call-cta-section__footer-links">
+            <li>
+              <!-- Replace with: EA | FUN | Coaching Application Step 01 published URL -->
+              <a
+                class="ea-discovery-call-cta-section__footer-link"
+                href="https://sites.leadconnectorhq.com/preview/aehkLDcgL1tPzpnd4jOI"
+              >
+                Coaching options
+              </a>
+            </li>
+
+            <li>
+              <a
+                class="ea-discovery-call-cta-section__footer-link"
+                href="#ea-application-next-steps"
+              >
+                What happens next
+              </a>
+            </li>
+
+            <li>
+              <!-- Replace with: EA | FUN | Coaching Application Step 03 - Discovery Call Booking published URL -->
+              <a
+                class="ea-discovery-call-cta-section__footer-link"
+                href="#"
+              >
+                Book a discovery call
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <nav
+          class="ea-discovery-call-cta-section__footer-column"
+          aria-labelledby="ea-discovery-call-footer-support"
+        >
+          <h3
+            class="ea-discovery-call-cta-section__footer-heading"
+            id="ea-discovery-call-footer-support"
+          >
+            Support and Policies
+          </h3>
+
+          <ul class="ea-discovery-call-cta-section__footer-links">
+            <li>
+              <!-- Replace with: Elevate Academy customer-support or contact URL -->
+              <a
+                class="ea-discovery-call-cta-section__footer-link"
+                href="#"
+              >
+                Contact support
+              </a>
+            </li>
+
+            <li>
+              <!-- Replace with: Elevate Academy Privacy Policy URL -->
+              <a
+                class="ea-discovery-call-cta-section__footer-link"
+                href="#"
+              >
+                Privacy policy
+              </a>
+            </li>
+
+            <li>
+              <!-- Replace with: Elevate Academy Terms and Conditions URL -->
+              <a
+                class="ea-discovery-call-cta-section__footer-link"
+                href="#"
+              >
+                Terms
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="ea-discovery-call-cta-section__footer-bottom">
+        <p class="ea-discovery-call-cta-section__copyright">
+          © 2026 Elevate Academy. All rights reserved.
+        </p>
+
+        <div class="ea-discovery-call-cta-section__disclaimers">
+          <p class="ea-discovery-call-cta-section__disclaimer">
+            Elevate Academy is a fictional business created for CRM, funnel,
+            and automation demonstration purposes.
+          </p>
+
+          <p class="ea-discovery-call-cta-section__disclaimer">
+            Submitting an application or booking a discovery call does not
+            guarantee coaching acceptance, program availability, or
+            enrollment.
+          </p>
+
+          <p class="ea-discovery-call-cta-section__disclaimer">
+            Elevate Academy programs provide general educational guidance and
+            do not guarantee clients, revenue, income, or specific business
+            results.
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+</section>
+<!-- Section 3: Discovery Call CTA and Footer End -->
+<a
+  class="funnel-next-button"
+  href="../step-03/index.html"
+  aria-label="Go to Coaching Application Step 03"
+  title="Next Page"
+>
+  <span class="funnel-next-button__icon" aria-hidden="true">&rarr;</span>
+  <span>Next Page</span>
+</a>
+</body>
+</html>
+

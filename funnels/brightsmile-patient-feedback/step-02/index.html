@@ -1,0 +1,1702 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Thank you for sharing feedback with BrightSmile Dental.">
+  <title>BrightSmile Feedback Confirmation | Step 02</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    html {
+      min-width: 320px;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      min-width: 320px;
+      margin: 0;
+      background: #ffffff;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+    }
+  </style>
+  <style>
+    .funnel-next-button {
+      position: fixed;
+      z-index: 99999;
+      right: 24px;
+      bottom: 24px;
+      display: inline-flex;
+      min-height: 54px;
+      padding: 0 20px 0 10px;
+      align-items: center;
+      gap: 10px;
+      color: #ffffff;
+      background: linear-gradient(135deg, #0f766e, #115e59);
+      border: 1px solid rgba(255,255,255,.22);
+      border-radius: 999px;
+      box-shadow: 0 15px 36px rgba(15,118,110,.28);
+      font: 700 .88rem/1 Inter, Arial, sans-serif;
+      text-decoration: none;
+      transition: transform 180ms ease, box-shadow 180ms ease;
+    }
+    .funnel-next-button:hover { color: #ffffff; box-shadow: 0 20px 44px rgba(15,118,110,.38); transform: translateY(-3px); }
+    .funnel-next-button:focus-visible { outline: 3px solid #d6a84b; outline-offset: 4px; }
+    .funnel-next-button__icon { display: grid; width: 34px; height: 34px; place-items: center; color: #153f3a; background: #f1cf77; border-radius: 50%; font-size: 1.1rem; }
+    @media (max-width: 640px) { .funnel-next-button { right: 16px; bottom: 16px; min-height: 50px; padding-right: 16px; } }
+    @media (prefers-reduced-motion: reduce) { .funnel-next-button { transition: none; } }
+  </style>
+</head>
+<body>
+<!-- Section 1: Thank-You Hero Start -->
+<section
+  class="bs-feedback-confirmation-hero"
+  id="bs-feedback-confirmation-hero"
+  aria-labelledby="bs-feedback-confirmation-hero-heading"
+>
+  <style>
+    .bs-feedback-confirmation-hero {
+      position: relative;
+      width: 100%;
+      max-width: 100%;
+      overflow: hidden;
+      padding: 90px 0;
+      background:
+        radial-gradient(
+          circle at 12% 18%,
+          rgba(103, 184, 176, 0.14),
+          transparent 25%
+        ),
+        radial-gradient(
+          circle at 88% 82%,
+          rgba(45, 135, 163, 0.1),
+          transparent 24%
+        ),
+        linear-gradient(145deg, #f5fbfd 0%, #ffffff 52%, #eef7fa 100%);
+      color: #4d626a;
+      font-family: Inter, Arial, sans-serif;
+    }
+
+    .bs-feedback-confirmation-hero,
+    .bs-feedback-confirmation-hero * {
+      box-sizing: border-box;
+    }
+
+    .bs-feedback-confirmation-hero::before {
+      position: absolute;
+      top: -92px;
+      left: -84px;
+      width: 230px;
+      height: 230px;
+      border: 34px solid rgba(62, 153, 145, 0.07);
+      border-radius: 50%;
+      content: "";
+      pointer-events: none;
+    }
+
+    .bs-feedback-confirmation-hero::after {
+      position: absolute;
+      right: -68px;
+      bottom: -80px;
+      width: 200px;
+      height: 200px;
+      border: 28px solid rgba(23, 107, 135, 0.06);
+      border-radius: 50%;
+      content: "";
+      pointer-events: none;
+    }
+
+    .bs-feedback-confirmation-hero .bs-feedback-confirmation-hero__container {
+      position: relative;
+      z-index: 1;
+      width: min(100% - 64px, 980px);
+      margin-inline: auto;
+      text-align: center;
+    }
+
+    .bs-feedback-confirmation-hero .bs-feedback-confirmation-hero__smile {
+      position: absolute;
+      top: 16%;
+      right: 2%;
+      width: 78px;
+      height: 39px;
+      border-bottom: 3px solid rgba(62, 153, 145, 0.15);
+      border-radius: 0 0 50% 50%;
+      transform: rotate(-8deg);
+      pointer-events: none;
+    }
+
+    .bs-feedback-confirmation-hero .bs-feedback-confirmation-hero__cross {
+      position: absolute;
+      bottom: 16%;
+      left: 4%;
+      width: 25px;
+      height: 25px;
+      color: rgba(23, 107, 135, 0.12);
+      pointer-events: none;
+    }
+
+    .bs-feedback-confirmation-hero .bs-feedback-confirmation-hero__cross::before,
+    .bs-feedback-confirmation-hero .bs-feedback-confirmation-hero__cross::after {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      border-radius: 999px;
+      background: currentColor;
+      content: "";
+      transform: translate(-50%, -50%);
+    }
+
+    .bs-feedback-confirmation-hero .bs-feedback-confirmation-hero__cross::before {
+      width: 25px;
+      height: 7px;
+    }
+
+    .bs-feedback-confirmation-hero .bs-feedback-confirmation-hero__cross::after {
+      width: 7px;
+      height: 25px;
+    }
+
+    .bs-feedback-confirmation-hero .bs-feedback-confirmation-hero__success-icon {
+      display: grid;
+      width: 94px;
+      height: 94px;
+      margin: 0 auto 24px;
+      border: 1px solid rgba(46, 139, 87, 0.16);
+      border-radius: 50%;
+      background: #e8f6ee;
+      place-items: center;
+      color: #2e8b57;
+      box-shadow: 0 14px 32px rgba(46, 139, 87, 0.12);
+    }
+
+    .bs-feedback-confirmation-hero .bs-feedback-confirmation-hero__success-icon svg {
+      width: 49px;
+      height: 49px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .bs-feedback-confirmation-hero .bs-feedback-confirmation-hero__badge {
+      display: inline-flex;
+      min-height: 34px;
+      margin: 0 0 15px;
+      padding: 7px 14px;
+      border: 1px solid rgba(46, 139, 87, 0.18);
+      border-radius: 999px;
+      background: #e8f6ee;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      color: #247346;
+      font-family: Poppins, Arial, sans-serif;
+      font-size: 12px;
+      font-weight: 700;
+      line-height: 1.4;
+      letter-spacing: 0.035em;
+    }
+
+    .bs-feedback-confirmation-hero .bs-feedback-confirmation-hero__badge::before {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #2e8b57;
+      content: "";
+    }
+
+    .bs-feedback-confirmation-hero .bs-feedback-confirmation-hero__heading {
+      max-width: 790px;
+      margin: 0 auto;
+      color: #17313b;
+      font-family: Poppins, Arial, sans-serif;
+      font-size: clamp(34px, 5vw, 50px);
+      font-weight: 700;
+      line-height: 1.15;
+      letter-spacing: -0.03em;
+    }
+
+    .bs-feedback-confirmation-hero .bs-feedback-confirmation-hero__description {
+      max-width: 770px;
+      margin: 19px auto 0;
+      color: #4d626a;
+      font-size: 16px;
+      line-height: 1.75;
+    }
+
+    .bs-feedback-confirmation-hero .bs-feedback-confirmation-hero__supporting-message {
+      max-width: 710px;
+      margin: 13px auto 0;
+      color: #6e8087;
+      font-size: 14px;
+      line-height: 1.65;
+    }
+
+    .bs-feedback-confirmation-hero .bs-feedback-confirmation-hero__card {
+      margin-top: 34px;
+      padding: 12px;
+      border: 1px solid #d8e5e9;
+      border-radius: 20px;
+      background: rgba(255, 255, 255, 0.94);
+      box-shadow: 0 14px 36px rgba(18, 59, 74, 0.08);
+    }
+
+    .bs-feedback-confirmation-hero .bs-feedback-confirmation-hero__list {
+      display: grid;
+      margin: 0;
+      padding: 0;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      list-style: none;
+    }
+
+    .bs-feedback-confirmation-hero .bs-feedback-confirmation-hero__item {
+      display: flex;
+      min-width: 0;
+      min-height: 126px;
+      padding: 20px;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 12px;
+      color: #17313b;
+      font-family: Poppins, Arial, sans-serif;
+      font-size: 13px;
+      font-weight: 600;
+      line-height: 1.5;
+      text-align: center;
+    }
+
+    .bs-feedback-confirmation-hero .bs-feedback-confirmation-hero__item + .bs-feedback-confirmation-hero__item {
+      border-left: 1px solid #d8e5e9;
+    }
+
+    .bs-feedback-confirmation-hero .bs-feedback-confirmation-hero__item-icon {
+      display: grid;
+      width: 42px;
+      height: 42px;
+      border: 1px solid rgba(23, 107, 135, 0.1);
+      border-radius: 13px;
+      background: #eef7fa;
+      place-items: center;
+      color: #176b87;
+    }
+
+    .bs-feedback-confirmation-hero .bs-feedback-confirmation-hero__item:nth-child(1) .bs-feedback-confirmation-hero__item-icon {
+      border-color: rgba(46, 139, 87, 0.12);
+      background: #e8f6ee;
+      color: #2e8b57;
+    }
+
+    .bs-feedback-confirmation-hero .bs-feedback-confirmation-hero__item:nth-child(2) .bs-feedback-confirmation-hero__item-icon {
+      border-color: rgba(62, 153, 145, 0.12);
+      background: #ddf4f2;
+      color: #286e69;
+    }
+
+    .bs-feedback-confirmation-hero .bs-feedback-confirmation-hero__item-icon svg {
+      width: 23px;
+      height: 23px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 1.9;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .bs-feedback-confirmation-hero .bs-feedback-confirmation-hero__action {
+      margin-top: 28px;
+    }
+
+    .bs-feedback-confirmation-hero .bs-feedback-confirmation-hero__button {
+      display: inline-flex;
+      min-height: 50px;
+      padding: 13px 24px;
+      border: 1px solid #176b87;
+      border-radius: 11px;
+      background: #ffffff;
+      align-items: center;
+      justify-content: center;
+      color: #176b87;
+      font-family: Poppins, Arial, sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 1.4;
+      text-align: center;
+      text-decoration: none;
+      transition:
+        background-color 160ms ease,
+        color 160ms ease,
+        transform 160ms ease;
+    }
+
+    .bs-feedback-confirmation-hero .bs-feedback-confirmation-hero__button:hover {
+      background: #eef7fa;
+      color: #123b4a;
+      transform: translateY(-1px);
+    }
+
+    .bs-feedback-confirmation-hero .bs-feedback-confirmation-hero__button:focus-visible {
+      outline: 3px solid #67b8b0;
+      outline-offset: 4px;
+    }
+
+    .bs-feedback-confirmation-hero .bs-feedback-confirmation-hero__note {
+      max-width: 660px;
+      margin: 15px auto 0;
+      color: #6e8087;
+      font-size: 12px;
+      line-height: 1.62;
+    }
+
+    @media (max-width: 767px) {
+      .bs-feedback-confirmation-hero {
+        padding: 74px 0;
+      }
+
+      .bs-feedback-confirmation-hero .bs-feedback-confirmation-hero__container {
+        width: min(100% - 40px, 980px);
+      }
+
+      .bs-feedback-confirmation-hero .bs-feedback-confirmation-hero__success-icon {
+        width: 84px;
+        height: 84px;
+      }
+
+      .bs-feedback-confirmation-hero .bs-feedback-confirmation-hero__success-icon svg {
+        width: 43px;
+        height: 43px;
+      }
+
+      .bs-feedback-confirmation-hero .bs-feedback-confirmation-hero__heading {
+        font-size: clamp(32px, 7vw, 42px);
+      }
+
+      .bs-feedback-confirmation-hero .bs-feedback-confirmation-hero__list {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .bs-feedback-confirmation-hero .bs-feedback-confirmation-hero__item:last-child {
+        border-top: 1px solid #d8e5e9;
+        border-left: 0;
+        grid-column: 1 / -1;
+      }
+    }
+
+    @media (max-width: 599px) {
+      .bs-feedback-confirmation-hero {
+        padding: 62px 0;
+      }
+
+      .bs-feedback-confirmation-hero .bs-feedback-confirmation-hero__smile,
+      .bs-feedback-confirmation-hero .bs-feedback-confirmation-hero__cross {
+        display: none;
+      }
+
+      .bs-feedback-confirmation-hero .bs-feedback-confirmation-hero__success-icon {
+        width: 76px;
+        height: 76px;
+        margin-bottom: 21px;
+      }
+
+      .bs-feedback-confirmation-hero .bs-feedback-confirmation-hero__success-icon svg {
+        width: 38px;
+        height: 38px;
+      }
+
+      .bs-feedback-confirmation-hero .bs-feedback-confirmation-hero__heading {
+        font-size: clamp(29px, 9vw, 36px);
+      }
+
+      .bs-feedback-confirmation-hero .bs-feedback-confirmation-hero__description {
+        font-size: 15px;
+      }
+
+      .bs-feedback-confirmation-hero .bs-feedback-confirmation-hero__card {
+        margin-top: 28px;
+        padding: 10px 18px;
+      }
+
+      .bs-feedback-confirmation-hero .bs-feedback-confirmation-hero__list {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .bs-feedback-confirmation-hero .bs-feedback-confirmation-hero__item {
+        min-height: 0;
+        padding: 20px 8px;
+      }
+
+      .bs-feedback-confirmation-hero .bs-feedback-confirmation-hero__item + .bs-feedback-confirmation-hero__item,
+      .bs-feedback-confirmation-hero .bs-feedback-confirmation-hero__item:last-child {
+        border-top: 1px solid #d8e5e9;
+        border-left: 0;
+        grid-column: auto;
+      }
+
+      .bs-feedback-confirmation-hero .bs-feedback-confirmation-hero__button {
+        width: 100%;
+      }
+    }
+
+    @media (max-width: 399px) {
+      .bs-feedback-confirmation-hero .bs-feedback-confirmation-hero__container {
+        width: min(100% - 32px, 980px);
+      }
+
+      .bs-feedback-confirmation-hero .bs-feedback-confirmation-hero__card {
+        border-radius: 17px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .bs-feedback-confirmation-hero .bs-feedback-confirmation-hero__button {
+        transition: none;
+      }
+    }
+  </style>
+
+  <div class="bs-feedback-confirmation-hero__container">
+    <span
+      class="bs-feedback-confirmation-hero__smile"
+      aria-hidden="true"
+    ></span>
+
+    <span
+      class="bs-feedback-confirmation-hero__cross"
+      aria-hidden="true"
+    ></span>
+
+    <span
+      class="bs-feedback-confirmation-hero__success-icon"
+      aria-hidden="true"
+    >
+      <svg viewBox="0 0 56 56" focusable="false">
+        <circle cx="28" cy="28" r="21"></circle>
+        <path d="m17.5 28.5 7 7 14.5-15"></path>
+      </svg>
+    </span>
+
+    <p class="bs-feedback-confirmation-hero__badge">
+      Feedback submitted successfully
+    </p>
+
+    <h1
+      class="bs-feedback-confirmation-hero__heading"
+      id="bs-feedback-confirmation-hero-heading"
+    >
+      Thank You for Sharing Your Experience
+    </h1>
+
+    <p class="bs-feedback-confirmation-hero__description">
+      Your feedback has been received and will help BrightSmile Dental
+      understand what went well and where the patient experience can be
+      improved.
+    </p>
+
+    <p class="bs-feedback-confirmation-hero__supporting-message">
+      A member of the clinic team may review your response and contact you when
+      additional follow-up is appropriate.
+    </p>
+
+    <div
+      class="bs-feedback-confirmation-hero__card"
+      aria-label="Feedback submission summary"
+    >
+      <ul class="bs-feedback-confirmation-hero__list">
+        <li class="bs-feedback-confirmation-hero__item">
+          <span
+            class="bs-feedback-confirmation-hero__item-icon"
+            aria-hidden="true"
+          >
+            <svg viewBox="0 0 24 24" focusable="false">
+              <circle cx="12" cy="12" r="9"></circle>
+              <path d="m7.5 12.2 3 3 6-6.5"></path>
+            </svg>
+          </span>
+
+          <span>Response received</span>
+        </li>
+
+        <li class="bs-feedback-confirmation-hero__item">
+          <span
+            class="bs-feedback-confirmation-hero__item-icon"
+            aria-hidden="true"
+          >
+            <svg viewBox="0 0 24 24" focusable="false">
+              <rect
+                x="5"
+                y="4"
+                width="14"
+                height="17"
+                rx="2"
+              ></rect>
+              <path d="M9 4.5V3h6v1.5"></path>
+              <path d="M8.5 10h7"></path>
+              <path d="M8.5 14h7"></path>
+              <path d="M8.5 18h4"></path>
+            </svg>
+          </span>
+
+          <span>Feedback will be reviewed</span>
+        </li>
+
+        <li class="bs-feedback-confirmation-hero__item">
+          <span
+            class="bs-feedback-confirmation-hero__item-icon"
+            aria-hidden="true"
+          >
+            <svg viewBox="0 0 24 24" focusable="false">
+              <path
+                d="M5 5h14a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-7l-5 4v-4H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2Z"
+              ></path>
+              <path d="M8 9h8"></path>
+              <path d="M8 13h5"></path>
+            </svg>
+          </span>
+
+          <span>Follow-up may be provided when needed</span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="bs-feedback-confirmation-hero__action">
+      <!-- Replace with: BS | SVC-MENU | Dental Services public URL -->
+      <a
+        class="bs-feedback-confirmation-hero__button"
+        href="../../brightsmile-appointment-booking/step-01/index.html"
+      >
+        Book another appointment
+      </a>
+    </div>
+
+    <p class="bs-feedback-confirmation-hero__note">
+      Submitting feedback does not automatically create, cancel, or change an
+      appointment.
+    </p>
+  </div>
+</section>
+<!-- Section 1: Thank-You Hero End -->
+
+<!-- Section 2: What Happens Next Start -->
+<section
+  class="bs-feedback-confirmation-next"
+  id="bs-feedback-confirmation-next"
+  aria-labelledby="bs-feedback-confirmation-next-heading"
+>
+  <style>
+    .bs-feedback-confirmation-next {
+      width: 100%;
+      max-width: 100%;
+      overflow-x: hidden;
+      padding: 80px 0;
+      background: #ffffff;
+      color: #4d626a;
+      font-family: Inter, Arial, sans-serif;
+    }
+
+    .bs-feedback-confirmation-next,
+    .bs-feedback-confirmation-next * {
+      box-sizing: border-box;
+    }
+
+    .bs-feedback-confirmation-next .bs-feedback-confirmation-next__container {
+      width: min(100% - 64px, 1180px);
+      margin-inline: auto;
+    }
+
+    .bs-feedback-confirmation-next .bs-feedback-confirmation-next__introduction {
+      max-width: 760px;
+      margin: 0 auto 44px;
+      text-align: center;
+    }
+
+    .bs-feedback-confirmation-next .bs-feedback-confirmation-next__eyebrow {
+      display: inline-flex;
+      margin: 0 0 12px;
+      align-items: center;
+      gap: 9px;
+      color: #176b87;
+      font-family: Poppins, Arial, sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      line-height: 1.4;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .bs-feedback-confirmation-next .bs-feedback-confirmation-next__eyebrow::before,
+    .bs-feedback-confirmation-next .bs-feedback-confirmation-next__eyebrow::after {
+      width: 22px;
+      height: 2px;
+      border-radius: 999px;
+      background: #67b8b0;
+      content: "";
+    }
+
+    .bs-feedback-confirmation-next .bs-feedback-confirmation-next__heading {
+      margin: 0;
+      color: #17313b;
+      font-family: Poppins, Arial, sans-serif;
+      font-size: clamp(30px, 4vw, 42px);
+      font-weight: 700;
+      line-height: 1.18;
+      letter-spacing: -0.025em;
+    }
+
+    .bs-feedback-confirmation-next .bs-feedback-confirmation-next__description {
+      max-width: 690px;
+      margin: 16px auto 0;
+      color: #4d626a;
+      font-size: 16px;
+      line-height: 1.75;
+    }
+
+    .bs-feedback-confirmation-next .bs-feedback-confirmation-next__cards {
+      display: grid;
+      margin: 0;
+      padding: 0;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 24px;
+      align-items: stretch;
+      list-style: none;
+    }
+
+    .bs-feedback-confirmation-next .bs-feedback-confirmation-next__card {
+      position: relative;
+      display: flex;
+      min-width: 0;
+      min-height: 330px;
+      padding: 30px;
+      border: 1px solid #d8e5e9;
+      border-radius: 20px;
+      background: #ffffff;
+      box-shadow: 0 12px 30px rgba(18, 59, 74, 0.07);
+      flex-direction: column;
+    }
+
+    .bs-feedback-confirmation-next .bs-feedback-confirmation-next__card::after {
+      position: absolute;
+      right: 24px;
+      bottom: 0;
+      left: 24px;
+      height: 3px;
+      border-radius: 999px 999px 0 0;
+      background: linear-gradient(90deg, #176b87, #3e9991);
+      content: "";
+      opacity: 0.7;
+    }
+
+    .bs-feedback-confirmation-next .bs-feedback-confirmation-next__card-top {
+      display: flex;
+      margin-bottom: 23px;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+    }
+
+    .bs-feedback-confirmation-next .bs-feedback-confirmation-next__step {
+      display: grid;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: #176b87;
+      place-items: center;
+      color: #ffffff;
+      font-family: Poppins, Arial, sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 1;
+      box-shadow: 0 6px 14px rgba(23, 107, 135, 0.18);
+      flex: 0 0 auto;
+    }
+
+    .bs-feedback-confirmation-next .bs-feedback-confirmation-next__icon {
+      display: grid;
+      width: 54px;
+      height: 54px;
+      border: 1px solid rgba(23, 107, 135, 0.12);
+      border-radius: 16px;
+      background: #eef7fa;
+      place-items: center;
+      color: #176b87;
+      flex: 0 0 auto;
+    }
+
+    .bs-feedback-confirmation-next .bs-feedback-confirmation-next__card:nth-child(2) .bs-feedback-confirmation-next__icon {
+      border-color: rgba(62, 153, 145, 0.14);
+      background: #ddf4f2;
+      color: #286e69;
+    }
+
+    .bs-feedback-confirmation-next .bs-feedback-confirmation-next__card:nth-child(3) .bs-feedback-confirmation-next__icon {
+      border-color: rgba(46, 139, 87, 0.14);
+      background: #e8f6ee;
+      color: #2e8b57;
+    }
+
+    .bs-feedback-confirmation-next .bs-feedback-confirmation-next__icon svg {
+      width: 27px;
+      height: 27px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 1.8;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .bs-feedback-confirmation-next .bs-feedback-confirmation-next__card-title {
+      margin: 0 0 12px;
+      color: #17313b;
+      font-family: Poppins, Arial, sans-serif;
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 1.35;
+      letter-spacing: -0.015em;
+    }
+
+    .bs-feedback-confirmation-next .bs-feedback-confirmation-next__card-description {
+      margin: 0;
+      color: #4d626a;
+      font-size: 15px;
+      line-height: 1.7;
+      overflow-wrap: anywhere;
+    }
+
+    .bs-feedback-confirmation-next .bs-feedback-confirmation-next__card-note {
+      margin: auto 0 0;
+      padding: 18px 0 0;
+      color: #286e69;
+      font-size: 12px;
+      font-weight: 700;
+      line-height: 1.6;
+      overflow-wrap: anywhere;
+    }
+
+    .bs-feedback-confirmation-next .bs-feedback-confirmation-next__support-panel {
+      display: grid;
+      margin-top: 30px;
+      padding: 32px;
+      border: 1px solid #d8e5e9;
+      border-radius: 20px;
+      background: #f8fbfc;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0;
+    }
+
+    .bs-feedback-confirmation-next .bs-feedback-confirmation-next__support-column {
+      min-width: 0;
+      padding-right: clamp(28px, 5vw, 54px);
+    }
+
+    .bs-feedback-confirmation-next .bs-feedback-confirmation-next__notice-column {
+      min-width: 0;
+      padding-left: clamp(28px, 5vw, 54px);
+      border-left: 1px solid #d8e5e9;
+    }
+
+    .bs-feedback-confirmation-next .bs-feedback-confirmation-next__panel-heading {
+      margin: 0;
+      color: #17313b;
+      font-family: Poppins, Arial, sans-serif;
+      font-size: 21px;
+      font-weight: 700;
+      line-height: 1.35;
+      letter-spacing: -0.015em;
+    }
+
+    .bs-feedback-confirmation-next .bs-feedback-confirmation-next__panel-description {
+      margin: 12px 0 0;
+      color: #4d626a;
+      font-size: 14px;
+      line-height: 1.68;
+      overflow-wrap: anywhere;
+    }
+
+    .bs-feedback-confirmation-next .bs-feedback-confirmation-next__action {
+      margin-top: 21px;
+    }
+
+    .bs-feedback-confirmation-next .bs-feedback-confirmation-next__button {
+      display: inline-flex;
+      min-height: 48px;
+      padding: 12px 22px;
+      border: 1px solid #176b87;
+      border-radius: 11px;
+      background: #176b87;
+      align-items: center;
+      justify-content: center;
+      color: #ffffff;
+      font-family: Poppins, Arial, sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 1.4;
+      text-align: center;
+      text-decoration: none;
+      transition:
+        background-color 160ms ease,
+        border-color 160ms ease,
+        transform 160ms ease;
+    }
+
+    .bs-feedback-confirmation-next .bs-feedback-confirmation-next__button:hover {
+      border-color: #123b4a;
+      background: #123b4a;
+      transform: translateY(-1px);
+    }
+
+    .bs-feedback-confirmation-next .bs-feedback-confirmation-next__button:focus-visible {
+      outline: 3px solid #67b8b0;
+      outline-offset: 4px;
+    }
+
+    .bs-feedback-confirmation-next .bs-feedback-confirmation-next__notice {
+      display: grid;
+      grid-template-columns: 44px minmax(0, 1fr);
+      gap: 14px;
+      align-items: start;
+    }
+
+    .bs-feedback-confirmation-next .bs-feedback-confirmation-next__notice-icon {
+      display: grid;
+      width: 44px;
+      height: 44px;
+      border: 1px solid rgba(197, 139, 48, 0.2);
+      border-radius: 13px;
+      background: #fff7e8;
+      place-items: center;
+      color: #94641c;
+    }
+
+    .bs-feedback-confirmation-next .bs-feedback-confirmation-next__notice-icon svg {
+      width: 24px;
+      height: 24px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 1.9;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .bs-feedback-confirmation-next .bs-feedback-confirmation-next__notice-content {
+      min-width: 0;
+    }
+
+    .bs-feedback-confirmation-next .bs-feedback-confirmation-next__disclaimer {
+      margin: 10px 0 0;
+      color: #b84a4a;
+      font-size: 12px;
+      font-weight: 600;
+      line-height: 1.62;
+      overflow-wrap: anywhere;
+    }
+
+    @media (max-width: 900px) {
+      .bs-feedback-confirmation-next {
+        padding: 68px 0;
+      }
+
+      .bs-feedback-confirmation-next .bs-feedback-confirmation-next__cards {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .bs-feedback-confirmation-next .bs-feedback-confirmation-next__card:last-child {
+        min-height: 270px;
+        grid-column: 1 / -1;
+      }
+
+      .bs-feedback-confirmation-next .bs-feedback-confirmation-next__card {
+        padding: 27px;
+      }
+
+      .bs-feedback-confirmation-next .bs-feedback-confirmation-next__support-panel {
+        padding: 28px;
+      }
+    }
+
+    @media (max-width: 767px) {
+      .bs-feedback-confirmation-next .bs-feedback-confirmation-next__container {
+        width: min(100% - 40px, 1180px);
+      }
+
+      .bs-feedback-confirmation-next .bs-feedback-confirmation-next__introduction {
+        margin-bottom: 36px;
+      }
+
+      .bs-feedback-confirmation-next .bs-feedback-confirmation-next__description {
+        font-size: 15px;
+      }
+
+      .bs-feedback-confirmation-next .bs-feedback-confirmation-next__support-panel {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 28px;
+      }
+
+      .bs-feedback-confirmation-next .bs-feedback-confirmation-next__support-column {
+        padding-right: 0;
+      }
+
+      .bs-feedback-confirmation-next .bs-feedback-confirmation-next__notice-column {
+        padding-top: 28px;
+        padding-left: 0;
+        border-top: 1px solid #d8e5e9;
+        border-left: 0;
+      }
+    }
+
+    @media (max-width: 599px) {
+      .bs-feedback-confirmation-next {
+        padding: 56px 0;
+      }
+
+      .bs-feedback-confirmation-next .bs-feedback-confirmation-next__heading {
+        font-size: clamp(28px, 9vw, 34px);
+      }
+
+      .bs-feedback-confirmation-next .bs-feedback-confirmation-next__cards {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 20px;
+      }
+
+      .bs-feedback-confirmation-next .bs-feedback-confirmation-next__card,
+      .bs-feedback-confirmation-next .bs-feedback-confirmation-next__card:last-child {
+        min-height: 0;
+        grid-column: auto;
+      }
+
+      .bs-feedback-confirmation-next .bs-feedback-confirmation-next__card-note {
+        margin-top: 20px;
+      }
+
+      .bs-feedback-confirmation-next .bs-feedback-confirmation-next__support-panel {
+        margin-top: 24px;
+        padding: 24px;
+        border-radius: 17px;
+      }
+
+      .bs-feedback-confirmation-next .bs-feedback-confirmation-next__button {
+        width: 100%;
+      }
+    }
+
+    @media (max-width: 399px) {
+      .bs-feedback-confirmation-next .bs-feedback-confirmation-next__container {
+        width: min(100% - 32px, 1180px);
+      }
+
+      .bs-feedback-confirmation-next .bs-feedback-confirmation-next__card {
+        padding: 22px;
+        border-radius: 17px;
+      }
+
+      .bs-feedback-confirmation-next .bs-feedback-confirmation-next__icon {
+        width: 50px;
+        height: 50px;
+      }
+
+      .bs-feedback-confirmation-next .bs-feedback-confirmation-next__card-title {
+        font-size: 18px;
+      }
+
+      .bs-feedback-confirmation-next .bs-feedback-confirmation-next__support-panel {
+        padding: 21px;
+      }
+
+      .bs-feedback-confirmation-next .bs-feedback-confirmation-next__notice {
+        grid-template-columns: 40px minmax(0, 1fr);
+        gap: 12px;
+      }
+
+      .bs-feedback-confirmation-next .bs-feedback-confirmation-next__notice-icon {
+        width: 40px;
+        height: 40px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .bs-feedback-confirmation-next .bs-feedback-confirmation-next__button {
+        transition: none;
+      }
+    }
+  </style>
+
+  <div class="bs-feedback-confirmation-next__container">
+    <header class="bs-feedback-confirmation-next__introduction">
+      <p class="bs-feedback-confirmation-next__eyebrow">
+        What happens next
+      </p>
+
+      <h2
+        class="bs-feedback-confirmation-next__heading"
+        id="bs-feedback-confirmation-next-heading"
+      >
+        Your Feedback Will Be Reviewed
+      </h2>
+
+      <p class="bs-feedback-confirmation-next__description">
+        BrightSmile Dental uses patient feedback to understand service quality,
+        identify concerns, and improve future visits.
+      </p>
+    </header>
+
+    <ol class="bs-feedback-confirmation-next__cards">
+      <li class="bs-feedback-confirmation-next__card">
+        <div class="bs-feedback-confirmation-next__card-top">
+          <span
+            class="bs-feedback-confirmation-next__step"
+            aria-label="Step 1"
+          >
+            1
+          </span>
+
+          <span
+            class="bs-feedback-confirmation-next__icon"
+            aria-hidden="true"
+          >
+            <svg viewBox="0 0 32 32" focusable="false">
+              <rect
+                x="6"
+                y="5"
+                width="20"
+                height="23"
+                rx="3"
+              ></rect>
+              <path d="M12 5.5V4h8v1.5"></path>
+              <path d="M11 12h9"></path>
+              <path d="M11 17h7"></path>
+              <circle cx="21.5" cy="21.5" r="3.5"></circle>
+              <path d="m24 24 2.5 2.5"></path>
+            </svg>
+          </span>
+        </div>
+
+        <h3 class="bs-feedback-confirmation-next__card-title">
+          The Team Reviews Your Response
+        </h3>
+
+        <p class="bs-feedback-confirmation-next__card-description">
+          The clinic team may review your overall rating, comments, and other
+          survey responses.
+        </p>
+      </li>
+
+      <li class="bs-feedback-confirmation-next__card">
+        <div class="bs-feedback-confirmation-next__card-top">
+          <span
+            class="bs-feedback-confirmation-next__step"
+            aria-label="Step 2"
+          >
+            2
+          </span>
+
+          <span
+            class="bs-feedback-confirmation-next__icon"
+            aria-hidden="true"
+          >
+            <svg viewBox="0 0 32 32" focusable="false">
+              <path
+                d="m16 4 3.2 6.5 7.2 1-5.2 5.1 1.2 7.2-6.4-3.4-6.4 3.4 1.2-7.2-5.2-5.1 7.2-1L16 4Z"
+              ></path>
+              <path d="M23 22h4a2 2 0 0 1 2 2v3l-3-2h-3"></path>
+            </svg>
+          </span>
+        </div>
+
+        <h3 class="bs-feedback-confirmation-next__card-title">
+          Positive Feedback May Receive a Review Invitation
+        </h3>
+
+        <p class="bs-feedback-confirmation-next__card-description">
+          Patients who report a positive experience may later receive an
+          optional invitation to share a public review.
+        </p>
+
+        <p class="bs-feedback-confirmation-next__card-note">
+          Posting a public review is always optional.
+        </p>
+      </li>
+
+      <li class="bs-feedback-confirmation-next__card">
+        <div class="bs-feedback-confirmation-next__card-top">
+          <span
+            class="bs-feedback-confirmation-next__step"
+            aria-label="Step 3"
+          >
+            3
+          </span>
+
+          <span
+            class="bs-feedback-confirmation-next__icon"
+            aria-hidden="true"
+          >
+            <svg viewBox="0 0 32 32" focusable="false">
+              <path
+                d="M7 6h18a3 3 0 0 1 3 3v10a3 3 0 0 1-3 3h-9l-7 5v-5H7a3 3 0 0 1-3-3V9a3 3 0 0 1 3-3Z"
+              ></path>
+              <path d="M11 12h10"></path>
+              <path d="M11 17h7"></path>
+            </svg>
+          </span>
+        </div>
+
+        <h3 class="bs-feedback-confirmation-next__card-title">
+          Concerns May Receive Personal Follow-Up
+        </h3>
+
+        <p class="bs-feedback-confirmation-next__card-description">
+          When feedback indicates a concern, a team member may contact the
+          patient privately to better understand the experience.
+        </p>
+      </li>
+    </ol>
+
+    <aside
+      class="bs-feedback-confirmation-next__support-panel"
+      aria-label="Appointment support and important feedback notice"
+    >
+      <div class="bs-feedback-confirmation-next__support-column">
+        <h3 class="bs-feedback-confirmation-next__panel-heading">
+          Need Help With an Appointment?
+        </h3>
+
+        <p class="bs-feedback-confirmation-next__panel-description">
+          Contact BrightSmile Dental directly when you need to reschedule,
+          cancel, or ask a question about an existing appointment.
+        </p>
+
+        <div class="bs-feedback-confirmation-next__action">
+          <!-- Replace with: BrightSmile Dental contact-page or complete telephone URL -->
+          <a
+            class="bs-feedback-confirmation-next__button"
+            href="tel:+639152817852"
+          >
+            Contact the clinic
+          </a>
+        </div>
+      </div>
+
+      <div class="bs-feedback-confirmation-next__notice-column">
+        <div class="bs-feedback-confirmation-next__notice">
+          <span
+            class="bs-feedback-confirmation-next__notice-icon"
+            aria-hidden="true"
+          >
+            <svg viewBox="0 0 24 24" focusable="false">
+              <path d="M12 3 2.8 20h18.4L12 3Z"></path>
+              <path d="M12 9v5"></path>
+              <path d="M12 17h.01"></path>
+            </svg>
+          </span>
+
+          <div class="bs-feedback-confirmation-next__notice-content">
+            <h3 class="bs-feedback-confirmation-next__panel-heading">
+              Important Feedback Notice
+            </h3>
+
+            <p class="bs-feedback-confirmation-next__panel-description">
+              The feedback survey is intended for general service feedback. Do
+              not use it for urgent medical or dental concerns.
+            </p>
+
+            <p class="bs-feedback-confirmation-next__disclaimer">
+              Seek appropriate emergency assistance when immediate care is
+              required.
+            </p>
+          </div>
+        </div>
+      </div>
+    </aside>
+  </div>
+</section>
+<!-- Section 2: What Happens Next End -->
+
+<!-- Section 3: Footer Start -->
+<footer
+  class="bs-feedback-confirmation-footer"
+  id="bs-feedback-confirmation-footer"
+  aria-labelledby="bs-feedback-confirmation-footer-brand"
+>
+  <style>
+    .bs-feedback-confirmation-footer {
+      width: 100%;
+      max-width: 100%;
+      overflow-x: hidden;
+      padding: 64px 0 26px;
+      background: #123b4a;
+      color: #ffffff;
+      font-family: Inter, Arial, sans-serif;
+    }
+
+    .bs-feedback-confirmation-footer,
+    .bs-feedback-confirmation-footer * {
+      box-sizing: border-box;
+    }
+
+    .bs-feedback-confirmation-footer .bs-feedback-confirmation-footer__container {
+      width: min(100% - 64px, 1180px);
+      margin-inline: auto;
+    }
+
+    .bs-feedback-confirmation-footer .bs-feedback-confirmation-footer__columns {
+      display: grid;
+      grid-template-columns:
+        minmax(0, 1.25fr)
+        minmax(230px, 0.8fr)
+        minmax(260px, 0.9fr);
+      gap: clamp(42px, 7vw, 82px);
+      padding-bottom: 40px;
+    }
+
+    .bs-feedback-confirmation-footer .bs-feedback-confirmation-footer__column {
+      min-width: 0;
+    }
+
+    .bs-feedback-confirmation-footer .bs-feedback-confirmation-footer__brand {
+      display: flex;
+      min-width: 0;
+      margin: 0;
+      align-items: center;
+      gap: 12px;
+      color: #ffffff;
+      font-family: Poppins, Arial, sans-serif;
+      font-size: 23px;
+      font-weight: 700;
+      line-height: 1.3;
+      letter-spacing: -0.02em;
+    }
+
+    .bs-feedback-confirmation-footer .bs-feedback-confirmation-footer__brand-icon {
+      display: grid;
+      width: 42px;
+      height: 42px;
+      border: 1px solid rgba(221, 244, 242, 0.2);
+      border-radius: 13px;
+      background: rgba(221, 244, 242, 0.1);
+      place-items: center;
+      color: #67b8b0;
+      flex: 0 0 auto;
+    }
+
+    .bs-feedback-confirmation-footer .bs-feedback-confirmation-footer__brand-icon svg {
+      width: 25px;
+      height: 25px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 1.7;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .bs-feedback-confirmation-footer .bs-feedback-confirmation-footer__accent {
+      display: block;
+      width: 46px;
+      height: 3px;
+      margin-top: 16px;
+      border-radius: 999px;
+      background: linear-gradient(90deg, #67b8b0, #2d87a3);
+    }
+
+    .bs-feedback-confirmation-footer .bs-feedback-confirmation-footer__description {
+      max-width: 420px;
+      margin: 17px 0 0;
+      color: #eef7fa;
+      font-size: 14px;
+      line-height: 1.7;
+      opacity: 0.82;
+    }
+
+    .bs-feedback-confirmation-footer .bs-feedback-confirmation-footer__heading {
+      margin: 0 0 17px;
+      color: #ffffff;
+      font-family: Poppins, Arial, sans-serif;
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 1.4;
+    }
+
+    .bs-feedback-confirmation-footer .bs-feedback-confirmation-footer__links {
+      display: grid;
+      gap: 8px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .bs-feedback-confirmation-footer .bs-feedback-confirmation-footer__links a,
+    .bs-feedback-confirmation-footer .bs-feedback-confirmation-footer__legal-links a {
+      color: #eef7fa;
+      font-size: 14px;
+      line-height: 1.55;
+      text-decoration: none;
+      text-underline-offset: 4px;
+      overflow-wrap: anywhere;
+      transition:
+        color 160ms ease,
+        text-decoration-color 160ms ease;
+    }
+
+    .bs-feedback-confirmation-footer .bs-feedback-confirmation-footer__links a:hover,
+    .bs-feedback-confirmation-footer .bs-feedback-confirmation-footer__legal-links a:hover {
+      color: #67b8b0;
+      text-decoration: underline;
+      text-decoration-color: #eef7fa;
+    }
+
+    .bs-feedback-confirmation-footer .bs-feedback-confirmation-footer__links a:focus-visible,
+    .bs-feedback-confirmation-footer .bs-feedback-confirmation-footer__legal-links a:focus-visible {
+      border-radius: 5px;
+      outline: 3px solid #67b8b0;
+      outline-offset: 4px;
+    }
+
+    .bs-feedback-confirmation-footer .bs-feedback-confirmation-footer__details {
+      display: grid;
+      gap: 0;
+      margin: 0;
+    }
+
+    .bs-feedback-confirmation-footer .bs-feedback-confirmation-footer__detail {
+      display: grid;
+      min-width: 0;
+      padding: 10px 0;
+      border-bottom: 1px solid rgba(238, 247, 250, 0.12);
+      grid-template-columns: 88px minmax(0, 1fr);
+      gap: 10px;
+      align-items: start;
+    }
+
+    .bs-feedback-confirmation-footer .bs-feedback-confirmation-footer__detail:first-child {
+      padding-top: 0;
+    }
+
+    .bs-feedback-confirmation-footer .bs-feedback-confirmation-footer__detail:last-child {
+      padding-bottom: 0;
+      border-bottom: 0;
+    }
+
+    .bs-feedback-confirmation-footer .bs-feedback-confirmation-footer__detail-label {
+      margin: 0;
+      color: #ddf4f2;
+      font-size: 13px;
+      font-weight: 700;
+      line-height: 1.55;
+    }
+
+    .bs-feedback-confirmation-footer .bs-feedback-confirmation-footer__detail-value {
+      min-width: 0;
+      margin: 0;
+      color: #eef7fa;
+      font-size: 13px;
+      line-height: 1.55;
+      overflow-wrap: anywhere;
+      opacity: 0.82;
+    }
+
+    .bs-feedback-confirmation-footer .bs-feedback-confirmation-footer__bottom {
+      padding-top: 24px;
+      border-top: 1px solid rgba(238, 247, 250, 0.16);
+    }
+
+    .bs-feedback-confirmation-footer .bs-feedback-confirmation-footer__bottom-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .bs-feedback-confirmation-footer .bs-feedback-confirmation-footer__copyright {
+      margin: 0;
+      color: #eef7fa;
+      font-size: 13px;
+      line-height: 1.6;
+      opacity: 0.78;
+    }
+
+    .bs-feedback-confirmation-footer .bs-feedback-confirmation-footer__legal-links {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 10px 20px;
+    }
+
+    .bs-feedback-confirmation-footer .bs-feedback-confirmation-footer__disclaimers {
+      display: grid;
+      max-width: 930px;
+      gap: 6px;
+      margin: 18px auto 0;
+      text-align: center;
+    }
+
+    .bs-feedback-confirmation-footer .bs-feedback-confirmation-footer__disclaimer {
+      margin: 0;
+      color: #eef7fa;
+      font-size: 12px;
+      line-height: 1.65;
+      opacity: 0.6;
+    }
+
+    .bs-feedback-confirmation-footer .bs-feedback-confirmation-footer__feedback-disclaimer {
+      margin: 0;
+      color: #ddf4f2;
+      font-size: 12px;
+      line-height: 1.65;
+      opacity: 0.72;
+    }
+
+    @media (max-width: 900px) {
+      .bs-feedback-confirmation-footer .bs-feedback-confirmation-footer__columns {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 40px 56px;
+      }
+
+      .bs-feedback-confirmation-footer .bs-feedback-confirmation-footer__column:first-child {
+        grid-column: 1 / -1;
+      }
+
+      .bs-feedback-confirmation-footer .bs-feedback-confirmation-footer__description {
+        max-width: 560px;
+      }
+    }
+
+    @media (max-width: 767px) {
+      .bs-feedback-confirmation-footer {
+        padding-top: 56px;
+      }
+
+      .bs-feedback-confirmation-footer .bs-feedback-confirmation-footer__container {
+        width: min(100% - 40px, 1180px);
+      }
+    }
+
+    @media (max-width: 599px) {
+      .bs-feedback-confirmation-footer {
+        padding: 50px 0 24px;
+      }
+
+      .bs-feedback-confirmation-footer .bs-feedback-confirmation-footer__columns {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 34px;
+        padding-bottom: 34px;
+      }
+
+      .bs-feedback-confirmation-footer .bs-feedback-confirmation-footer__column:first-child {
+        grid-column: auto;
+      }
+
+      .bs-feedback-confirmation-footer .bs-feedback-confirmation-footer__links {
+        gap: 5px;
+      }
+
+      .bs-feedback-confirmation-footer .bs-feedback-confirmation-footer__links a {
+        display: inline-flex;
+        min-height: 40px;
+        align-items: center;
+      }
+
+      .bs-feedback-confirmation-footer .bs-feedback-confirmation-footer__bottom-row {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 14px;
+      }
+
+      .bs-feedback-confirmation-footer .bs-feedback-confirmation-footer__legal-links {
+        justify-content: flex-start;
+      }
+
+      .bs-feedback-confirmation-footer .bs-feedback-confirmation-footer__legal-links a {
+        display: inline-flex;
+        min-height: 36px;
+        align-items: center;
+      }
+
+      .bs-feedback-confirmation-footer .bs-feedback-confirmation-footer__disclaimers {
+        text-align: left;
+      }
+    }
+
+    @media (max-width: 399px) {
+      .bs-feedback-confirmation-footer .bs-feedback-confirmation-footer__container {
+        width: min(100% - 32px, 1180px);
+      }
+
+      .bs-feedback-confirmation-footer .bs-feedback-confirmation-footer__brand {
+        font-size: 20px;
+      }
+
+      .bs-feedback-confirmation-footer .bs-feedback-confirmation-footer__brand-icon {
+        width: 39px;
+        height: 39px;
+      }
+
+      .bs-feedback-confirmation-footer .bs-feedback-confirmation-footer__detail {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 3px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .bs-feedback-confirmation-footer .bs-feedback-confirmation-footer__links a,
+      .bs-feedback-confirmation-footer .bs-feedback-confirmation-footer__legal-links a {
+        transition: none;
+      }
+    }
+  </style>
+
+  <div class="bs-feedback-confirmation-footer__container">
+    <div class="bs-feedback-confirmation-footer__columns">
+      <div class="bs-feedback-confirmation-footer__column">
+        <h2
+          class="bs-feedback-confirmation-footer__brand"
+          id="bs-feedback-confirmation-footer-brand"
+        >
+          <span
+            class="bs-feedback-confirmation-footer__brand-icon"
+            aria-hidden="true"
+          >
+            <svg viewBox="0 0 32 32" focusable="false">
+              <path
+                d="M10.2 4.5c2.1 0 3.4 1.3 5.8 1.3s3.7-1.3 5.8-1.3c3.2 0 5.7 2.7 5.7 6.1 0 2.6-1.2 4.3-2.2 6.2-1.2 2.1-1.7 4.5-2.3 7.1-.5 2.1-1.3 3.6-2.7 3.6-1.8 0-1.9-2.4-2.7-4.8-.4-1.2-.8-2-1.6-2s-1.2.8-1.6 2c-.8 2.4-.9 4.8-2.7 4.8-1.4 0-2.2-1.5-2.7-3.6-.6-2.6-1.1-5-2.3-7.1-1-1.9-2.2-3.6-2.2-6.2 0-3.4 2.5-6.1 5.7-6.1Z"
+              ></path>
+              <path d="M20.8 9.4a5.8 5.8 0 0 1-4.8 2.4"></path>
+            </svg>
+          </span>
+
+          <span>BrightSmile Dental</span>
+        </h2>
+
+        <span
+          class="bs-feedback-confirmation-footer__accent"
+          aria-hidden="true"
+        ></span>
+
+        <p class="bs-feedback-confirmation-footer__description">
+          Professional dental care supported by clear communication and patient
+          feedback.
+        </p>
+      </div>
+
+      <nav
+        class="bs-feedback-confirmation-footer__column"
+        aria-labelledby="bs-feedback-confirmation-footer-resources-heading"
+      >
+        <h3
+          class="bs-feedback-confirmation-footer__heading"
+          id="bs-feedback-confirmation-footer-resources-heading"
+        >
+          Patient resources
+        </h3>
+
+        <ul class="bs-feedback-confirmation-footer__links">
+          <li>
+            <!-- Replace with: BS | SVC-MENU | Dental Services public URL -->
+            <a href="../../brightsmile-appointment-booking/step-01/index.html">Book an appointment</a>
+          </li>
+
+          <li>
+            <!-- Replace with: BS | FRM | Appointment Request public URL -->
+            <a href="../../brightsmile-appointment-booking/step-01/index.html">Request an appointment</a>
+          </li>
+
+          <li>
+            <!-- Replace with: BS | SRV | New Patient Information public URL -->
+            <a href="https://api.leadconnectorhq.com/widget/survey/Djuus9mAGcOaiLDWwFHQ">Complete patient information</a>
+          </li>
+
+          <li>
+            <!-- Replace with: BrightSmile Dental contact-page URL -->
+            <a href="tel:+639152817852">Contact</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div
+        class="bs-feedback-confirmation-footer__column"
+        aria-labelledby="bs-feedback-confirmation-footer-clinic-heading"
+      >
+        <h3
+          class="bs-feedback-confirmation-footer__heading"
+          id="bs-feedback-confirmation-footer-clinic-heading"
+        >
+          Clinic information
+        </h3>
+
+        <dl class="bs-feedback-confirmation-footer__details">
+          <div class="bs-feedback-confirmation-footer__detail">
+            <dt class="bs-feedback-confirmation-footer__detail-label">
+              Phone:
+            </dt>
+
+            <dd class="bs-feedback-confirmation-footer__detail-value">
+              +639 152 817 852
+            </dd>
+          </div>
+
+          <div class="bs-feedback-confirmation-footer__detail">
+            <dt class="bs-feedback-confirmation-footer__detail-label">
+              Email:
+            </dt>
+
+            <dd class="bs-feedback-confirmation-footer__detail-value">
+              brightsmiledental.crm@gmail.com
+            </dd>
+          </div>
+
+          <div class="bs-feedback-confirmation-footer__detail">
+            <dt class="bs-feedback-confirmation-footer__detail-label">
+              Office hours:
+            </dt>
+
+            <dd class="bs-feedback-confirmation-footer__detail-value">
+              8:00 AM – 5:00 PM
+            </dd>
+          </div>
+        </dl>
+      </div>
+    </div>
+
+    <div class="bs-feedback-confirmation-footer__bottom">
+      <div class="bs-feedback-confirmation-footer__bottom-row">
+        <p class="bs-feedback-confirmation-footer__copyright">
+          © 2026 BrightSmile Dental. All rights reserved.
+        </p>
+
+        <nav
+          class="bs-feedback-confirmation-footer__legal-links"
+          aria-label="Legal information"
+        >
+          <!-- Replace with: BrightSmile Dental Privacy Policy URL -->
+          <a href="#">Privacy policy</a>
+
+          <!-- Replace with: BrightSmile Dental Terms and Conditions URL -->
+          <a href="#">Terms</a>
+        </nav>
+      </div>
+
+      <div class="bs-feedback-confirmation-footer__disclaimers">
+        <p class="bs-feedback-confirmation-footer__disclaimer">
+          BrightSmile Dental is a fictional business created for CRM and
+          automation demonstration purposes.
+        </p>
+
+        <p class="bs-feedback-confirmation-footer__feedback-disclaimer">
+          Patient feedback is intended for general service review and should
+          not be used for urgent medical or dental concerns.
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- Section 3: Footer End -->
+<a class="funnel-next-button" href="../step-01/index.html" aria-label="Restart the Patient Feedback Funnel" title="Start Again">
+  <span class="funnel-next-button__icon" aria-hidden="true">↻</span>
+  <span>Start Again</span>
+</a>
+</body>
+</html>

@@ -1,0 +1,2586 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Choose a convenient date and time for your private Elite Realty property showing.">
+  <title>Book Your Elite Realty Property Showing | Step 02</title>
+  <style>
+    html { scroll-behavior: smooth; }
+    body { margin: 0; min-width: 320px; background: #ffffff; }
+
+    .funnel-next-button {
+      position: fixed;
+      right: 24px;
+      bottom: 24px;
+      z-index: 99999;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      min-height: 54px;
+      padding: 0 20px 0 10px;
+      border: 1px solid rgba(255,255,255,.24);
+      border-radius: 999px;
+      background: linear-gradient(135deg, #3f4e8c, #2d3768);
+      box-shadow: 0 14px 34px rgba(45,55,104,.34);
+      color: #ffffff;
+      font: 700 14px/1 Inter, Arial, sans-serif;
+      text-decoration: none;
+      transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease;
+      isolation: isolate;
+    }
+
+    .funnel-next-button::after {
+      content: "";
+      position: absolute;
+      right: 18px;
+      bottom: -7px;
+      z-index: -1;
+      width: 18px;
+      height: 18px;
+      border-radius: 0 0 5px 0;
+      background: #2d3768;
+      transform: rotate(35deg);
+    }
+
+    .funnel-next-button:hover {
+      background: linear-gradient(135deg, #2d3768, #20284f);
+      box-shadow: 0 18px 40px rgba(45,55,104,.44);
+      color: #ffffff;
+      transform: translateY(-3px);
+    }
+
+    .funnel-next-button:focus-visible {
+      outline: 3px solid #d5a64a;
+      outline-offset: 4px;
+    }
+
+    .funnel-next-button__icon {
+      display: inline-grid;
+      width: 36px;
+      height: 36px;
+      flex: 0 0 36px;
+      place-items: center;
+      border-radius: 50%;
+      background: #d5a64a;
+      color: #2d3768;
+      font-size: 19px;
+    }
+
+    @media (max-width: 640px) {
+      .funnel-next-button { right: 16px; bottom: 16px; min-height: 50px; padding-right: 17px; }
+      .funnel-next-button__icon { width: 32px; height: 32px; flex-basis: 32px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .funnel-next-button { transition: none; }
+    }
+  </style>
+</head>
+<body>
+<!-- Section 1: Header and Progress Start -->
+<section
+  class="er-property-showing-booking-header"
+  id="property-showing-booking-header"
+  aria-label="Property showing booking progress"
+>
+  <style>
+    .er-property-showing-booking-header {
+      width: 100%;
+      max-width: 100%;
+      overflow-x: hidden;
+      background: #ffffff;
+      color: #526273;
+      font-family: Inter, Arial, sans-serif;
+    }
+
+    .er-property-showing-booking-header,
+    .er-property-showing-booking-header * {
+      box-sizing: border-box;
+    }
+
+    .er-property-showing-booking-header .er-property-showing-booking-header__header {
+      background: #ffffff;
+      border-bottom: 1px solid #dde1f0;
+    }
+
+    .er-property-showing-booking-header .er-property-showing-booking-header__header-inner,
+    .er-property-showing-booking-header .er-property-showing-booking-header__progress-inner {
+      width: min(100% - 40px, 1180px);
+      margin-inline: auto;
+    }
+
+    .er-property-showing-booking-header .er-property-showing-booking-header__header-inner {
+      min-height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      padding-block: 12px;
+    }
+
+    .er-property-showing-booking-header .er-property-showing-booking-header__brand {
+      position: relative;
+      flex: 0 1 auto;
+      margin: 0;
+      padding-bottom: 7px;
+      color: #2d3768;
+      font-family: Poppins, Arial, sans-serif;
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+    }
+
+    .er-property-showing-booking-header .er-property-showing-booking-header__brand::after {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 38px;
+      height: 3px;
+      border-radius: 999px;
+      background: #d5a64a;
+      content: "";
+    }
+
+    .er-property-showing-booking-header .er-property-showing-booking-header__back-link {
+      flex: 0 0 auto;
+      color: #3f4e8c;
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 1.4;
+      text-decoration: none;
+      text-underline-offset: 4px;
+      transition:
+        color 160ms ease,
+        text-decoration-color 160ms ease;
+    }
+
+    .er-property-showing-booking-header .er-property-showing-booking-header__back-link:hover {
+      color: #2d3768;
+      text-decoration: underline;
+      text-decoration-color: #d5a64a;
+    }
+
+    .er-property-showing-booking-header .er-property-showing-booking-header__back-link:focus-visible {
+      border-radius: 5px;
+      outline: 3px solid #d5a64a;
+      outline-offset: 4px;
+    }
+
+    .er-property-showing-booking-header .er-property-showing-booking-header__progress {
+      background: #eef0fa;
+      border-bottom: 1px solid #dde1f0;
+    }
+
+    .er-property-showing-booking-header .er-property-showing-booking-header__progress-inner {
+      padding-block: 18px 20px;
+    }
+
+    .er-property-showing-booking-header .er-property-showing-booking-header__progress-label {
+      margin: 0 0 14px;
+      color: #3f4e8c;
+      font-size: 13px;
+      font-weight: 800;
+      line-height: 1.4;
+      text-align: center;
+    }
+
+    .er-property-showing-booking-header .er-property-showing-booking-header__steps {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .er-property-showing-booking-header .er-property-showing-booking-header__step {
+      position: relative;
+      min-width: 0;
+      padding-inline: 8px;
+      text-align: center;
+    }
+
+    .er-property-showing-booking-header .er-property-showing-booking-header__step:not(:last-child)::after {
+      position: absolute;
+      z-index: 0;
+      top: 17px;
+      left: calc(50% + 22px);
+      width: calc(100% - 44px);
+      height: 3px;
+      border-radius: 999px;
+      background: #dde1f0;
+      content: "";
+    }
+
+    .er-property-showing-booking-header .er-property-showing-booking-header__step--complete:not(:last-child)::after {
+      background: #2e8b57;
+    }
+
+    .er-property-showing-booking-header .er-property-showing-booking-header__marker {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      width: 36px;
+      height: 36px;
+      margin: 0 auto 9px;
+      place-items: center;
+      border: 2px solid #dde1f0;
+      border-radius: 50%;
+      background: #ffffff;
+      color: #718096;
+      font-family: Poppins, Arial, sans-serif;
+      font-size: 12px;
+      font-weight: 700;
+      line-height: 1;
+    }
+
+    .er-property-showing-booking-header .er-property-showing-booking-header__step--complete .er-property-showing-booking-header__marker {
+      border-color: #2e8b57;
+      background: #2e8b57;
+      color: #ffffff;
+    }
+
+    .er-property-showing-booking-header .er-property-showing-booking-header__step--current .er-property-showing-booking-header__marker {
+      border-color: #3f4e8c;
+      background: #3f4e8c;
+      color: #ffffff;
+      box-shadow: 0 0 0 4px #ffffff;
+    }
+
+    .er-property-showing-booking-header .er-property-showing-booking-header__check {
+      width: 17px;
+      height: 17px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 2.5;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .er-property-showing-booking-header .er-property-showing-booking-header__step-name,
+    .er-property-showing-booking-header .er-property-showing-booking-header__step-status {
+      display: block;
+      overflow-wrap: anywhere;
+    }
+
+    .er-property-showing-booking-header .er-property-showing-booking-header__step-name {
+      color: #526273;
+      font-family: Poppins, Arial, sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      line-height: 1.35;
+    }
+
+    .er-property-showing-booking-header .er-property-showing-booking-header__step-status {
+      margin-top: 2px;
+      color: #718096;
+      font-size: 13px;
+      font-weight: 600;
+      line-height: 1.35;
+    }
+
+    .er-property-showing-booking-header .er-property-showing-booking-header__step--complete .er-property-showing-booking-header__step-name,
+    .er-property-showing-booking-header .er-property-showing-booking-header__step--complete .er-property-showing-booking-header__step-status {
+      color: #2e8b57;
+    }
+
+    .er-property-showing-booking-header .er-property-showing-booking-header__step--current .er-property-showing-booking-header__step-name,
+    .er-property-showing-booking-header .er-property-showing-booking-header__step--current .er-property-showing-booking-header__step-status {
+      color: #2d3768;
+    }
+
+    @media (max-width: 767px) {
+      .er-property-showing-booking-header .er-property-showing-booking-header__header-inner,
+      .er-property-showing-booking-header .er-property-showing-booking-header__progress-inner {
+        width: min(100% - 32px, 1180px);
+      }
+
+      .er-property-showing-booking-header .er-property-showing-booking-header__header-inner {
+        min-height: 66px;
+        gap: 16px;
+      }
+
+      .er-property-showing-booking-header .er-property-showing-booking-header__brand {
+        font-size: 18px;
+      }
+
+      .er-property-showing-booking-header .er-property-showing-booking-header__back-link {
+        max-width: 150px;
+        font-size: 13px;
+        text-align: right;
+      }
+
+      .er-property-showing-booking-header .er-property-showing-booking-header__progress-inner {
+        padding-block: 15px 17px;
+      }
+
+      .er-property-showing-booking-header .er-property-showing-booking-header__step {
+        padding-inline: 3px;
+      }
+
+      .er-property-showing-booking-header .er-property-showing-booking-header__step:not(:last-child)::after {
+        top: 15px;
+        left: calc(50% + 18px);
+        width: calc(100% - 36px);
+      }
+
+      .er-property-showing-booking-header .er-property-showing-booking-header__marker {
+        width: 32px;
+        height: 32px;
+        font-size: 11px;
+      }
+
+      .er-property-showing-booking-header .er-property-showing-booking-header__step-name,
+      .er-property-showing-booking-header .er-property-showing-booking-header__step-status {
+        font-size: 11px;
+      }
+    }
+
+    @media (max-width: 479px) {
+      .er-property-showing-booking-header .er-property-showing-booking-header__header-inner,
+      .er-property-showing-booking-header .er-property-showing-booking-header__progress-inner {
+        width: min(100% - 24px, 1180px);
+      }
+
+      .er-property-showing-booking-header .er-property-showing-booking-header__brand {
+        max-width: 150px;
+        font-size: 16px;
+      }
+
+      .er-property-showing-booking-header .er-property-showing-booking-header__back-link {
+        max-width: 125px;
+        font-size: 12px;
+      }
+
+      .er-property-showing-booking-header .er-property-showing-booking-header__progress-label {
+        margin-bottom: 12px;
+      }
+
+      .er-property-showing-booking-header .er-property-showing-booking-header__step-status {
+        display: none;
+      }
+
+      .er-property-showing-booking-header .er-property-showing-booking-header__step-name {
+        font-size: 10px;
+        line-height: 1.25;
+      }
+    }
+
+    @media (max-width: 359px) {
+      .er-property-showing-booking-header .er-property-showing-booking-header__header-inner {
+        gap: 10px;
+      }
+
+      .er-property-showing-booking-header .er-property-showing-booking-header__brand {
+        max-width: 130px;
+        font-size: 15px;
+      }
+
+      .er-property-showing-booking-header .er-property-showing-booking-header__back-link {
+        max-width: 112px;
+        font-size: 11px;
+      }
+
+      .er-property-showing-booking-header .er-property-showing-booking-header__marker {
+        width: 29px;
+        height: 29px;
+        margin-bottom: 7px;
+      }
+
+      .er-property-showing-booking-header .er-property-showing-booking-header__step:not(:last-child)::after {
+        top: 14px;
+        left: calc(50% + 17px);
+        width: calc(100% - 34px);
+        height: 2px;
+      }
+
+      .er-property-showing-booking-header .er-property-showing-booking-header__step-name {
+        font-size: 9px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .er-property-showing-booking-header .er-property-showing-booking-header__back-link {
+        transition: none;
+      }
+    }
+  </style>
+
+  <header class="er-property-showing-booking-header__header">
+    <div class="er-property-showing-booking-header__header-inner">
+      <p class="er-property-showing-booking-header__brand">
+        Elite Realty Group
+      </p>
+
+      <!-- Replace with: 01 | Property Showing Landing URL -->
+      <a
+        class="er-property-showing-booking-header__back-link"
+        href="../step-01/index.html"
+        aria-label="Back to property showing overview"
+      >
+        Back to property showing overview
+      </a>
+    </div>
+  </header>
+
+  <nav
+    class="er-property-showing-booking-header__progress"
+    aria-label="Property showing progress"
+  >
+    <div class="er-property-showing-booking-header__progress-inner">
+      <p
+        class="er-property-showing-booking-header__progress-label"
+        aria-live="polite"
+      >
+        Step 2 of 3
+      </p>
+
+      <ol class="er-property-showing-booking-header__steps">
+        <li class="er-property-showing-booking-header__step er-property-showing-booking-header__step--complete">
+          <span
+            class="er-property-showing-booking-header__marker"
+            aria-hidden="true"
+          >
+            <svg
+              class="er-property-showing-booking-header__check"
+              viewBox="0 0 24 24"
+              focusable="false"
+            >
+              <path d="m5 12.5 4.2 4.2L19 7"></path>
+            </svg>
+          </span>
+          <span class="er-property-showing-booking-header__step-name">
+            01 Overview
+          </span>
+          <span class="er-property-showing-booking-header__step-status">
+            Complete
+          </span>
+          <span hidden>Step 1, Overview, complete.</span>
+        </li>
+
+        <li
+          class="er-property-showing-booking-header__step er-property-showing-booking-header__step--current"
+          aria-current="step"
+        >
+          <span
+            class="er-property-showing-booking-header__marker"
+            aria-hidden="true"
+          >
+            02
+          </span>
+          <span class="er-property-showing-booking-header__step-name">
+            02 Schedule showing
+          </span>
+          <span class="er-property-showing-booking-header__step-status">
+            Current
+          </span>
+          <span hidden>Step 2, Schedule showing, current step.</span>
+        </li>
+
+        <li class="er-property-showing-booking-header__step">
+          <span
+            class="er-property-showing-booking-header__marker"
+            aria-hidden="true"
+          >
+            03
+          </span>
+          <span class="er-property-showing-booking-header__step-name">
+            03 Confirmation
+          </span>
+          <span class="er-property-showing-booking-header__step-status">
+            Upcoming
+          </span>
+          <span hidden>Step 3, Confirmation, upcoming.</span>
+        </li>
+      </ol>
+    </div>
+  </nav>
+</section>
+<!-- Section 1: Header and Progress End -->
+
+<!-- Section 2: Booking Introduction Start -->
+<section
+  id="property-showing-booking-introduction"
+  class="er-property-showing-booking-introduction"
+  aria-labelledby="er-property-showing-booking-introduction-heading"
+>
+  <style>
+    .er-property-showing-booking-introduction {
+      width: 100%;
+      max-width: 100%;
+      overflow-x: clip;
+      padding: 68px 0 58px;
+      background: #f7f8fd;
+      color: #526273;
+      font-family: Inter, Arial, sans-serif;
+    }
+
+    .er-property-showing-booking-introduction,
+    .er-property-showing-booking-introduction * {
+      box-sizing: border-box;
+    }
+
+    .er-property-showing-booking-introduction .er-property-showing-booking-introduction-container {
+      width: min(100% - 48px, 1200px);
+      display: grid;
+      grid-template-columns: minmax(0, 1.08fr) minmax(340px, 0.82fr);
+      gap: clamp(42px, 6vw, 82px);
+      align-items: center;
+      margin: 0 auto;
+    }
+
+    .er-property-showing-booking-introduction .er-property-showing-booking-introduction-content,
+    .er-property-showing-booking-introduction .er-property-showing-booking-introduction-summary {
+      min-width: 0;
+    }
+
+    .er-property-showing-booking-introduction .er-property-showing-booking-introduction-content {
+      max-width: 680px;
+    }
+
+    .er-property-showing-booking-introduction .er-property-showing-booking-introduction-eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin: 0 0 16px;
+      color: #3f4e8c;
+      font-family: Poppins, Arial, sans-serif;
+      font-size: 0.8125rem;
+      font-weight: 700;
+      line-height: 1.4;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .er-property-showing-booking-introduction .er-property-showing-booking-introduction-eyebrow::before {
+      width: 30px;
+      height: 3px;
+      flex: 0 0 30px;
+      border-radius: 999px;
+      background: #d5a64a;
+      content: "";
+    }
+
+    .er-property-showing-booking-introduction .er-property-showing-booking-introduction-heading {
+      max-width: 680px;
+      margin: 0;
+      color: #2d3768;
+      font-family: Poppins, Arial, sans-serif;
+      font-size: clamp(2.25rem, 4.2vw, 3.35rem);
+      font-weight: 700;
+      line-height: 1.12;
+      letter-spacing: -0.035em;
+    }
+
+    .er-property-showing-booking-introduction .er-property-showing-booking-introduction-copy {
+      max-width: 660px;
+      margin: 22px 0 0;
+      color: #526273;
+      font-size: 1.0625rem;
+      line-height: 1.7;
+    }
+
+    .er-property-showing-booking-introduction .er-property-showing-booking-introduction-reassurance {
+      display: grid;
+      gap: 12px;
+      margin: 28px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .er-property-showing-booking-introduction .er-property-showing-booking-introduction-reassurance-item {
+      min-width: 0;
+      display: flex;
+      align-items: flex-start;
+      gap: 11px;
+      color: #182433;
+      font-size: 0.9375rem;
+      font-weight: 600;
+      line-height: 1.5;
+    }
+
+    .er-property-showing-booking-introduction .er-property-showing-booking-introduction-check {
+      width: 25px;
+      height: 25px;
+      display: inline-flex;
+      flex: 0 0 25px;
+      align-items: center;
+      justify-content: center;
+      margin-top: 1px;
+      border-radius: 50%;
+      background: #eef0fa;
+      color: #2e8b57;
+    }
+
+    .er-property-showing-booking-introduction .er-property-showing-booking-introduction-check svg {
+      width: 14px;
+      height: 14px;
+      display: block;
+    }
+
+    .er-property-showing-booking-introduction .er-property-showing-booking-introduction-actions {
+      margin-top: 32px;
+    }
+
+    .er-property-showing-booking-introduction .er-property-showing-booking-introduction-button {
+      min-height: 52px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 14px 26px;
+      border: 1px solid #3f4e8c;
+      border-radius: 11px;
+      background: #3f4e8c;
+      color: #ffffff;
+      font-family: Poppins, Arial, sans-serif;
+      font-size: 0.9375rem;
+      font-weight: 700;
+      line-height: 1.4;
+      text-align: center;
+      text-decoration: none;
+      box-shadow: 0 10px 24px rgba(45, 55, 104, 0.15);
+      transition:
+        background-color 160ms ease,
+        border-color 160ms ease,
+        transform 160ms ease,
+        box-shadow 160ms ease;
+    }
+
+    .er-property-showing-booking-introduction .er-property-showing-booking-introduction-button:hover {
+      border-color: #2d3768;
+      background: #2d3768;
+      transform: translateY(-1px);
+      box-shadow: 0 13px 29px rgba(45, 55, 104, 0.2);
+    }
+
+    .er-property-showing-booking-introduction .er-property-showing-booking-introduction-button:focus-visible {
+      outline: 3px solid #d5a64a;
+      outline-offset: 4px;
+    }
+
+    .er-property-showing-booking-introduction .er-property-showing-booking-introduction-button-icon {
+      width: 18px;
+      height: 18px;
+      display: block;
+      flex: 0 0 18px;
+    }
+
+    .er-property-showing-booking-introduction .er-property-showing-booking-introduction-summary {
+      position: relative;
+      width: 100%;
+      max-width: 470px;
+      justify-self: end;
+      padding: 34px;
+      overflow: hidden;
+      border: 1px solid #dde1f0;
+      border-radius: 18px;
+      background: #ffffff;
+      box-shadow: 0 20px 48px rgba(45, 55, 104, 0.12);
+    }
+
+    .er-property-showing-booking-introduction .er-property-showing-booking-introduction-summary::before {
+      position: absolute;
+      top: 0;
+      left: 34px;
+      width: 64px;
+      height: 4px;
+      border-radius: 0 0 999px 999px;
+      background: #d5a64a;
+      content: "";
+    }
+
+    .er-property-showing-booking-introduction .er-property-showing-booking-introduction-summary::after {
+      position: absolute;
+      top: -54px;
+      right: -54px;
+      width: 148px;
+      height: 148px;
+      border-radius: 50%;
+      background: #eef0fa;
+      content: "";
+      pointer-events: none;
+    }
+
+    .er-property-showing-booking-introduction .er-property-showing-booking-introduction-badge {
+      position: relative;
+      z-index: 1;
+      width: fit-content;
+      margin: 0 0 21px;
+      padding: 7px 12px;
+      border: 1px solid #dde1f0;
+      border-radius: 999px;
+      background: #f7f8fd;
+      color: #3f4e8c;
+      font-size: 0.8125rem;
+      font-weight: 700;
+      line-height: 1.3;
+    }
+
+    .er-property-showing-booking-introduction .er-property-showing-booking-introduction-summary-heading {
+      position: relative;
+      z-index: 1;
+      margin: 0;
+      color: #2d3768;
+      font-family: Poppins, Arial, sans-serif;
+      font-size: clamp(1.45rem, 2.5vw, 1.75rem);
+      font-weight: 700;
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+    }
+
+    .er-property-showing-booking-introduction .er-property-showing-booking-introduction-details {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      gap: 0;
+      margin: 25px 0 0;
+    }
+
+    .er-property-showing-booking-introduction .er-property-showing-booking-introduction-detail {
+      min-width: 0;
+      display: grid;
+      grid-template-columns: 42px minmax(0, 1fr);
+      gap: 13px;
+      align-items: start;
+      padding: 16px 0;
+      border-top: 1px solid #dde1f0;
+    }
+
+    .er-property-showing-booking-introduction .er-property-showing-booking-introduction-detail:last-child {
+      padding-bottom: 0;
+    }
+
+    .er-property-showing-booking-introduction .er-property-showing-booking-introduction-detail-icon {
+      width: 42px;
+      height: 42px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 11px;
+      background: #eef0fa;
+      color: #3f4e8c;
+    }
+
+    .er-property-showing-booking-introduction .er-property-showing-booking-introduction-detail-icon svg {
+      width: 20px;
+      height: 20px;
+      display: block;
+    }
+
+    .er-property-showing-booking-introduction .er-property-showing-booking-introduction-detail-content {
+      min-width: 0;
+    }
+
+    .er-property-showing-booking-introduction .er-property-showing-booking-introduction-detail-label {
+      margin: 0 0 4px;
+      color: #718096;
+      font-size: 0.8125rem;
+      font-weight: 600;
+      line-height: 1.4;
+    }
+
+    .er-property-showing-booking-introduction .er-property-showing-booking-introduction-detail-value {
+      margin: 0;
+      color: #182433;
+      font-size: 0.9375rem;
+      font-weight: 600;
+      line-height: 1.5;
+      overflow-wrap: anywhere;
+    }
+
+    @media (max-width: 900px) {
+      .er-property-showing-booking-introduction {
+        padding: 56px 0 50px;
+      }
+
+      .er-property-showing-booking-introduction .er-property-showing-booking-introduction-container {
+        grid-template-columns: minmax(0, 1fr) minmax(310px, 0.8fr);
+        gap: 38px;
+      }
+
+      .er-property-showing-booking-introduction .er-property-showing-booking-introduction-summary {
+        padding: 30px;
+      }
+    }
+
+    @media (max-width: 767px) {
+      .er-property-showing-booking-introduction {
+        padding: 44px 0 40px;
+      }
+
+      .er-property-showing-booking-introduction .er-property-showing-booking-introduction-container {
+        width: min(100% - 36px, 1200px);
+        grid-template-columns: minmax(0, 1fr);
+        gap: 34px;
+      }
+
+      .er-property-showing-booking-introduction .er-property-showing-booking-introduction-content {
+        max-width: none;
+      }
+
+      .er-property-showing-booking-introduction .er-property-showing-booking-introduction-heading {
+        font-size: clamp(2rem, 9vw, 2.5rem);
+      }
+
+      .er-property-showing-booking-introduction .er-property-showing-booking-introduction-copy {
+        margin-top: 18px;
+        font-size: 1rem;
+      }
+
+      .er-property-showing-booking-introduction .er-property-showing-booking-introduction-reassurance {
+        margin-top: 24px;
+      }
+
+      .er-property-showing-booking-introduction .er-property-showing-booking-introduction-actions {
+        margin-top: 28px;
+      }
+
+      .er-property-showing-booking-introduction .er-property-showing-booking-introduction-summary {
+        max-width: none;
+        justify-self: stretch;
+        padding: 27px 24px;
+      }
+
+      .er-property-showing-booking-introduction .er-property-showing-booking-introduction-summary::before {
+        left: 24px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .er-property-showing-booking-introduction .er-property-showing-booking-introduction-button {
+        width: 100%;
+      }
+
+      .er-property-showing-booking-introduction .er-property-showing-booking-introduction-summary {
+        border-radius: 16px;
+      }
+
+      .er-property-showing-booking-introduction .er-property-showing-booking-introduction-detail {
+        grid-template-columns: 38px minmax(0, 1fr);
+        gap: 11px;
+      }
+
+      .er-property-showing-booking-introduction .er-property-showing-booking-introduction-detail-icon {
+        width: 38px;
+        height: 38px;
+      }
+    }
+
+    @media (max-width: 340px) {
+      .er-property-showing-booking-introduction .er-property-showing-booking-introduction-container {
+        width: min(100% - 28px, 1200px);
+      }
+
+      .er-property-showing-booking-introduction .er-property-showing-booking-introduction-summary {
+        padding: 24px 20px;
+      }
+
+      .er-property-showing-booking-introduction .er-property-showing-booking-introduction-summary::before {
+        left: 20px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .er-property-showing-booking-introduction .er-property-showing-booking-introduction-button {
+        transition: none;
+      }
+
+      .er-property-showing-booking-introduction .er-property-showing-booking-introduction-button:hover {
+        transform: none;
+      }
+    }
+  </style>
+
+  <div class="er-property-showing-booking-introduction-container">
+    <!-- Booking Introduction Content Start -->
+    <div class="er-property-showing-booking-introduction-content">
+      <p class="er-property-showing-booking-introduction-eyebrow">
+        Schedule your showing
+      </p>
+
+      <h1
+        id="er-property-showing-booking-introduction-heading"
+        class="er-property-showing-booking-introduction-heading"
+      >
+        Choose a convenient time to tour the property
+      </h1>
+
+      <p class="er-property-showing-booking-introduction-copy">
+        Select an available date and time for your private property showing with
+        Ethan Brooks. After choosing a time, complete the short booking form so
+        Elite Realty can prepare for your visit.
+      </p>
+
+      <ul
+        class="er-property-showing-booking-introduction-reassurance"
+        aria-label="Property showing benefits"
+      >
+        <li class="er-property-showing-booking-introduction-reassurance-item">
+          <span class="er-property-showing-booking-introduction-check" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none">
+              <path d="M5 12.5 9.3 17 19 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+          <span>Private guided property walkthrough</span>
+        </li>
+
+        <li class="er-property-showing-booking-introduction-reassurance-item">
+          <span class="er-property-showing-booking-introduction-check" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none">
+              <path d="M5 12.5 9.3 17 19 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+          <span>Time to review features and ask questions</span>
+        </li>
+
+        <li class="er-property-showing-booking-introduction-reassurance-item">
+          <span class="er-property-showing-booking-introduction-check" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none">
+              <path d="M5 12.5 9.3 17 19 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+          <span>No obligation to make an offer</span>
+        </li>
+      </ul>
+
+      <div class="er-property-showing-booking-introduction-actions">
+        <!-- Internal link: Section 3 — Embedded Property Showing Calendar -->
+        <a
+          class="er-property-showing-booking-introduction-button"
+          href="#property-showing-booking-calendar"
+        >
+          <span>Choose a showing time</span>
+          <svg
+            class="er-property-showing-booking-introduction-button-icon"
+            viewBox="0 0 24 24"
+            fill="none"
+            aria-hidden="true"
+          >
+            <path d="M5 12h14m-5-5 5 5-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+    <!-- Booking Introduction Content End -->
+
+    <!-- Showing Summary Card Start -->
+    <aside
+      class="er-property-showing-booking-introduction-summary"
+      aria-labelledby="er-property-showing-booking-summary-heading"
+    >
+      <p class="er-property-showing-booking-introduction-badge">
+        Step 2 of 3
+      </p>
+
+      <h2
+        id="er-property-showing-booking-summary-heading"
+        class="er-property-showing-booking-introduction-summary-heading"
+      >
+        Your property showing
+      </h2>
+
+      <dl class="er-property-showing-booking-introduction-details">
+        <div class="er-property-showing-booking-introduction-detail">
+          <span class="er-property-showing-booking-introduction-detail-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none">
+              <rect x="4" y="5" width="16" height="15" rx="2" stroke="currentColor" stroke-width="1.8"/>
+              <path d="M8 3v4M16 3v4M4 10h16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+            </svg>
+          </span>
+          <div class="er-property-showing-booking-introduction-detail-content">
+            <dt class="er-property-showing-booking-introduction-detail-label">
+              Appointment
+            </dt>
+            <dd class="er-property-showing-booking-introduction-detail-value">
+              Private Property Showing
+            </dd>
+          </div>
+        </div>
+
+        <div class="er-property-showing-booking-introduction-detail">
+          <span class="er-property-showing-booking-introduction-detail-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none">
+              <circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="1.8"/>
+              <path d="M5 20c.8-4 3.1-6 7-6s6.2 2 7 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+            </svg>
+          </span>
+          <div class="er-property-showing-booking-introduction-detail-content">
+            <dt class="er-property-showing-booking-introduction-detail-label">
+              Buyer agent
+            </dt>
+            <dd class="er-property-showing-booking-introduction-detail-value">
+              Ethan Brooks
+            </dd>
+          </div>
+        </div>
+
+        <div class="er-property-showing-booking-introduction-detail">
+          <span class="er-property-showing-booking-introduction-detail-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none">
+              <path d="m3 11 9-7 9 7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M5.5 10v10h13V10M9 20v-6h6v6" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+            </svg>
+          </span>
+          <div class="er-property-showing-booking-introduction-detail-content">
+            <dt class="er-property-showing-booking-introduction-detail-label">
+              Visit focus
+            </dt>
+            <dd class="er-property-showing-booking-introduction-detail-value">
+              Layout, features, visible condition, and buyer questions
+            </dd>
+          </div>
+        </div>
+
+        <div class="er-property-showing-booking-introduction-detail">
+          <span class="er-property-showing-booking-introduction-detail-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none">
+              <circle cx="12" cy="12" r="8.5" stroke="currentColor" stroke-width="1.8"/>
+              <path d="M12 7.5V12l3 2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+          <div class="er-property-showing-booking-introduction-detail-content">
+            <dt class="er-property-showing-booking-introduction-detail-label">
+              Next action
+            </dt>
+            <dd class="er-property-showing-booking-introduction-detail-value">
+              Choose an available date and time
+            </dd>
+          </div>
+        </div>
+      </dl>
+    </aside>
+    <!-- Showing Summary Card End -->
+  </div>
+</section>
+<!-- Section 2: Booking Introduction End -->
+
+<!-- Section 3: Embedded Property Showing Calendar Start -->
+<section
+  id="property-showing-booking-calendar"
+  class="er-property-showing-booking-calendar"
+  aria-labelledby="er-property-showing-booking-calendar-heading"
+>
+  <style>
+    .er-property-showing-booking-calendar {
+      width: 100%;
+      max-width: 100%;
+      overflow-x: clip;
+      padding: 34px 0 72px;
+      background: #f7f9fc;
+      color: #526273;
+      font-family: Inter, Arial, sans-serif;
+    }
+
+    .er-property-showing-booking-calendar,
+    .er-property-showing-booking-calendar * {
+      box-sizing: border-box;
+    }
+
+    .er-property-showing-booking-calendar .er-property-showing-booking-calendar-container {
+      width: min(100% - 48px, 1200px);
+      margin: 0 auto;
+    }
+
+    .er-property-showing-booking-calendar .er-property-showing-booking-calendar-card {
+      width: 100%;
+      max-width: 1000px;
+      min-width: 0;
+      margin: 0 auto;
+      padding: 46px;
+      border: 1px solid #dde1f0;
+      border-radius: 18px;
+      background: #ffffff;
+      box-shadow: 0 20px 50px rgba(45, 55, 104, 0.1);
+    }
+
+    .er-property-showing-booking-calendar .er-property-showing-booking-calendar-header {
+      max-width: 800px;
+    }
+
+    .er-property-showing-booking-calendar .er-property-showing-booking-calendar-eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin: 0 0 14px;
+      color: #3f4e8c;
+      font-family: Poppins, Arial, sans-serif;
+      font-size: 0.8125rem;
+      font-weight: 700;
+      line-height: 1.4;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .er-property-showing-booking-calendar .er-property-showing-booking-calendar-eyebrow::before {
+      width: 30px;
+      height: 3px;
+      flex: 0 0 30px;
+      border-radius: 999px;
+      background: #d5a64a;
+      content: "";
+    }
+
+    .er-property-showing-booking-calendar .er-property-showing-booking-calendar-heading {
+      margin: 0;
+      color: #2d3768;
+      font-family: Poppins, Arial, sans-serif;
+      font-size: clamp(1.75rem, 3vw, 2.15rem);
+      font-weight: 700;
+      line-height: 1.18;
+      letter-spacing: -0.025em;
+    }
+
+    .er-property-showing-booking-calendar .er-property-showing-booking-calendar-copy {
+      max-width: 760px;
+      margin: 15px 0 0;
+      color: #526273;
+      font-size: 1rem;
+      line-height: 1.7;
+    }
+
+    .er-property-showing-booking-calendar .er-property-showing-booking-calendar-agent {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-top: 25px;
+      padding: 15px 17px;
+      border: 1px solid #dde1f0;
+      border-radius: 14px;
+      background: #f7f8fd;
+    }
+
+    .er-property-showing-booking-calendar .er-property-showing-booking-calendar-avatar {
+      width: 48px;
+      height: 48px;
+      display: inline-flex;
+      flex: 0 0 48px;
+      align-items: center;
+      justify-content: center;
+      border: 2px solid #d5a64a;
+      border-radius: 50%;
+      background: #3f4e8c;
+      color: #ffffff;
+      font-family: Poppins, Arial, sans-serif;
+      font-size: 0.9375rem;
+      font-weight: 700;
+      line-height: 1;
+      letter-spacing: 0.04em;
+    }
+
+    .er-property-showing-booking-calendar .er-property-showing-booking-calendar-agent-content {
+      min-width: 0;
+      flex: 1 1 auto;
+    }
+
+    .er-property-showing-booking-calendar .er-property-showing-booking-calendar-agent-name {
+      margin: 0;
+      color: #2d3768;
+      font-family: Poppins, Arial, sans-serif;
+      font-size: 0.9375rem;
+      font-weight: 700;
+      line-height: 1.35;
+    }
+
+    .er-property-showing-booking-calendar .er-property-showing-booking-calendar-agent-role {
+      margin: 3px 0 0;
+      color: #526273;
+      font-size: 0.8125rem;
+      line-height: 1.45;
+    }
+
+    .er-property-showing-booking-calendar .er-property-showing-booking-calendar-badge {
+      flex: 0 1 auto;
+      margin: 0;
+      padding: 7px 11px;
+      border: 1px solid #dde1f0;
+      border-radius: 999px;
+      background: #ffffff;
+      color: #3f4e8c;
+      font-size: 0.8125rem;
+      font-weight: 700;
+      line-height: 1.3;
+      text-align: center;
+    }
+
+    .er-property-showing-booking-calendar .er-property-showing-booking-calendar-embed {
+      width: 100%;
+      max-width: 100%;
+      min-width: 0;
+      display: block;
+      margin: 30px auto 0;
+      padding: 0;
+      border: 0;
+      background: #ffffff;
+      overflow: visible;
+    }
+
+    .er-property-showing-booking-calendar .er-property-showing-booking-calendar-embed iframe {
+      width: 100% !important;
+      min-width: 100% !important;
+      max-width: 100% !important;
+      display: block !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      border: 0 !important;
+      background: #ffffff;
+    }
+
+    .er-property-showing-booking-calendar .er-property-showing-booking-calendar-embed > br {
+      display: none;
+    }
+
+    .er-property-showing-booking-calendar .er-property-showing-booking-calendar-information {
+      display: grid;
+      grid-template-columns: 44px minmax(0, 1fr);
+      gap: 14px;
+      align-items: start;
+      margin-top: 28px;
+      padding: 20px 22px;
+      border: 1px solid #d5a64a;
+      border-radius: 15px;
+      background: #f7f8fd;
+    }
+
+    .er-property-showing-booking-calendar .er-property-showing-booking-calendar-information-icon,
+    .er-property-showing-booking-calendar .er-property-showing-booking-calendar-help-icon {
+      width: 44px;
+      height: 44px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 12px;
+      background: #ffffff;
+      color: #3f4e8c;
+    }
+
+    .er-property-showing-booking-calendar .er-property-showing-booking-calendar-information-icon svg,
+    .er-property-showing-booking-calendar .er-property-showing-booking-calendar-help-icon svg {
+      width: 22px;
+      height: 22px;
+      display: block;
+    }
+
+    .er-property-showing-booking-calendar .er-property-showing-booking-calendar-information-content,
+    .er-property-showing-booking-calendar .er-property-showing-booking-calendar-help-content {
+      min-width: 0;
+    }
+
+    .er-property-showing-booking-calendar .er-property-showing-booking-calendar-information-heading,
+    .er-property-showing-booking-calendar .er-property-showing-booking-calendar-help-heading {
+      margin: 0;
+      color: #2d3768;
+      font-family: Poppins, Arial, sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
+      line-height: 1.4;
+    }
+
+    .er-property-showing-booking-calendar .er-property-showing-booking-calendar-information-copy,
+    .er-property-showing-booking-calendar .er-property-showing-booking-calendar-help-copy {
+      margin: 6px 0 0;
+      color: #526273;
+      font-size: 0.9375rem;
+      line-height: 1.65;
+      overflow-wrap: anywhere;
+    }
+
+    .er-property-showing-booking-calendar .er-property-showing-booking-calendar-help {
+      display: grid;
+      grid-template-columns: 44px minmax(0, 1fr);
+      gap: 14px;
+      align-items: start;
+      margin-top: 16px;
+      padding: 20px 22px;
+      border: 1px solid #dde1f0;
+      border-radius: 15px;
+      background: #eef0fa;
+    }
+
+    .er-property-showing-booking-calendar .er-property-showing-booking-calendar-contact-link {
+      display: inline-flex;
+      min-height: 44px;
+      align-items: center;
+      margin: -6px 1px;
+      padding: 6px 2px;
+      color: #3f4e8c;
+      font-weight: 700;
+      text-decoration: underline;
+      text-decoration-color: #6674b8;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+      overflow-wrap: anywhere;
+      transition:
+        color 160ms ease,
+        text-decoration-color 160ms ease;
+    }
+
+    .er-property-showing-booking-calendar .er-property-showing-booking-calendar-contact-link:hover {
+      color: #2d3768;
+      text-decoration-color: #d5a64a;
+    }
+
+    .er-property-showing-booking-calendar .er-property-showing-booking-calendar-contact-link:focus-visible,
+    .er-property-showing-booking-calendar .er-property-showing-booking-calendar-back-link:focus-visible {
+      border-radius: 6px;
+      outline: 3px solid #d5a64a;
+      outline-offset: 3px;
+    }
+
+    .er-property-showing-booking-calendar .er-property-showing-booking-calendar-navigation {
+      margin-top: 22px;
+      text-align: center;
+    }
+
+    .er-property-showing-booking-calendar .er-property-showing-booking-calendar-back-link {
+      min-height: 44px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 8px 4px;
+      color: #3f4e8c;
+      font-size: 0.875rem;
+      font-weight: 700;
+      line-height: 1.4;
+      text-decoration: underline;
+      text-decoration-color: #dde1f0;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 4px;
+      transition:
+        color 160ms ease,
+        text-decoration-color 160ms ease;
+    }
+
+    .er-property-showing-booking-calendar .er-property-showing-booking-calendar-back-link:hover {
+      color: #2d3768;
+      text-decoration-color: #d5a64a;
+    }
+
+    .er-property-showing-booking-calendar .er-property-showing-booking-calendar-back-icon {
+      width: 17px;
+      height: 17px;
+      display: block;
+      flex: 0 0 17px;
+    }
+
+    @media (max-width: 900px) {
+      .er-property-showing-booking-calendar {
+        padding: 28px 0 62px;
+      }
+
+      .er-property-showing-booking-calendar .er-property-showing-booking-calendar-card {
+        padding: 36px;
+      }
+    }
+
+    @media (max-width: 767px) {
+      .er-property-showing-booking-calendar {
+        padding: 22px 0 54px;
+      }
+
+      .er-property-showing-booking-calendar .er-property-showing-booking-calendar-container {
+        width: min(100% - 36px, 1200px);
+      }
+
+      .er-property-showing-booking-calendar .er-property-showing-booking-calendar-card {
+        padding: 26px 22px;
+        border-radius: 17px;
+      }
+
+      .er-property-showing-booking-calendar .er-property-showing-booking-calendar-heading {
+        font-size: clamp(1.55rem, 7vw, 1.8rem);
+      }
+
+      .er-property-showing-booking-calendar .er-property-showing-booking-calendar-agent {
+        align-items: flex-start;
+        flex-wrap: wrap;
+      }
+
+      .er-property-showing-booking-calendar .er-property-showing-booking-calendar-badge {
+        margin-left: 62px;
+      }
+
+      .er-property-showing-booking-calendar .er-property-showing-booking-calendar-embed {
+        margin-top: 25px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .er-property-showing-booking-calendar .er-property-showing-booking-calendar-agent {
+        display: grid;
+        grid-template-columns: 46px minmax(0, 1fr);
+        gap: 12px;
+      }
+
+      .er-property-showing-booking-calendar .er-property-showing-booking-calendar-avatar {
+        width: 46px;
+        height: 46px;
+        flex-basis: 46px;
+      }
+
+      .er-property-showing-booking-calendar .er-property-showing-booking-calendar-badge {
+        grid-column: 1 / -1;
+        width: fit-content;
+        margin: 1px 0 0;
+      }
+
+      .er-property-showing-booking-calendar .er-property-showing-booking-calendar-information,
+      .er-property-showing-booking-calendar .er-property-showing-booking-calendar-help {
+        grid-template-columns: minmax(0, 1fr);
+        padding: 19px;
+      }
+
+      .er-property-showing-booking-calendar .er-property-showing-booking-calendar-contact-link {
+        display: flex;
+        width: fit-content;
+        max-width: 100%;
+      }
+    }
+
+    @media (max-width: 340px) {
+      .er-property-showing-booking-calendar .er-property-showing-booking-calendar-container {
+        width: min(100% - 28px, 1200px);
+      }
+
+      .er-property-showing-booking-calendar .er-property-showing-booking-calendar-card {
+        padding: 23px 18px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .er-property-showing-booking-calendar .er-property-showing-booking-calendar-contact-link,
+      .er-property-showing-booking-calendar .er-property-showing-booking-calendar-back-link {
+        transition: none;
+      }
+    }
+  </style>
+
+  <div class="er-property-showing-booking-calendar-container">
+    <article class="er-property-showing-booking-calendar-card">
+      <!-- Calendar Introduction Start -->
+      <header class="er-property-showing-booking-calendar-header">
+        <p class="er-property-showing-booking-calendar-eyebrow">
+          Select your appointment
+        </p>
+
+        <h2
+          id="er-property-showing-booking-calendar-heading"
+          class="er-property-showing-booking-calendar-heading"
+        >
+          Book your private property showing
+        </h2>
+
+        <p class="er-property-showing-booking-calendar-copy">
+          Choose an available date and time below. After selecting a time,
+          complete the attached booking form with the requested contact and
+          property information.
+        </p>
+      </header>
+
+      <div class="er-property-showing-booking-calendar-agent">
+        <span class="er-property-showing-booking-calendar-avatar" aria-hidden="true">
+          EB
+        </span>
+
+        <div class="er-property-showing-booking-calendar-agent-content">
+          <p class="er-property-showing-booking-calendar-agent-name">
+            Ethan Brooks
+          </p>
+          <p class="er-property-showing-booking-calendar-agent-role">
+            Buyer agent<br>
+            Elite Realty Group
+          </p>
+        </div>
+
+        <p class="er-property-showing-booking-calendar-badge">
+          Private showing
+        </p>
+      </div>
+      <!-- Calendar Introduction End -->
+
+      <!-- GoHighLevel Property Showing Calendar Start -->
+      <div class="er-property-showing-booking-calendar-embed">
+        <iframe title="Book your property showing" src="https://api.leadconnectorhq.com/widget/booking/nyddDkabMXwE5ta5DioH" style="width: 100%;border:none;overflow: hidden;" scrolling="no" id="ixmKwH4c7KxQ4OH6Fx2O_1784489677363"></iframe><br><script src="https://link.msgsndr.com/js/form_embed.js" type="text/javascript"></script>
+      </div>
+      <!-- GoHighLevel Property Showing Calendar End -->
+
+      <!-- Booking Information Start -->
+      <aside
+        class="er-property-showing-booking-calendar-information"
+        aria-labelledby="er-property-showing-booking-information-heading"
+      >
+        <span class="er-property-showing-booking-calendar-information-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none">
+            <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8"/>
+            <path d="M12 10.5V16M12 7.5h.01" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </span>
+
+        <div class="er-property-showing-booking-calendar-information-content">
+          <h3
+            id="er-property-showing-booking-information-heading"
+            class="er-property-showing-booking-calendar-information-heading"
+          >
+            Before you book
+          </h3>
+          <p class="er-property-showing-booking-calendar-information-copy">
+            Showing availability may depend on property access, agent
+            availability, or confirmation from the property representative.
+          </p>
+        </div>
+      </aside>
+      <!-- Booking Information End -->
+
+      <!-- Scheduling Help Start -->
+      <aside
+        class="er-property-showing-booking-calendar-help"
+        aria-labelledby="er-property-showing-booking-help-heading"
+      >
+        <span class="er-property-showing-booking-calendar-help-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none">
+            <path d="M7.5 18.5 4 20l1.2-3.8A8.2 8.2 0 0 1 4 12c0-4.4 3.6-8 8-8s8 3.6 8 8-3.6 8-8 8c-1.6 0-3.1-.5-4.5-1.5Z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M9.5 10a2.6 2.6 0 0 1 5 .8c0 1.7-2.5 1.8-2.5 3.2M12 16.7h.01" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+          </svg>
+        </span>
+
+        <div class="er-property-showing-booking-calendar-help-content">
+          <h3
+            id="er-property-showing-booking-help-heading"
+            class="er-property-showing-booking-calendar-help-heading"
+          >
+            Need help scheduling?
+          </h3>
+
+          <p class="er-property-showing-booking-calendar-help-copy">
+            Call
+            <a
+              class="er-property-showing-booking-calendar-contact-link"
+              href="tel:+15125550147"
+              aria-label="Call Elite Realty Group at 512-555-0147"
+            >
+              (512) 555-0147
+            </a>
+            or email
+            <a
+              class="er-property-showing-booking-calendar-contact-link"
+              href="mailto:eliterealty.crm@gmail.com"
+              aria-label="Email Elite Realty Group at eliterealty.crm@gmail.com"
+            >
+              eliterealty.crm@gmail.com
+            </a>.
+          </p>
+        </div>
+      </aside>
+      <!-- Scheduling Help End -->
+
+      <nav
+        class="er-property-showing-booking-calendar-navigation"
+        aria-label="Return to property showing overview"
+      >
+        <!-- Replace with: 01 | Property Showing Landing URL -->
+        <a
+          class="er-property-showing-booking-calendar-back-link"
+          href="../step-01/index.html"
+        >
+          <svg
+            class="er-property-showing-booking-calendar-back-icon"
+            viewBox="0 0 24 24"
+            fill="none"
+            aria-hidden="true"
+          >
+            <path d="M19 12H5m5 5-5-5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span>Back to property showing overview</span>
+        </a>
+      </nav>
+    </article>
+  </div>
+</section>
+<!-- Section 3: Embedded Property Showing Calendar End -->
+
+<!-- Section 4: Showing Preparation and Reassurance Start -->
+<section
+  id="property-showing-booking-preparation"
+  class="er-property-showing-booking-preparation"
+  aria-labelledby="er-property-showing-booking-preparation-heading"
+>
+  <style>
+    .er-property-showing-booking-preparation {
+      width: 100%;
+      max-width: 100%;
+      overflow-x: clip;
+      padding: 72px 0;
+      background: #f7f8fd;
+      color: #526273;
+      font-family: Inter, Arial, sans-serif;
+    }
+
+    .er-property-showing-booking-preparation,
+    .er-property-showing-booking-preparation * {
+      box-sizing: border-box;
+    }
+
+    .er-property-showing-booking-preparation .er-property-showing-booking-preparation-container {
+      width: min(100% - 48px, 1100px);
+      margin: 0 auto;
+    }
+
+    .er-property-showing-booking-preparation .er-property-showing-booking-preparation-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 0.88fr) minmax(0, 1.12fr);
+      gap: clamp(42px, 6vw, 76px);
+      align-items: start;
+    }
+
+    .er-property-showing-booking-preparation .er-property-showing-booking-preparation-introduction,
+    .er-property-showing-booking-preparation .er-property-showing-booking-preparation-checklist-panel {
+      min-width: 0;
+    }
+
+    .er-property-showing-booking-preparation .er-property-showing-booking-preparation-eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin: 0 0 15px;
+      color: #3f4e8c;
+      font-family: Poppins, Arial, sans-serif;
+      font-size: 0.8125rem;
+      font-weight: 700;
+      line-height: 1.4;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .er-property-showing-booking-preparation .er-property-showing-booking-preparation-eyebrow::before {
+      width: 30px;
+      height: 3px;
+      flex: 0 0 30px;
+      border-radius: 999px;
+      background: #d5a64a;
+      content: "";
+    }
+
+    .er-property-showing-booking-preparation .er-property-showing-booking-preparation-heading {
+      max-width: 540px;
+      margin: 0;
+      color: #2d3768;
+      font-family: Poppins, Arial, sans-serif;
+      font-size: clamp(1.85rem, 3.5vw, 2.45rem);
+      font-weight: 700;
+      line-height: 1.16;
+      letter-spacing: -0.03em;
+    }
+
+    .er-property-showing-booking-preparation .er-property-showing-booking-preparation-copy {
+      max-width: 570px;
+      margin: 18px 0 0;
+      color: #526273;
+      font-size: 1rem;
+      line-height: 1.7;
+    }
+
+    .er-property-showing-booking-preparation .er-property-showing-booking-preparation-checklist-panel {
+      padding: 28px;
+      border: 1px solid #dde1f0;
+      border-radius: 17px;
+      background: #ffffff;
+      box-shadow: 0 14px 34px rgba(45, 55, 104, 0.07);
+    }
+
+    .er-property-showing-booking-preparation .er-property-showing-booking-preparation-checklist {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px 22px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .er-property-showing-booking-preparation .er-property-showing-booking-preparation-checklist-item {
+      min-width: 0;
+      display: flex;
+      align-items: flex-start;
+      gap: 11px;
+      color: #182433;
+      font-size: 0.9375rem;
+      font-weight: 600;
+      line-height: 1.55;
+    }
+
+    .er-property-showing-booking-preparation .er-property-showing-booking-preparation-check {
+      width: 27px;
+      height: 27px;
+      display: inline-flex;
+      flex: 0 0 27px;
+      align-items: center;
+      justify-content: center;
+      margin-top: 1px;
+      border-radius: 50%;
+      background: #eef0fa;
+      color: #2e8b57;
+    }
+
+    .er-property-showing-booking-preparation .er-property-showing-booking-preparation-check svg {
+      width: 15px;
+      height: 15px;
+      display: block;
+    }
+
+    .er-property-showing-booking-preparation .er-property-showing-booking-preparation-reassurance {
+      margin-top: 54px;
+    }
+
+    .er-property-showing-booking-preparation .er-property-showing-booking-preparation-reassurance-heading {
+      margin: 0 0 22px;
+      color: #2d3768;
+      font-family: Poppins, Arial, sans-serif;
+      font-size: 1.35rem;
+      font-weight: 700;
+      line-height: 1.25;
+      text-align: center;
+    }
+
+    .er-property-showing-booking-preparation .er-property-showing-booking-preparation-card-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 20px;
+    }
+
+    .er-property-showing-booking-preparation .er-property-showing-booking-preparation-card {
+      min-width: 0;
+      padding: 24px;
+      border: 1px solid #dde1f0;
+      border-radius: 16px;
+      background: #ffffff;
+      box-shadow: 0 12px 30px rgba(45, 55, 104, 0.07);
+    }
+
+    .er-property-showing-booking-preparation .er-property-showing-booking-preparation-card-icon {
+      width: 46px;
+      height: 46px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 13px;
+      background: #eef0fa;
+      color: #3f4e8c;
+    }
+
+    .er-property-showing-booking-preparation .er-property-showing-booking-preparation-card-icon svg {
+      width: 23px;
+      height: 23px;
+      display: block;
+    }
+
+    .er-property-showing-booking-preparation .er-property-showing-booking-preparation-card-heading {
+      margin: 17px 0 0;
+      color: #3f4e8c;
+      font-family: Poppins, Arial, sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
+      line-height: 1.35;
+    }
+
+    .er-property-showing-booking-preparation .er-property-showing-booking-preparation-card-copy {
+      margin: 9px 0 0;
+      color: #526273;
+      font-size: 0.9375rem;
+      line-height: 1.65;
+    }
+
+    .er-property-showing-booking-preparation .er-property-showing-booking-preparation-information {
+      display: grid;
+      grid-template-columns: 46px minmax(0, 1fr);
+      gap: 15px;
+      align-items: start;
+      margin-top: 24px;
+      padding: 22px 24px;
+      border: 1px solid #d5a64a;
+      border-radius: 15px;
+      background: #ffffff;
+    }
+
+    .er-property-showing-booking-preparation .er-property-showing-booking-preparation-information-icon {
+      width: 46px;
+      height: 46px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 13px;
+      background: #eef0fa;
+      color: #af8233;
+    }
+
+    .er-property-showing-booking-preparation .er-property-showing-booking-preparation-information-icon svg {
+      width: 23px;
+      height: 23px;
+      display: block;
+    }
+
+    .er-property-showing-booking-preparation .er-property-showing-booking-preparation-information-content {
+      min-width: 0;
+    }
+
+    .er-property-showing-booking-preparation .er-property-showing-booking-preparation-information-heading {
+      margin: 0;
+      color: #2d3768;
+      font-family: Poppins, Arial, sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
+      line-height: 1.4;
+    }
+
+    .er-property-showing-booking-preparation .er-property-showing-booking-preparation-information-copy {
+      margin: 6px 0 0;
+      color: #526273;
+      font-size: 0.9375rem;
+      line-height: 1.65;
+    }
+
+    .er-property-showing-booking-preparation .er-property-showing-booking-preparation-navigation {
+      margin-top: 30px;
+      text-align: center;
+    }
+
+    .er-property-showing-booking-preparation .er-property-showing-booking-preparation-link {
+      min-height: 48px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      padding: 11px 20px;
+      border: 1px solid #3f4e8c;
+      border-radius: 10px;
+      background: #ffffff;
+      color: #3f4e8c;
+      font-family: Poppins, Arial, sans-serif;
+      font-size: 0.875rem;
+      font-weight: 700;
+      line-height: 1.4;
+      text-decoration: none;
+      transition:
+        background-color 160ms ease,
+        color 160ms ease,
+        transform 160ms ease;
+    }
+
+    .er-property-showing-booking-preparation .er-property-showing-booking-preparation-link:hover {
+      background: #3f4e8c;
+      color: #ffffff;
+      transform: translateY(-1px);
+    }
+
+    .er-property-showing-booking-preparation .er-property-showing-booking-preparation-link:focus-visible {
+      outline: 3px solid #d5a64a;
+      outline-offset: 4px;
+    }
+
+    .er-property-showing-booking-preparation .er-property-showing-booking-preparation-link-icon {
+      width: 18px;
+      height: 18px;
+      display: block;
+      flex: 0 0 18px;
+    }
+
+    @media (max-width: 900px) {
+      .er-property-showing-booking-preparation {
+        padding: 62px 0;
+      }
+
+      .er-property-showing-booking-preparation .er-property-showing-booking-preparation-layout {
+        grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+        gap: 36px;
+      }
+
+      .er-property-showing-booking-preparation .er-property-showing-booking-preparation-checklist {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .er-property-showing-booking-preparation .er-property-showing-booking-preparation-card-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .er-property-showing-booking-preparation .er-property-showing-booking-preparation-card:last-child {
+        grid-column: 1 / -1;
+      }
+    }
+
+    @media (max-width: 767px) {
+      .er-property-showing-booking-preparation {
+        padding: 52px 0;
+      }
+
+      .er-property-showing-booking-preparation .er-property-showing-booking-preparation-container {
+        width: min(100% - 36px, 1100px);
+      }
+
+      .er-property-showing-booking-preparation .er-property-showing-booking-preparation-layout {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 28px;
+      }
+
+      .er-property-showing-booking-preparation .er-property-showing-booking-preparation-heading {
+        font-size: clamp(1.65rem, 7vw, 2rem);
+      }
+
+      .er-property-showing-booking-preparation .er-property-showing-booking-preparation-checklist-panel {
+        padding: 23px;
+      }
+
+      .er-property-showing-booking-preparation .er-property-showing-booking-preparation-reassurance {
+        margin-top: 42px;
+      }
+
+      .er-property-showing-booking-preparation .er-property-showing-booking-preparation-card-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .er-property-showing-booking-preparation .er-property-showing-booking-preparation-card:last-child {
+        grid-column: auto;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .er-property-showing-booking-preparation .er-property-showing-booking-preparation-card {
+        padding: 21px;
+      }
+
+      .er-property-showing-booking-preparation .er-property-showing-booking-preparation-information {
+        grid-template-columns: minmax(0, 1fr);
+        padding: 21px;
+      }
+
+      .er-property-showing-booking-preparation .er-property-showing-booking-preparation-link {
+        width: 100%;
+      }
+    }
+
+    @media (max-width: 340px) {
+      .er-property-showing-booking-preparation .er-property-showing-booking-preparation-container {
+        width: min(100% - 28px, 1100px);
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .er-property-showing-booking-preparation .er-property-showing-booking-preparation-link {
+        transition: none;
+      }
+
+      .er-property-showing-booking-preparation .er-property-showing-booking-preparation-link:hover {
+        transform: none;
+      }
+    }
+  </style>
+
+  <div class="er-property-showing-booking-preparation-container">
+    <!-- Showing Preparation Area Start -->
+    <div class="er-property-showing-booking-preparation-layout">
+      <div class="er-property-showing-booking-preparation-introduction">
+        <p class="er-property-showing-booking-preparation-eyebrow">
+          Prepare for your visit
+        </p>
+
+        <h2
+          id="er-property-showing-booking-preparation-heading"
+          class="er-property-showing-booking-preparation-heading"
+        >
+          A few things to think about before the showing
+        </h2>
+
+        <p class="er-property-showing-booking-preparation-copy">
+          You do not need formal documents before booking. Having a few
+          preferences and questions in mind can help make the visit more useful.
+        </p>
+      </div>
+
+      <div class="er-property-showing-booking-preparation-checklist-panel">
+        <ul
+          class="er-property-showing-booking-preparation-checklist"
+          aria-label="Property showing preparation checklist"
+        >
+          <li class="er-property-showing-booking-preparation-checklist-item">
+            <span class="er-property-showing-booking-preparation-check" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M5 12.5 9.3 17 19 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+            <span>Rooms and layout that matter most to you</span>
+          </li>
+
+          <li class="er-property-showing-booking-preparation-checklist-item">
+            <span class="er-property-showing-booking-preparation-check" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M5 12.5 9.3 17 19 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+            <span>Must-have property features</span>
+          </li>
+
+          <li class="er-property-showing-booking-preparation-checklist-item">
+            <span class="er-property-showing-booking-preparation-check" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M5 12.5 9.3 17 19 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+            <span>Questions about visible condition or improvements</span>
+          </li>
+
+          <li class="er-property-showing-booking-preparation-checklist-item">
+            <span class="er-property-showing-booking-preparation-check" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M5 12.5 9.3 17 19 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+            <span>Storage and usable-space needs</span>
+          </li>
+
+          <li class="er-property-showing-booking-preparation-checklist-item">
+            <span class="er-property-showing-booking-preparation-check" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M5 12.5 9.3 17 19 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+            <span>Neighborhood or location questions</span>
+          </li>
+
+          <li class="er-property-showing-booking-preparation-checklist-item">
+            <span class="er-property-showing-booking-preparation-check" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M5 12.5 9.3 17 19 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+            <span>Your preferred buying timeline</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- Showing Preparation Area End -->
+
+    <!-- Reassurance Area Start -->
+    <div class="er-property-showing-booking-preparation-reassurance">
+      <h3 class="er-property-showing-booking-preparation-reassurance-heading">
+        What to expect
+      </h3>
+
+      <div class="er-property-showing-booking-preparation-card-grid">
+        <article class="er-property-showing-booking-preparation-card">
+          <span class="er-property-showing-booking-preparation-card-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none">
+              <rect x="3.5" y="5" width="11" height="14" rx="2" stroke="currentColor" stroke-width="1.8"/>
+              <path d="M6.5 9h5M6.5 12h5M6.5 15h3M16 8h4v11h-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+          <h3 class="er-property-showing-booking-preparation-card-heading">
+            The booking form comes after time selection
+          </h3>
+          <p class="er-property-showing-booking-preparation-card-copy">
+            Choose an available time first, then complete the attached form to
+            confirm your visit.
+          </p>
+        </article>
+
+        <article class="er-property-showing-booking-preparation-card">
+          <span class="er-property-showing-booking-preparation-card-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none">
+              <circle cx="8" cy="7.5" r="3" stroke="currentColor" stroke-width="1.8"/>
+              <path d="M3.5 18c.6-3.3 2.1-5 4.5-5s3.9 1.7 4.5 5M13 10l4-3 4 3M14.5 9v9h5V9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+          <h3 class="er-property-showing-booking-preparation-card-heading">
+            Your showing is guided
+          </h3>
+          <p class="er-property-showing-booking-preparation-card-copy">
+            Ethan Brooks will help you review the property and organize your
+            questions during the visit.
+          </p>
+        </article>
+
+        <article class="er-property-showing-booking-preparation-card">
+          <span class="er-property-showing-booking-preparation-card-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none">
+              <path d="M12 3 19 6v5c0 4.5-2.8 7.8-7 10-4.2-2.2-7-5.5-7-10V6l7-3Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+              <path d="m8.5 12 2.2 2.2 4.8-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+          <h3 class="er-property-showing-booking-preparation-card-heading">
+            No obligation to make an offer
+          </h3>
+          <p class="er-property-showing-booking-preparation-card-copy">
+            The showing gives you an opportunity to evaluate the property
+            before deciding whether to continue.
+          </p>
+        </article>
+      </div>
+    </div>
+    <!-- Reassurance Area End -->
+
+    <!-- Property Access Information Start -->
+    <aside
+      class="er-property-showing-booking-preparation-information"
+      aria-labelledby="er-property-showing-booking-preparation-information-heading"
+    >
+      <span class="er-property-showing-booking-preparation-information-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none">
+          <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8"/>
+          <path d="M12 10.5V16M12 7.5h.01" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </span>
+
+      <div class="er-property-showing-booking-preparation-information-content">
+        <h3
+          id="er-property-showing-booking-preparation-information-heading"
+          class="er-property-showing-booking-preparation-information-heading"
+        >
+          Property access
+        </h3>
+        <p class="er-property-showing-booking-preparation-information-copy">
+          The requested time may remain subject to property availability,
+          access approval, and final scheduling confirmation.
+        </p>
+      </div>
+    </aside>
+    <!-- Property Access Information End -->
+
+    <nav
+      class="er-property-showing-booking-preparation-navigation"
+      aria-label="Return to property showing calendar"
+    >
+      <!-- Internal link: Section 3 — Embedded Property Showing Calendar -->
+      <a
+        class="er-property-showing-booking-preparation-link"
+        href="#property-showing-booking-calendar"
+      >
+        <svg
+          class="er-property-showing-booking-preparation-link-icon"
+          viewBox="0 0 24 24"
+          fill="none"
+          aria-hidden="true"
+        >
+          <path d="M19 12H5m5 5-5-5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span>Return to the calendar</span>
+      </a>
+    </nav>
+  </div>
+</section>
+<!-- Section 4: Showing Preparation and Reassurance End -->
+
+<!-- Section 5: Footer Start -->
+<footer
+  id="property-showing-booking-footer"
+  class="er-property-showing-booking-footer"
+  aria-labelledby="er-property-showing-booking-footer-brand"
+>
+  <style>
+    .er-property-showing-booking-footer {
+      width: 100%;
+      max-width: 100%;
+      overflow-x: clip;
+      padding: 54px 0 24px;
+      border-top: 1px solid #3f4e8c;
+      background: #27315f;
+      color: #ffffff;
+      font-family: Inter, Arial, sans-serif;
+    }
+
+    .er-property-showing-booking-footer,
+    .er-property-showing-booking-footer * {
+      box-sizing: border-box;
+    }
+
+    .er-property-showing-booking-footer .er-property-showing-booking-footer-container {
+      width: min(100% - 48px, 1200px);
+      margin: 0 auto;
+    }
+
+    .er-property-showing-booking-footer .er-property-showing-booking-footer-columns {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(210px, 0.8fr) minmax(260px, 1fr);
+      gap: clamp(40px, 7vw, 88px);
+      align-items: start;
+      padding-bottom: 38px;
+    }
+
+    .er-property-showing-booking-footer .er-property-showing-booking-footer-column {
+      min-width: 0;
+    }
+
+    .er-property-showing-booking-footer .er-property-showing-booking-footer-brand {
+      position: relative;
+      margin: 0;
+      padding-left: 24px;
+      color: #ffffff;
+      font-family: Poppins, Arial, sans-serif;
+      font-size: 1.125rem;
+      font-weight: 700;
+      line-height: 1.35;
+    }
+
+    .er-property-showing-booking-footer .er-property-showing-booking-footer-brand::before {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: 15px;
+      height: 3px;
+      border-radius: 999px;
+      background: #d5a64a;
+      content: "";
+      transform: translateY(-50%);
+    }
+
+    .er-property-showing-booking-footer .er-property-showing-booking-footer-description {
+      max-width: 380px;
+      margin: 15px 0 0;
+      color: #eef0fa;
+      font-size: 0.9375rem;
+      line-height: 1.7;
+      opacity: 0.82;
+    }
+
+    .er-property-showing-booking-footer .er-property-showing-booking-footer-heading {
+      margin: 0 0 15px;
+      color: #ffffff;
+      font-family: Poppins, Arial, sans-serif;
+      font-size: 0.9375rem;
+      font-weight: 700;
+      line-height: 1.4;
+    }
+
+    .er-property-showing-booking-footer .er-property-showing-booking-footer-links,
+    .er-property-showing-booking-footer .er-property-showing-booking-footer-contact-list,
+    .er-property-showing-booking-footer .er-property-showing-booking-footer-legal-links {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .er-property-showing-booking-footer .er-property-showing-booking-footer-links,
+    .er-property-showing-booking-footer .er-property-showing-booking-footer-contact-list {
+      display: grid;
+      gap: 7px;
+    }
+
+    .er-property-showing-booking-footer .er-property-showing-booking-footer-link,
+    .er-property-showing-booking-footer .er-property-showing-booking-footer-contact-link,
+    .er-property-showing-booking-footer .er-property-showing-booking-footer-legal-link {
+      width: fit-content;
+      max-width: 100%;
+      min-height: 44px;
+      display: inline-flex;
+      align-items: center;
+      padding: 6px 2px;
+      color: #eef0fa;
+      font-size: 0.875rem;
+      line-height: 1.5;
+      text-decoration: none;
+      overflow-wrap: anywhere;
+      transition:
+        color 160ms ease,
+        text-decoration-color 160ms ease;
+    }
+
+    .er-property-showing-booking-footer .er-property-showing-booking-footer-link:hover,
+    .er-property-showing-booking-footer .er-property-showing-booking-footer-contact-link:hover,
+    .er-property-showing-booking-footer .er-property-showing-booking-footer-legal-link:hover {
+      color: #d5a64a;
+      text-decoration: underline;
+      text-decoration-color: #d5a64a;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 4px;
+    }
+
+    .er-property-showing-booking-footer .er-property-showing-booking-footer-link:focus-visible,
+    .er-property-showing-booking-footer .er-property-showing-booking-footer-contact-link:focus-visible,
+    .er-property-showing-booking-footer .er-property-showing-booking-footer-legal-link:focus-visible {
+      border-radius: 5px;
+      outline: 3px solid #d5a64a;
+      outline-offset: 3px;
+    }
+
+    .er-property-showing-booking-footer .er-property-showing-booking-footer-contact-item {
+      min-width: 0;
+      color: #eef0fa;
+      font-size: 0.875rem;
+      line-height: 1.65;
+    }
+
+    .er-property-showing-booking-footer .er-property-showing-booking-footer-address {
+      max-width: 310px;
+      margin: 6px 0 0;
+      color: #eef0fa;
+      font-style: normal;
+      font-size: 0.875rem;
+      line-height: 1.7;
+      opacity: 0.82;
+    }
+
+    .er-property-showing-booking-footer .er-property-showing-booking-footer-bottom {
+      padding-top: 22px;
+      border-top: 1px solid #3f4e8c;
+    }
+
+    .er-property-showing-booking-footer .er-property-showing-booking-footer-bottom-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .er-property-showing-booking-footer .er-property-showing-booking-footer-copyright {
+      margin: 0;
+      color: #eef0fa;
+      font-size: 0.8125rem;
+      line-height: 1.5;
+      opacity: 0.82;
+    }
+
+    .er-property-showing-booking-footer .er-property-showing-booking-footer-legal-links {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 18px;
+    }
+
+    .er-property-showing-booking-footer .er-property-showing-booking-footer-legal-link {
+      min-height: 40px;
+      font-size: 0.8125rem;
+      font-weight: 600;
+    }
+
+    .er-property-showing-booking-footer .er-property-showing-booking-footer-disclaimer {
+      max-width: 850px;
+      margin: 16px 0 0;
+      color: #eef0fa;
+      font-size: 0.8125rem;
+      line-height: 1.6;
+      opacity: 0.72;
+    }
+
+    @media (max-width: 900px) {
+      .er-property-showing-booking-footer .er-property-showing-booking-footer-columns {
+        grid-template-columns: 1.1fr 0.9fr;
+        gap: 38px 52px;
+      }
+
+      .er-property-showing-booking-footer .er-property-showing-booking-footer-column--contact {
+        grid-column: 1 / -1;
+      }
+
+      .er-property-showing-booking-footer .er-property-showing-booking-footer-contact-list {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 4px 28px;
+      }
+
+      .er-property-showing-booking-footer .er-property-showing-booking-footer-address {
+        max-width: 420px;
+      }
+    }
+
+    @media (max-width: 767px) {
+      .er-property-showing-booking-footer {
+        padding: 44px 0 22px;
+      }
+
+      .er-property-showing-booking-footer .er-property-showing-booking-footer-container {
+        width: min(100% - 36px, 1200px);
+      }
+
+      .er-property-showing-booking-footer .er-property-showing-booking-footer-columns {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 30px;
+        padding-bottom: 30px;
+      }
+
+      .er-property-showing-booking-footer .er-property-showing-booking-footer-column--contact {
+        grid-column: auto;
+      }
+
+      .er-property-showing-booking-footer .er-property-showing-booking-footer-contact-list {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .er-property-showing-booking-footer .er-property-showing-booking-footer-bottom-row {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 8px;
+      }
+
+      .er-property-showing-booking-footer .er-property-showing-booking-footer-legal-links {
+        justify-content: flex-start;
+        gap: 16px;
+      }
+
+      .er-property-showing-booking-footer .er-property-showing-booking-footer-disclaimer {
+        margin-top: 12px;
+      }
+    }
+
+    @media (max-width: 340px) {
+      .er-property-showing-booking-footer .er-property-showing-booking-footer-container {
+        width: min(100% - 28px, 1200px);
+      }
+
+      .er-property-showing-booking-footer .er-property-showing-booking-footer-legal-links {
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .er-property-showing-booking-footer .er-property-showing-booking-footer-link,
+      .er-property-showing-booking-footer .er-property-showing-booking-footer-contact-link,
+      .er-property-showing-booking-footer .er-property-showing-booking-footer-legal-link {
+        transition: none;
+      }
+    }
+  </style>
+
+  <div class="er-property-showing-booking-footer-container">
+    <div class="er-property-showing-booking-footer-columns">
+      <!-- Brand Column Start -->
+      <section
+        class="er-property-showing-booking-footer-column"
+        aria-labelledby="er-property-showing-booking-footer-brand"
+      >
+        <h2
+          id="er-property-showing-booking-footer-brand"
+          class="er-property-showing-booking-footer-brand"
+        >
+          Elite Realty Group
+        </h2>
+
+        <p class="er-property-showing-booking-footer-description">
+          Helping Austin-area buyers and sellers move forward with greater clarity.
+        </p>
+      </section>
+      <!-- Brand Column End -->
+
+      <!-- Buyer Resources Column Start -->
+      <nav
+        class="er-property-showing-booking-footer-column"
+        aria-labelledby="er-property-showing-booking-footer-resources-heading"
+      >
+        <h2
+          id="er-property-showing-booking-footer-resources-heading"
+          class="er-property-showing-booking-footer-heading"
+        >
+          Buyer resources
+        </h2>
+
+        <ul class="er-property-showing-booking-footer-links">
+          <li>
+            <!-- Replace with: 01 | Property Showing Landing URL -->
+            <a class="er-property-showing-booking-footer-link" href="#">
+              Property showing
+            </a>
+          </li>
+
+          <li>
+            <!-- Replace with: ER | FNL | Buyer Consultation landing-page URL -->
+            <a class="er-property-showing-booking-footer-link" href="#">
+              Buyer consultation
+            </a>
+          </li>
+
+          <li>
+            <!-- Replace with: ER | FNL | Open House Registration landing-page URL -->
+            <a class="er-property-showing-booking-footer-link" href="#">
+              Open house registration
+            </a>
+          </li>
+
+          <li>
+            <!-- Replace with: Elite Realty contact-page URL -->
+            <a class="er-property-showing-booking-footer-link" href="#">
+              Contact
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <!-- Buyer Resources Column End -->
+
+      <!-- Contact Column Start -->
+      <section
+        class="er-property-showing-booking-footer-column er-property-showing-booking-footer-column--contact"
+        aria-labelledby="er-property-showing-booking-footer-contact-heading"
+      >
+        <h2
+          id="er-property-showing-booking-footer-contact-heading"
+          class="er-property-showing-booking-footer-heading"
+        >
+          Contact
+        </h2>
+
+        <ul class="er-property-showing-booking-footer-contact-list">
+          <li class="er-property-showing-booking-footer-contact-item">
+            <a
+              class="er-property-showing-booking-footer-contact-link"
+              href="tel:+15125550147"
+              aria-label="Call Elite Realty Group at 512-555-0147"
+            >
+              (512) 555-0147
+            </a>
+          </li>
+
+          <li class="er-property-showing-booking-footer-contact-item">
+            <a
+              class="er-property-showing-booking-footer-contact-link"
+              href="mailto:eliterealty.crm@gmail.com"
+              aria-label="Email Elite Realty Group at eliterealty.crm@gmail.com"
+            >
+              eliterealty.crm@gmail.com
+            </a>
+          </li>
+        </ul>
+
+        <address class="er-property-showing-booking-footer-address">
+          1847 Meridian Grove Avenue, Suite 320<br>
+          Austin, TX 78704
+        </address>
+      </section>
+      <!-- Contact Column End -->
+    </div>
+
+    <!-- Footer Bottom Start -->
+    <div class="er-property-showing-booking-footer-bottom">
+      <div class="er-property-showing-booking-footer-bottom-row">
+        <p class="er-property-showing-booking-footer-copyright">
+          © 2026 Elite Realty Group. All rights reserved.
+        </p>
+
+        <nav aria-label="Legal information">
+          <ul class="er-property-showing-booking-footer-legal-links">
+            <li>
+              <!-- Replace with: Elite Realty Privacy Policy URL -->
+              <a
+                class="er-property-showing-booking-footer-legal-link"
+                href="#"
+              >
+                Privacy policy
+              </a>
+            </li>
+
+            <li>
+              <!-- Replace with: Elite Realty Terms and Conditions URL -->
+              <a
+                class="er-property-showing-booking-footer-legal-link"
+                href="#"
+              >
+                Terms
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <p class="er-property-showing-booking-footer-disclaimer">
+        Elite Realty Group is a fictional business created for CRM and automation
+        demonstration purposes.
+      </p>
+    </div>
+    <!-- Footer Bottom End -->
+  </div>
+</footer>
+<!-- Section 5: Footer End -->
+
+  <a class="funnel-next-button" href="../step-03/index.html" aria-label="Go to Property Showing Step 03" title="Next Page">
+    <span class="funnel-next-button__icon" aria-hidden="true">→</span>
+    <span>Next Page</span>
+  </a>
+</body>
+</html>

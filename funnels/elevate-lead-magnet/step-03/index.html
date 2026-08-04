@@ -1,0 +1,4211 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Compare Elevate Academy learning and coaching options to choose the support that matches your goals.">
+  <title>Elevate Program Selection | Step 03</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+  <style>
+    html {
+      min-width: 320px;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      min-width: 320px;
+      margin: 0;
+      background: #ffffff;
+    }
+
+    .funnel-next-button {
+      position: fixed;
+      z-index: 99999;
+      right: 24px;
+      bottom: 24px;
+      display: inline-flex;
+      min-height: 54px;
+      padding: 0 20px 0 10px;
+      align-items: center;
+      gap: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 999px;
+      background: linear-gradient(135deg, #643b68, #3d2342);
+      box-shadow: 0 15px 36px rgba(61, 35, 66, 0.28);
+      color: #ffffff;
+      font: 700 0.88rem/1 Inter, Arial, sans-serif;
+      text-decoration: none;
+      transition: transform 180ms ease, box-shadow 180ms ease;
+    }
+
+    .funnel-next-button:hover {
+      color: #ffffff;
+      box-shadow: 0 20px 44px rgba(61, 35, 66, 0.38);
+      transform: translateY(-3px);
+    }
+
+    .funnel-next-button:focus-visible {
+      outline: 3px solid #55a892;
+      outline-offset: 4px;
+    }
+
+    .funnel-next-button__icon {
+      display: grid;
+      width: 34px;
+      height: 34px;
+      place-items: center;
+      border-radius: 50%;
+      background: #e8f5ee;
+      color: #3d2342;
+      font-size: 1.1rem;
+    }
+
+    @media (max-width: 640px) {
+      .funnel-next-button {
+        right: 16px;
+        bottom: 16px;
+        min-height: 50px;
+        padding-right: 16px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      .funnel-next-button {
+        transition: none;
+      }
+    }
+  </style>
+</head>
+<body>
+<!-- Section 1: Program Selection Hero Start -->
+<section
+  class="ea-program-selection-hero"
+  id="ea-program-selection-hero"
+  aria-labelledby="ea-program-selection-hero-heading"
+>
+  <style>
+    .ea-program-selection-hero {
+      width: 100%;
+      max-width: 100%;
+      overflow-x: hidden;
+      background: #fff8ec;
+      color: #344054;
+      font-family: Inter, Arial, sans-serif;
+    }
+
+    .ea-program-selection-hero,
+    .ea-program-selection-hero * {
+      box-sizing: border-box;
+    }
+
+    .ea-program-selection-hero a {
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .ea-program-selection-hero .ea-program-selection-hero__header {
+      position: relative;
+      z-index: 10;
+      background: #ffffff;
+      border-bottom: 1px solid #dde2ea;
+    }
+
+    .ea-program-selection-hero .ea-program-selection-hero__header-container {
+      display: flex;
+      width: min(100% - 64px, 1180px);
+      min-height: 74px;
+      margin-inline: auto;
+      align-items: center;
+      justify-content: space-between;
+      gap: 28px;
+    }
+
+    .ea-program-selection-hero .ea-program-selection-hero__brand {
+      display: inline-flex;
+      min-width: 0;
+      align-items: center;
+      gap: 11px;
+      color: #14213d;
+      font-family: Manrope, Arial, sans-serif;
+      font-size: 20px;
+      font-weight: 800;
+      line-height: 1.2;
+      letter-spacing: -0.025em;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    .ea-program-selection-hero .ea-program-selection-hero__brand-icon {
+      display: grid;
+      width: 38px;
+      height: 38px;
+      flex: 0 0 38px;
+      place-items: center;
+      border: 1px solid #ffe0a8;
+      border-radius: 11px;
+      background: #fff1d6;
+      color: #14213d;
+    }
+
+    .ea-program-selection-hero .ea-program-selection-hero__brand-icon svg {
+      width: 24px;
+      height: 24px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 1.8;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .ea-program-selection-hero .ea-program-selection-hero__brand-icon .ea-program-selection-hero__svg-accent {
+      stroke: #d78300;
+    }
+
+    .ea-program-selection-hero .ea-program-selection-hero__navigation {
+      display: flex;
+      min-width: 0;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 8px;
+    }
+
+    .ea-program-selection-hero .ea-program-selection-hero__nav-link {
+      display: inline-flex;
+      min-height: 44px;
+      align-items: center;
+      justify-content: center;
+      padding: 9px 13px;
+      border-radius: 10px;
+      color: #344054;
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 1.35;
+      text-decoration: none;
+      transition:
+        background-color 170ms ease,
+        color 170ms ease,
+        transform 170ms ease;
+    }
+
+    .ea-program-selection-hero .ea-program-selection-hero__nav-link:hover {
+      background: #f5f6f8;
+      color: #14213d;
+    }
+
+    .ea-program-selection-hero .ea-program-selection-hero__nav-link:active {
+      transform: translateY(1px);
+    }
+
+    .ea-program-selection-hero .ea-program-selection-hero__nav-button {
+      display: inline-flex;
+      min-height: 44px;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 18px;
+      border: 1px solid #fca311;
+      border-radius: 11px;
+      background: #fca311;
+      color: #14213d;
+      font-family: Manrope, Arial, sans-serif;
+      font-size: 14px;
+      font-weight: 800;
+      line-height: 1.35;
+      text-align: center;
+      text-decoration: none;
+      box-shadow: 0 8px 18px rgba(215, 131, 0, 0.17);
+      transition:
+        background-color 170ms ease,
+        border-color 170ms ease,
+        box-shadow 170ms ease,
+        transform 170ms ease;
+    }
+
+    .ea-program-selection-hero .ea-program-selection-hero__nav-button:hover {
+      border-color: #d78300;
+      background: #ffb83d;
+      box-shadow: 0 10px 22px rgba(215, 131, 0, 0.22);
+      transform: translateY(-1px);
+    }
+
+    .ea-program-selection-hero .ea-program-selection-hero__nav-button:active {
+      background: #d78300;
+      transform: translateY(1px);
+    }
+
+    .ea-program-selection-hero .ea-program-selection-hero__brand:focus-visible,
+    .ea-program-selection-hero .ea-program-selection-hero__nav-link:focus-visible,
+    .ea-program-selection-hero .ea-program-selection-hero__nav-button:focus-visible,
+    .ea-program-selection-hero .ea-program-selection-hero__primary-cta:focus-visible,
+    .ea-program-selection-hero .ea-program-selection-hero__secondary-cta:focus-visible {
+      outline: 3px solid #22345c;
+      outline-offset: 3px;
+    }
+
+    .ea-program-selection-hero .ea-program-selection-hero__hero {
+      position: relative;
+      isolation: isolate;
+      overflow: hidden;
+      padding: clamp(64px, 7vw, 92px) 0;
+      background:
+        radial-gradient(
+          circle at 91% 13%,
+          rgba(252, 163, 17, 0.15) 0,
+          rgba(252, 163, 17, 0.15) 6%,
+          transparent 6.2%
+        ),
+        linear-gradient(135deg, #fff8ec 0%, #fffcf6 52%, #fff8ec 100%);
+    }
+
+    .ea-program-selection-hero .ea-program-selection-hero__hero::before {
+      position: absolute;
+      z-index: -2;
+      top: 0;
+      right: 0;
+      width: 46%;
+      height: 100%;
+      background-image:
+        linear-gradient(rgba(20, 33, 61, 0.045) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(20, 33, 61, 0.045) 1px, transparent 1px);
+      background-size: 28px 28px;
+      content: "";
+      mask-image: linear-gradient(to left, #000 30%, transparent 100%);
+      pointer-events: none;
+    }
+
+    .ea-program-selection-hero .ea-program-selection-hero__hero::after {
+      position: absolute;
+      z-index: -1;
+      right: -85px;
+      bottom: -145px;
+      width: 340px;
+      height: 340px;
+      border: 54px solid rgba(34, 52, 92, 0.05);
+      border-radius: 50%;
+      content: "";
+      pointer-events: none;
+    }
+
+    .ea-program-selection-hero .ea-program-selection-hero__container {
+      display: grid;
+      width: min(100% - 64px, 1180px);
+      margin-inline: auto;
+      grid-template-columns: minmax(0, 1.16fr) minmax(390px, 0.84fr);
+      gap: clamp(48px, 6vw, 78px);
+      align-items: center;
+    }
+
+    .ea-program-selection-hero .ea-program-selection-hero__copy {
+      min-width: 0;
+    }
+
+    .ea-program-selection-hero .ea-program-selection-hero__eyebrow {
+      display: inline-flex;
+      margin: 0 0 18px;
+      align-items: center;
+      gap: 10px;
+      color: #d78300;
+      font-family: Manrope, Arial, sans-serif;
+      font-size: 13px;
+      font-weight: 800;
+      line-height: 1.4;
+      letter-spacing: 0.12em;
+    }
+
+    .ea-program-selection-hero .ea-program-selection-hero__eyebrow::before {
+      width: 30px;
+      height: 3px;
+      flex: 0 0 30px;
+      border-radius: 999px;
+      background: #fca311;
+      content: "";
+    }
+
+    .ea-program-selection-hero .ea-program-selection-hero__heading {
+      max-width: 720px;
+      margin: 0;
+      color: #14213d;
+      font-family: Manrope, Arial, sans-serif;
+      font-size: clamp(40px, 5vw, 64px);
+      font-weight: 800;
+      line-height: 1.06;
+      letter-spacing: -0.045em;
+      text-wrap: balance;
+    }
+
+    .ea-program-selection-hero .ea-program-selection-hero__lead {
+      max-width: 690px;
+      margin: 24px 0 0;
+      color: #344054;
+      font-size: 19px;
+      line-height: 1.65;
+    }
+
+    .ea-program-selection-hero .ea-program-selection-hero__supporting-copy {
+      max-width: 700px;
+      margin: 13px 0 0;
+      color: #344054;
+      font-size: 16px;
+      line-height: 1.75;
+    }
+
+    .ea-program-selection-hero .ea-program-selection-hero__choice-note {
+      max-width: 700px;
+      margin: 17px 0 0;
+      padding: 13px 16px;
+      border-left: 4px solid #fca311;
+      border-radius: 0 11px 11px 0;
+      background: rgba(255, 255, 255, 0.72);
+      color: #667085;
+      font-size: 14px;
+      line-height: 1.65;
+    }
+
+    .ea-program-selection-hero .ea-program-selection-hero__indicators {
+      display: grid;
+      margin: 28px 0 0;
+      gap: 10px;
+    }
+
+    .ea-program-selection-hero .ea-program-selection-hero__indicator {
+      display: grid;
+      min-width: 0;
+      padding: 14px 16px;
+      grid-template-columns: 42px minmax(0, 1fr);
+      gap: 13px;
+      align-items: center;
+      border: 1px solid rgba(221, 226, 234, 0.92);
+      border-radius: 14px;
+      background: rgba(255, 255, 255, 0.78);
+      box-shadow: 0 7px 18px rgba(13, 23, 45, 0.045);
+      transition:
+        border-color 180ms ease,
+        box-shadow 180ms ease,
+        transform 180ms ease;
+    }
+
+    .ea-program-selection-hero .ea-program-selection-hero__indicator:hover {
+      border-color: #ffcf7a;
+      box-shadow: 0 10px 24px rgba(13, 23, 45, 0.07);
+      transform: translateX(3px);
+    }
+
+    .ea-program-selection-hero .ea-program-selection-hero__indicator-icon {
+      display: grid;
+      width: 42px;
+      height: 42px;
+      place-items: center;
+      border-radius: 12px;
+      background: #fff1d6;
+      color: #14213d;
+    }
+
+    .ea-program-selection-hero .ea-program-selection-hero__indicator:nth-child(2) .ea-program-selection-hero__indicator-icon {
+      background: #e9edf5;
+      color: #22345c;
+    }
+
+    .ea-program-selection-hero .ea-program-selection-hero__indicator:nth-child(3) .ea-program-selection-hero__indicator-icon {
+      background: #e8f6ee;
+      color: #2e8b57;
+    }
+
+    .ea-program-selection-hero .ea-program-selection-hero__indicator-icon svg {
+      width: 23px;
+      height: 23px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 1.8;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .ea-program-selection-hero .ea-program-selection-hero__indicator-content {
+      min-width: 0;
+    }
+
+    .ea-program-selection-hero .ea-program-selection-hero__indicator-title {
+      display: block;
+      margin: 0 0 3px;
+      color: #14213d;
+      font-family: Manrope, Arial, sans-serif;
+      font-size: 15px;
+      font-weight: 800;
+      line-height: 1.4;
+    }
+
+    .ea-program-selection-hero .ea-program-selection-hero__indicator-text {
+      display: block;
+      color: #667085;
+      font-size: 13px;
+      line-height: 1.55;
+    }
+
+    .ea-program-selection-hero .ea-program-selection-hero__actions {
+      display: flex;
+      margin-top: 28px;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 12px 20px;
+    }
+
+    .ea-program-selection-hero .ea-program-selection-hero__primary-cta {
+      display: inline-flex;
+      min-height: 50px;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 13px 23px;
+      border: 1px solid #fca311;
+      border-radius: 12px;
+      background: #fca311;
+      color: #14213d;
+      font-family: Manrope, Arial, sans-serif;
+      font-size: 15px;
+      font-weight: 800;
+      line-height: 1.35;
+      text-align: center;
+      text-decoration: none;
+      box-shadow: 0 10px 24px rgba(215, 131, 0, 0.2);
+      transition:
+        background-color 180ms ease,
+        border-color 180ms ease,
+        box-shadow 180ms ease,
+        transform 180ms ease;
+    }
+
+    .ea-program-selection-hero .ea-program-selection-hero__primary-cta:hover {
+      border-color: #d78300;
+      background: #ffb83d;
+      box-shadow: 0 13px 28px rgba(215, 131, 0, 0.26);
+      transform: translateY(-2px);
+    }
+
+    .ea-program-selection-hero .ea-program-selection-hero__primary-cta:active {
+      background: #d78300;
+      transform: translateY(1px);
+    }
+
+    .ea-program-selection-hero .ea-program-selection-hero__primary-cta svg {
+      width: 18px;
+      height: 18px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .ea-program-selection-hero .ea-program-selection-hero__secondary-action {
+      display: grid;
+      gap: 2px;
+    }
+
+    .ea-program-selection-hero .ea-program-selection-hero__secondary-label {
+      color: #667085;
+      font-size: 12px;
+      line-height: 1.4;
+    }
+
+    .ea-program-selection-hero .ea-program-selection-hero__secondary-cta {
+      display: inline-flex;
+      min-height: 44px;
+      align-items: center;
+      gap: 7px;
+      border-radius: 8px;
+      color: #14213d;
+      font-family: Manrope, Arial, sans-serif;
+      font-size: 14px;
+      font-weight: 800;
+      line-height: 1.4;
+      text-decoration: underline;
+      text-decoration-color: #fca311;
+      text-decoration-thickness: 2px;
+      text-underline-offset: 5px;
+      transition:
+        color 170ms ease,
+        transform 170ms ease;
+    }
+
+    .ea-program-selection-hero .ea-program-selection-hero__secondary-cta:hover {
+      color: #d78300;
+      transform: translateX(2px);
+    }
+
+    .ea-program-selection-hero .ea-program-selection-hero__secondary-cta:active {
+      transform: translateX(0);
+    }
+
+    .ea-program-selection-hero .ea-program-selection-hero__secondary-cta svg {
+      width: 17px;
+      height: 17px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .ea-program-selection-hero .ea-program-selection-hero__visual {
+      position: relative;
+      min-width: 0;
+    }
+
+    .ea-program-selection-hero .ea-program-selection-hero__visual::before {
+      position: absolute;
+      top: -22px;
+      right: -22px;
+      width: 86px;
+      height: 86px;
+      border: 16px solid rgba(252, 163, 17, 0.17);
+      border-radius: 50%;
+      content: "";
+      pointer-events: none;
+    }
+
+    .ea-program-selection-hero .ea-program-selection-hero__visual::after {
+      position: absolute;
+      bottom: -18px;
+      left: -20px;
+      width: 74px;
+      height: 74px;
+      border-radius: 18px;
+      background:
+        radial-gradient(circle, rgba(34, 52, 92, 0.19) 2px, transparent 2.5px);
+      background-size: 13px 13px;
+      content: "";
+      pointer-events: none;
+    }
+
+    .ea-program-selection-hero .ea-program-selection-hero__pathway-card {
+      position: relative;
+      z-index: 1;
+      overflow: hidden;
+      padding: clamp(24px, 3vw, 34px);
+      border: 1px solid #dde2ea;
+      border-radius: 26px;
+      background: rgba(255, 255, 255, 0.96);
+      box-shadow: 0 24px 55px rgba(13, 23, 45, 0.13);
+    }
+
+    .ea-program-selection-hero .ea-program-selection-hero__pathway-card::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 5px;
+      background: linear-gradient(90deg, #fca311 0%, #ffb83d 42%, #22345c 100%);
+      content: "";
+    }
+
+    .ea-program-selection-hero .ea-program-selection-hero__visual-label {
+      display: inline-flex;
+      min-height: 30px;
+      margin-bottom: 16px;
+      align-items: center;
+      gap: 7px;
+      padding: 5px 10px;
+      border-radius: 999px;
+      background: #fff1d6;
+      color: #9b6000;
+      font-family: Manrope, Arial, sans-serif;
+      font-size: 11px;
+      font-weight: 800;
+      line-height: 1.3;
+      letter-spacing: 0.08em;
+    }
+
+    .ea-program-selection-hero .ea-program-selection-hero__visual-label svg {
+      width: 14px;
+      height: 14px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .ea-program-selection-hero .ea-program-selection-hero__visual-heading {
+      margin: 0;
+      color: #14213d;
+      font-family: Manrope, Arial, sans-serif;
+      font-size: clamp(23px, 2.7vw, 30px);
+      font-weight: 800;
+      line-height: 1.2;
+      letter-spacing: -0.025em;
+    }
+
+    .ea-program-selection-hero .ea-program-selection-hero__visual-description {
+      margin: 8px 0 0;
+      color: #667085;
+      font-size: 13px;
+      line-height: 1.6;
+    }
+
+    .ea-program-selection-hero .ea-program-selection-hero__pathway {
+      position: relative;
+      margin-top: 25px;
+    }
+
+    .ea-program-selection-hero .ea-program-selection-hero__starting-point {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      width: min(100%, 270px);
+      min-height: 56px;
+      margin: 0 auto;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 11px 16px;
+      border: 1px solid #22345c;
+      border-radius: 14px;
+      background: #14213d;
+      color: #ffffff;
+      font-family: Manrope, Arial, sans-serif;
+      font-size: 13px;
+      font-weight: 800;
+      line-height: 1.35;
+      text-align: center;
+      box-shadow: 0 9px 20px rgba(13, 23, 45, 0.16);
+    }
+
+    .ea-program-selection-hero .ea-program-selection-hero__starting-point svg {
+      width: 21px;
+      height: 21px;
+      flex: 0 0 21px;
+      fill: none;
+      stroke: #ffb83d;
+      stroke-width: 1.9;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .ea-program-selection-hero .ea-program-selection-hero__branch {
+      position: relative;
+      height: 54px;
+      margin: 0 22px;
+    }
+
+    .ea-program-selection-hero .ea-program-selection-hero__branch::before {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      width: 2px;
+      height: 25px;
+      background: #fca311;
+      content: "";
+      transform: translateX(-50%);
+    }
+
+    .ea-program-selection-hero .ea-program-selection-hero__branch::after {
+      position: absolute;
+      top: 24px;
+      right: 15%;
+      left: 15%;
+      height: 2px;
+      background: linear-gradient(90deg, #22345c, #fca311 50%, #22345c);
+      content: "";
+    }
+
+    .ea-program-selection-hero .ea-program-selection-hero__routes {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 10px;
+    }
+
+    .ea-program-selection-hero .ea-program-selection-hero__route {
+      position: relative;
+      display: flex;
+      min-width: 0;
+      min-height: 184px;
+      padding: 18px 12px 14px;
+      flex-direction: column;
+      align-items: center;
+      border: 1px solid #dde2ea;
+      border-radius: 16px;
+      background: #fffcf6;
+      text-align: center;
+      box-shadow: 0 7px 18px rgba(13, 23, 45, 0.055);
+      transition:
+        border-color 180ms ease,
+        box-shadow 180ms ease,
+        transform 180ms ease;
+    }
+
+    .ea-program-selection-hero .ea-program-selection-hero__route::before {
+      position: absolute;
+      top: -31px;
+      left: 50%;
+      width: 2px;
+      height: 31px;
+      background: #22345c;
+      content: "";
+      transform: translateX(-50%);
+    }
+
+    .ea-program-selection-hero .ea-program-selection-hero__route::after {
+      position: absolute;
+      top: -5px;
+      left: 50%;
+      width: 10px;
+      height: 10px;
+      border: 2px solid #ffffff;
+      border-radius: 50%;
+      background: #fca311;
+      box-shadow: 0 0 0 1px #fca311;
+      content: "";
+      transform: translateX(-50%);
+    }
+
+    .ea-program-selection-hero .ea-program-selection-hero__route:hover {
+      border-color: #ffcf7a;
+      box-shadow: 0 11px 24px rgba(13, 23, 45, 0.08);
+      transform: translateY(-3px);
+    }
+
+    .ea-program-selection-hero .ea-program-selection-hero__route-icon {
+      display: grid;
+      width: 42px;
+      height: 42px;
+      flex: 0 0 42px;
+      place-items: center;
+      border-radius: 12px;
+      background: #fff1d6;
+      color: #14213d;
+    }
+
+    .ea-program-selection-hero .ea-program-selection-hero__route:nth-child(2) .ea-program-selection-hero__route-icon {
+      background: #e9edf5;
+      color: #22345c;
+    }
+
+    .ea-program-selection-hero .ea-program-selection-hero__route:nth-child(3) .ea-program-selection-hero__route-icon {
+      background: #e8f6ee;
+      color: #2e8b57;
+    }
+
+    .ea-program-selection-hero .ea-program-selection-hero__route-icon svg {
+      width: 23px;
+      height: 23px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 1.8;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .ea-program-selection-hero .ea-program-selection-hero__route-badge {
+      display: inline-flex;
+      min-height: 23px;
+      margin: 8px 0 -1px;
+      align-items: center;
+      justify-content: center;
+      padding: 3px 7px;
+      border-radius: 999px;
+      background: #fff1d6;
+      color: #9b6000;
+      font-family: Manrope, Arial, sans-serif;
+      font-size: 9px;
+      font-weight: 800;
+      line-height: 1.2;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .ea-program-selection-hero .ea-program-selection-hero__route-title {
+      margin: 10px 0 0;
+      color: #14213d;
+      font-family: Manrope, Arial, sans-serif;
+      font-size: 13px;
+      font-weight: 800;
+      line-height: 1.35;
+      overflow-wrap: anywhere;
+    }
+
+    .ea-program-selection-hero .ea-program-selection-hero__route-description {
+      margin: 6px 0 0;
+      color: #667085;
+      font-size: 11px;
+      line-height: 1.5;
+    }
+
+    .ea-program-selection-hero .ea-program-selection-hero__destination {
+      display: grid;
+      width: 21px;
+      height: 21px;
+      margin-top: auto;
+      place-items: center;
+      border: 2px solid #fca311;
+      border-radius: 50%;
+      background: #ffffff;
+      color: #d78300;
+    }
+
+    .ea-program-selection-hero .ea-program-selection-hero__destination svg {
+      width: 11px;
+      height: 11px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 2.5;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .ea-program-selection-hero .ea-program-selection-hero__visual-note {
+      display: flex;
+      margin: 20px 0 0;
+      align-items: flex-start;
+      justify-content: center;
+      gap: 8px;
+      color: #667085;
+      font-size: 12px;
+      line-height: 1.55;
+      text-align: center;
+    }
+
+    .ea-program-selection-hero .ea-program-selection-hero__visual-note svg {
+      width: 17px;
+      height: 17px;
+      flex: 0 0 17px;
+      margin-top: 1px;
+      fill: none;
+      stroke: #d78300;
+      stroke-width: 1.9;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    @media (max-width: 1060px) {
+      .ea-program-selection-hero .ea-program-selection-hero__header-container {
+        gap: 18px;
+      }
+
+      .ea-program-selection-hero .ea-program-selection-hero__navigation {
+        gap: 3px;
+      }
+
+      .ea-program-selection-hero .ea-program-selection-hero__nav-link {
+        padding-inline: 9px;
+      }
+
+      .ea-program-selection-hero .ea-program-selection-hero__container {
+        grid-template-columns: minmax(0, 1.05fr) minmax(360px, 0.95fr);
+        gap: 38px;
+      }
+
+      .ea-program-selection-hero .ea-program-selection-hero__route {
+        padding-inline: 9px;
+      }
+    }
+
+    @media (max-width: 900px) {
+      .ea-program-selection-hero .ea-program-selection-hero__header-container {
+        width: min(100% - 40px, 1180px);
+      }
+
+      .ea-program-selection-hero .ea-program-selection-hero__nav-link {
+        display: none;
+      }
+
+      .ea-program-selection-hero .ea-program-selection-hero__container {
+        width: min(100% - 40px, 760px);
+        grid-template-columns: minmax(0, 1fr);
+        gap: 54px;
+      }
+
+      .ea-program-selection-hero .ea-program-selection-hero__heading {
+        max-width: 760px;
+      }
+
+      .ea-program-selection-hero .ea-program-selection-hero__lead,
+      .ea-program-selection-hero .ea-program-selection-hero__supporting-copy,
+      .ea-program-selection-hero .ea-program-selection-hero__choice-note {
+        max-width: 740px;
+      }
+
+      .ea-program-selection-hero .ea-program-selection-hero__visual {
+        width: min(100%, 650px);
+        margin-inline: auto;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .ea-program-selection-hero .ea-program-selection-hero__header-container {
+        width: min(100% - 32px, 1180px);
+        min-height: 68px;
+        gap: 12px;
+      }
+
+      .ea-program-selection-hero .ea-program-selection-hero__brand {
+        gap: 8px;
+        font-size: 17px;
+      }
+
+      .ea-program-selection-hero .ea-program-selection-hero__brand-icon {
+        width: 34px;
+        height: 34px;
+        flex-basis: 34px;
+        border-radius: 10px;
+      }
+
+      .ea-program-selection-hero .ea-program-selection-hero__brand-icon svg {
+        width: 21px;
+        height: 21px;
+      }
+
+      .ea-program-selection-hero .ea-program-selection-hero__nav-button {
+        min-height: 44px;
+        padding: 9px 12px;
+        font-size: 12px;
+      }
+
+      .ea-program-selection-hero .ea-program-selection-hero__hero {
+        padding: 58px 0 62px;
+      }
+
+      .ea-program-selection-hero .ea-program-selection-hero__hero::before {
+        width: 72%;
+        opacity: 0.65;
+      }
+
+      .ea-program-selection-hero .ea-program-selection-hero__container {
+        width: min(100% - 32px, 760px);
+        gap: 46px;
+      }
+
+      .ea-program-selection-hero .ea-program-selection-hero__eyebrow {
+        margin-bottom: 15px;
+        font-size: 11px;
+      }
+
+      .ea-program-selection-hero .ea-program-selection-hero__heading {
+        font-size: clamp(35px, 11vw, 46px);
+        line-height: 1.09;
+      }
+
+      .ea-program-selection-hero .ea-program-selection-hero__lead {
+        margin-top: 20px;
+        font-size: 17px;
+      }
+
+      .ea-program-selection-hero .ea-program-selection-hero__supporting-copy {
+        font-size: 15px;
+      }
+
+      .ea-program-selection-hero .ea-program-selection-hero__indicator {
+        grid-template-columns: 40px minmax(0, 1fr);
+        padding: 13px;
+      }
+
+      .ea-program-selection-hero .ea-program-selection-hero__indicator-icon {
+        width: 40px;
+        height: 40px;
+      }
+
+      .ea-program-selection-hero .ea-program-selection-hero__actions {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .ea-program-selection-hero .ea-program-selection-hero__primary-cta {
+        width: 100%;
+      }
+
+      .ea-program-selection-hero .ea-program-selection-hero__secondary-action {
+        justify-items: start;
+      }
+
+      .ea-program-selection-hero .ea-program-selection-hero__pathway-card {
+        padding: 24px 18px;
+        border-radius: 21px;
+      }
+
+      .ea-program-selection-hero .ea-program-selection-hero__branch {
+        display: none;
+      }
+
+      .ea-program-selection-hero .ea-program-selection-hero__routes {
+        position: relative;
+        margin-top: 26px;
+        padding-left: 24px;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 14px;
+      }
+
+      .ea-program-selection-hero .ea-program-selection-hero__routes::before {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 8px;
+        width: 2px;
+        border-radius: 999px;
+        background: linear-gradient(#fca311, #22345c, #2e8b57);
+        content: "";
+      }
+
+      .ea-program-selection-hero .ea-program-selection-hero__route {
+        min-height: 0;
+        padding: 15px;
+        align-items: flex-start;
+        text-align: left;
+      }
+
+      .ea-program-selection-hero .ea-program-selection-hero__route::before {
+        top: 28px;
+        left: -16px;
+        width: 16px;
+        height: 2px;
+        background: #22345c;
+        transform: none;
+      }
+
+      .ea-program-selection-hero .ea-program-selection-hero__route::after {
+        top: 23px;
+        left: -21px;
+        transform: none;
+      }
+
+      .ea-program-selection-hero .ea-program-selection-hero__route-title {
+        font-size: 14px;
+      }
+
+      .ea-program-selection-hero .ea-program-selection-hero__route-description {
+        font-size: 12px;
+      }
+
+      .ea-program-selection-hero .ea-program-selection-hero__destination {
+        position: absolute;
+        top: 19px;
+        right: 14px;
+        margin: 0;
+      }
+
+      .ea-program-selection-hero .ea-program-selection-hero__route-badge {
+        margin-top: 8px;
+      }
+    }
+
+    @media (max-width: 380px) {
+      .ea-program-selection-hero .ea-program-selection-hero__header-container {
+        width: min(100% - 24px, 1180px);
+      }
+
+      .ea-program-selection-hero .ea-program-selection-hero__brand {
+        font-size: 15px;
+      }
+
+      .ea-program-selection-hero .ea-program-selection-hero__brand-icon {
+        width: 31px;
+        height: 31px;
+        flex-basis: 31px;
+      }
+
+      .ea-program-selection-hero .ea-program-selection-hero__nav-button {
+        max-width: 112px;
+        padding-inline: 9px;
+        font-size: 11px;
+      }
+
+      .ea-program-selection-hero .ea-program-selection-hero__container {
+        width: min(100% - 24px, 760px);
+      }
+
+      .ea-program-selection-hero .ea-program-selection-hero__heading {
+        font-size: 33px;
+      }
+
+      .ea-program-selection-hero .ea-program-selection-hero__choice-note {
+        padding: 12px 13px;
+      }
+
+      .ea-program-selection-hero .ea-program-selection-hero__indicator {
+        grid-template-columns: 36px minmax(0, 1fr);
+        gap: 10px;
+        padding: 12px 10px;
+      }
+
+      .ea-program-selection-hero .ea-program-selection-hero__indicator-icon {
+        width: 36px;
+        height: 36px;
+      }
+
+      .ea-program-selection-hero .ea-program-selection-hero__indicator-title {
+        font-size: 14px;
+      }
+
+      .ea-program-selection-hero .ea-program-selection-hero__pathway-card {
+        padding-inline: 14px;
+      }
+
+      .ea-program-selection-hero .ea-program-selection-hero__starting-point {
+        padding-inline: 10px;
+        font-size: 12px;
+      }
+
+      .ea-program-selection-hero .ea-program-selection-hero__routes {
+        padding-left: 20px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .ea-program-selection-hero .ea-program-selection-hero__nav-link,
+      .ea-program-selection-hero .ea-program-selection-hero__nav-button,
+      .ea-program-selection-hero .ea-program-selection-hero__indicator,
+      .ea-program-selection-hero .ea-program-selection-hero__primary-cta,
+      .ea-program-selection-hero .ea-program-selection-hero__secondary-cta,
+      .ea-program-selection-hero .ea-program-selection-hero__route {
+        scroll-behavior: auto;
+        transition: none;
+      }
+
+      .ea-program-selection-hero .ea-program-selection-hero__nav-link:hover,
+      .ea-program-selection-hero .ea-program-selection-hero__nav-button:hover,
+      .ea-program-selection-hero .ea-program-selection-hero__indicator:hover,
+      .ea-program-selection-hero .ea-program-selection-hero__primary-cta:hover,
+      .ea-program-selection-hero .ea-program-selection-hero__secondary-cta:hover,
+      .ea-program-selection-hero .ea-program-selection-hero__route:hover {
+        transform: none;
+      }
+    }
+  </style>
+
+  <header class="ea-program-selection-hero__header">
+    <div class="ea-program-selection-hero__header-container">
+      <!-- Replace with: EA | FUN | Lead Magnet Step 01 - Lead Magnet Opt-In published URL -->
+      <a
+        class="ea-program-selection-hero__brand"
+        href="../step-01/index.html"
+        aria-label="Elevate Academy — return to the free checklist page"
+      >
+        <span
+          class="ea-program-selection-hero__brand-icon"
+          aria-hidden="true"
+        >
+          <svg viewBox="0 0 32 32" focusable="false">
+            <path d="M4.5 8.5c4.5-.7 8.3.5 11.5 3.6v13c-3.2-3-7-4.2-11.5-3.5Z"></path>
+            <path d="M27.5 8.5c-4.5-.7-8.3.5-11.5 3.6v13c3.2-3 7-4.2 11.5-3.5Z"></path>
+            <path
+              class="ea-program-selection-hero__svg-accent"
+              d="m19.5 8.5 3.3-3.3 3.3 3.3"
+            ></path>
+            <path
+              class="ea-program-selection-hero__svg-accent"
+              d="M22.8 5.2v8"
+            ></path>
+          </svg>
+        </span>
+
+        <span>Elevate Academy</span>
+      </a>
+
+      <nav
+        class="ea-program-selection-hero__navigation"
+        aria-label="Program selection navigation"
+      >
+        <!-- Replace with: EA | FUN | Lead Magnet Step 01 - Lead Magnet Opt-In published URL -->
+        <a
+          class="ea-program-selection-hero__nav-link"
+          href="../step-01/index.html"
+        >
+          Free Checklist
+        </a>
+
+        <!-- Scroll to: EA | FUN | Lead Magnet Step 03 Section 2 -->
+        <a
+          class="ea-program-selection-hero__nav-link"
+          href="#ea-program-comparison"
+        >
+          Programs
+        </a>
+
+        <!-- Scroll to: EA | FUN | Lead Magnet Step 03 Section 3 -->
+        <a
+          class="ea-program-selection-hero__nav-button"
+          href="#ea-program-guidance-cta"
+        >
+          Find Your Best Fit
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="ea-program-selection-hero__hero">
+    <div class="ea-program-selection-hero__container">
+      <div class="ea-program-selection-hero__copy">
+        <p class="ea-program-selection-hero__eyebrow">
+          CHOOSE YOUR NEXT STEP
+        </p>
+
+        <h1
+          class="ea-program-selection-hero__heading"
+          id="ea-program-selection-hero-heading"
+        >
+          Choose the Support That Matches Your Goals
+        </h1>
+
+        <p class="ea-program-selection-hero__lead">
+          Every business owner needs a different level of guidance, structure,
+          and accountability.
+        </p>
+
+        <p class="ea-program-selection-hero__supporting-copy">
+          Whether you prefer independent learning, collaborative support, or
+          personalized coaching, Elevate Academy provides a clear path based
+          on how you want to learn and make progress.
+        </p>
+
+        <p class="ea-program-selection-hero__choice-note">
+          There is no single best option for everyone. The right program
+          depends on your current needs, preferred learning style, and desired
+          level of support.
+        </p>
+
+        <div
+          class="ea-program-selection-hero__indicators"
+          aria-label="Available Elevate Academy program paths"
+        >
+          <article class="ea-program-selection-hero__indicator">
+            <span
+              class="ea-program-selection-hero__indicator-icon"
+              aria-hidden="true"
+            >
+              <svg viewBox="0 0 24 24" focusable="false">
+                <path d="M4 5.5h7.5a3 3 0 0 1 3 3v10H7a3 3 0 0 0-3 3Z"></path>
+                <path d="M14.5 8.5a3 3 0 0 1 3-3H20v13h-2.5a3 3 0 0 0-3 3"></path>
+                <path d="m9 10 3 2-3 2Z"></path>
+              </svg>
+            </span>
+
+            <span class="ea-program-selection-hero__indicator-content">
+              <strong class="ea-program-selection-hero__indicator-title">
+                Self-Paced Course
+              </strong>
+
+              <span class="ea-program-selection-hero__indicator-text">
+                Learn independently with structured lessons and practical
+                resources.
+              </span>
+            </span>
+          </article>
+
+          <article class="ea-program-selection-hero__indicator">
+            <span
+              class="ea-program-selection-hero__indicator-icon"
+              aria-hidden="true"
+            >
+              <svg viewBox="0 0 24 24" focusable="false">
+                <circle cx="12" cy="7" r="3"></circle>
+                <circle cx="5.5" cy="10" r="2.2"></circle>
+                <circle cx="18.5" cy="10" r="2.2"></circle>
+                <path d="M6.5 19v-1a5.5 5.5 0 0 1 11 0v1"></path>
+                <path d="M2 19v-.8a3.5 3.5 0 0 1 4-3.5"></path>
+                <path d="M22 19v-.8a3.5 3.5 0 0 0-4-3.5"></path>
+              </svg>
+            </span>
+
+            <span class="ea-program-selection-hero__indicator-content">
+              <strong class="ea-program-selection-hero__indicator-title">
+                Group Coaching
+              </strong>
+
+              <span class="ea-program-selection-hero__indicator-text">
+                Learn with guidance, accountability, and shared discussion.
+              </span>
+            </span>
+          </article>
+
+          <article class="ea-program-selection-hero__indicator">
+            <span
+              class="ea-program-selection-hero__indicator-icon"
+              aria-hidden="true"
+            >
+              <svg viewBox="0 0 24 24" focusable="false">
+                <circle cx="7" cy="7" r="3"></circle>
+                <circle cx="17" cy="7" r="3"></circle>
+                <path d="M2.5 19v-1.5A4.5 4.5 0 0 1 7 13h1"></path>
+                <path d="M21.5 19v-1.5A4.5 4.5 0 0 0 17 13h-1"></path>
+                <path d="M9.5 16h5"></path>
+                <path d="m12.5 13 2.5 3-2.5 3"></path>
+              </svg>
+            </span>
+
+            <span class="ea-program-selection-hero__indicator-content">
+              <strong class="ea-program-selection-hero__indicator-title">
+                One-on-One Coaching
+              </strong>
+
+              <span class="ea-program-selection-hero__indicator-text">
+                Receive personalized support focused on your business
+                situation.
+              </span>
+            </span>
+          </article>
+        </div>
+
+        <div class="ea-program-selection-hero__actions">
+          <a
+            class="ea-program-selection-hero__primary-cta"
+            href="#ea-program-comparison"
+          >
+            Compare the Programs
+
+            <svg
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+              focusable="false"
+            >
+              <path d="M5 12h14"></path>
+              <path d="m14 7 5 5-5 5"></path>
+            </svg>
+          </a>
+
+          <div class="ea-program-selection-hero__secondary-action">
+            <span class="ea-program-selection-hero__secondary-label">
+              Not sure where to begin?
+            </span>
+
+            <a
+              class="ea-program-selection-hero__secondary-cta"
+              href="#ea-program-guidance-cta"
+            >
+              Get guidance choosing a program
+
+              <svg
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+                focusable="false"
+              >
+                <path d="M5 12h14"></path>
+                <path d="m14 7 5 5-5 5"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="ea-program-selection-hero__visual">
+        <aside
+          class="ea-program-selection-hero__pathway-card"
+          aria-labelledby="ea-program-selection-pathway-heading"
+        >
+          <span class="ea-program-selection-hero__visual-label">
+            <svg
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+              focusable="false"
+            >
+              <circle cx="6" cy="18" r="2"></circle>
+              <circle cx="18" cy="6" r="2"></circle>
+              <path d="M8 18h2a3 3 0 0 0 3-3v-6a3 3 0 0 1 3-3"></path>
+              <path d="m14 10-3-3 3-3"></path>
+            </svg>
+
+            YOUR LEARNING PATH
+          </span>
+
+          <h2
+            class="ea-program-selection-hero__visual-heading"
+            id="ea-program-selection-pathway-heading"
+          >
+            Three Ways to Move Forward
+          </h2>
+
+          <p class="ea-program-selection-hero__visual-description">
+            Begin with your current stage, then choose the type of support that
+            fits how you want to learn.
+          </p>
+
+          <div class="ea-program-selection-hero__pathway">
+            <div class="ea-program-selection-hero__starting-point">
+              <svg
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+                focusable="false"
+              >
+                <circle cx="12" cy="12" r="8"></circle>
+                <path d="M12 8v4l3 2"></path>
+                <path d="M12 2v2"></path>
+              </svg>
+
+              <span>Your Current Business Stage</span>
+            </div>
+
+            <div
+              class="ea-program-selection-hero__branch"
+              aria-hidden="true"
+            ></div>
+
+            <div class="ea-program-selection-hero__routes">
+              <article class="ea-program-selection-hero__route">
+                <span
+                  class="ea-program-selection-hero__route-icon"
+                  aria-hidden="true"
+                >
+                  <svg viewBox="0 0 24 24" focusable="false">
+                    <rect x="3" y="4" width="18" height="16" rx="2"></rect>
+                    <path d="m10 9 5 3-5 3Z"></path>
+                    <path d="M7 4v16"></path>
+                  </svg>
+                </span>
+
+                <h3 class="ea-program-selection-hero__route-title">
+                  Self-Paced Course
+                </h3>
+
+                <p class="ea-program-selection-hero__route-description">
+                  Flexible, independent learning
+                </p>
+
+                <span
+                  class="ea-program-selection-hero__destination"
+                  aria-hidden="true"
+                >
+                  <svg viewBox="0 0 12 12" focusable="false">
+                    <path d="m2.5 6 2.2 2.2 4.8-4.8"></path>
+                  </svg>
+                </span>
+              </article>
+
+              <article class="ea-program-selection-hero__route">
+                <span
+                  class="ea-program-selection-hero__route-icon"
+                  aria-hidden="true"
+                >
+                  <svg viewBox="0 0 24 24" focusable="false">
+                    <circle cx="12" cy="8" r="3"></circle>
+                    <circle cx="5.5" cy="10" r="2"></circle>
+                    <circle cx="18.5" cy="10" r="2"></circle>
+                    <path d="M7 19a5 5 0 0 1 10 0"></path>
+                    <path d="M2 19a3.5 3.5 0 0 1 4-3.5"></path>
+                    <path d="M22 19a3.5 3.5 0 0 0-4-3.5"></path>
+                  </svg>
+                </span>
+
+                <h3 class="ea-program-selection-hero__route-title">
+                  Group Coaching
+                </h3>
+
+                <p class="ea-program-selection-hero__route-description">
+                  Guided learning with accountability
+                </p>
+
+                <span
+                  class="ea-program-selection-hero__destination"
+                  aria-hidden="true"
+                >
+                  <svg viewBox="0 0 12 12" focusable="false">
+                    <path d="m2.5 6 2.2 2.2 4.8-4.8"></path>
+                  </svg>
+                </span>
+              </article>
+
+              <article class="ea-program-selection-hero__route">
+                <span
+                  class="ea-program-selection-hero__route-icon"
+                  aria-hidden="true"
+                >
+                  <svg viewBox="0 0 24 24" focusable="false">
+                    <circle cx="7" cy="7" r="3"></circle>
+                    <circle cx="17" cy="7" r="3"></circle>
+                    <path d="M2.5 19a4.5 4.5 0 0 1 4.5-4.5h1"></path>
+                    <path d="M21.5 19a4.5 4.5 0 0 0-4.5-4.5h-1"></path>
+                    <path d="M9.5 17h5"></path>
+                    <path d="m12.5 14 2.5 3-2.5 3"></path>
+                  </svg>
+                </span>
+
+                <span class="ea-program-selection-hero__route-badge">
+                  Most Personalized
+                </span>
+
+                <h3 class="ea-program-selection-hero__route-title">
+                  One-on-One Coaching
+                </h3>
+
+                <p class="ea-program-selection-hero__route-description">
+                  Personalized, focused support
+                </p>
+
+                <span
+                  class="ea-program-selection-hero__destination"
+                  aria-hidden="true"
+                >
+                  <svg viewBox="0 0 12 12" focusable="false">
+                    <path d="m2.5 6 2.2 2.2 4.8-4.8"></path>
+                  </svg>
+                </span>
+              </article>
+            </div>
+          </div>
+
+          <p class="ea-program-selection-hero__visual-note">
+            <svg
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+              focusable="false"
+            >
+              <path d="M12 3a7 7 0 0 0-4 12.7V19h8v-3.3A7 7 0 0 0 12 3Z"></path>
+              <path d="M9 22h6"></path>
+              <path d="M9 16h6"></path>
+            </svg>
+
+            <span>
+              Choose based on the support you need—not on pressure or urgency.
+            </span>
+          </p>
+        </aside>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Section 1: Program Selection Hero End -->
+
+<!-- Section 2: Program Comparison Start -->
+<section
+  class="ea-program-comparison"
+  id="ea-program-comparison"
+  aria-labelledby="ea-program-comparison-heading"
+>
+  <style>
+    .ea-program-comparison {
+      width: 100%;
+      max-width: 100%;
+      overflow-x: hidden;
+      padding: clamp(64px, 7vw, 88px) 0;
+      background: #f5f6f8;
+      color: #344054;
+      font-family: Inter, Arial, sans-serif;
+    }
+
+    .ea-program-comparison,
+    .ea-program-comparison * {
+      box-sizing: border-box;
+    }
+
+    .ea-program-comparison a {
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .ea-program-comparison .ea-program-comparison__container {
+      width: min(100% - 64px, 1180px);
+      margin-inline: auto;
+    }
+
+    .ea-program-comparison .ea-program-comparison__introduction {
+      max-width: 790px;
+      margin: 0 auto 46px;
+      text-align: center;
+    }
+
+    .ea-program-comparison .ea-program-comparison__eyebrow {
+      display: inline-flex;
+      margin: 0 0 16px;
+      align-items: center;
+      gap: 9px;
+      color: #d78300;
+      font-family: Manrope, Arial, sans-serif;
+      font-size: 13px;
+      font-weight: 800;
+      line-height: 1.4;
+      letter-spacing: 0.12em;
+    }
+
+    .ea-program-comparison .ea-program-comparison__eyebrow::before,
+    .ea-program-comparison .ea-program-comparison__eyebrow::after {
+      width: 22px;
+      height: 2px;
+      flex: 0 0 22px;
+      border-radius: 999px;
+      background: #fca311;
+      content: "";
+    }
+
+    .ea-program-comparison .ea-program-comparison__heading {
+      margin: 0;
+      color: #14213d;
+      font-family: Manrope, Arial, sans-serif;
+      font-size: clamp(34px, 4vw, 50px);
+      font-weight: 800;
+      line-height: 1.12;
+      letter-spacing: -0.04em;
+      text-wrap: balance;
+    }
+
+    .ea-program-comparison .ea-program-comparison__description {
+      max-width: 720px;
+      margin: 20px auto 0;
+      color: #344054;
+      font-size: 17px;
+      line-height: 1.7;
+    }
+
+    .ea-program-comparison .ea-program-comparison__supporting-note {
+      max-width: 720px;
+      margin: 12px auto 0;
+      color: #667085;
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    .ea-program-comparison .ea-program-comparison__cards {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 22px;
+      align-items: stretch;
+    }
+
+    .ea-program-comparison .ea-program-comparison__card {
+      position: relative;
+      display: flex;
+      min-width: 0;
+      padding: 28px;
+      flex-direction: column;
+      overflow: hidden;
+      border: 1px solid #dde2ea;
+      border-radius: 22px;
+      background: #ffffff;
+      box-shadow: 0 14px 34px rgba(13, 23, 45, 0.07);
+      transition:
+        border-color 180ms ease,
+        box-shadow 180ms ease,
+        transform 180ms ease;
+    }
+
+    .ea-program-comparison .ea-program-comparison__card::before {
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      height: 4px;
+      background: #e9edf5;
+      content: "";
+    }
+
+    .ea-program-comparison .ea-program-comparison__card:nth-child(1)::before {
+      background: #fca311;
+    }
+
+    .ea-program-comparison .ea-program-comparison__card:nth-child(2)::before {
+      background: #22345c;
+    }
+
+    .ea-program-comparison .ea-program-comparison__card:nth-child(3)::before {
+      background: linear-gradient(90deg, #fca311, #ffb83d);
+    }
+
+    .ea-program-comparison .ea-program-comparison__card:hover {
+      border-color: #c9d1de;
+      box-shadow: 0 20px 42px rgba(13, 23, 45, 0.1);
+      transform: translateY(-4px);
+    }
+
+    .ea-program-comparison .ea-program-comparison__card--personalized {
+      border: 2px solid #f0a82f;
+      box-shadow: 0 16px 38px rgba(215, 131, 0, 0.1);
+    }
+
+    .ea-program-comparison .ea-program-comparison__card-label-row {
+      display: flex;
+      min-height: 28px;
+      margin-bottom: 18px;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+    .ea-program-comparison .ea-program-comparison__card-label {
+      display: inline-flex;
+      min-height: 28px;
+      align-items: center;
+      padding: 5px 10px;
+      border-radius: 999px;
+      background: #e9edf5;
+      color: #22345c;
+      font-family: Manrope, Arial, sans-serif;
+      font-size: 10px;
+      font-weight: 800;
+      line-height: 1.3;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .ea-program-comparison .ea-program-comparison__card--personalized .ea-program-comparison__card-label {
+      background: #fff1d6;
+      color: #9b6000;
+    }
+
+    .ea-program-comparison .ea-program-comparison__icon {
+      display: grid;
+      width: 58px;
+      height: 58px;
+      margin-bottom: 21px;
+      place-items: center;
+      border-radius: 17px;
+      background: #fff1d6;
+      color: #14213d;
+    }
+
+    .ea-program-comparison .ea-program-comparison__card:nth-child(2) .ea-program-comparison__icon {
+      background: #e9edf5;
+      color: #22345c;
+    }
+
+    .ea-program-comparison .ea-program-comparison__card:nth-child(3) .ea-program-comparison__icon {
+      background: #e8f6ee;
+      color: #2e8b57;
+    }
+
+    .ea-program-comparison .ea-program-comparison__icon svg {
+      width: 31px;
+      height: 31px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 1.7;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .ea-program-comparison .ea-program-comparison__program-name {
+      margin: 0 0 8px;
+      color: #d78300;
+      font-family: Manrope, Arial, sans-serif;
+      font-size: 13px;
+      font-weight: 800;
+      line-height: 1.4;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .ea-program-comparison .ea-program-comparison__card:nth-child(2) .ea-program-comparison__program-name {
+      color: #22345c;
+    }
+
+    .ea-program-comparison .ea-program-comparison__headline {
+      margin: 0;
+      color: #14213d;
+      font-family: Manrope, Arial, sans-serif;
+      font-size: 24px;
+      font-weight: 800;
+      line-height: 1.25;
+      letter-spacing: -0.025em;
+      text-wrap: balance;
+    }
+
+    .ea-program-comparison .ea-program-comparison__card-description {
+      margin: 14px 0 0;
+      color: #344054;
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    .ea-program-comparison .ea-program-comparison__best-for {
+      margin: 20px 0 0;
+      padding: 14px 15px;
+      border: 1px solid #e5e9f0;
+      border-radius: 13px;
+      background: #f5f6f8;
+    }
+
+    .ea-program-comparison .ea-program-comparison__best-for-label {
+      display: block;
+      margin-bottom: 5px;
+      color: #14213d;
+      font-family: Manrope, Arial, sans-serif;
+      font-size: 11px;
+      font-weight: 800;
+      line-height: 1.4;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+    }
+
+    .ea-program-comparison .ea-program-comparison__best-for-text {
+      margin: 0;
+      color: #667085;
+      font-size: 13px;
+      line-height: 1.6;
+    }
+
+    .ea-program-comparison .ea-program-comparison__expectations {
+      margin-top: 23px;
+    }
+
+    .ea-program-comparison .ea-program-comparison__subheading {
+      margin: 0 0 13px;
+      color: #14213d;
+      font-family: Manrope, Arial, sans-serif;
+      font-size: 14px;
+      font-weight: 800;
+      line-height: 1.4;
+    }
+
+    .ea-program-comparison .ea-program-comparison__list {
+      display: grid;
+      margin: 0;
+      padding: 0;
+      gap: 10px;
+      list-style: none;
+    }
+
+    .ea-program-comparison .ea-program-comparison__list-item {
+      display: grid;
+      min-width: 0;
+      grid-template-columns: 20px minmax(0, 1fr);
+      gap: 9px;
+      align-items: start;
+      color: #344054;
+      font-size: 13px;
+      line-height: 1.55;
+    }
+
+    .ea-program-comparison .ea-program-comparison__check {
+      display: grid;
+      width: 20px;
+      height: 20px;
+      margin-top: 1px;
+      place-items: center;
+      border-radius: 50%;
+      background: #e8f6ee;
+      color: #2e8b57;
+    }
+
+    .ea-program-comparison .ea-program-comparison__check svg {
+      width: 12px;
+      height: 12px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 2.4;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .ea-program-comparison .ea-program-comparison__support {
+      margin-top: 24px;
+      padding-top: 20px;
+      border-top: 1px solid #dde2ea;
+    }
+
+    .ea-program-comparison .ea-program-comparison__support-header {
+      display: flex;
+      margin-bottom: 10px;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .ea-program-comparison .ea-program-comparison__support-title {
+      color: #14213d;
+      font-family: Manrope, Arial, sans-serif;
+      font-size: 12px;
+      font-weight: 800;
+      line-height: 1.4;
+    }
+
+    .ea-program-comparison .ea-program-comparison__support-value {
+      color: #667085;
+      font-family: Manrope, Arial, sans-serif;
+      font-size: 12px;
+      font-weight: 700;
+      line-height: 1.4;
+    }
+
+    .ea-program-comparison .ea-program-comparison__support-track {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 6px;
+    }
+
+    .ea-program-comparison .ea-program-comparison__support-segment {
+      height: 7px;
+      border-radius: 999px;
+      background: #e9edf5;
+    }
+
+    .ea-program-comparison .ea-program-comparison__support-segment--active {
+      background: #fca311;
+    }
+
+    .ea-program-comparison .ea-program-comparison__card:nth-child(2) .ea-program-comparison__support-segment--active {
+      background: #22345c;
+    }
+
+    .ea-program-comparison .ea-program-comparison__card:nth-child(3) .ea-program-comparison__support-segment--active {
+      background: #2e8b57;
+    }
+
+    .ea-program-comparison .ea-program-comparison__support-caption {
+      margin: 9px 0 0;
+      color: #667085;
+      font-size: 11px;
+      line-height: 1.5;
+    }
+
+    .ea-program-comparison .ea-program-comparison__card-footer {
+      display: flex;
+      margin-top: auto;
+      padding-top: 25px;
+      flex-direction: column;
+    }
+
+    .ea-program-comparison .ea-program-comparison__cta {
+      display: inline-flex;
+      width: 100%;
+      min-height: 50px;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      padding: 13px 17px;
+      border: 1px solid #fca311;
+      border-radius: 12px;
+      background: #fca311;
+      color: #14213d;
+      font-family: Manrope, Arial, sans-serif;
+      font-size: 14px;
+      font-weight: 800;
+      line-height: 1.35;
+      text-align: center;
+      text-decoration: none;
+      box-shadow: 0 9px 20px rgba(215, 131, 0, 0.16);
+      transition:
+        background-color 180ms ease,
+        border-color 180ms ease,
+        box-shadow 180ms ease,
+        color 180ms ease,
+        transform 180ms ease;
+    }
+
+    .ea-program-comparison .ea-program-comparison__card:nth-child(2) .ea-program-comparison__cta {
+      border-color: #22345c;
+      background: #22345c;
+      color: #ffffff;
+      box-shadow: 0 9px 20px rgba(34, 52, 92, 0.16);
+    }
+
+    .ea-program-comparison .ea-program-comparison__cta:hover {
+      border-color: #d78300;
+      background: #ffb83d;
+      box-shadow: 0 12px 25px rgba(215, 131, 0, 0.22);
+      transform: translateY(-2px);
+    }
+
+    .ea-program-comparison .ea-program-comparison__card:nth-child(2) .ea-program-comparison__cta:hover {
+      border-color: #0d172d;
+      background: #14213d;
+      box-shadow: 0 12px 25px rgba(13, 23, 45, 0.22);
+    }
+
+    .ea-program-comparison .ea-program-comparison__cta:active {
+      background: #d78300;
+      transform: translateY(1px);
+    }
+
+    .ea-program-comparison .ea-program-comparison__card:nth-child(2) .ea-program-comparison__cta:active {
+      background: #0d172d;
+    }
+
+    .ea-program-comparison .ea-program-comparison__cta svg {
+      width: 17px;
+      height: 17px;
+      flex: 0 0 17px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .ea-program-comparison .ea-program-comparison__cta:focus-visible,
+    .ea-program-comparison .ea-program-comparison__guidance-link:focus-visible {
+      border-radius: 9px;
+      outline: 3px solid #22345c;
+      outline-offset: 3px;
+    }
+
+    .ea-program-comparison .ea-program-comparison__reassurance {
+      margin: 13px 0 0;
+      color: #667085;
+      font-size: 12px;
+      line-height: 1.6;
+      text-align: center;
+    }
+
+    .ea-program-comparison .ea-program-comparison__choice-panel {
+      display: grid;
+      margin-top: 34px;
+      padding: 28px 30px;
+      grid-template-columns: 52px minmax(0, 1fr) auto;
+      gap: 20px;
+      align-items: center;
+      border: 1px solid #f2d59d;
+      border-radius: 19px;
+      background: #fff8ec;
+      box-shadow: 0 10px 26px rgba(13, 23, 45, 0.05);
+    }
+
+    .ea-program-comparison .ea-program-comparison__choice-icon {
+      display: grid;
+      width: 52px;
+      height: 52px;
+      place-items: center;
+      border-radius: 15px;
+      background: #fff1d6;
+      color: #d78300;
+    }
+
+    .ea-program-comparison .ea-program-comparison__choice-icon svg {
+      width: 28px;
+      height: 28px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 1.8;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .ea-program-comparison .ea-program-comparison__choice-content {
+      min-width: 0;
+    }
+
+    .ea-program-comparison .ea-program-comparison__choice-label {
+      display: block;
+      margin-bottom: 6px;
+      color: #d78300;
+      font-family: Manrope, Arial, sans-serif;
+      font-size: 11px;
+      font-weight: 800;
+      line-height: 1.4;
+      letter-spacing: 0.1em;
+    }
+
+    .ea-program-comparison .ea-program-comparison__choice-text {
+      margin: 0;
+      color: #14213d;
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    .ea-program-comparison .ea-program-comparison__choice-supporting {
+      margin: 6px 0 0;
+      color: #667085;
+      font-size: 13px;
+      line-height: 1.65;
+    }
+
+    .ea-program-comparison .ea-program-comparison__guidance {
+      display: grid;
+      min-width: 215px;
+      justify-items: end;
+      gap: 3px;
+    }
+
+    .ea-program-comparison .ea-program-comparison__guidance-question {
+      color: #667085;
+      font-size: 12px;
+      line-height: 1.4;
+      text-align: right;
+    }
+
+    .ea-program-comparison .ea-program-comparison__guidance-link {
+      display: inline-flex;
+      min-height: 44px;
+      align-items: center;
+      justify-content: center;
+      gap: 7px;
+      border-radius: 8px;
+      color: #14213d;
+      font-family: Manrope, Arial, sans-serif;
+      font-size: 13px;
+      font-weight: 800;
+      line-height: 1.4;
+      text-align: right;
+      text-decoration: underline;
+      text-decoration-color: #fca311;
+      text-decoration-thickness: 2px;
+      text-underline-offset: 5px;
+      transition:
+        color 170ms ease,
+        transform 170ms ease;
+    }
+
+    .ea-program-comparison .ea-program-comparison__guidance-link:hover {
+      color: #d78300;
+      transform: translateX(2px);
+    }
+
+    .ea-program-comparison .ea-program-comparison__guidance-link:active {
+      transform: translateX(0);
+    }
+
+    .ea-program-comparison .ea-program-comparison__guidance-link svg {
+      width: 16px;
+      height: 16px;
+      flex: 0 0 16px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    @media (max-width: 1020px) {
+      .ea-program-comparison .ea-program-comparison__cards {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .ea-program-comparison .ea-program-comparison__card:nth-child(3) {
+        grid-column: 1 / -1;
+        width: min(100%, calc(50% - 11px));
+        justify-self: center;
+      }
+
+      .ea-program-comparison .ea-program-comparison__choice-panel {
+        grid-template-columns: 52px minmax(0, 1fr);
+      }
+
+      .ea-program-comparison .ea-program-comparison__guidance {
+        grid-column: 2;
+        min-width: 0;
+        justify-items: start;
+      }
+
+      .ea-program-comparison .ea-program-comparison__guidance-question,
+      .ea-program-comparison .ea-program-comparison__guidance-link {
+        text-align: left;
+      }
+    }
+
+    @media (max-width: 767px) {
+      .ea-program-comparison {
+        padding: 62px 0;
+      }
+
+      .ea-program-comparison .ea-program-comparison__container {
+        width: min(100% - 40px, 1180px);
+      }
+
+      .ea-program-comparison .ea-program-comparison__introduction {
+        margin-bottom: 36px;
+      }
+
+      .ea-program-comparison .ea-program-comparison__description {
+        font-size: 16px;
+      }
+
+      .ea-program-comparison .ea-program-comparison__cards {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .ea-program-comparison .ea-program-comparison__card:nth-child(3) {
+        grid-column: auto;
+        width: 100%;
+      }
+
+      .ea-program-comparison .ea-program-comparison__choice-panel {
+        grid-template-columns: 46px minmax(0, 1fr);
+        padding: 24px;
+        gap: 16px;
+      }
+
+      .ea-program-comparison .ea-program-comparison__choice-icon {
+        width: 46px;
+        height: 46px;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .ea-program-comparison {
+        padding: 56px 0;
+      }
+
+      .ea-program-comparison .ea-program-comparison__container {
+        width: min(100% - 32px, 1180px);
+      }
+
+      .ea-program-comparison .ea-program-comparison__eyebrow {
+        font-size: 11px;
+      }
+
+      .ea-program-comparison .ea-program-comparison__eyebrow::before,
+      .ea-program-comparison .ea-program-comparison__eyebrow::after {
+        width: 16px;
+        flex-basis: 16px;
+      }
+
+      .ea-program-comparison .ea-program-comparison__heading {
+        font-size: clamp(31px, 10vw, 39px);
+      }
+
+      .ea-program-comparison .ea-program-comparison__card {
+        padding: 24px 20px;
+        border-radius: 19px;
+      }
+
+      .ea-program-comparison .ea-program-comparison__headline {
+        font-size: 22px;
+      }
+
+      .ea-program-comparison .ea-program-comparison__choice-panel {
+        grid-template-columns: minmax(0, 1fr);
+        padding: 22px 20px;
+      }
+
+      .ea-program-comparison .ea-program-comparison__guidance {
+        grid-column: auto;
+      }
+
+      .ea-program-comparison .ea-program-comparison__guidance-link {
+        width: 100%;
+        justify-content: flex-start;
+      }
+    }
+
+    @media (max-width: 360px) {
+      .ea-program-comparison .ea-program-comparison__container {
+        width: min(100% - 24px, 1180px);
+      }
+
+      .ea-program-comparison .ea-program-comparison__card {
+        padding: 22px 16px;
+      }
+
+      .ea-program-comparison .ea-program-comparison__card-label-row {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .ea-program-comparison .ea-program-comparison__best-for {
+        padding-inline: 12px;
+      }
+
+      .ea-program-comparison .ea-program-comparison__support-header {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 4px;
+      }
+
+      .ea-program-comparison .ea-program-comparison__choice-panel {
+        padding-inline: 16px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .ea-program-comparison .ea-program-comparison__card,
+      .ea-program-comparison .ea-program-comparison__cta,
+      .ea-program-comparison .ea-program-comparison__guidance-link {
+        transition: none;
+      }
+
+      .ea-program-comparison .ea-program-comparison__card:hover,
+      .ea-program-comparison .ea-program-comparison__cta:hover,
+      .ea-program-comparison .ea-program-comparison__guidance-link:hover {
+        transform: none;
+      }
+    }
+  </style>
+
+  <div class="ea-program-comparison__container">
+    <header class="ea-program-comparison__introduction">
+      <p class="ea-program-comparison__eyebrow">
+        COMPARE YOUR OPTIONS
+      </p>
+
+      <h2
+        class="ea-program-comparison__heading"
+        id="ea-program-comparison-heading"
+      >
+        Three Ways to Learn, Apply, and Make Progress
+      </h2>
+
+      <p class="ea-program-comparison__description">
+        Choose the program that best matches your preferred level of
+        flexibility, interaction, accountability, and personalized support.
+      </p>
+
+      <p class="ea-program-comparison__supporting-note">
+        You can begin with the option that fits your current situation and
+        explore a different level of support as your needs change.
+      </p>
+    </header>
+
+    <div class="ea-program-comparison__cards">
+      <article
+        class="ea-program-comparison__card"
+        aria-labelledby="ea-program-comparison-self-paced-title"
+      >
+        <div class="ea-program-comparison__card-label-row">
+          <span class="ea-program-comparison__card-label">
+            Flexible learning
+          </span>
+        </div>
+
+        <span
+          class="ea-program-comparison__icon"
+          aria-hidden="true"
+        >
+          <svg viewBox="0 0 32 32" focusable="false">
+            <rect x="3.5" y="4.5" width="25" height="19" rx="3"></rect>
+            <path d="M8 27.5h16"></path>
+            <path d="M16 23.5v4"></path>
+            <path d="m13 10 7 4.5-7 4.5Z"></path>
+            <path d="M7.5 7.5h7"></path>
+          </svg>
+        </span>
+
+        <p class="ea-program-comparison__program-name">
+          Self-Paced Course
+        </p>
+
+        <h3
+          class="ea-program-comparison__headline"
+          id="ea-program-comparison-self-paced-title"
+        >
+          Learn at Your Own Pace
+        </h3>
+
+        <p class="ea-program-comparison__card-description">
+          Follow structured lessons, practical exercises, and
+          business-building resources on a schedule that works for you.
+        </p>
+
+        <div class="ea-program-comparison__best-for">
+          <span class="ea-program-comparison__best-for-label">
+            Best for
+          </span>
+
+          <p class="ea-program-comparison__best-for-text">
+            Independent learners who want flexibility and a clear step-by-step
+            framework.
+          </p>
+        </div>
+
+        <div class="ea-program-comparison__expectations">
+          <h4 class="ea-program-comparison__subheading">
+            What you can expect
+          </h4>
+
+          <ul class="ea-program-comparison__list">
+            <li class="ea-program-comparison__list-item">
+              <span
+                class="ea-program-comparison__check"
+                aria-hidden="true"
+              >
+                <svg viewBox="0 0 16 16" focusable="false">
+                  <path d="m3 8 3 3 7-7"></path>
+                </svg>
+              </span>
+
+              <span>Structured learning modules</span>
+            </li>
+
+            <li class="ea-program-comparison__list-item">
+              <span
+                class="ea-program-comparison__check"
+                aria-hidden="true"
+              >
+                <svg viewBox="0 0 16 16" focusable="false">
+                  <path d="m3 8 3 3 7-7"></path>
+                </svg>
+              </span>
+
+              <span>Practical exercises and worksheets</span>
+            </li>
+
+            <li class="ea-program-comparison__list-item">
+              <span
+                class="ea-program-comparison__check"
+                aria-hidden="true"
+              >
+                <svg viewBox="0 0 16 16" focusable="false">
+                  <path d="m3 8 3 3 7-7"></path>
+                </svg>
+              </span>
+
+              <span>Flexible access to course materials</span>
+            </li>
+
+            <li class="ea-program-comparison__list-item">
+              <span
+                class="ea-program-comparison__check"
+                aria-hidden="true"
+              >
+                <svg viewBox="0 0 16 16" focusable="false">
+                  <path d="m3 8 3 3 7-7"></path>
+                </svg>
+              </span>
+
+              <span>The ability to review lessons at your own pace</span>
+            </li>
+          </ul>
+        </div>
+
+        <div
+          class="ea-program-comparison__support"
+          aria-label="Support level: Independent"
+        >
+          <div class="ea-program-comparison__support-header">
+            <span class="ea-program-comparison__support-title">
+              Support level
+            </span>
+
+            <span class="ea-program-comparison__support-value">
+              Independent
+            </span>
+          </div>
+
+          <div
+            class="ea-program-comparison__support-track"
+            aria-hidden="true"
+          >
+            <span class="ea-program-comparison__support-segment ea-program-comparison__support-segment--active"></span>
+            <span class="ea-program-comparison__support-segment"></span>
+            <span class="ea-program-comparison__support-segment"></span>
+          </div>
+
+          <p class="ea-program-comparison__support-caption">
+            This indicator describes the support structure, not expected
+            results.
+          </p>
+        </div>
+
+        <div class="ea-program-comparison__card-footer">
+          <!-- Replace with: Elevate Academy Self-Paced Course sales funnel published URL -->
+          <a
+            class="ea-program-comparison__cta"
+            href="https://sites.leadconnectorhq.com/preview/gjqJJWfkRF5aR1yygI8T?notrack=true"
+          >
+            View the Self-Paced Course
+
+            <svg
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+              focusable="false"
+            >
+              <path d="M5 12h14"></path>
+              <path d="m14 7 5 5-5 5"></path>
+            </svg>
+          </a>
+
+          <p class="ea-program-comparison__reassurance">
+            Choose this option when flexibility and independent implementation
+            are your priorities.
+          </p>
+        </div>
+      </article>
+
+      <article
+        class="ea-program-comparison__card"
+        aria-labelledby="ea-program-comparison-group-title"
+      >
+        <div class="ea-program-comparison__card-label-row">
+          <span class="ea-program-comparison__card-label">
+            Shared guidance
+          </span>
+        </div>
+
+        <span
+          class="ea-program-comparison__icon"
+          aria-hidden="true"
+        >
+          <svg viewBox="0 0 32 32" focusable="false">
+            <circle cx="16" cy="9" r="4"></circle>
+            <circle cx="7" cy="12" r="3"></circle>
+            <circle cx="25" cy="12" r="3"></circle>
+            <path d="M9 27v-2a7 7 0 0 1 14 0v2"></path>
+            <path d="M2 27v-1.5A5.5 5.5 0 0 1 8 20"></path>
+            <path d="M30 27v-1.5a5.5 5.5 0 0 0-6-5.5"></path>
+            <path d="M12 16.5h8"></path>
+          </svg>
+        </span>
+
+        <p class="ea-program-comparison__program-name">
+          Group Coaching
+        </p>
+
+        <h3
+          class="ea-program-comparison__headline"
+          id="ea-program-comparison-group-title"
+        >
+          Learn With Guidance and Accountability
+        </h3>
+
+        <p class="ea-program-comparison__card-description">
+          Join structured coaching sessions, discuss practical challenges, and
+          make progress alongside other business owners.
+        </p>
+
+        <div class="ea-program-comparison__best-for">
+          <span class="ea-program-comparison__best-for-label">
+            Best for
+          </span>
+
+          <p class="ea-program-comparison__best-for-text">
+            People who want regular guidance, shared learning, and
+            accountability in a collaborative setting.
+          </p>
+        </div>
+
+        <div class="ea-program-comparison__expectations">
+          <h4 class="ea-program-comparison__subheading">
+            What you can expect
+          </h4>
+
+          <ul class="ea-program-comparison__list">
+            <li class="ea-program-comparison__list-item">
+              <span
+                class="ea-program-comparison__check"
+                aria-hidden="true"
+              >
+                <svg viewBox="0 0 16 16" focusable="false">
+                  <path d="m3 8 3 3 7-7"></path>
+                </svg>
+              </span>
+
+              <span>Live group coaching sessions</span>
+            </li>
+
+            <li class="ea-program-comparison__list-item">
+              <span
+                class="ea-program-comparison__check"
+                aria-hidden="true"
+              >
+                <svg viewBox="0 0 16 16" focusable="false">
+                  <path d="m3 8 3 3 7-7"></path>
+                </svg>
+              </span>
+
+              <span>Structured topics and implementation guidance</span>
+            </li>
+
+            <li class="ea-program-comparison__list-item">
+              <span
+                class="ea-program-comparison__check"
+                aria-hidden="true"
+              >
+                <svg viewBox="0 0 16 16" focusable="false">
+                  <path d="m3 8 3 3 7-7"></path>
+                </svg>
+              </span>
+
+              <span>Shared discussion and peer learning</span>
+            </li>
+
+            <li class="ea-program-comparison__list-item">
+              <span
+                class="ea-program-comparison__check"
+                aria-hidden="true"
+              >
+                <svg viewBox="0 0 16 16" focusable="false">
+                  <path d="m3 8 3 3 7-7"></path>
+                </svg>
+              </span>
+
+              <span>Regular accountability and progress check-ins</span>
+            </li>
+          </ul>
+        </div>
+
+        <div
+          class="ea-program-comparison__support"
+          aria-label="Support level: Collaborative"
+        >
+          <div class="ea-program-comparison__support-header">
+            <span class="ea-program-comparison__support-title">
+              Support level
+            </span>
+
+            <span class="ea-program-comparison__support-value">
+              Collaborative
+            </span>
+          </div>
+
+          <div
+            class="ea-program-comparison__support-track"
+            aria-hidden="true"
+          >
+            <span class="ea-program-comparison__support-segment ea-program-comparison__support-segment--active"></span>
+            <span class="ea-program-comparison__support-segment ea-program-comparison__support-segment--active"></span>
+            <span class="ea-program-comparison__support-segment"></span>
+          </div>
+
+          <p class="ea-program-comparison__support-caption">
+            This indicator describes the support structure, not expected
+            results.
+          </p>
+        </div>
+
+        <div class="ea-program-comparison__card-footer">
+          <!-- Replace with: Elevate Academy Group Coaching information or enrollment funnel published URL -->
+          <a
+            class="ea-program-comparison__cta"
+            href="#"
+          >
+            Explore Group Coaching
+
+            <svg
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+              focusable="false"
+            >
+              <path d="M5 12h14"></path>
+              <path d="m14 7 5 5-5 5"></path>
+            </svg>
+          </a>
+
+          <p class="ea-program-comparison__reassurance">
+            Choose this option when you value guidance, discussion, and shared
+            accountability.
+          </p>
+        </div>
+      </article>
+
+      <article
+        class="ea-program-comparison__card ea-program-comparison__card--personalized"
+        aria-labelledby="ea-program-comparison-one-on-one-title"
+      >
+        <div class="ea-program-comparison__card-label-row">
+          <span class="ea-program-comparison__card-label">
+            Most Personalized
+          </span>
+        </div>
+
+        <span
+          class="ea-program-comparison__icon"
+          aria-hidden="true"
+        >
+          <svg viewBox="0 0 32 32" focusable="false">
+            <circle cx="9" cy="8" r="4"></circle>
+            <circle cx="23" cy="8" r="4"></circle>
+            <path d="M2.5 27v-2a6.5 6.5 0 0 1 6.5-6.5h2"></path>
+            <path d="M29.5 27v-2a6.5 6.5 0 0 0-6.5-6.5h-2"></path>
+            <path d="M12.5 23h7"></path>
+            <path d="m16.5 19 4 4-4 4"></path>
+            <circle cx="16" cy="14" r="2"></circle>
+          </svg>
+        </span>
+
+        <p class="ea-program-comparison__program-name">
+          One-on-One Coaching
+        </p>
+
+        <h3
+          class="ea-program-comparison__headline"
+          id="ea-program-comparison-one-on-one-title"
+        >
+          Get Personalized Business Support
+        </h3>
+
+        <p class="ea-program-comparison__card-description">
+          Work directly with a coach to identify priorities, address
+          challenges, and create a plan around your specific business
+          situation.
+        </p>
+
+        <div class="ea-program-comparison__best-for">
+          <span class="ea-program-comparison__best-for-label">
+            Best for
+          </span>
+
+          <p class="ea-program-comparison__best-for-text">
+            Business owners who want focused guidance, personalized feedback,
+            and direct support.
+          </p>
+        </div>
+
+        <div class="ea-program-comparison__expectations">
+          <h4 class="ea-program-comparison__subheading">
+            What you can expect
+          </h4>
+
+          <ul class="ea-program-comparison__list">
+            <li class="ea-program-comparison__list-item">
+              <span
+                class="ea-program-comparison__check"
+                aria-hidden="true"
+              >
+                <svg viewBox="0 0 16 16" focusable="false">
+                  <path d="m3 8 3 3 7-7"></path>
+                </svg>
+              </span>
+
+              <span>Personalized coaching conversations</span>
+            </li>
+
+            <li class="ea-program-comparison__list-item">
+              <span
+                class="ea-program-comparison__check"
+                aria-hidden="true"
+              >
+                <svg viewBox="0 0 16 16" focusable="false">
+                  <path d="m3 8 3 3 7-7"></path>
+                </svg>
+              </span>
+
+              <span>Focused strategy and priority planning</span>
+            </li>
+
+            <li class="ea-program-comparison__list-item">
+              <span
+                class="ea-program-comparison__check"
+                aria-hidden="true"
+              >
+                <svg viewBox="0 0 16 16" focusable="false">
+                  <path d="m3 8 3 3 7-7"></path>
+                </svg>
+              </span>
+
+              <span>Direct feedback on current challenges</span>
+            </li>
+
+            <li class="ea-program-comparison__list-item">
+              <span
+                class="ea-program-comparison__check"
+                aria-hidden="true"
+              >
+                <svg viewBox="0 0 16 16" focusable="false">
+                  <path d="m3 8 3 3 7-7"></path>
+                </svg>
+              </span>
+
+              <span>Accountability based on your individual goals</span>
+            </li>
+          </ul>
+        </div>
+
+        <div
+          class="ea-program-comparison__support"
+          aria-label="Support level: Personalized"
+        >
+          <div class="ea-program-comparison__support-header">
+            <span class="ea-program-comparison__support-title">
+              Support level
+            </span>
+
+            <span class="ea-program-comparison__support-value">
+              Personalized
+            </span>
+          </div>
+
+          <div
+            class="ea-program-comparison__support-track"
+            aria-hidden="true"
+          >
+            <span class="ea-program-comparison__support-segment ea-program-comparison__support-segment--active"></span>
+            <span class="ea-program-comparison__support-segment ea-program-comparison__support-segment--active"></span>
+            <span class="ea-program-comparison__support-segment ea-program-comparison__support-segment--active"></span>
+          </div>
+
+          <p class="ea-program-comparison__support-caption">
+            This indicator describes the support structure, not expected
+            results.
+          </p>
+        </div>
+
+        <div class="ea-program-comparison__card-footer">
+          <!-- Replace with: EA | FUN | Coaching Application published URL -->
+          <a
+            class="ea-program-comparison__cta"
+            href="../../elevate-coaching-application/step-01/index.html"
+          >
+            Apply for One-on-One Coaching
+
+            <svg
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+              focusable="false"
+            >
+              <path d="M5 12h14"></path>
+              <path d="m14 7 5 5-5 5"></path>
+            </svg>
+          </a>
+
+          <p class="ea-program-comparison__reassurance">
+            Choose this option when your goals or challenges require focused
+            individual support.
+          </p>
+        </div>
+      </article>
+    </div>
+
+    <aside
+      class="ea-program-comparison__choice-panel"
+      aria-labelledby="ea-program-comparison-choice-label"
+    >
+      <span
+        class="ea-program-comparison__choice-icon"
+        aria-hidden="true"
+      >
+        <svg viewBox="0 0 32 32" focusable="false">
+          <circle cx="16" cy="16" r="12"></circle>
+          <path d="m19.5 12.5-2.2 5-5 2.2 2.2-5Z"></path>
+          <path d="M16 2v3"></path>
+          <path d="M16 27v3"></path>
+          <path d="M2 16h3"></path>
+          <path d="M27 16h3"></path>
+        </svg>
+      </span>
+
+      <div class="ea-program-comparison__choice-content">
+        <span
+          class="ea-program-comparison__choice-label"
+          id="ea-program-comparison-choice-label"
+        >
+          HOW TO CHOOSE
+        </span>
+
+        <p class="ea-program-comparison__choice-text">
+          Choose Self-Paced Course for maximum flexibility, Group Coaching for
+          guidance with shared accountability, or One-on-One Coaching for
+          personalized support focused on your specific goals and challenges.
+        </p>
+
+        <p class="ea-program-comparison__choice-supporting">
+          The most suitable option depends on how you learn best and how much
+          direct support you currently need.
+        </p>
+      </div>
+
+      <div class="ea-program-comparison__guidance">
+        <span class="ea-program-comparison__guidance-question">
+          Still unsure which program fits?
+        </span>
+
+        <a
+          class="ea-program-comparison__guidance-link"
+          href="#ea-program-guidance-cta"
+        >
+          Get help choosing your next step
+
+          <svg
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+            focusable="false"
+          >
+            <path d="M5 12h14"></path>
+            <path d="m14 7 5 5-5 5"></path>
+          </svg>
+        </a>
+      </div>
+    </aside>
+  </div>
+</section>
+<!-- Section 2: Program Comparison End -->
+
+<!-- Section 3: Guidance CTA and Footer Start -->
+<section
+  class="ea-program-guidance-cta"
+  id="ea-program-guidance-cta"
+  aria-labelledby="ea-program-guidance-cta-heading"
+>
+  <style>
+    .ea-program-guidance-cta {
+      width: 100%;
+      max-width: 100%;
+      overflow-x: hidden;
+      background: #fffcf6;
+      color: #344054;
+      font-family: Inter, Arial, sans-serif;
+    }
+
+    .ea-program-guidance-cta,
+    .ea-program-guidance-cta * {
+      box-sizing: border-box;
+    }
+
+    .ea-program-guidance-cta a {
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .ea-program-guidance-cta .ea-program-guidance-cta__main {
+      position: relative;
+      isolation: isolate;
+      overflow: hidden;
+      padding: clamp(64px, 7vw, 88px) 0;
+      background:
+        radial-gradient(
+          circle at 8% 12%,
+          rgba(252, 163, 17, 0.12) 0,
+          rgba(252, 163, 17, 0.12) 6%,
+          transparent 6.2%
+        ),
+        linear-gradient(145deg, #fffcf6 0%, #fff8ec 100%);
+    }
+
+    .ea-program-guidance-cta .ea-program-guidance-cta__main::before {
+      position: absolute;
+      z-index: -2;
+      top: 0;
+      right: 0;
+      width: 48%;
+      height: 100%;
+      background-image:
+        linear-gradient(rgba(20, 33, 61, 0.045) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(20, 33, 61, 0.045) 1px, transparent 1px);
+      background-size: 28px 28px;
+      content: "";
+      mask-image: linear-gradient(to left, #000 25%, transparent 100%);
+      pointer-events: none;
+    }
+
+    .ea-program-guidance-cta .ea-program-guidance-cta__main::after {
+      position: absolute;
+      z-index: -1;
+      right: -90px;
+      bottom: -160px;
+      width: 360px;
+      height: 360px;
+      border: 58px solid rgba(34, 52, 92, 0.045);
+      border-radius: 50%;
+      content: "";
+      pointer-events: none;
+    }
+
+    .ea-program-guidance-cta .ea-program-guidance-cta__container {
+      width: min(100% - 64px, 1180px);
+      margin-inline: auto;
+    }
+
+    .ea-program-guidance-cta .ea-program-guidance-cta__panel {
+      position: relative;
+      display: grid;
+      overflow: hidden;
+      padding: clamp(34px, 5vw, 58px);
+      grid-template-columns: minmax(0, 1.12fr) minmax(360px, 0.88fr);
+      gap: clamp(44px, 6vw, 76px);
+      align-items: center;
+      border: 1px solid #eadfca;
+      border-radius: 26px;
+      background: rgba(255, 255, 255, 0.88);
+      box-shadow: 0 22px 55px rgba(13, 23, 45, 0.09);
+    }
+
+    .ea-program-guidance-cta .ea-program-guidance-cta__panel::before {
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      height: 5px;
+      background: linear-gradient(90deg, #fca311 0%, #ffb83d 38%, #22345c 100%);
+      content: "";
+    }
+
+    .ea-program-guidance-cta .ea-program-guidance-cta__content {
+      position: relative;
+      z-index: 1;
+      min-width: 0;
+    }
+
+    .ea-program-guidance-cta .ea-program-guidance-cta__eyebrow {
+      display: inline-flex;
+      margin: 0 0 17px;
+      align-items: center;
+      gap: 9px;
+      color: #d78300;
+      font-family: Manrope, Arial, sans-serif;
+      font-size: 13px;
+      font-weight: 800;
+      line-height: 1.4;
+      letter-spacing: 0.12em;
+    }
+
+    .ea-program-guidance-cta .ea-program-guidance-cta__eyebrow::before {
+      width: 29px;
+      height: 3px;
+      flex: 0 0 29px;
+      border-radius: 999px;
+      background: #fca311;
+      content: "";
+    }
+
+    .ea-program-guidance-cta .ea-program-guidance-cta__heading {
+      max-width: 650px;
+      margin: 0;
+      color: #14213d;
+      font-family: Manrope, Arial, sans-serif;
+      font-size: clamp(35px, 4.5vw, 52px);
+      font-weight: 800;
+      line-height: 1.1;
+      letter-spacing: -0.04em;
+      text-wrap: balance;
+    }
+
+    .ea-program-guidance-cta .ea-program-guidance-cta__description {
+      max-width: 670px;
+      margin: 21px 0 0;
+      color: #344054;
+      font-size: 17px;
+      line-height: 1.7;
+    }
+
+    .ea-program-guidance-cta .ea-program-guidance-cta__supporting {
+      max-width: 680px;
+      margin: 12px 0 0;
+      color: #667085;
+      font-size: 15px;
+      line-height: 1.72;
+    }
+
+    .ea-program-guidance-cta .ea-program-guidance-cta__benefits {
+      display: grid;
+      margin: 25px 0 0;
+      padding: 0;
+      gap: 11px;
+      list-style: none;
+    }
+
+    .ea-program-guidance-cta .ea-program-guidance-cta__benefit {
+      display: grid;
+      min-width: 0;
+      grid-template-columns: 24px minmax(0, 1fr);
+      gap: 10px;
+      align-items: center;
+      color: #344054;
+      font-size: 14px;
+      line-height: 1.55;
+    }
+
+    .ea-program-guidance-cta .ea-program-guidance-cta__benefit-icon {
+      display: grid;
+      width: 24px;
+      height: 24px;
+      place-items: center;
+      border-radius: 50%;
+      background: #e8f6ee;
+      color: #2e8b57;
+    }
+
+    .ea-program-guidance-cta .ea-program-guidance-cta__benefit-icon svg {
+      width: 14px;
+      height: 14px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 2.3;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .ea-program-guidance-cta .ea-program-guidance-cta__actions {
+      display: flex;
+      margin-top: 28px;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .ea-program-guidance-cta .ea-program-guidance-cta__primary-cta,
+    .ea-program-guidance-cta .ea-program-guidance-cta__secondary-cta {
+      display: inline-flex;
+      min-height: 50px;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      padding: 13px 21px;
+      border-radius: 12px;
+      font-family: Manrope, Arial, sans-serif;
+      font-size: 14px;
+      font-weight: 800;
+      line-height: 1.35;
+      text-align: center;
+      text-decoration: none;
+      transition:
+        background-color 180ms ease,
+        border-color 180ms ease,
+        box-shadow 180ms ease,
+        color 180ms ease,
+        transform 180ms ease;
+    }
+
+    .ea-program-guidance-cta .ea-program-guidance-cta__primary-cta {
+      border: 1px solid #fca311;
+      background: #fca311;
+      color: #14213d;
+      box-shadow: 0 10px 24px rgba(215, 131, 0, 0.21);
+    }
+
+    .ea-program-guidance-cta .ea-program-guidance-cta__primary-cta:hover {
+      border-color: #d78300;
+      background: #ffb83d;
+      box-shadow: 0 13px 28px rgba(215, 131, 0, 0.27);
+      transform: translateY(-2px);
+    }
+
+    .ea-program-guidance-cta .ea-program-guidance-cta__primary-cta:active {
+      background: #d78300;
+      transform: translateY(1px);
+    }
+
+    .ea-program-guidance-cta .ea-program-guidance-cta__secondary-cta {
+      border: 1px solid #14213d;
+      background: transparent;
+      color: #14213d;
+    }
+
+    .ea-program-guidance-cta .ea-program-guidance-cta__secondary-cta:hover {
+      background: #e9edf5;
+      transform: translateY(-2px);
+    }
+
+    .ea-program-guidance-cta .ea-program-guidance-cta__secondary-cta:active {
+      background: #dce2ed;
+      transform: translateY(1px);
+    }
+
+    .ea-program-guidance-cta .ea-program-guidance-cta__primary-cta svg,
+    .ea-program-guidance-cta .ea-program-guidance-cta__secondary-cta svg {
+      width: 18px;
+      height: 18px;
+      flex: 0 0 18px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .ea-program-guidance-cta .ea-program-guidance-cta__primary-cta:focus-visible,
+    .ea-program-guidance-cta .ea-program-guidance-cta__secondary-cta:focus-visible,
+    .ea-program-guidance-cta .ea-program-guidance-cta__footer-link:focus-visible,
+    .ea-program-guidance-cta .ea-program-guidance-cta__legal-link:focus-visible {
+      border-radius: 8px;
+      outline: 3px solid #ffb83d;
+      outline-offset: 4px;
+    }
+
+    .ea-program-guidance-cta .ea-program-guidance-cta__reassurance {
+      display: grid;
+      max-width: 680px;
+      margin: 20px 0 0;
+      padding: 14px 16px;
+      grid-template-columns: 24px minmax(0, 1fr);
+      gap: 10px;
+      align-items: start;
+      border: 1px solid #dde2ea;
+      border-radius: 13px;
+      background: #f5f6f8;
+      color: #667085;
+      font-size: 12px;
+      line-height: 1.65;
+    }
+
+    .ea-program-guidance-cta .ea-program-guidance-cta__reassurance-icon {
+      display: grid;
+      width: 24px;
+      height: 24px;
+      margin-top: 1px;
+      place-items: center;
+      border-radius: 8px;
+      background: #e9edf5;
+      color: #22345c;
+    }
+
+    .ea-program-guidance-cta .ea-program-guidance-cta__reassurance-icon svg {
+      width: 15px;
+      height: 15px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 1.9;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .ea-program-guidance-cta .ea-program-guidance-cta__roadmap {
+      position: relative;
+      z-index: 1;
+      min-width: 0;
+    }
+
+    .ea-program-guidance-cta .ea-program-guidance-cta__roadmap::before {
+      position: absolute;
+      top: -23px;
+      right: -23px;
+      width: 86px;
+      height: 86px;
+      border: 16px solid rgba(252, 163, 17, 0.16);
+      border-radius: 50%;
+      content: "";
+      pointer-events: none;
+    }
+
+    .ea-program-guidance-cta .ea-program-guidance-cta__roadmap-card {
+      position: relative;
+      overflow: hidden;
+      padding: 28px;
+      border: 1px solid #dde2ea;
+      border-radius: 22px;
+      background: #ffffff;
+      box-shadow: 0 17px 38px rgba(13, 23, 45, 0.1);
+    }
+
+    .ea-program-guidance-cta .ea-program-guidance-cta__roadmap-card::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: linear-gradient(90deg, #fca311, #22345c);
+      content: "";
+    }
+
+    .ea-program-guidance-cta .ea-program-guidance-cta__roadmap-label {
+      display: inline-flex;
+      min-height: 29px;
+      margin-bottom: 12px;
+      align-items: center;
+      gap: 7px;
+      padding: 5px 10px;
+      border-radius: 999px;
+      background: #fff1d6;
+      color: #9b6000;
+      font-family: Manrope, Arial, sans-serif;
+      font-size: 10px;
+      font-weight: 800;
+      line-height: 1.3;
+      letter-spacing: 0.08em;
+    }
+
+    .ea-program-guidance-cta .ea-program-guidance-cta__roadmap-label svg {
+      width: 14px;
+      height: 14px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .ea-program-guidance-cta .ea-program-guidance-cta__roadmap-heading {
+      margin: 0;
+      color: #14213d;
+      font-family: Manrope, Arial, sans-serif;
+      font-size: 25px;
+      font-weight: 800;
+      line-height: 1.25;
+      letter-spacing: -0.025em;
+    }
+
+    .ea-program-guidance-cta .ea-program-guidance-cta__stages {
+      position: relative;
+      display: grid;
+      margin-top: 23px;
+      gap: 13px;
+    }
+
+    .ea-program-guidance-cta .ea-program-guidance-cta__stages::before {
+      position: absolute;
+      top: 34px;
+      bottom: 34px;
+      left: 23px;
+      width: 2px;
+      border-radius: 999px;
+      background: linear-gradient(#fca311, #22345c, #2e8b57);
+      content: "";
+    }
+
+    .ea-program-guidance-cta .ea-program-guidance-cta__stage {
+      position: relative;
+      display: grid;
+      min-width: 0;
+      padding: 15px 15px 15px 64px;
+      border: 1px solid #dde2ea;
+      border-radius: 15px;
+      background: #fffcf6;
+      transition:
+        border-color 180ms ease,
+        box-shadow 180ms ease,
+        transform 180ms ease;
+    }
+
+    .ea-program-guidance-cta .ea-program-guidance-cta__stage:hover {
+      border-color: #f2cb81;
+      box-shadow: 0 9px 20px rgba(13, 23, 45, 0.07);
+      transform: translateX(3px);
+    }
+
+    .ea-program-guidance-cta .ea-program-guidance-cta__stage-number {
+      position: absolute;
+      z-index: 2;
+      top: 14px;
+      left: 8px;
+      display: grid;
+      width: 32px;
+      height: 32px;
+      place-items: center;
+      border: 3px solid #ffffff;
+      border-radius: 50%;
+      background: #fca311;
+      color: #14213d;
+      font-family: Manrope, Arial, sans-serif;
+      font-size: 12px;
+      font-weight: 800;
+      line-height: 1;
+      box-shadow: 0 0 0 1px #fca311;
+    }
+
+    .ea-program-guidance-cta .ea-program-guidance-cta__stage:nth-child(2) .ea-program-guidance-cta__stage-number {
+      background: #22345c;
+      color: #ffffff;
+      box-shadow: 0 0 0 1px #22345c;
+    }
+
+    .ea-program-guidance-cta .ea-program-guidance-cta__stage:nth-child(3) .ea-program-guidance-cta__stage-number {
+      background: #2e8b57;
+      color: #ffffff;
+      box-shadow: 0 0 0 1px #2e8b57;
+    }
+
+    .ea-program-guidance-cta .ea-program-guidance-cta__stage-title {
+      margin: 0;
+      color: #14213d;
+      font-family: Manrope, Arial, sans-serif;
+      font-size: 15px;
+      font-weight: 800;
+      line-height: 1.4;
+    }
+
+    .ea-program-guidance-cta .ea-program-guidance-cta__stage-description {
+      margin: 5px 0 0;
+      color: #667085;
+      font-size: 12px;
+      line-height: 1.6;
+    }
+
+    .ea-program-guidance-cta .ea-program-guidance-cta__roadmap-note {
+      display: flex;
+      margin: 18px 0 0;
+      align-items: flex-start;
+      justify-content: center;
+      gap: 8px;
+      color: #667085;
+      font-size: 12px;
+      line-height: 1.6;
+      text-align: center;
+    }
+
+    .ea-program-guidance-cta .ea-program-guidance-cta__roadmap-note svg {
+      width: 17px;
+      height: 17px;
+      flex: 0 0 17px;
+      margin-top: 1px;
+      fill: none;
+      stroke: #d78300;
+      stroke-width: 1.9;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .ea-program-guidance-cta .ea-program-guidance-cta__footer {
+      padding: 58px 0 26px;
+      background: #0d172d;
+      color: #ffffff;
+    }
+
+    .ea-program-guidance-cta .ea-program-guidance-cta__footer-container {
+      width: min(100% - 64px, 1180px);
+      margin-inline: auto;
+    }
+
+    .ea-program-guidance-cta .ea-program-guidance-cta__footer-columns {
+      display: grid;
+      padding-bottom: 38px;
+      grid-template-columns:
+        minmax(0, 1.25fr)
+        minmax(210px, 0.75fr)
+        minmax(210px, 0.75fr);
+      gap: clamp(40px, 7vw, 82px);
+    }
+
+    .ea-program-guidance-cta .ea-program-guidance-cta__footer-column {
+      min-width: 0;
+    }
+
+    .ea-program-guidance-cta .ea-program-guidance-cta__brand {
+      display: flex;
+      align-items: center;
+      gap: 11px;
+    }
+
+    .ea-program-guidance-cta .ea-program-guidance-cta__brand-icon {
+      display: grid;
+      width: 42px;
+      height: 42px;
+      flex: 0 0 42px;
+      place-items: center;
+      border: 1px solid rgba(252, 163, 17, 0.35);
+      border-radius: 12px;
+      background: rgba(252, 163, 17, 0.1);
+      color: #ffb83d;
+    }
+
+    .ea-program-guidance-cta .ea-program-guidance-cta__brand-icon svg {
+      width: 27px;
+      height: 27px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 1.7;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .ea-program-guidance-cta .ea-program-guidance-cta__brand-name {
+      position: relative;
+      margin: 0;
+      padding-bottom: 10px;
+      color: #ffffff;
+      font-family: Manrope, Arial, sans-serif;
+      font-size: 22px;
+      font-weight: 800;
+      line-height: 1.25;
+      letter-spacing: -0.025em;
+    }
+
+    .ea-program-guidance-cta .ea-program-guidance-cta__brand-name::after {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 43px;
+      height: 3px;
+      border-radius: 999px;
+      background: #fca311;
+      content: "";
+    }
+
+    .ea-program-guidance-cta .ea-program-guidance-cta__brand-description {
+      max-width: 440px;
+      margin: 17px 0 0;
+      color: #e9edf5;
+      font-size: 14px;
+      line-height: 1.7;
+      opacity: 0.82;
+    }
+
+    .ea-program-guidance-cta .ea-program-guidance-cta__footer-heading {
+      margin: 0 0 16px;
+      color: #ffffff;
+      font-family: Manrope, Arial, sans-serif;
+      font-size: 16px;
+      font-weight: 800;
+      line-height: 1.4;
+    }
+
+    .ea-program-guidance-cta .ea-program-guidance-cta__footer-links,
+    .ea-program-guidance-cta .ea-program-guidance-cta__program-list {
+      display: grid;
+      margin: 0;
+      padding: 0;
+      gap: 6px;
+      list-style: none;
+    }
+
+    .ea-program-guidance-cta .ea-program-guidance-cta__footer-link,
+    .ea-program-guidance-cta .ea-program-guidance-cta__legal-link {
+      display: inline-flex;
+      min-height: 44px;
+      align-items: center;
+      border-radius: 6px;
+      color: #e9edf5;
+      font-size: 14px;
+      line-height: 1.5;
+      text-decoration: none;
+      text-underline-offset: 4px;
+      overflow-wrap: anywhere;
+      transition:
+        color 170ms ease,
+        transform 170ms ease;
+    }
+
+    .ea-program-guidance-cta .ea-program-guidance-cta__footer-link:hover,
+    .ea-program-guidance-cta .ea-program-guidance-cta__legal-link:hover {
+      color: #ffb83d;
+      text-decoration: underline;
+      text-decoration-color: #fca311;
+      transform: translateX(2px);
+    }
+
+    .ea-program-guidance-cta .ea-program-guidance-cta__footer-link:active,
+    .ea-program-guidance-cta .ea-program-guidance-cta__legal-link:active {
+      color: #fca311;
+      transform: translateX(0);
+    }
+
+    .ea-program-guidance-cta .ea-program-guidance-cta__program-item {
+      display: grid;
+      min-height: 44px;
+      grid-template-columns: 18px minmax(0, 1fr);
+      gap: 9px;
+      align-items: center;
+      color: #e9edf5;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    .ea-program-guidance-cta .ea-program-guidance-cta__program-icon {
+      display: grid;
+      width: 18px;
+      height: 18px;
+      place-items: center;
+      border-radius: 50%;
+      background: rgba(252, 163, 17, 0.14);
+      color: #ffb83d;
+    }
+
+    .ea-program-guidance-cta .ea-program-guidance-cta__program-icon svg {
+      width: 11px;
+      height: 11px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 2.2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .ea-program-guidance-cta .ea-program-guidance-cta__footer-bottom {
+      padding-top: 24px;
+      border-top: 1px solid rgba(233, 237, 245, 0.16);
+    }
+
+    .ea-program-guidance-cta .ea-program-guidance-cta__bottom-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .ea-program-guidance-cta .ea-program-guidance-cta__copyright {
+      margin: 0;
+      color: #e9edf5;
+      font-size: 13px;
+      line-height: 1.6;
+      opacity: 0.78;
+    }
+
+    .ea-program-guidance-cta .ea-program-guidance-cta__legal-links {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 8px 20px;
+    }
+
+    .ea-program-guidance-cta .ea-program-guidance-cta__legal-link {
+      min-height: 40px;
+      font-size: 13px;
+    }
+
+    .ea-program-guidance-cta .ea-program-guidance-cta__disclaimers {
+      display: grid;
+      max-width: 940px;
+      margin: 18px auto 0;
+      gap: 6px;
+      text-align: center;
+    }
+
+    .ea-program-guidance-cta .ea-program-guidance-cta__disclaimer {
+      margin: 0;
+      color: #e9edf5;
+      font-size: 12px;
+      line-height: 1.65;
+      opacity: 0.62;
+    }
+
+    @media (max-width: 980px) {
+      .ea-program-guidance-cta .ea-program-guidance-cta__panel {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 48px;
+      }
+
+      .ea-program-guidance-cta .ea-program-guidance-cta__roadmap {
+        width: min(100%, 700px);
+        margin-inline: auto;
+      }
+
+      .ea-program-guidance-cta .ea-program-guidance-cta__footer-columns {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .ea-program-guidance-cta .ea-program-guidance-cta__footer-column:first-child {
+        grid-column: 1 / -1;
+      }
+
+      .ea-program-guidance-cta .ea-program-guidance-cta__brand-description {
+        max-width: 650px;
+      }
+    }
+
+    @media (max-width: 767px) {
+      .ea-program-guidance-cta .ea-program-guidance-cta__container,
+      .ea-program-guidance-cta .ea-program-guidance-cta__footer-container {
+        width: min(100% - 40px, 1180px);
+      }
+
+      .ea-program-guidance-cta .ea-program-guidance-cta__panel {
+        padding: 34px 28px;
+        border-radius: 22px;
+      }
+
+      .ea-program-guidance-cta .ea-program-guidance-cta__footer {
+        padding-top: 52px;
+      }
+    }
+
+    @media (max-width: 599px) {
+      .ea-program-guidance-cta .ea-program-guidance-cta__main {
+        padding: 56px 0;
+      }
+
+      .ea-program-guidance-cta .ea-program-guidance-cta__main::before {
+        width: 75%;
+        opacity: 0.6;
+      }
+
+      .ea-program-guidance-cta .ea-program-guidance-cta__panel {
+        padding: 30px 20px;
+        gap: 42px;
+      }
+
+      .ea-program-guidance-cta .ea-program-guidance-cta__eyebrow {
+        font-size: 11px;
+      }
+
+      .ea-program-guidance-cta .ea-program-guidance-cta__heading {
+        font-size: clamp(32px, 10vw, 42px);
+      }
+
+      .ea-program-guidance-cta .ea-program-guidance-cta__description {
+        font-size: 16px;
+      }
+
+      .ea-program-guidance-cta .ea-program-guidance-cta__actions {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .ea-program-guidance-cta .ea-program-guidance-cta__primary-cta,
+      .ea-program-guidance-cta .ea-program-guidance-cta__secondary-cta {
+        width: 100%;
+      }
+
+      .ea-program-guidance-cta .ea-program-guidance-cta__roadmap-card {
+        padding: 24px 18px;
+        border-radius: 19px;
+      }
+
+      .ea-program-guidance-cta .ea-program-guidance-cta__roadmap-heading {
+        font-size: 22px;
+      }
+
+      .ea-program-guidance-cta .ea-program-guidance-cta__stage {
+        padding-right: 12px;
+        padding-left: 57px;
+      }
+
+      .ea-program-guidance-cta .ea-program-guidance-cta__footer-columns {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 32px;
+      }
+
+      .ea-program-guidance-cta .ea-program-guidance-cta__footer-column:first-child {
+        grid-column: auto;
+      }
+
+      .ea-program-guidance-cta .ea-program-guidance-cta__bottom-row {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 8px;
+      }
+
+      .ea-program-guidance-cta .ea-program-guidance-cta__legal-links {
+        justify-content: flex-start;
+      }
+
+      .ea-program-guidance-cta .ea-program-guidance-cta__disclaimers {
+        text-align: left;
+      }
+    }
+
+    @media (max-width: 399px) {
+      .ea-program-guidance-cta .ea-program-guidance-cta__container,
+      .ea-program-guidance-cta .ea-program-guidance-cta__footer-container {
+        width: min(100% - 24px, 1180px);
+      }
+
+      .ea-program-guidance-cta .ea-program-guidance-cta__panel {
+        padding: 27px 15px;
+      }
+
+      .ea-program-guidance-cta .ea-program-guidance-cta__benefit {
+        grid-template-columns: 22px minmax(0, 1fr);
+        gap: 8px;
+      }
+
+      .ea-program-guidance-cta .ea-program-guidance-cta__benefit-icon {
+        width: 22px;
+        height: 22px;
+      }
+
+      .ea-program-guidance-cta .ea-program-guidance-cta__reassurance {
+        padding-inline: 12px;
+      }
+
+      .ea-program-guidance-cta .ea-program-guidance-cta__roadmap-card {
+        padding-inline: 13px;
+      }
+
+      .ea-program-guidance-cta .ea-program-guidance-cta__stage {
+        padding-left: 52px;
+      }
+
+      .ea-program-guidance-cta .ea-program-guidance-cta__stage-number {
+        left: 5px;
+      }
+
+      .ea-program-guidance-cta .ea-program-guidance-cta__stages::before {
+        left: 20px;
+      }
+
+      .ea-program-guidance-cta .ea-program-guidance-cta__brand-name {
+        font-size: 20px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .ea-program-guidance-cta .ea-program-guidance-cta__primary-cta,
+      .ea-program-guidance-cta .ea-program-guidance-cta__secondary-cta,
+      .ea-program-guidance-cta .ea-program-guidance-cta__stage,
+      .ea-program-guidance-cta .ea-program-guidance-cta__footer-link,
+      .ea-program-guidance-cta .ea-program-guidance-cta__legal-link {
+        transition: none;
+      }
+
+      .ea-program-guidance-cta .ea-program-guidance-cta__primary-cta:hover,
+      .ea-program-guidance-cta .ea-program-guidance-cta__secondary-cta:hover,
+      .ea-program-guidance-cta .ea-program-guidance-cta__stage:hover,
+      .ea-program-guidance-cta .ea-program-guidance-cta__footer-link:hover,
+      .ea-program-guidance-cta .ea-program-guidance-cta__legal-link:hover {
+        transform: none;
+      }
+    }
+  </style>
+
+  <div class="ea-program-guidance-cta__main">
+    <div class="ea-program-guidance-cta__container">
+      <div class="ea-program-guidance-cta__panel">
+        <div class="ea-program-guidance-cta__content">
+          <p class="ea-program-guidance-cta__eyebrow">
+            NEED HELP CHOOSING?
+          </p>
+
+          <h2
+            class="ea-program-guidance-cta__heading"
+            id="ea-program-guidance-cta-heading"
+          >
+            Not Sure Which Program Is Right for You?
+          </h2>
+
+          <p class="ea-program-guidance-cta__description">
+            Complete a short coaching application and share your current
+            business stage, goals, challenges, and preferred type of support.
+          </p>
+
+          <p class="ea-program-guidance-cta__supporting">
+            Your responses can help identify whether One-on-One Coaching,
+            Group Coaching, or Self-Paced Course is the most appropriate next
+            step for your current situation.
+          </p>
+
+          <ul class="ea-program-guidance-cta__benefits">
+            <li class="ea-program-guidance-cta__benefit">
+              <span
+                class="ea-program-guidance-cta__benefit-icon"
+                aria-hidden="true"
+              >
+                <svg viewBox="0 0 16 16" focusable="false">
+                  <path d="m3 8 3 3 7-7"></path>
+                </svg>
+              </span>
+
+              <span>Clarify your current goals and challenges</span>
+            </li>
+
+            <li class="ea-program-guidance-cta__benefit">
+              <span
+                class="ea-program-guidance-cta__benefit-icon"
+                aria-hidden="true"
+              >
+                <svg viewBox="0 0 16 16" focusable="false">
+                  <path d="m3 8 3 3 7-7"></path>
+                </svg>
+              </span>
+
+              <span>Identify the level of guidance you may need</span>
+            </li>
+
+            <li class="ea-program-guidance-cta__benefit">
+              <span
+                class="ea-program-guidance-cta__benefit-icon"
+                aria-hidden="true"
+              >
+                <svg viewBox="0 0 16 16" focusable="false">
+                  <path d="m3 8 3 3 7-7"></path>
+                </svg>
+              </span>
+
+              <span>Choose a more suitable next step</span>
+            </li>
+          </ul>
+
+          <div class="ea-program-guidance-cta__actions">
+            <!-- Replace with: EA | FUN | Coaching Application published URL -->
+            <a
+              class="ea-program-guidance-cta__primary-cta"
+              href="../../elevate-coaching-application/step-01/index.html"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+                focusable="false"
+              >
+                <path d="M7 3h10a2 2 0 0 1 2 2v16H5V5a2 2 0 0 1 2-2Z"></path>
+                <path d="M9 3v3h6V3"></path>
+                <path d="M8.5 11h7"></path>
+                <path d="M8.5 15h5"></path>
+              </svg>
+
+              Complete the Coaching Application
+            </a>
+
+            <a
+              class="ea-program-guidance-cta__secondary-cta"
+              href="#ea-program-comparison"
+            >
+              Review the Programs Again
+
+              <svg
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+                focusable="false"
+              >
+                <path d="M19 12H5"></path>
+                <path d="m10 7-5 5 5 5"></path>
+              </svg>
+            </a>
+          </div>
+
+          <p class="ea-program-guidance-cta__reassurance">
+            <span
+              class="ea-program-guidance-cta__reassurance-icon"
+              aria-hidden="true"
+            >
+              <svg viewBox="0 0 24 24" focusable="false">
+                <path d="M12 3 20 7v5c0 5-3.4 8-8 9-4.6-1-8-4-8-9V7Z"></path>
+                <path d="m8.5 12 2.2 2.2 4.8-4.8"></path>
+              </svg>
+            </span>
+
+            <span>
+              Submitting the application does not guarantee acceptance into a
+              coaching program and does not require you to purchase a program.
+            </span>
+          </p>
+        </div>
+
+        <aside
+          class="ea-program-guidance-cta__roadmap"
+          aria-labelledby="ea-program-guidance-roadmap-heading"
+        >
+          <div class="ea-program-guidance-cta__roadmap-card">
+            <span class="ea-program-guidance-cta__roadmap-label">
+              <svg
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+                focusable="false"
+              >
+                <circle cx="6" cy="18" r="2"></circle>
+                <circle cx="18" cy="6" r="2"></circle>
+                <path d="M8 18h2a3 3 0 0 0 3-3V9a3 3 0 0 1 3-3"></path>
+                <path d="m14 10-3-3 3-3"></path>
+              </svg>
+
+              APPLICATION ROADMAP
+            </span>
+
+            <h3
+              class="ea-program-guidance-cta__roadmap-heading"
+              id="ea-program-guidance-roadmap-heading"
+            >
+              A Clear Path to Your Next Step
+            </h3>
+
+            <div class="ea-program-guidance-cta__stages">
+              <article class="ea-program-guidance-cta__stage">
+                <span
+                  class="ea-program-guidance-cta__stage-number"
+                  aria-hidden="true"
+                >
+                  1
+                </span>
+
+                <h4 class="ea-program-guidance-cta__stage-title">
+                  Share Your Situation
+                </h4>
+
+                <p class="ea-program-guidance-cta__stage-description">
+                  Tell us about your business stage, goals, and current
+                  challenges.
+                </p>
+              </article>
+
+              <article class="ea-program-guidance-cta__stage">
+                <span
+                  class="ea-program-guidance-cta__stage-number"
+                  aria-hidden="true"
+                >
+                  2
+                </span>
+
+                <h4 class="ea-program-guidance-cta__stage-title">
+                  Review Your Options
+                </h4>
+
+                <p class="ea-program-guidance-cta__stage-description">
+                  Consider the level of flexibility, accountability, and direct
+                  support you need.
+                </p>
+              </article>
+
+              <article class="ea-program-guidance-cta__stage">
+                <span
+                  class="ea-program-guidance-cta__stage-number"
+                  aria-hidden="true"
+                >
+                  3
+                </span>
+
+                <h4 class="ea-program-guidance-cta__stage-title">
+                  Choose a Next Step
+                </h4>
+
+                <p class="ea-program-guidance-cta__stage-description">
+                  Continue to the program or conversation that best fits your
+                  situation.
+                </p>
+              </article>
+            </div>
+
+            <p class="ea-program-guidance-cta__roadmap-note">
+              <svg
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+                focusable="false"
+              >
+                <circle cx="12" cy="12" r="9"></circle>
+                <path d="m15.5 8.5-2.2 5-5 2.2 2.2-5Z"></path>
+              </svg>
+
+              <span>
+                A clear next step begins with an honest review of where you are
+                now.
+              </span>
+            </p>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </div>
+
+  <footer
+    class="ea-program-guidance-cta__footer"
+    aria-labelledby="ea-program-guidance-footer-brand"
+  >
+    <div class="ea-program-guidance-cta__footer-container">
+      <div class="ea-program-guidance-cta__footer-columns">
+        <div class="ea-program-guidance-cta__footer-column">
+          <div class="ea-program-guidance-cta__brand">
+            <span
+              class="ea-program-guidance-cta__brand-icon"
+              aria-hidden="true"
+            >
+              <svg viewBox="0 0 32 32" focusable="false">
+                <path d="M4.5 9c4.5-.8 8.3.4 11.5 3.5v13c-3.2-3-7-4.2-11.5-3.5Z"></path>
+                <path d="M27.5 9c-4.5-.8-8.3.4-11.5 3.5v13c3.2-3 7-4.2 11.5-3.5Z"></path>
+                <path d="m19 8.5 3.5-3.5L26 8.5"></path>
+                <path d="M22.5 5v9"></path>
+              </svg>
+            </span>
+
+            <h2
+              class="ea-program-guidance-cta__brand-name"
+              id="ea-program-guidance-footer-brand"
+            >
+              Elevate Academy
+            </h2>
+          </div>
+
+          <p class="ea-program-guidance-cta__brand-description">
+            Practical courses and coaching designed to help business owners
+            build clearer strategies, stronger systems, and more consistent
+            progress.
+          </p>
+        </div>
+
+        <nav
+          class="ea-program-guidance-cta__footer-column"
+          aria-labelledby="ea-program-guidance-footer-resources"
+        >
+          <h3
+            class="ea-program-guidance-cta__footer-heading"
+            id="ea-program-guidance-footer-resources"
+          >
+            Resources
+          </h3>
+
+          <ul class="ea-program-guidance-cta__footer-links">
+            <li>
+              <!-- Replace with: EA | FUN | Lead Magnet Step 01 - Lead Magnet Opt-In published URL -->
+              <a
+                class="ea-program-guidance-cta__footer-link"
+                href="../step-01/index.html"
+              >
+                Free checklist
+              </a>
+            </li>
+
+            <li>
+              <!-- Replace with: Final hosted URL for The 7-Step Client Acquisition Checklist -->
+              <a
+                class="ea-program-guidance-cta__footer-link"
+                href="https://drive.google.com/file/d/17xCzZrwh_07QtDHW08lAKEN84RmURF9Q/view?usp=drive_link"
+              >
+                Download checklist
+              </a>
+            </li>
+
+            <li>
+              <!-- Scroll to: EA | FUN | Lead Magnet Step 03 Section 2 -->
+              <a
+                class="ea-program-guidance-cta__footer-link"
+                href="#ea-program-comparison"
+              >
+                Program comparison
+              </a>
+            </li>
+
+            <li>
+              <!-- Replace with: EA | FUN | Coaching Application published URL -->
+              <a
+                class="ea-program-guidance-cta__footer-link"
+                href="../../elevate-coaching-application/step-01/index.html"
+              >
+                Coaching application
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <div
+          class="ea-program-guidance-cta__footer-column"
+          aria-labelledby="ea-program-guidance-footer-programs"
+        >
+          <h3
+            class="ea-program-guidance-cta__footer-heading"
+            id="ea-program-guidance-footer-programs"
+          >
+            Programs
+          </h3>
+
+          <ul class="ea-program-guidance-cta__program-list">
+            <li class="ea-program-guidance-cta__program-item">
+              <span
+                class="ea-program-guidance-cta__program-icon"
+                aria-hidden="true"
+              >
+                <svg viewBox="0 0 12 12" focusable="false">
+                  <path d="m2.5 6 2 2 5-5"></path>
+                </svg>
+              </span>
+
+              <span>One-on-One Coaching</span>
+            </li>
+
+            <li class="ea-program-guidance-cta__program-item">
+              <span
+                class="ea-program-guidance-cta__program-icon"
+                aria-hidden="true"
+              >
+                <svg viewBox="0 0 12 12" focusable="false">
+                  <path d="m2.5 6 2 2 5-5"></path>
+                </svg>
+              </span>
+
+              <span>Group Coaching</span>
+            </li>
+
+            <li class="ea-program-guidance-cta__program-item">
+              <span
+                class="ea-program-guidance-cta__program-icon"
+                aria-hidden="true"
+              >
+                <svg viewBox="0 0 12 12" focusable="false">
+                  <path d="m2.5 6 2 2 5-5"></path>
+                </svg>
+              </span>
+
+              <span>Self-Paced Course</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="ea-program-guidance-cta__footer-bottom">
+        <div class="ea-program-guidance-cta__bottom-row">
+          <p class="ea-program-guidance-cta__copyright">
+            © 2026 Elevate Academy. All rights reserved.
+          </p>
+
+          <nav
+            class="ea-program-guidance-cta__legal-links"
+            aria-label="Legal information"
+          >
+            <!-- Replace with: Elevate Academy Privacy Policy URL -->
+            <a
+              class="ea-program-guidance-cta__legal-link"
+              href="#"
+            >
+              Privacy policy
+            </a>
+
+            <!-- Replace with: Elevate Academy Terms and Conditions URL -->
+            <a
+              class="ea-program-guidance-cta__legal-link"
+              href="#"
+            >
+              Terms
+            </a>
+          </nav>
+        </div>
+
+        <div class="ea-program-guidance-cta__disclaimers">
+          <p class="ea-program-guidance-cta__disclaimer">
+            Elevate Academy is a fictional business created for CRM, funnel,
+            and automation demonstration purposes.
+          </p>
+
+          <p class="ea-program-guidance-cta__disclaimer">
+            The information and programs presented are for general educational
+            purposes and do not guarantee specific business, income, or
+            financial results.
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+</section>
+<!-- Section 3: Guidance CTA and Footer End -->
+<a class="funnel-next-button" href="../step-01/index.html" aria-label="Restart the Lead Magnet Funnel" title="Start Again">
+  <span class="funnel-next-button__icon" aria-hidden="true">↻</span>
+  <span>Start Again</span>
+</a>
+</body>
+</html>

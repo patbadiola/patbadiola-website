@@ -1,0 +1,4040 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Schedule a personalized home-selling consultation with Elite Realty.">
+  <title>Elite Realty Seller Consultation | Step 01</title>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      min-width: 320px;
+      background: #ffffff;
+    }
+
+    .funnel-next-button {
+      position: fixed;
+      right: 24px;
+      bottom: 24px;
+      z-index: 99999;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      min-height: 54px;
+      padding: 0 20px 0 10px;
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      border-radius: 999px;
+      background: linear-gradient(135deg, #245a4a 0%, #3c806a 100%);
+      box-shadow: 0 14px 34px rgba(25, 68, 56, 0.32);
+      color: #ffffff;
+      font: 700 14px/1 Inter, Arial, sans-serif;
+      letter-spacing: 0.01em;
+      text-decoration: none;
+      transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease;
+      isolation: isolate;
+    }
+
+    .funnel-next-button::after {
+      content: "";
+      position: absolute;
+      right: 18px;
+      bottom: -7px;
+      z-index: -1;
+      width: 18px;
+      height: 18px;
+      border-radius: 0 0 5px 0;
+      background: #3c806a;
+      transform: rotate(35deg);
+    }
+
+    .funnel-next-button:hover {
+      background: linear-gradient(135deg, #194438 0%, #245a4a 100%);
+      box-shadow: 0 18px 40px rgba(25, 68, 56, 0.4);
+      color: #ffffff;
+      transform: translateY(-3px);
+    }
+
+    .funnel-next-button:focus-visible {
+      outline: 3px solid #d6a84b;
+      outline-offset: 4px;
+    }
+
+    .funnel-next-button__icon {
+      display: inline-grid;
+      width: 36px;
+      height: 36px;
+      flex: 0 0 36px;
+      place-items: center;
+      border-radius: 50%;
+      background: #d6a84b;
+      color: #194438;
+      font-size: 19px;
+      line-height: 1;
+    }
+
+    @media (max-width: 640px) {
+      .funnel-next-button {
+        right: 16px;
+        bottom: 16px;
+        min-height: 50px;
+        padding-right: 17px;
+      }
+
+      .funnel-next-button__icon {
+        width: 32px;
+        height: 32px;
+        flex-basis: 32px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      .funnel-next-button {
+        transition: none;
+      }
+    }
+  </style>
+</head>
+<body>
+<!-- Elite Realty Seller Consultation: Header and Hero Start -->
+<div class="er-seller-consultation-hero">
+  <style>
+    .er-seller-consultation-hero {
+      --er-seller-consultation-primary: #245A4A;
+      --er-seller-consultation-secondary: #3C806A;
+      --er-seller-consultation-dark: #194438;
+      --er-seller-consultation-sage: #EDF6F2;
+      --er-seller-consultation-soft-sage: #E1F0EA;
+      --er-seller-consultation-gold: #D6A84B;
+      --er-seller-consultation-heading: #182433;
+      --er-seller-consultation-body: #526273;
+      --er-seller-consultation-muted: #718096;
+      --er-seller-consultation-light: #F7F9FC;
+      --er-seller-consultation-white: #FFFFFF;
+      --er-seller-consultation-border: #DCE7E2;
+      --er-seller-consultation-success: #2E8B57;
+      --er-seller-consultation-heading-font: Poppins, Arial, sans-serif;
+      --er-seller-consultation-body-font: Inter, Arial, sans-serif;
+
+      width: 100%;
+      max-width: 100%;
+      min-width: 0;
+      overflow-x: clip;
+      color: var(--er-seller-consultation-body);
+      font-family: var(--er-seller-consultation-body-font);
+    }
+
+    .er-seller-consultation-hero *,
+    .er-seller-consultation-hero *::before,
+    .er-seller-consultation-hero *::after {
+      box-sizing: border-box;
+    }
+
+    .er-seller-consultation-hero .er-seller-consultation-container {
+      width: min(calc(100% - 48px), 1200px);
+      margin-inline: auto;
+    }
+
+    /* Header */
+    .er-seller-consultation-hero .er-seller-consultation-header {
+      position: relative;
+      z-index: 10;
+      background: var(--er-seller-consultation-white);
+      border-bottom: 1px solid var(--er-seller-consultation-border);
+    }
+
+    .er-seller-consultation-hero .er-seller-consultation-header-inner {
+      display: grid;
+      min-height: 74px;
+      grid-template-columns: minmax(190px, 1fr) auto auto;
+      align-items: center;
+      gap: 32px;
+    }
+
+    .er-seller-consultation-hero .er-seller-consultation-logo {
+      display: inline-flex;
+      width: fit-content;
+      align-items: center;
+      gap: 11px;
+      color: var(--er-seller-consultation-primary);
+      font-family: var(--er-seller-consultation-heading-font);
+      font-size: 1.0625rem;
+      font-weight: 700;
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    .er-seller-consultation-hero .er-seller-consultation-logo-accent {
+      display: inline-block;
+      width: 26px;
+      height: 3px;
+      flex: 0 0 26px;
+      background: var(--er-seller-consultation-gold);
+      border-radius: 999px;
+    }
+
+    .er-seller-consultation-hero .er-seller-consultation-nav {
+      display: flex;
+      align-items: center;
+      gap: 27px;
+    }
+
+    .er-seller-consultation-hero .er-seller-consultation-nav-link {
+      color: var(--er-seller-consultation-body);
+      font-size: 0.875rem;
+      font-weight: 600;
+      line-height: 1.4;
+      text-decoration: none;
+      text-underline-offset: 5px;
+      transition: color 160ms ease;
+    }
+
+    .er-seller-consultation-hero .er-seller-consultation-nav-link:hover {
+      color: var(--er-seller-consultation-primary);
+      text-decoration: underline;
+      text-decoration-color: var(--er-seller-consultation-gold);
+      text-decoration-thickness: 2px;
+    }
+
+    /* Shared CTA */
+    .er-seller-consultation-hero .er-seller-consultation-button {
+      display: inline-flex;
+      min-height: 52px;
+      align-items: center;
+      justify-content: center;
+      padding: 14px 23px;
+      background: var(--er-seller-consultation-primary);
+      border: 1px solid var(--er-seller-consultation-primary);
+      border-radius: 11px;
+      color: var(--er-seller-consultation-white);
+      font-family: var(--er-seller-consultation-heading-font);
+      font-size: 0.9375rem;
+      font-weight: 600;
+      line-height: 1.25;
+      text-align: center;
+      text-decoration: none;
+      box-shadow: 0 7px 18px var(--er-seller-consultation-border);
+      transition:
+        background-color 160ms ease,
+        border-color 160ms ease,
+        transform 160ms ease;
+    }
+
+    .er-seller-consultation-hero .er-seller-consultation-button:hover {
+      background: var(--er-seller-consultation-dark);
+      border-color: var(--er-seller-consultation-dark);
+      transform: translateY(-1px);
+    }
+
+    .er-seller-consultation-hero .er-seller-consultation-logo:focus-visible,
+    .er-seller-consultation-hero .er-seller-consultation-nav-link:focus-visible,
+    .er-seller-consultation-hero .er-seller-consultation-button:focus-visible,
+    .er-seller-consultation-hero .er-seller-consultation-text-link:focus-visible {
+      border-radius: 6px;
+      outline: 3px solid var(--er-seller-consultation-gold);
+      outline-offset: 4px;
+    }
+
+    /* Hero */
+    .er-seller-consultation-hero .er-seller-consultation-hero-section {
+      position: relative;
+      isolation: isolate;
+      overflow: hidden;
+      padding: clamp(70px, 8vw, 104px) 0 clamp(74px, 8vw, 106px);
+      background: var(--er-seller-consultation-sage);
+    }
+
+    .er-seller-consultation-hero .er-seller-consultation-hero-section::before {
+      position: absolute;
+      z-index: -1;
+      top: -170px;
+      right: -120px;
+      width: 520px;
+      height: 520px;
+      background: var(--er-seller-consultation-soft-sage);
+      border-radius: 50%;
+      content: "";
+      opacity: 0.72;
+    }
+
+    .er-seller-consultation-hero .er-seller-consultation-hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.12fr) minmax(360px, 0.88fr);
+      align-items: center;
+      gap: clamp(54px, 7vw, 96px);
+    }
+
+    .er-seller-consultation-hero .er-seller-consultation-hero-copy {
+      min-width: 0;
+    }
+
+    .er-seller-consultation-hero .er-seller-consultation-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin: 0 0 17px;
+      color: var(--er-seller-consultation-primary);
+      font-family: var(--er-seller-consultation-heading-font);
+      font-size: 0.8125rem;
+      font-weight: 700;
+      line-height: 1.4;
+      letter-spacing: 0.11em;
+    }
+
+    .er-seller-consultation-hero .er-seller-consultation-eyebrow::before {
+      width: 30px;
+      height: 2px;
+      flex: 0 0 30px;
+      background: var(--er-seller-consultation-gold);
+      content: "";
+    }
+
+    .er-seller-consultation-hero .er-seller-consultation-title {
+      max-width: 670px;
+      margin: 0;
+      color: var(--er-seller-consultation-heading);
+      font-family: var(--er-seller-consultation-heading-font);
+      font-size: clamp(2.55rem, 4.8vw, 4.25rem);
+      font-weight: 700;
+      line-height: 1.08;
+      letter-spacing: -0.045em;
+      text-wrap: balance;
+    }
+
+    .er-seller-consultation-hero .er-seller-consultation-description {
+      max-width: 650px;
+      margin: 24px 0 0;
+      color: var(--er-seller-consultation-body);
+      font-size: 1.0625rem;
+      line-height: 1.72;
+    }
+
+    .er-seller-consultation-hero .er-seller-consultation-actions {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 18px 24px;
+      margin-top: 31px;
+    }
+
+    .er-seller-consultation-hero .er-seller-consultation-text-link {
+      display: inline-flex;
+      min-height: 48px;
+      align-items: center;
+      gap: 8px;
+      color: var(--er-seller-consultation-primary);
+      font-size: 0.9375rem;
+      font-weight: 700;
+      line-height: 1.4;
+      text-decoration: underline;
+      text-decoration-color: var(--er-seller-consultation-gold);
+      text-decoration-thickness: 2px;
+      text-underline-offset: 5px;
+      transition: color 160ms ease;
+    }
+
+    .er-seller-consultation-hero .er-seller-consultation-text-link:hover {
+      color: var(--er-seller-consultation-dark);
+    }
+
+    .er-seller-consultation-hero .er-seller-consultation-link-arrow {
+      font-size: 1.05rem;
+      line-height: 1;
+      transition: transform 160ms ease;
+    }
+
+    .er-seller-consultation-hero
+      .er-seller-consultation-text-link:hover
+      .er-seller-consultation-link-arrow {
+      transform: translateX(3px);
+    }
+
+    .er-seller-consultation-hero .er-seller-consultation-reassurance {
+      display: flex;
+      align-items: flex-start;
+      gap: 9px;
+      max-width: 630px;
+      margin: 17px 0 0;
+      color: var(--er-seller-consultation-muted);
+      font-size: 0.875rem;
+      line-height: 1.6;
+    }
+
+    .er-seller-consultation-hero .er-seller-consultation-reassurance-mark {
+      display: inline-flex;
+      width: 21px;
+      height: 21px;
+      flex: 0 0 21px;
+      align-items: center;
+      justify-content: center;
+      margin-top: 1px;
+      background: var(--er-seller-consultation-soft-sage);
+      border-radius: 50%;
+      color: var(--er-seller-consultation-primary);
+      font-size: 0.75rem;
+      font-weight: 800;
+      line-height: 1;
+    }
+
+    .er-seller-consultation-hero .er-seller-consultation-trust-list {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+      max-width: 680px;
+      margin: 30px 0 0;
+      padding: 23px 0 0;
+      border-top: 1px solid var(--er-seller-consultation-border);
+      list-style: none;
+    }
+
+    .er-seller-consultation-hero .er-seller-consultation-trust-item {
+      display: flex;
+      min-width: 0;
+      align-items: flex-start;
+      gap: 8px;
+      color: var(--er-seller-consultation-heading);
+      font-size: 0.8125rem;
+      font-weight: 700;
+      line-height: 1.45;
+    }
+
+    .er-seller-consultation-hero .er-seller-consultation-trust-mark {
+      display: inline-flex;
+      width: 22px;
+      height: 22px;
+      flex: 0 0 22px;
+      align-items: center;
+      justify-content: center;
+      background: var(--er-seller-consultation-white);
+      border: 1px solid var(--er-seller-consultation-border);
+      border-radius: 7px;
+      color: var(--er-seller-consultation-success);
+      font-size: 0.75rem;
+      font-weight: 800;
+      line-height: 1;
+    }
+
+    /* Consultation summary card */
+    .er-seller-consultation-hero .er-seller-consultation-visual {
+      position: relative;
+      min-width: 0;
+      padding: 24px 0 18px;
+    }
+
+    .er-seller-consultation-hero .er-seller-consultation-summary-card {
+      position: relative;
+      z-index: 1;
+      overflow: hidden;
+      padding: 34px;
+      background: var(--er-seller-consultation-white);
+      border: 1px solid var(--er-seller-consultation-border);
+      border-radius: 22px;
+      box-shadow: 0 24px 50px var(--er-seller-consultation-border);
+    }
+
+    .er-seller-consultation-hero .er-seller-consultation-summary-card::before {
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      height: 5px;
+      background: var(--er-seller-consultation-gold);
+      content: "";
+    }
+
+    .er-seller-consultation-hero .er-seller-consultation-card-header {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .er-seller-consultation-hero .er-seller-consultation-card-kicker {
+      margin: 0;
+      color: var(--er-seller-consultation-secondary);
+      font-size: 0.8125rem;
+      font-weight: 700;
+      line-height: 1.4;
+      letter-spacing: 0.08em;
+    }
+
+    .er-seller-consultation-hero .er-seller-consultation-card-title {
+      margin: 5px 0 0;
+      color: var(--er-seller-consultation-heading);
+      font-family: var(--er-seller-consultation-heading-font);
+      font-size: 1.5rem;
+      font-weight: 700;
+      line-height: 1.25;
+    }
+
+    .er-seller-consultation-hero .er-seller-consultation-card-mark {
+      display: grid;
+      width: 48px;
+      height: 48px;
+      flex: 0 0 48px;
+      place-items: center;
+      background: var(--er-seller-consultation-soft-sage);
+      border-radius: 14px;
+      color: var(--er-seller-consultation-primary);
+      font-family: var(--er-seller-consultation-heading-font);
+      font-size: 0.8125rem;
+      font-weight: 700;
+      line-height: 1;
+    }
+
+    .er-seller-consultation-hero .er-seller-consultation-discuss {
+      margin-top: 28px;
+      padding: 23px;
+      background: var(--er-seller-consultation-light);
+      border: 1px solid var(--er-seller-consultation-border);
+      border-radius: 16px;
+    }
+
+    .er-seller-consultation-hero .er-seller-consultation-discuss-heading {
+      margin: 0 0 15px;
+      color: var(--er-seller-consultation-primary);
+      font-family: var(--er-seller-consultation-heading-font);
+      font-size: 0.875rem;
+      font-weight: 700;
+      line-height: 1.4;
+    }
+
+    .er-seller-consultation-hero .er-seller-consultation-discuss-list {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 13px 16px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .er-seller-consultation-hero .er-seller-consultation-discuss-item {
+      display: flex;
+      min-width: 0;
+      align-items: center;
+      gap: 9px;
+      color: var(--er-seller-consultation-heading);
+      font-size: 0.875rem;
+      font-weight: 600;
+      line-height: 1.45;
+    }
+
+    .er-seller-consultation-hero .er-seller-consultation-discuss-mark {
+      display: inline-flex;
+      width: 24px;
+      height: 24px;
+      flex: 0 0 24px;
+      align-items: center;
+      justify-content: center;
+      background: var(--er-seller-consultation-soft-sage);
+      border-radius: 50%;
+      color: var(--er-seller-consultation-primary);
+      font-size: 0.75rem;
+      font-weight: 800;
+      line-height: 1;
+    }
+
+    .er-seller-consultation-hero .er-seller-consultation-specialist {
+      display: flex;
+      align-items: center;
+      gap: 13px;
+      margin-top: 24px;
+      padding-top: 23px;
+      border-top: 1px solid var(--er-seller-consultation-border);
+    }
+
+    .er-seller-consultation-hero .er-seller-consultation-specialist-avatar {
+      display: block;
+      width: 64px;
+      height: 64px;
+      flex: 0 0 64px;
+      object-fit: cover;
+      object-position: center;
+      border: 3px solid var(--er-seller-consultation-soft-sage);
+      border-radius: 50%;
+      box-shadow: 0 8px 20px rgba(36, 90, 74, 0.14);
+    }
+
+    .er-seller-consultation-hero .er-seller-consultation-specialist-copy {
+      min-width: 0;
+    }
+
+    .er-seller-consultation-hero .er-seller-consultation-specialist-label {
+      margin: 0;
+      color: var(--er-seller-consultation-muted);
+      font-size: 0.8125rem;
+      font-weight: 600;
+      line-height: 1.4;
+    }
+
+    .er-seller-consultation-hero .er-seller-consultation-specialist-name {
+      margin: 3px 0 0;
+      color: var(--er-seller-consultation-heading);
+      font-family: var(--er-seller-consultation-heading-font);
+      font-size: 1rem;
+      font-weight: 700;
+      line-height: 1.35;
+    }
+
+    .er-seller-consultation-hero .er-seller-consultation-status {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      margin: 24px 0 0;
+      padding: 8px 11px;
+      background: var(--er-seller-consultation-sage);
+      border: 1px solid var(--er-seller-consultation-border);
+      border-radius: 999px;
+      color: var(--er-seller-consultation-primary);
+      font-size: 0.8125rem;
+      font-weight: 700;
+      line-height: 1.3;
+    }
+
+    .er-seller-consultation-hero .er-seller-consultation-status-dot {
+      width: 8px;
+      height: 8px;
+      flex: 0 0 8px;
+      background: var(--er-seller-consultation-success);
+      border-radius: 50%;
+    }
+
+    @media (max-width: 1040px) {
+      .er-seller-consultation-hero .er-seller-consultation-header-inner {
+        grid-template-columns: 1fr auto;
+        gap: 20px;
+      }
+
+      .er-seller-consultation-hero .er-seller-consultation-nav {
+        display: none;
+      }
+
+      .er-seller-consultation-hero .er-seller-consultation-hero-grid {
+        grid-template-columns: minmax(0, 1fr) minmax(330px, 0.8fr);
+        gap: 44px;
+      }
+
+      .er-seller-consultation-hero .er-seller-consultation-title {
+        font-size: clamp(2.35rem, 5.5vw, 3.5rem);
+      }
+
+      .er-seller-consultation-hero .er-seller-consultation-trust-list {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    @media (max-width: 800px) {
+      .er-seller-consultation-hero .er-seller-consultation-hero-section {
+        padding: 64px 0 76px;
+      }
+
+      .er-seller-consultation-hero .er-seller-consultation-hero-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 48px;
+      }
+
+      .er-seller-consultation-hero .er-seller-consultation-title,
+      .er-seller-consultation-hero .er-seller-consultation-description {
+        max-width: 680px;
+      }
+
+      .er-seller-consultation-hero .er-seller-consultation-trust-list {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .er-seller-consultation-hero .er-seller-consultation-visual {
+        width: min(100%, 620px);
+        margin-inline: auto;
+      }
+    }
+
+    @media (max-width: 620px) {
+      .er-seller-consultation-hero .er-seller-consultation-container {
+        width: min(calc(100% - 36px), 1200px);
+      }
+
+      .er-seller-consultation-hero .er-seller-consultation-header-inner {
+        min-height: 68px;
+        gap: 9px;
+      }
+
+      .er-seller-consultation-hero .er-seller-consultation-logo {
+        gap: 7px;
+        font-size: 0.9rem;
+      }
+
+      .er-seller-consultation-hero .er-seller-consultation-logo-accent {
+        width: 18px;
+        flex-basis: 18px;
+      }
+
+      .er-seller-consultation-hero .er-seller-consultation-header-cta {
+        min-height: 44px;
+        padding: 10px 12px;
+        font-size: 0.8125rem;
+      }
+
+      .er-seller-consultation-hero .er-seller-consultation-hero-section {
+        padding: 52px 0 64px;
+      }
+
+      .er-seller-consultation-hero
+        .er-seller-consultation-hero-section::before {
+        top: -140px;
+        right: -190px;
+        width: 390px;
+        height: 390px;
+      }
+
+      .er-seller-consultation-hero .er-seller-consultation-title {
+        font-size: clamp(2.15rem, 11vw, 3rem);
+      }
+
+      .er-seller-consultation-hero .er-seller-consultation-description {
+        margin-top: 20px;
+        font-size: 1rem;
+      }
+
+      .er-seller-consultation-hero .er-seller-consultation-actions {
+        align-items: stretch;
+        gap: 10px;
+        margin-top: 27px;
+      }
+
+      .er-seller-consultation-hero .er-seller-consultation-hero-primary {
+        width: 100%;
+      }
+
+      .er-seller-consultation-hero .er-seller-consultation-text-link {
+        width: 100%;
+        justify-content: center;
+      }
+
+      .er-seller-consultation-hero .er-seller-consultation-trust-list {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 11px;
+      }
+
+      .er-seller-consultation-hero .er-seller-consultation-visual {
+        padding-top: 14px;
+      }
+
+      .er-seller-consultation-hero .er-seller-consultation-summary-card {
+        padding: 25px;
+        border-radius: 18px;
+      }
+
+      .er-seller-consultation-hero .er-seller-consultation-discuss {
+        padding: 18px;
+      }
+    }
+
+    @media (max-width: 390px) {
+      .er-seller-consultation-hero .er-seller-consultation-container {
+        width: min(calc(100% - 28px), 1200px);
+      }
+
+      .er-seller-consultation-hero .er-seller-consultation-logo-accent {
+        display: none;
+      }
+
+      .er-seller-consultation-hero .er-seller-consultation-logo {
+        font-size: 0.8125rem;
+      }
+
+      .er-seller-consultation-hero .er-seller-consultation-header-cta {
+        padding-inline: 9px;
+        font-size: 0.8125rem;
+      }
+
+      .er-seller-consultation-hero .er-seller-consultation-discuss-list {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .er-seller-consultation-hero .er-seller-consultation-card-header {
+        align-items: center;
+      }
+
+      .er-seller-consultation-hero .er-seller-consultation-card-title {
+        font-size: 1.3rem;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .er-seller-consultation-hero *,
+      .er-seller-consultation-hero *::before,
+      .er-seller-consultation-hero *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+  </style>
+
+  <!-- Slim Header Start -->
+  <header class="er-seller-consultation-header">
+    <div class="er-seller-consultation-container er-seller-consultation-header-inner">
+      <a
+        class="er-seller-consultation-logo"
+        href="#"
+        aria-label="Elite Realty Group home"
+      >
+        <span
+          class="er-seller-consultation-logo-accent"
+          aria-hidden="true"
+        ></span>
+        <span>Elite Realty Group</span>
+      </a>
+
+      <nav
+        class="er-seller-consultation-nav"
+        aria-label="Seller consultation navigation"
+      >
+        <a
+          class="er-seller-consultation-nav-link"
+          href="#seller-process"
+        >
+          How it works
+        </a>
+
+        <a
+          class="er-seller-consultation-nav-link"
+          href="#seller-specialist"
+        >
+          Meet your specialist
+        </a>
+
+        <a
+          class="er-seller-consultation-nav-link"
+          href="#seller-preparation"
+        >
+          Prepare to sell
+        </a>
+      </nav>
+
+      <a
+        class="er-seller-consultation-button er-seller-consultation-header-cta"
+        href="../step-02/index.html"
+      >
+        Start your consultation
+      </a>
+    </div>
+  </header>
+  <!-- Slim Header End -->
+
+  <!-- Seller Consultation Hero Start -->
+  <section
+    class="er-seller-consultation-hero-section"
+    aria-labelledby="er-seller-consultation-title"
+  >
+    <div class="er-seller-consultation-container er-seller-consultation-hero-grid">
+      <div class="er-seller-consultation-hero-copy">
+        <p class="er-seller-consultation-eyebrow">
+          Seller consultation
+        </p>
+
+        <h1
+          class="er-seller-consultation-title"
+          id="er-seller-consultation-title"
+        >
+          Sell your home with a clear, confident plan
+        </h1>
+
+        <p class="er-seller-consultation-description">
+          Connect with a local real estate professional to discuss your
+          property, selling goals, preferred timeline, and the steps needed
+          to prepare for a successful sale.
+        </p>
+
+        <div class="er-seller-consultation-actions">
+          <a
+            class="er-seller-consultation-button er-seller-consultation-hero-primary"
+            href="../step-02/index.html"
+          >
+            Start your seller consultation
+          </a>
+
+          <a
+            class="er-seller-consultation-text-link"
+            href="../step-02/index.html"
+          >
+            <span>See how the process works</span>
+            <span
+              class="er-seller-consultation-link-arrow"
+              aria-hidden="true"
+            >â†’</span>
+          </a>
+        </div>
+
+        <p class="er-seller-consultation-reassurance">
+          <span
+            class="er-seller-consultation-reassurance-mark"
+            aria-hidden="true"
+          >âœ“</span>
+          <span>
+            No obligation. Start with a simple conversation about your
+            property and goals.
+          </span>
+        </p>
+
+        <ul
+          class="er-seller-consultation-trust-list"
+          aria-label="Seller consultation benefits"
+        >
+          <li class="er-seller-consultation-trust-item">
+            <span
+              class="er-seller-consultation-trust-mark"
+              aria-hidden="true"
+            >âœ“</span>
+            <span>Personalized selling guidance</span>
+          </li>
+
+          <li class="er-seller-consultation-trust-item">
+            <span
+              class="er-seller-consultation-trust-mark"
+              aria-hidden="true"
+            >âœ“</span>
+            <span>Local Austin market perspective</span>
+          </li>
+
+          <li class="er-seller-consultation-trust-item">
+            <span
+              class="er-seller-consultation-trust-mark"
+              aria-hidden="true"
+            >âœ“</span>
+            <span>Clear next-step recommendations</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- CSS-Only Consultation Summary Start -->
+      <aside
+        class="er-seller-consultation-visual"
+        aria-label="Seller consultation summary"
+      >
+        <div class="er-seller-consultation-summary-card">
+          <div class="er-seller-consultation-card-header">
+            <div>
+              <p class="er-seller-consultation-card-kicker">
+                Elite Realty Group
+              </p>
+              <h2 class="er-seller-consultation-card-title">
+                Seller consultation
+              </h2>
+            </div>
+
+            <span
+              class="er-seller-consultation-card-mark"
+              aria-hidden="true"
+            >
+              ER
+            </span>
+          </div>
+
+          <div class="er-seller-consultation-discuss">
+            <h3 class="er-seller-consultation-discuss-heading">
+              Discuss:
+            </h3>
+
+            <ul class="er-seller-consultation-discuss-list">
+              <li class="er-seller-consultation-discuss-item">
+                <span
+                  class="er-seller-consultation-discuss-mark"
+                  aria-hidden="true"
+                >âœ“</span>
+                <span>Property goals</span>
+              </li>
+
+              <li class="er-seller-consultation-discuss-item">
+                <span
+                  class="er-seller-consultation-discuss-mark"
+                  aria-hidden="true"
+                >âœ“</span>
+                <span>Selling timeline</span>
+              </li>
+
+              <li class="er-seller-consultation-discuss-item">
+                <span
+                  class="er-seller-consultation-discuss-mark"
+                  aria-hidden="true"
+                >âœ“</span>
+                <span>Pricing preparation</span>
+              </li>
+
+              <li class="er-seller-consultation-discuss-item">
+                <span
+                  class="er-seller-consultation-discuss-mark"
+                  aria-hidden="true"
+                >âœ“</span>
+                <span>Marketing approach</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="er-seller-consultation-specialist">
+            <img
+              class="er-seller-consultation-specialist-avatar"
+              src="https://assets.cdn.filesafe.space/6LJVbOy4V4hjoCRqMxVd/media/6a614bf18bec5a9d0bd68cf7.png"
+              alt="Sophia Ramirez, Elite Realty listing specialist"
+              width="64"
+              height="64"
+              loading="lazy"
+              decoding="async"
+            >
+
+            <div class="er-seller-consultation-specialist-copy">
+              <p class="er-seller-consultation-specialist-label">
+                Listing specialist
+              </p>
+              <p class="er-seller-consultation-specialist-name">
+                Sophia Ramirez
+              </p>
+            </div>
+          </div>
+
+          <p class="er-seller-consultation-status">
+            <span
+              class="er-seller-consultation-status-dot"
+              aria-hidden="true"
+            ></span>
+            <span>Personalized consultation</span>
+          </p>
+        </div>
+      </aside>
+      <!-- CSS-Only Consultation Summary End -->
+    </div>
+  </section>
+  <!-- Seller Consultation Hero End -->
+</div>
+<!-- Elite Realty Seller Consultation: Header and Hero End -->
+
+<!-- Elite Realty Seller Consultation: Benefits Section Start -->
+<div class="er-seller-consultation-benefits">
+  <style>
+    .er-seller-consultation-benefits {
+      --er-seller-consultation-benefits-primary: #245A4A;
+      --er-seller-consultation-benefits-secondary: #3C806A;
+      --er-seller-consultation-benefits-gold: #D6A84B;
+      --er-seller-consultation-benefits-heading: #182433;
+      --er-seller-consultation-benefits-body: #526273;
+      --er-seller-consultation-benefits-white: #FFFFFF;
+      --er-seller-consultation-benefits-border: #DCE7E2;
+      --er-seller-consultation-benefits-soft-sage: #E1F0EA;
+      --er-seller-consultation-benefits-success: #2E8B57;
+      --er-seller-consultation-benefits-heading-font: Poppins, Arial, sans-serif;
+      --er-seller-consultation-benefits-body-font: Inter, Arial, sans-serif;
+
+      width: 100%;
+      max-width: 100%;
+      min-width: 0;
+      overflow-x: clip;
+      background: var(--er-seller-consultation-benefits-white);
+      color: var(--er-seller-consultation-benefits-body);
+      font-family: var(--er-seller-consultation-benefits-body-font);
+    }
+
+    .er-seller-consultation-benefits *,
+    .er-seller-consultation-benefits *::before,
+    .er-seller-consultation-benefits *::after {
+      box-sizing: border-box;
+    }
+
+    .er-seller-consultation-benefits
+      .er-seller-consultation-benefits-section {
+      padding: clamp(78px, 8vw, 108px) 0;
+      background: var(--er-seller-consultation-benefits-white);
+    }
+
+    .er-seller-consultation-benefits
+      .er-seller-consultation-benefits-container {
+      width: min(calc(100% - 48px), 1200px);
+      margin-inline: auto;
+    }
+
+    .er-seller-consultation-benefits
+      .er-seller-consultation-benefits-intro {
+      max-width: 760px;
+      margin-inline: auto;
+      text-align: center;
+    }
+
+    .er-seller-consultation-benefits
+      .er-seller-consultation-benefits-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      margin: 0 0 14px;
+      color: var(--er-seller-consultation-benefits-primary);
+      font-family: var(--er-seller-consultation-benefits-heading-font);
+      font-size: 0.8125rem;
+      font-weight: 700;
+      line-height: 1.4;
+      letter-spacing: 0.11em;
+    }
+
+    .er-seller-consultation-benefits
+      .er-seller-consultation-benefits-eyebrow::before,
+    .er-seller-consultation-benefits
+      .er-seller-consultation-benefits-eyebrow::after {
+      width: 25px;
+      height: 2px;
+      flex: 0 0 25px;
+      background: var(--er-seller-consultation-benefits-gold);
+      content: "";
+    }
+
+    .er-seller-consultation-benefits
+      .er-seller-consultation-benefits-title {
+      margin: 0;
+      color: var(--er-seller-consultation-benefits-heading);
+      font-family: var(--er-seller-consultation-benefits-heading-font);
+      font-size: clamp(2.05rem, 4vw, 3rem);
+      font-weight: 700;
+      line-height: 1.14;
+      letter-spacing: -0.035em;
+      text-wrap: balance;
+    }
+
+    .er-seller-consultation-benefits
+      .er-seller-consultation-benefits-description {
+      max-width: 720px;
+      margin: 18px auto 0;
+      color: var(--er-seller-consultation-benefits-body);
+      font-size: 1.0625rem;
+      line-height: 1.72;
+    }
+
+    .er-seller-consultation-benefits
+      .er-seller-consultation-benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      align-items: stretch;
+      gap: 22px;
+      margin: clamp(44px, 5vw, 58px) 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .er-seller-consultation-benefits
+      .er-seller-consultation-benefits-card {
+      position: relative;
+      display: flex;
+      min-width: 0;
+      min-height: 100%;
+      flex-direction: column;
+      padding: 29px 27px 30px;
+      overflow: hidden;
+      background: var(--er-seller-consultation-benefits-white);
+      border: 1px solid var(--er-seller-consultation-benefits-border);
+      border-radius: 18px;
+      box-shadow: 0 10px 26px var(--er-seller-consultation-benefits-border);
+      transition:
+        border-color 180ms ease,
+        box-shadow 180ms ease,
+        transform 180ms ease;
+    }
+
+    .er-seller-consultation-benefits
+      .er-seller-consultation-benefits-card::before {
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      height: 3px;
+      background: var(--er-seller-consultation-benefits-gold);
+      content: "";
+      opacity: 0;
+      transition: opacity 180ms ease;
+    }
+
+    .er-seller-consultation-benefits
+      .er-seller-consultation-benefits-card:hover {
+      border-color: var(--er-seller-consultation-benefits-secondary);
+      box-shadow: 0 15px 32px var(--er-seller-consultation-benefits-border);
+      transform: translateY(-4px);
+    }
+
+    .er-seller-consultation-benefits
+      .er-seller-consultation-benefits-card:hover::before {
+      opacity: 1;
+    }
+
+    .er-seller-consultation-benefits
+      .er-seller-consultation-benefits-icon {
+      position: relative;
+      display: grid;
+      width: 54px;
+      height: 54px;
+      flex: 0 0 54px;
+      place-items: center;
+      margin-bottom: 23px;
+      background: var(--er-seller-consultation-benefits-soft-sage);
+      border: 1px solid var(--er-seller-consultation-benefits-border);
+      border-radius: 15px;
+      color: var(--er-seller-consultation-benefits-primary);
+    }
+
+    .er-seller-consultation-benefits
+      .er-seller-consultation-benefits-card-title {
+      margin: 0;
+      color: var(--er-seller-consultation-benefits-primary);
+      font-family: var(--er-seller-consultation-benefits-heading-font);
+      font-size: 1.0625rem;
+      font-weight: 700;
+      line-height: 1.35;
+    }
+
+    .er-seller-consultation-benefits
+      .er-seller-consultation-benefits-card-description {
+      margin: 12px 0 0;
+      color: var(--er-seller-consultation-benefits-body);
+      font-size: 0.9375rem;
+      line-height: 1.68;
+    }
+
+    /* Market chart icon */
+    .er-seller-consultation-benefits
+      .er-seller-consultation-benefits-chart {
+      display: flex;
+      width: 28px;
+      height: 27px;
+      align-items: flex-end;
+      justify-content: center;
+      gap: 3px;
+      padding-bottom: 3px;
+      border-bottom: 2px solid var(--er-seller-consultation-benefits-primary);
+    }
+
+    .er-seller-consultation-benefits
+      .er-seller-consultation-benefits-chart-bar {
+      display: block;
+      width: 5px;
+      background: var(--er-seller-consultation-benefits-primary);
+      border-radius: 2px 2px 0 0;
+    }
+
+    .er-seller-consultation-benefits
+      .er-seller-consultation-benefits-chart-bar-one {
+      height: 8px;
+      opacity: 0.65;
+    }
+
+    .er-seller-consultation-benefits
+      .er-seller-consultation-benefits-chart-bar-two {
+      height: 14px;
+      opacity: 0.82;
+    }
+
+    .er-seller-consultation-benefits
+      .er-seller-consultation-benefits-chart-bar-three {
+      height: 21px;
+    }
+
+    /* Calendar icon */
+    .er-seller-consultation-benefits
+      .er-seller-consultation-benefits-calendar {
+      position: relative;
+      width: 28px;
+      height: 26px;
+      border: 2px solid var(--er-seller-consultation-benefits-primary);
+      border-radius: 5px;
+    }
+
+    .er-seller-consultation-benefits
+      .er-seller-consultation-benefits-calendar::before {
+      position: absolute;
+      top: 5px;
+      right: 0;
+      left: 0;
+      height: 2px;
+      background: var(--er-seller-consultation-benefits-primary);
+      content: "";
+    }
+
+    .er-seller-consultation-benefits
+      .er-seller-consultation-benefits-calendar::after {
+      position: absolute;
+      right: 6px;
+      bottom: 5px;
+      width: 8px;
+      height: 5px;
+      border-bottom: 2px solid var(--er-seller-consultation-benefits-secondary);
+      border-left: 2px solid var(--er-seller-consultation-benefits-secondary);
+      content: "";
+      transform: rotate(-45deg);
+    }
+
+    .er-seller-consultation-benefits
+      .er-seller-consultation-benefits-calendar-ring {
+      position: absolute;
+      top: -5px;
+      width: 3px;
+      height: 8px;
+      background: var(--er-seller-consultation-benefits-primary);
+      border-radius: 2px;
+    }
+
+    .er-seller-consultation-benefits
+      .er-seller-consultation-benefits-calendar-ring-one {
+      left: 6px;
+    }
+
+    .er-seller-consultation-benefits
+      .er-seller-consultation-benefits-calendar-ring-two {
+      right: 6px;
+    }
+
+    /* Home icon */
+    .er-seller-consultation-benefits
+      .er-seller-consultation-benefits-home {
+      position: relative;
+      width: 27px;
+      height: 22px;
+      margin-top: 6px;
+      border: 2px solid var(--er-seller-consultation-benefits-primary);
+      border-top: 0;
+      border-radius: 0 0 4px 4px;
+    }
+
+    .er-seller-consultation-benefits
+      .er-seller-consultation-benefits-home::before {
+      position: absolute;
+      top: -9px;
+      left: 3px;
+      width: 18px;
+      height: 18px;
+      border-top: 2px solid var(--er-seller-consultation-benefits-primary);
+      border-left: 2px solid var(--er-seller-consultation-benefits-primary);
+      content: "";
+      transform: rotate(45deg);
+    }
+
+    .er-seller-consultation-benefits
+      .er-seller-consultation-benefits-home-check {
+      position: absolute;
+      right: -7px;
+      bottom: -7px;
+      display: grid;
+      width: 17px;
+      height: 17px;
+      place-items: center;
+      background: var(--er-seller-consultation-benefits-success);
+      border: 2px solid var(--er-seller-consultation-benefits-soft-sage);
+      border-radius: 50%;
+      color: var(--er-seller-consultation-benefits-white);
+      font-size: 0.625rem;
+      font-weight: 800;
+      line-height: 1;
+    }
+
+    /* Roadmap icon */
+    .er-seller-consultation-benefits
+      .er-seller-consultation-benefits-roadmap {
+      position: relative;
+      width: 30px;
+      height: 24px;
+    }
+
+    .er-seller-consultation-benefits
+      .er-seller-consultation-benefits-roadmap-line {
+      position: absolute;
+      top: 11px;
+      left: 4px;
+      width: 21px;
+      height: 2px;
+      background: var(--er-seller-consultation-benefits-primary);
+    }
+
+    .er-seller-consultation-benefits
+      .er-seller-consultation-benefits-roadmap-line::after {
+      position: absolute;
+      top: -4px;
+      right: -1px;
+      width: 9px;
+      height: 9px;
+      border-top: 2px solid var(--er-seller-consultation-benefits-primary);
+      border-right: 2px solid var(--er-seller-consultation-benefits-primary);
+      content: "";
+      transform: rotate(45deg);
+    }
+
+    .er-seller-consultation-benefits
+      .er-seller-consultation-benefits-roadmap-dot {
+      position: absolute;
+      top: 8px;
+      left: 1px;
+      width: 8px;
+      height: 8px;
+      background: var(--er-seller-consultation-benefits-secondary);
+      border: 2px solid var(--er-seller-consultation-benefits-soft-sage);
+      border-radius: 50%;
+    }
+
+    @media (max-width: 1050px) {
+      .er-seller-consultation-benefits
+        .er-seller-consultation-benefits-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .er-seller-consultation-benefits
+        .er-seller-consultation-benefits-card {
+        padding: 30px;
+      }
+    }
+
+    @media (max-width: 620px) {
+      .er-seller-consultation-benefits
+        .er-seller-consultation-benefits-section {
+        padding: 64px 0;
+      }
+
+      .er-seller-consultation-benefits
+        .er-seller-consultation-benefits-container {
+        width: min(calc(100% - 36px), 1200px);
+      }
+
+      .er-seller-consultation-benefits
+        .er-seller-consultation-benefits-eyebrow::before,
+      .er-seller-consultation-benefits
+        .er-seller-consultation-benefits-eyebrow::after {
+        width: 18px;
+        flex-basis: 18px;
+      }
+
+      .er-seller-consultation-benefits
+        .er-seller-consultation-benefits-title {
+        font-size: clamp(1.9rem, 9vw, 2.4rem);
+      }
+
+      .er-seller-consultation-benefits
+        .er-seller-consultation-benefits-description {
+        font-size: 1rem;
+      }
+
+      .er-seller-consultation-benefits
+        .er-seller-consultation-benefits-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 17px;
+        margin-top: 38px;
+      }
+
+      .er-seller-consultation-benefits
+        .er-seller-consultation-benefits-card {
+        padding: 26px;
+      }
+    }
+
+    @media (max-width: 360px) {
+      .er-seller-consultation-benefits
+        .er-seller-consultation-benefits-container {
+        width: min(calc(100% - 28px), 1200px);
+      }
+
+      .er-seller-consultation-benefits
+        .er-seller-consultation-benefits-eyebrow::after {
+        display: none;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .er-seller-consultation-benefits *,
+      .er-seller-consultation-benefits *::before,
+      .er-seller-consultation-benefits *::after {
+        transition-duration: 0.01ms !important;
+      }
+    }
+  </style>
+
+  <section
+    id="seller-benefits"
+    class="er-seller-consultation-benefits-section"
+    aria-labelledby="er-seller-consultation-benefits-title"
+  >
+    <div class="er-seller-consultation-benefits-container">
+      <!-- Benefits Introduction Start -->
+      <div class="er-seller-consultation-benefits-intro">
+        <p class="er-seller-consultation-benefits-eyebrow">
+          A smarter way to prepare
+        </p>
+
+        <h2
+          id="er-seller-consultation-benefits-title"
+          class="er-seller-consultation-benefits-title"
+        >
+          Start your sale with clarity
+        </h2>
+
+        <p class="er-seller-consultation-benefits-description">
+          A seller consultation helps you understand your options before
+          making important decisions about pricing, preparation, marketing,
+          and timing.
+        </p>
+      </div>
+      <!-- Benefits Introduction End -->
+
+      <!-- Benefits Grid Start -->
+      <ul class="er-seller-consultation-benefits-grid">
+        <li class="er-seller-consultation-benefits-card">
+          <span
+            class="er-seller-consultation-benefits-icon"
+            aria-hidden="true"
+          >
+            <span class="er-seller-consultation-benefits-chart">
+              <span
+                class="er-seller-consultation-benefits-chart-bar er-seller-consultation-benefits-chart-bar-one"
+              ></span>
+              <span
+                class="er-seller-consultation-benefits-chart-bar er-seller-consultation-benefits-chart-bar-two"
+              ></span>
+              <span
+                class="er-seller-consultation-benefits-chart-bar er-seller-consultation-benefits-chart-bar-three"
+              ></span>
+            </span>
+          </span>
+
+          <h3 class="er-seller-consultation-benefits-card-title">
+            Understand your market position
+          </h3>
+
+          <p class="er-seller-consultation-benefits-card-description">
+            Discuss how your property, location, condition, and current
+            market activity may influence your selling strategy.
+          </p>
+        </li>
+
+        <li class="er-seller-consultation-benefits-card">
+          <span
+            class="er-seller-consultation-benefits-icon"
+            aria-hidden="true"
+          >
+            <span class="er-seller-consultation-benefits-calendar">
+              <span
+                class="er-seller-consultation-benefits-calendar-ring er-seller-consultation-benefits-calendar-ring-one"
+              ></span>
+              <span
+                class="er-seller-consultation-benefits-calendar-ring er-seller-consultation-benefits-calendar-ring-two"
+              ></span>
+            </span>
+          </span>
+
+          <h3 class="er-seller-consultation-benefits-card-title">
+            Plan your ideal timeline
+          </h3>
+
+          <p class="er-seller-consultation-benefits-card-description">
+            Review when you would like to sell and identify the steps that
+            may need to happen before your home reaches the market.
+          </p>
+        </li>
+
+        <li class="er-seller-consultation-benefits-card">
+          <span
+            class="er-seller-consultation-benefits-icon"
+            aria-hidden="true"
+          >
+            <span class="er-seller-consultation-benefits-home">
+              <span class="er-seller-consultation-benefits-home-check">
+                âœ“
+              </span>
+            </span>
+          </span>
+
+          <h3 class="er-seller-consultation-benefits-card-title">
+            Prepare your property
+          </h3>
+
+          <p class="er-seller-consultation-benefits-card-description">
+            Learn which improvements, repairs, organization, or presentation
+            steps may help support a stronger launch.
+          </p>
+        </li>
+
+        <li class="er-seller-consultation-benefits-card">
+          <span
+            class="er-seller-consultation-benefits-icon"
+            aria-hidden="true"
+          >
+            <span class="er-seller-consultation-benefits-roadmap">
+              <span
+                class="er-seller-consultation-benefits-roadmap-line"
+              ></span>
+              <span
+                class="er-seller-consultation-benefits-roadmap-dot"
+              ></span>
+            </span>
+          </span>
+
+          <h3 class="er-seller-consultation-benefits-card-title">
+            Know what comes next
+          </h3>
+
+          <p class="er-seller-consultation-benefits-card-description">
+            Leave the consultation with a clearer understanding of the
+            recommended next actions for your situation.
+          </p>
+        </li>
+      </ul>
+      <!-- Benefits Grid End -->
+    </div>
+  </section>
+</div>
+<!-- Elite Realty Seller Consultation: Benefits Section End -->
+
+<!-- Elite Realty Seller Consultation: Process Section Start -->
+<div class="er-seller-consultation-process">
+  <style>
+    .er-seller-consultation-process {
+      --er-seller-consultation-process-primary: #245A4A;
+      --er-seller-consultation-process-secondary: #3C806A;
+      --er-seller-consultation-process-dark: #194438;
+      --er-seller-consultation-process-sage: #EDF6F2;
+      --er-seller-consultation-process-soft-sage: #E1F0EA;
+      --er-seller-consultation-process-gold: #D6A84B;
+      --er-seller-consultation-process-heading: #182433;
+      --er-seller-consultation-process-body: #526273;
+      --er-seller-consultation-process-muted: #718096;
+      --er-seller-consultation-process-white: #FFFFFF;
+      --er-seller-consultation-process-border: #DCE7E2;
+      --er-seller-consultation-process-heading-font: Poppins, Arial, sans-serif;
+      --er-seller-consultation-process-body-font: Inter, Arial, sans-serif;
+
+      width: 100%;
+      max-width: 100%;
+      min-width: 0;
+      overflow-x: clip;
+      background: var(--er-seller-consultation-process-sage);
+      color: var(--er-seller-consultation-process-body);
+      font-family: var(--er-seller-consultation-process-body-font);
+    }
+
+    .er-seller-consultation-process *,
+    .er-seller-consultation-process *::before,
+    .er-seller-consultation-process *::after {
+      box-sizing: border-box;
+    }
+
+    .er-seller-consultation-process
+      .er-seller-consultation-process-section {
+      position: relative;
+      isolation: isolate;
+      overflow: hidden;
+      padding: clamp(78px, 8vw, 108px) 0;
+      background: var(--er-seller-consultation-process-sage);
+    }
+
+    .er-seller-consultation-process
+      .er-seller-consultation-process-section::before {
+      position: absolute;
+      z-index: -1;
+      top: -180px;
+      left: -170px;
+      width: 420px;
+      height: 420px;
+      background: var(--er-seller-consultation-process-soft-sage);
+      border-radius: 50%;
+      content: "";
+      opacity: 0.65;
+    }
+
+    .er-seller-consultation-process
+      .er-seller-consultation-process-container {
+      width: min(calc(100% - 48px), 1200px);
+      margin-inline: auto;
+    }
+
+    .er-seller-consultation-process
+      .er-seller-consultation-process-intro {
+      max-width: 790px;
+      margin-inline: auto;
+      text-align: center;
+    }
+
+    .er-seller-consultation-process
+      .er-seller-consultation-process-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      margin: 0 0 14px;
+      color: var(--er-seller-consultation-process-primary);
+      font-family: var(--er-seller-consultation-process-heading-font);
+      font-size: 0.8125rem;
+      font-weight: 700;
+      line-height: 1.4;
+      letter-spacing: 0.11em;
+    }
+
+    .er-seller-consultation-process
+      .er-seller-consultation-process-eyebrow::before,
+    .er-seller-consultation-process
+      .er-seller-consultation-process-eyebrow::after {
+      width: 25px;
+      height: 2px;
+      flex: 0 0 25px;
+      background: var(--er-seller-consultation-process-gold);
+      content: "";
+    }
+
+    .er-seller-consultation-process
+      .er-seller-consultation-process-title {
+      margin: 0;
+      color: var(--er-seller-consultation-process-heading);
+      font-family: var(--er-seller-consultation-process-heading-font);
+      font-size: clamp(2.05rem, 4vw, 3rem);
+      font-weight: 700;
+      line-height: 1.14;
+      letter-spacing: -0.035em;
+      text-wrap: balance;
+    }
+
+    .er-seller-consultation-process
+      .er-seller-consultation-process-description {
+      max-width: 740px;
+      margin: 18px auto 0;
+      color: var(--er-seller-consultation-process-body);
+      font-size: 1.0625rem;
+      line-height: 1.72;
+    }
+
+    .er-seller-consultation-process
+      .er-seller-consultation-process-list {
+      position: relative;
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      align-items: stretch;
+      gap: 22px;
+      margin: clamp(48px, 6vw, 66px) 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .er-seller-consultation-process
+      .er-seller-consultation-process-list::before {
+      position: absolute;
+      z-index: 0;
+      top: 25px;
+      right: 12.5%;
+      left: 12.5%;
+      height: 2px;
+      background: var(--er-seller-consultation-process-secondary);
+      content: "";
+      opacity: 0.42;
+    }
+
+    .er-seller-consultation-process
+      .er-seller-consultation-process-step {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      min-width: 0;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .er-seller-consultation-process
+      .er-seller-consultation-process-number {
+      display: grid;
+      width: 50px;
+      height: 50px;
+      flex: 0 0 50px;
+      place-items: center;
+      background: var(--er-seller-consultation-process-primary);
+      border: 5px solid var(--er-seller-consultation-process-sage);
+      border-radius: 50%;
+      color: var(--er-seller-consultation-process-white);
+      font-family: var(--er-seller-consultation-process-heading-font);
+      font-size: 0.8125rem;
+      font-weight: 700;
+      line-height: 1;
+      box-shadow: 0 0 0 1px var(--er-seller-consultation-process-border);
+    }
+
+    .er-seller-consultation-process
+      .er-seller-consultation-process-card {
+      display: flex;
+      width: 100%;
+      height: 100%;
+      min-width: 0;
+      flex-direction: column;
+      align-items: flex-start;
+      margin-top: 17px;
+      padding: 27px 25px 29px;
+      background: var(--er-seller-consultation-process-white);
+      border: 1px solid var(--er-seller-consultation-process-border);
+      border-radius: 18px;
+      box-shadow: 0 10px 27px var(--er-seller-consultation-process-border);
+    }
+
+    .er-seller-consultation-process
+      .er-seller-consultation-process-icon {
+      display: grid;
+      width: 44px;
+      height: 44px;
+      flex: 0 0 44px;
+      place-items: center;
+      margin-bottom: 18px;
+      background: var(--er-seller-consultation-process-soft-sage);
+      border: 1px solid var(--er-seller-consultation-process-border);
+      border-radius: 13px;
+      color: var(--er-seller-consultation-process-primary);
+      font-family: var(--er-seller-consultation-process-heading-font);
+      font-size: 1rem;
+      font-weight: 700;
+      line-height: 1;
+    }
+
+    .er-seller-consultation-process
+      .er-seller-consultation-process-step-title {
+      margin: 0;
+      color: var(--er-seller-consultation-process-primary);
+      font-family: var(--er-seller-consultation-process-heading-font);
+      font-size: 1.0625rem;
+      font-weight: 700;
+      line-height: 1.35;
+    }
+
+    .er-seller-consultation-process
+      .er-seller-consultation-process-step-description {
+      margin: 11px 0 0;
+      color: var(--er-seller-consultation-process-body);
+      font-size: 0.9375rem;
+      line-height: 1.68;
+    }
+
+    .er-seller-consultation-process
+      .er-seller-consultation-process-action {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 44px;
+      text-align: center;
+    }
+
+    .er-seller-consultation-process
+      .er-seller-consultation-process-button {
+      display: inline-flex;
+      min-height: 52px;
+      align-items: center;
+      justify-content: center;
+      padding: 14px 24px;
+      background: var(--er-seller-consultation-process-primary);
+      border: 1px solid var(--er-seller-consultation-process-primary);
+      border-radius: 11px;
+      color: var(--er-seller-consultation-process-white);
+      font-family: var(--er-seller-consultation-process-heading-font);
+      font-size: 0.9375rem;
+      font-weight: 600;
+      line-height: 1.3;
+      text-align: center;
+      text-decoration: none;
+      box-shadow: 0 7px 18px var(--er-seller-consultation-process-border);
+      transition:
+        background-color 160ms ease,
+        border-color 160ms ease,
+        transform 160ms ease;
+    }
+
+    .er-seller-consultation-process
+      .er-seller-consultation-process-button:hover {
+      background: var(--er-seller-consultation-process-dark);
+      border-color: var(--er-seller-consultation-process-dark);
+      transform: translateY(-1px);
+    }
+
+    .er-seller-consultation-process
+      .er-seller-consultation-process-button:focus-visible {
+      outline: 3px solid var(--er-seller-consultation-process-gold);
+      outline-offset: 4px;
+    }
+
+    .er-seller-consultation-process
+      .er-seller-consultation-process-supporting {
+      max-width: 650px;
+      margin: 14px auto 0;
+      color: var(--er-seller-consultation-process-muted);
+      font-size: 0.875rem;
+      line-height: 1.6;
+    }
+
+    @media (max-width: 1050px) {
+      .er-seller-consultation-process
+        .er-seller-consultation-process-list {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 26px 22px;
+      }
+
+      .er-seller-consultation-process
+        .er-seller-consultation-process-list::before {
+        display: none;
+      }
+
+      .er-seller-consultation-process
+        .er-seller-consultation-process-card {
+        padding: 28px;
+      }
+    }
+
+    @media (max-width: 620px) {
+      .er-seller-consultation-process
+        .er-seller-consultation-process-section {
+        padding: 64px 0;
+      }
+
+      .er-seller-consultation-process
+        .er-seller-consultation-process-container {
+        width: min(calc(100% - 36px), 1200px);
+      }
+
+      .er-seller-consultation-process
+        .er-seller-consultation-process-eyebrow::before,
+      .er-seller-consultation-process
+        .er-seller-consultation-process-eyebrow::after {
+        width: 18px;
+        flex-basis: 18px;
+      }
+
+      .er-seller-consultation-process
+        .er-seller-consultation-process-title {
+        font-size: clamp(1.9rem, 9vw, 2.4rem);
+      }
+
+      .er-seller-consultation-process
+        .er-seller-consultation-process-description {
+        font-size: 1rem;
+      }
+
+      .er-seller-consultation-process
+        .er-seller-consultation-process-list {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 19px;
+        margin-top: 40px;
+      }
+
+      .er-seller-consultation-process
+        .er-seller-consultation-process-step {
+        align-items: flex-start;
+      }
+
+      .er-seller-consultation-process
+        .er-seller-consultation-process-number {
+        margin-left: 18px;
+      }
+
+      .er-seller-consultation-process
+        .er-seller-consultation-process-card {
+        margin-top: 12px;
+        padding: 25px;
+      }
+
+      .er-seller-consultation-process
+        .er-seller-consultation-process-action {
+        margin-top: 36px;
+      }
+
+      .er-seller-consultation-process
+        .er-seller-consultation-process-button {
+        width: 100%;
+      }
+    }
+
+    @media (max-width: 360px) {
+      .er-seller-consultation-process
+        .er-seller-consultation-process-container {
+        width: min(calc(100% - 28px), 1200px);
+      }
+
+      .er-seller-consultation-process
+        .er-seller-consultation-process-eyebrow::after {
+        display: none;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .er-seller-consultation-process *,
+      .er-seller-consultation-process *::before,
+      .er-seller-consultation-process *::after {
+        transition-duration: 0.01ms !important;
+      }
+    }
+  </style>
+
+  <section
+    id="seller-process"
+    class="er-seller-consultation-process-section"
+    aria-labelledby="er-seller-consultation-process-title"
+  >
+    <div class="er-seller-consultation-process-container">
+      <!-- Process Introduction Start -->
+      <div class="er-seller-consultation-process-intro">
+        <p class="er-seller-consultation-process-eyebrow">
+          How it works
+        </p>
+
+        <h2
+          id="er-seller-consultation-process-title"
+          class="er-seller-consultation-process-title"
+        >
+          A simple path to your seller consultation
+        </h2>
+
+        <p class="er-seller-consultation-process-description">
+          Share a few details about yourself and your property, complete a
+          short seller assessment, and choose a convenient time to speak
+          with your listing specialist.
+        </p>
+      </div>
+      <!-- Process Introduction End -->
+
+      <!-- Four-Step Process Start -->
+      <ol class="er-seller-consultation-process-list">
+        <li class="er-seller-consultation-process-step">
+          <span class="er-seller-consultation-process-number">01</span>
+
+          <div class="er-seller-consultation-process-card">
+            <span
+              class="er-seller-consultation-process-icon"
+              aria-hidden="true"
+            >@</span>
+
+            <h3 class="er-seller-consultation-process-step-title">
+              Tell us how to reach you
+            </h3>
+
+            <p class="er-seller-consultation-process-step-description">
+              Provide your basic contact information and property address.
+            </p>
+          </div>
+        </li>
+
+        <li class="er-seller-consultation-process-step">
+          <span class="er-seller-consultation-process-number">02</span>
+
+          <div class="er-seller-consultation-process-card">
+            <span
+              class="er-seller-consultation-process-icon"
+              aria-hidden="true"
+            >â—‡</span>
+
+            <h3 class="er-seller-consultation-process-step-title">
+              Share your selling goals
+            </h3>
+
+            <p class="er-seller-consultation-process-step-description">
+              Complete a short assessment about your property, timeline,
+              occupancy, and reason for selling.
+            </p>
+          </div>
+        </li>
+
+        <li class="er-seller-consultation-process-step">
+          <span class="er-seller-consultation-process-number">03</span>
+
+          <div class="er-seller-consultation-process-card">
+            <span
+              class="er-seller-consultation-process-icon"
+              aria-hidden="true"
+            >â–£</span>
+
+            <h3 class="er-seller-consultation-process-step-title">
+              Choose a consultation time
+            </h3>
+
+            <p class="er-seller-consultation-process-step-description">
+              Select an available date and time that works for your schedule.
+            </p>
+          </div>
+        </li>
+
+        <li class="er-seller-consultation-process-step">
+          <span class="er-seller-consultation-process-number">04</span>
+
+          <div class="er-seller-consultation-process-card">
+            <span
+              class="er-seller-consultation-process-icon"
+              aria-hidden="true"
+            >âœ“</span>
+
+            <h3 class="er-seller-consultation-process-step-title">
+              Review your selling plan
+            </h3>
+
+            <p class="er-seller-consultation-process-step-description">
+              Meet with Sophia Ramirez to discuss your property, questions,
+              goals, and recommended next steps.
+            </p>
+          </div>
+        </li>
+      </ol>
+      <!-- Four-Step Process End -->
+
+      <!-- Process CTA Start -->
+      <div class="er-seller-consultation-process-action">
+        <a
+          class="er-seller-consultation-process-button"
+          href="../step-02/index.html"
+        >
+          Start your seller consultation
+        </a>
+
+        <p class="er-seller-consultation-process-supporting">
+          The consultation is designed to help you explore your options
+          without pressure.
+        </p>
+      </div>
+      <!-- Process CTA End -->
+    </div>
+  </section>
+</div>
+<!-- Elite Realty Seller Consultation: Process Section End -->
+
+<!-- Elite Realty Seller Consultation: Specialist Section Start -->
+<div class="er-seller-consultation-specialist">
+  <style>
+    .er-seller-consultation-specialist {
+      --er-seller-specialist-primary: #245A4A;
+      --er-seller-specialist-secondary: #3C806A;
+      --er-seller-specialist-dark: #194438;
+      --er-seller-specialist-sage: #EDF6F2;
+      --er-seller-specialist-soft-sage: #E1F0EA;
+      --er-seller-specialist-gold: #D6A84B;
+      --er-seller-specialist-heading: #182433;
+      --er-seller-specialist-body: #526273;
+      --er-seller-specialist-muted: #718096;
+      --er-seller-specialist-light: #F7F9FC;
+      --er-seller-specialist-white: #FFFFFF;
+      --er-seller-specialist-border: #DCE7E2;
+      --er-seller-specialist-heading-font: Poppins, Arial, sans-serif;
+      --er-seller-specialist-body-font: Inter, Arial, sans-serif;
+
+      width: 100%;
+      max-width: 100%;
+      min-width: 0;
+      overflow-x: clip;
+      background: var(--er-seller-specialist-white);
+      color: var(--er-seller-specialist-body);
+      font-family: var(--er-seller-specialist-body-font);
+    }
+
+    .er-seller-consultation-specialist *,
+    .er-seller-consultation-specialist *::before,
+    .er-seller-consultation-specialist *::after {
+      box-sizing: border-box;
+    }
+
+    .er-seller-consultation-specialist
+      .er-seller-consultation-specialist-section {
+      padding: clamp(78px, 8vw, 108px) 0;
+      background: var(--er-seller-specialist-white);
+    }
+
+    .er-seller-consultation-specialist
+      .er-seller-consultation-specialist-container {
+      display: grid;
+      width: min(calc(100% - 48px), 1200px);
+      grid-template-columns: minmax(340px, 0.82fr) minmax(0, 1.18fr);
+      align-items: center;
+      gap: clamp(58px, 8vw, 104px);
+      margin-inline: auto;
+    }
+
+    /* Profile placeholder */
+    .er-seller-consultation-specialist
+      .er-seller-consultation-specialist-profile-wrap {
+      position: relative;
+      min-width: 0;
+      padding: 18px 0 20px;
+    }
+
+    .er-seller-consultation-specialist
+      .er-seller-consultation-specialist-profile-wrap::before {
+      position: absolute;
+      top: 0;
+      right: -18px;
+      bottom: 0;
+      left: 22px;
+      background: var(--er-seller-specialist-soft-sage);
+      border-radius: 25px;
+      content: "";
+      transform: rotate(3deg);
+    }
+
+    .er-seller-consultation-specialist
+      .er-seller-consultation-specialist-profile-card {
+      position: relative;
+      z-index: 1;
+      overflow: hidden;
+      padding: 42px 34px 34px;
+      background: var(--er-seller-specialist-primary);
+      border: 1px solid var(--er-seller-specialist-dark);
+      border-radius: 22px;
+      color: var(--er-seller-specialist-white);
+      text-align: center;
+      box-shadow: 0 24px 48px var(--er-seller-specialist-border);
+    }
+
+    .er-seller-consultation-specialist
+      .er-seller-consultation-specialist-profile-card::before {
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      height: 5px;
+      background: var(--er-seller-specialist-gold);
+      content: "";
+    }
+
+    .er-seller-consultation-specialist
+      .er-seller-consultation-specialist-profile-card::after {
+      position: absolute;
+      right: -90px;
+      bottom: -110px;
+      width: 240px;
+      height: 240px;
+      background: var(--er-seller-specialist-secondary);
+      border-radius: 50%;
+      content: "";
+      opacity: 0.32;
+    }
+
+    .er-seller-consultation-specialist
+      .er-seller-consultation-specialist-avatar-shell {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      width: 154px;
+      height: 154px;
+      place-items: center;
+      margin: 0 auto 25px;
+      background: var(--er-seller-specialist-sage);
+      border: 5px solid var(--er-seller-specialist-white);
+      border-radius: 50%;
+      box-shadow: 0 0 0 5px var(--er-seller-specialist-secondary);
+    }
+
+    .er-seller-consultation-specialist
+      .er-seller-consultation-specialist-avatar-shell::before {
+      position: absolute;
+      top: -13px;
+      right: 6px;
+      width: 42px;
+      height: 7px;
+      background: var(--er-seller-specialist-gold);
+      border-radius: 999px;
+      content: "";
+      transform: rotate(-18deg);
+    }
+
+    .er-seller-consultation-specialist
+      .er-seller-consultation-specialist-avatar {
+      display: block;
+      width: 118px;
+      height: 118px;
+      object-fit: cover;
+      object-position: center;
+      border-radius: 50%;
+    }
+
+    .er-seller-consultation-specialist
+      .er-seller-consultation-specialist-profile-name {
+      position: relative;
+      z-index: 1;
+      margin: 0;
+      color: var(--er-seller-specialist-white);
+      font-family: var(--er-seller-specialist-heading-font);
+      font-size: 1.55rem;
+      font-weight: 700;
+      line-height: 1.25;
+    }
+
+    .er-seller-consultation-specialist
+      .er-seller-consultation-specialist-profile-role,
+    .er-seller-consultation-specialist
+      .er-seller-consultation-specialist-profile-company,
+    .er-seller-consultation-specialist
+      .er-seller-consultation-specialist-profile-location {
+      position: relative;
+      z-index: 1;
+      margin: 0;
+      color: var(--er-seller-specialist-white);
+      line-height: 1.5;
+    }
+
+    .er-seller-consultation-specialist
+      .er-seller-consultation-specialist-profile-role {
+      margin-top: 7px;
+      font-size: 0.9375rem;
+      font-weight: 700;
+    }
+
+    .er-seller-consultation-specialist
+      .er-seller-consultation-specialist-profile-company {
+      margin-top: 3px;
+      font-size: 0.875rem;
+      opacity: 0.88;
+    }
+
+    .er-seller-consultation-specialist
+      .er-seller-consultation-specialist-profile-location {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 7px;
+      margin-top: 18px;
+      padding-top: 17px;
+      border-top: 1px solid var(--er-seller-specialist-secondary);
+      font-size: 0.8125rem;
+      font-weight: 600;
+      opacity: 0.9;
+    }
+
+    .er-seller-consultation-specialist
+      .er-seller-consultation-specialist-location-mark {
+      color: var(--er-seller-specialist-gold);
+      font-size: 1rem;
+      line-height: 1;
+    }
+
+    .er-seller-consultation-specialist
+      .er-seller-consultation-specialist-badge {
+      position: relative;
+      z-index: 1;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin: 23px 0 0;
+      padding: 9px 13px;
+      background: var(--er-seller-specialist-white);
+      border: 1px solid var(--er-seller-specialist-border);
+      border-radius: 999px;
+      color: var(--er-seller-specialist-primary);
+      font-size: 0.8125rem;
+      font-weight: 700;
+      line-height: 1.3;
+    }
+
+    .er-seller-consultation-specialist
+      .er-seller-consultation-specialist-badge-mark {
+      width: 8px;
+      height: 8px;
+      flex: 0 0 8px;
+      background: var(--er-seller-specialist-gold);
+      border-radius: 50%;
+    }
+
+    /* Specialist content */
+    .er-seller-consultation-specialist
+      .er-seller-consultation-specialist-content {
+      min-width: 0;
+    }
+
+    .er-seller-consultation-specialist
+      .er-seller-consultation-specialist-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin: 0 0 14px;
+      color: var(--er-seller-specialist-primary);
+      font-family: var(--er-seller-specialist-heading-font);
+      font-size: 0.8125rem;
+      font-weight: 700;
+      line-height: 1.4;
+      letter-spacing: 0.11em;
+    }
+
+    .er-seller-consultation-specialist
+      .er-seller-consultation-specialist-eyebrow::before {
+      width: 29px;
+      height: 2px;
+      flex: 0 0 29px;
+      background: var(--er-seller-specialist-gold);
+      content: "";
+    }
+
+    .er-seller-consultation-specialist
+      .er-seller-consultation-specialist-title {
+      margin: 0;
+      color: var(--er-seller-specialist-heading);
+      font-family: var(--er-seller-specialist-heading-font);
+      font-size: clamp(2.05rem, 4vw, 3rem);
+      font-weight: 700;
+      line-height: 1.14;
+      letter-spacing: -0.035em;
+      text-wrap: balance;
+    }
+
+    .er-seller-consultation-specialist
+      .er-seller-consultation-specialist-description {
+      max-width: 690px;
+      margin: 19px 0 0;
+      color: var(--er-seller-specialist-body);
+      font-size: 1.0625rem;
+      line-height: 1.72;
+    }
+
+    .er-seller-consultation-specialist
+      .er-seller-consultation-specialist-expertise {
+      display: grid;
+      gap: 14px;
+      margin: 30px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .er-seller-consultation-specialist
+      .er-seller-consultation-specialist-expertise-item {
+      display: grid;
+      min-width: 0;
+      grid-template-columns: auto minmax(0, 1fr);
+      gap: 15px;
+      align-items: start;
+      padding: 18px 20px;
+      background: var(--er-seller-specialist-light);
+      border: 1px solid var(--er-seller-specialist-border);
+      border-radius: 15px;
+    }
+
+    .er-seller-consultation-specialist
+      .er-seller-consultation-specialist-expertise-icon {
+      display: grid;
+      width: 40px;
+      height: 40px;
+      place-items: center;
+      background: var(--er-seller-specialist-soft-sage);
+      border-radius: 11px;
+      color: var(--er-seller-specialist-primary);
+      font-family: var(--er-seller-specialist-heading-font);
+      font-size: 0.9375rem;
+      font-weight: 700;
+      line-height: 1;
+    }
+
+    .er-seller-consultation-specialist
+      .er-seller-consultation-specialist-expertise-copy {
+      min-width: 0;
+    }
+
+    .er-seller-consultation-specialist
+      .er-seller-consultation-specialist-expertise-title {
+      margin: 0;
+      color: var(--er-seller-specialist-primary);
+      font-family: var(--er-seller-specialist-heading-font);
+      font-size: 1rem;
+      font-weight: 700;
+      line-height: 1.35;
+    }
+
+    .er-seller-consultation-specialist
+      .er-seller-consultation-specialist-expertise-description {
+      margin: 6px 0 0;
+      color: var(--er-seller-specialist-body);
+      font-size: 0.9375rem;
+      line-height: 1.62;
+    }
+
+    .er-seller-consultation-specialist
+      .er-seller-consultation-specialist-reassurance {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      margin: 23px 0 0;
+      color: var(--er-seller-specialist-muted);
+      font-size: 0.875rem;
+      line-height: 1.6;
+    }
+
+    .er-seller-consultation-specialist
+      .er-seller-consultation-specialist-reassurance-mark {
+      display: grid;
+      width: 22px;
+      height: 22px;
+      flex: 0 0 22px;
+      place-items: center;
+      margin-top: 1px;
+      background: var(--er-seller-specialist-soft-sage);
+      border-radius: 50%;
+      color: var(--er-seller-specialist-primary);
+      font-size: 0.75rem;
+      font-weight: 800;
+      line-height: 1;
+    }
+
+    .er-seller-consultation-specialist
+      .er-seller-consultation-specialist-button {
+      display: inline-flex;
+      min-height: 52px;
+      align-items: center;
+      justify-content: center;
+      margin-top: 27px;
+      padding: 14px 24px;
+      background: var(--er-seller-specialist-primary);
+      border: 1px solid var(--er-seller-specialist-primary);
+      border-radius: 11px;
+      color: var(--er-seller-specialist-white);
+      font-family: var(--er-seller-specialist-heading-font);
+      font-size: 0.9375rem;
+      font-weight: 600;
+      line-height: 1.3;
+      text-align: center;
+      text-decoration: none;
+      box-shadow: 0 7px 18px var(--er-seller-specialist-border);
+      transition:
+        background-color 160ms ease,
+        border-color 160ms ease,
+        transform 160ms ease;
+    }
+
+    .er-seller-consultation-specialist
+      .er-seller-consultation-specialist-button:hover {
+      background: var(--er-seller-specialist-dark);
+      border-color: var(--er-seller-specialist-dark);
+      transform: translateY(-1px);
+    }
+
+    .er-seller-consultation-specialist
+      .er-seller-consultation-specialist-button:focus-visible {
+      outline: 3px solid var(--er-seller-specialist-gold);
+      outline-offset: 4px;
+    }
+
+    @media (max-width: 900px) {
+      .er-seller-consultation-specialist
+        .er-seller-consultation-specialist-container {
+        grid-template-columns: minmax(300px, 0.85fr) minmax(0, 1.15fr);
+        gap: 44px;
+      }
+
+      .er-seller-consultation-specialist
+        .er-seller-consultation-specialist-profile-card {
+        padding: 36px 27px 30px;
+      }
+
+      .er-seller-consultation-specialist
+        .er-seller-consultation-specialist-avatar-shell {
+        width: 132px;
+        height: 132px;
+      }
+
+      .er-seller-consultation-specialist
+        .er-seller-consultation-specialist-avatar {
+        width: 100px;
+        height: 100px;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .er-seller-consultation-specialist
+        .er-seller-consultation-specialist-section {
+        padding: 70px 0;
+      }
+
+      .er-seller-consultation-specialist
+        .er-seller-consultation-specialist-container {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 52px;
+      }
+
+      .er-seller-consultation-specialist
+        .er-seller-consultation-specialist-profile-wrap {
+        width: min(100%, 530px);
+        margin-inline: auto;
+      }
+
+      .er-seller-consultation-specialist
+        .er-seller-consultation-specialist-title {
+        font-size: clamp(1.9rem, 8vw, 2.5rem);
+      }
+    }
+
+    @media (max-width: 620px) {
+      .er-seller-consultation-specialist
+        .er-seller-consultation-specialist-container {
+        width: min(calc(100% - 36px), 1200px);
+      }
+
+      .er-seller-consultation-specialist
+        .er-seller-consultation-specialist-profile-wrap::before {
+        right: -8px;
+        left: 12px;
+      }
+
+      .er-seller-consultation-specialist
+        .er-seller-consultation-specialist-profile-card {
+        padding: 34px 23px 28px;
+        border-radius: 19px;
+      }
+
+      .er-seller-consultation-specialist
+        .er-seller-consultation-specialist-description {
+        font-size: 1rem;
+      }
+
+      .er-seller-consultation-specialist
+        .er-seller-consultation-specialist-expertise-item {
+        padding: 17px;
+      }
+
+      .er-seller-consultation-specialist
+        .er-seller-consultation-specialist-button {
+        width: 100%;
+      }
+    }
+
+    @media (max-width: 360px) {
+      .er-seller-consultation-specialist
+        .er-seller-consultation-specialist-container {
+        width: min(calc(100% - 28px), 1200px);
+      }
+
+      .er-seller-consultation-specialist
+        .er-seller-consultation-specialist-expertise-item {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .er-seller-consultation-specialist *,
+      .er-seller-consultation-specialist *::before,
+      .er-seller-consultation-specialist *::after {
+        transition-duration: 0.01ms !important;
+      }
+    }
+  </style>
+
+  <section
+    id="seller-specialist"
+    class="er-seller-consultation-specialist-section"
+    aria-labelledby="er-seller-consultation-specialist-title"
+  >
+    <div class="er-seller-consultation-specialist-container">
+      <!-- Specialist Profile Start -->
+      <aside
+        class="er-seller-consultation-specialist-profile-wrap"
+        aria-label="Sophia Ramirez profile"
+      >
+        <div class="er-seller-consultation-specialist-profile-card">
+          <div class="er-seller-consultation-specialist-avatar-shell">
+            <img
+              class="er-seller-consultation-specialist-avatar"
+              src="https://assets.cdn.filesafe.space/6LJVbOy4V4hjoCRqMxVd/media/6a614bf18bec5a9d0bd68cf7.png"
+              alt="Sophia Ramirez, Elite Realty listing specialist"
+              width="118"
+              height="118"
+              loading="lazy"
+              decoding="async"
+            >
+          </div>
+
+          <p class="er-seller-consultation-specialist-profile-name">
+            Sophia Ramirez
+          </p>
+
+          <p class="er-seller-consultation-specialist-profile-role">
+            Listing agent
+          </p>
+
+          <p class="er-seller-consultation-specialist-profile-company">
+            Elite Realty Group
+          </p>
+
+          <p class="er-seller-consultation-specialist-profile-location">
+            <span
+              class="er-seller-consultation-specialist-location-mark"
+              aria-hidden="true"
+            >â—</span>
+            <span>Austin and Central Texas</span>
+          </p>
+
+          <p class="er-seller-consultation-specialist-badge">
+            <span
+              class="er-seller-consultation-specialist-badge-mark"
+              aria-hidden="true"
+            ></span>
+            <span>Seller-focused guidance</span>
+          </p>
+        </div>
+      </aside>
+      <!-- Specialist Profile End -->
+
+      <!-- Specialist Content Start -->
+      <div class="er-seller-consultation-specialist-content">
+        <p class="er-seller-consultation-specialist-eyebrow">
+          Meet your listing specialist
+        </p>
+
+        <h2
+          id="er-seller-consultation-specialist-title"
+          class="er-seller-consultation-specialist-title"
+        >
+          Work with Sophia Ramirez
+        </h2>
+
+        <p class="er-seller-consultation-specialist-description">
+          Sophia helps homeowners organize their selling goals, understand
+          the preparation process, and build a practical strategy around
+          their property and preferred timeline.
+        </p>
+
+        <ul class="er-seller-consultation-specialist-expertise">
+          <li class="er-seller-consultation-specialist-expertise-item">
+            <span
+              class="er-seller-consultation-specialist-expertise-icon"
+              aria-hidden="true"
+            >âŒ‚</span>
+
+            <div class="er-seller-consultation-specialist-expertise-copy">
+              <h3 class="er-seller-consultation-specialist-expertise-title">
+                Property preparation
+              </h3>
+              <p class="er-seller-consultation-specialist-expertise-description">
+                Discuss practical steps that may help your home present well
+                before entering the market.
+              </p>
+            </div>
+          </li>
+
+          <li class="er-seller-consultation-specialist-expertise-item">
+            <span
+              class="er-seller-consultation-specialist-expertise-icon"
+              aria-hidden="true"
+            >$</span>
+
+            <div class="er-seller-consultation-specialist-expertise-copy">
+              <h3 class="er-seller-consultation-specialist-expertise-title">
+                Pricing conversations
+              </h3>
+              <p class="er-seller-consultation-specialist-expertise-description">
+                Review the factors that may influence a recommended pricing
+                strategy.
+              </p>
+            </div>
+          </li>
+
+          <li class="er-seller-consultation-specialist-expertise-item">
+            <span
+              class="er-seller-consultation-specialist-expertise-icon"
+              aria-hidden="true"
+            >â†—</span>
+
+            <div class="er-seller-consultation-specialist-expertise-copy">
+              <h3 class="er-seller-consultation-specialist-expertise-title">
+                Marketing and launch planning
+              </h3>
+              <p class="er-seller-consultation-specialist-expertise-description">
+                Understand how the property may be positioned and introduced
+                to potential buyers.
+              </p>
+            </div>
+          </li>
+        </ul>
+
+        <p class="er-seller-consultation-specialist-reassurance">
+          <span
+            class="er-seller-consultation-specialist-reassurance-mark"
+            aria-hidden="true"
+          >âœ“</span>
+          <span>
+            Your consultation will focus on your needs, questions, and
+            preferred pace.
+          </span>
+        </p>
+
+        <a
+          class="er-seller-consultation-specialist-button"
+          href="../step-02/index.html"
+        >
+          Schedule with Sophia
+        </a>
+      </div>
+      <!-- Specialist Content End -->
+    </div>
+  </section>
+</div>
+<!-- Elite Realty Seller Consultation: Specialist Section End -->
+
+<!-- Elite Realty Seller Consultation: Situations Section Start -->
+<div class="er-seller-consultation-situations">
+  <style>
+    .er-seller-consultation-situations {
+      --er-seller-situations-primary: #245A4A;
+      --er-seller-situations-secondary: #3C806A;
+      --er-seller-situations-sage: #EDF6F2;
+      --er-seller-situations-soft-sage: #E1F0EA;
+      --er-seller-situations-gold: #D6A84B;
+      --er-seller-situations-heading: #182433;
+      --er-seller-situations-body: #526273;
+      --er-seller-situations-light: #F7F9FC;
+      --er-seller-situations-white: #FFFFFF;
+      --er-seller-situations-border: #DCE7E2;
+      --er-seller-situations-success: #2E8B57;
+      --er-seller-situations-heading-font: Poppins, Arial, sans-serif;
+      --er-seller-situations-body-font: Inter, Arial, sans-serif;
+
+      width: 100%;
+      max-width: 100%;
+      min-width: 0;
+      overflow-x: clip;
+      background: var(--er-seller-situations-light);
+      color: var(--er-seller-situations-body);
+      font-family: var(--er-seller-situations-body-font);
+    }
+
+    .er-seller-consultation-situations *,
+    .er-seller-consultation-situations *::before,
+    .er-seller-consultation-situations *::after {
+      box-sizing: border-box;
+    }
+
+    .er-seller-consultation-situations
+      .er-seller-consultation-situations-section {
+      position: relative;
+      isolation: isolate;
+      overflow: hidden;
+      padding: clamp(78px, 8vw, 108px) 0;
+      background: var(--er-seller-situations-light);
+    }
+
+    .er-seller-consultation-situations
+      .er-seller-consultation-situations-section::before {
+      position: absolute;
+      z-index: -1;
+      top: -180px;
+      right: -190px;
+      width: 430px;
+      height: 430px;
+      background: var(--er-seller-situations-sage);
+      border-radius: 50%;
+      content: "";
+      opacity: 0.75;
+    }
+
+    .er-seller-consultation-situations
+      .er-seller-consultation-situations-container {
+      width: min(calc(100% - 48px), 1200px);
+      margin-inline: auto;
+    }
+
+    .er-seller-consultation-situations
+      .er-seller-consultation-situations-intro {
+      max-width: 790px;
+      margin-inline: auto;
+      text-align: center;
+    }
+
+    .er-seller-consultation-situations
+      .er-seller-consultation-situations-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      margin: 0 0 14px;
+      color: var(--er-seller-situations-primary);
+      font-family: var(--er-seller-situations-heading-font);
+      font-size: 0.8125rem;
+      font-weight: 700;
+      line-height: 1.4;
+      letter-spacing: 0.11em;
+    }
+
+    .er-seller-consultation-situations
+      .er-seller-consultation-situations-eyebrow::before,
+    .er-seller-consultation-situations
+      .er-seller-consultation-situations-eyebrow::after {
+      width: 25px;
+      height: 2px;
+      flex: 0 0 25px;
+      background: var(--er-seller-situations-gold);
+      content: "";
+    }
+
+    .er-seller-consultation-situations
+      .er-seller-consultation-situations-title {
+      margin: 0;
+      color: var(--er-seller-situations-heading);
+      font-family: var(--er-seller-situations-heading-font);
+      font-size: clamp(2.05rem, 4vw, 3rem);
+      font-weight: 700;
+      line-height: 1.14;
+      letter-spacing: -0.035em;
+      text-wrap: balance;
+    }
+
+    .er-seller-consultation-situations
+      .er-seller-consultation-situations-description {
+      max-width: 730px;
+      margin: 18px auto 0;
+      color: var(--er-seller-situations-body);
+      font-size: 1.0625rem;
+      line-height: 1.72;
+    }
+
+    .er-seller-consultation-situations
+      .er-seller-consultation-situations-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      align-items: stretch;
+      gap: 20px;
+      margin: clamp(44px, 5vw, 58px) 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .er-seller-consultation-situations
+      .er-seller-consultation-situations-card {
+      display: flex;
+      min-width: 0;
+      min-height: 100%;
+      align-items: flex-start;
+      gap: 14px;
+      padding: 24px;
+      background: var(--er-seller-situations-white);
+      border: 1px solid var(--er-seller-situations-border);
+      border-radius: 16px;
+      box-shadow: 0 8px 22px var(--er-seller-situations-border);
+    }
+
+    .er-seller-consultation-situations
+      .er-seller-consultation-situations-check {
+      display: grid;
+      width: 30px;
+      height: 30px;
+      flex: 0 0 30px;
+      place-items: center;
+      background: var(--er-seller-situations-soft-sage);
+      border: 1px solid var(--er-seller-situations-border);
+      border-radius: 9px;
+      color: var(--er-seller-situations-success);
+      font-size: 0.8125rem;
+      font-weight: 800;
+      line-height: 1;
+    }
+
+    .er-seller-consultation-situations
+      .er-seller-consultation-situations-card-text {
+      margin: 2px 0 0;
+      color: var(--er-seller-situations-heading);
+      font-size: 1rem;
+      font-weight: 600;
+      line-height: 1.58;
+    }
+
+    /* Reassurance box */
+    .er-seller-consultation-situations
+      .er-seller-consultation-situations-reassurance {
+      position: relative;
+      display: grid;
+      max-width: 930px;
+      grid-template-columns: auto minmax(0, 1fr);
+      gap: 18px;
+      align-items: start;
+      margin: 38px auto 0;
+      padding: 26px 29px;
+      overflow: hidden;
+      background: var(--er-seller-situations-sage);
+      border: 1px solid var(--er-seller-situations-border);
+      border-radius: 17px;
+    }
+
+    .er-seller-consultation-situations
+      .er-seller-consultation-situations-reassurance::before {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      width: 4px;
+      background: var(--er-seller-situations-gold);
+      content: "";
+    }
+
+    .er-seller-consultation-situations
+      .er-seller-consultation-situations-reassurance-icon {
+      display: grid;
+      width: 46px;
+      height: 46px;
+      place-items: center;
+      background: var(--er-seller-situations-primary);
+      border-radius: 13px;
+      color: var(--er-seller-situations-white);
+      font-family: var(--er-seller-situations-heading-font);
+      font-size: 1.15rem;
+      font-weight: 700;
+      line-height: 1;
+    }
+
+    .er-seller-consultation-situations
+      .er-seller-consultation-situations-reassurance-copy {
+      min-width: 0;
+    }
+
+    .er-seller-consultation-situations
+      .er-seller-consultation-situations-reassurance-title {
+      margin: 0;
+      color: var(--er-seller-situations-primary);
+      font-family: var(--er-seller-situations-heading-font);
+      font-size: 1.125rem;
+      font-weight: 700;
+      line-height: 1.35;
+    }
+
+    .er-seller-consultation-situations
+      .er-seller-consultation-situations-reassurance-text {
+      margin: 7px 0 0;
+      color: var(--er-seller-situations-body);
+      font-size: 0.9375rem;
+      line-height: 1.66;
+    }
+
+    @media (max-width: 940px) {
+      .er-seller-consultation-situations
+        .er-seller-consultation-situations-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 620px) {
+      .er-seller-consultation-situations
+        .er-seller-consultation-situations-section {
+        padding: 64px 0;
+      }
+
+      .er-seller-consultation-situations
+        .er-seller-consultation-situations-container {
+        width: min(calc(100% - 36px), 1200px);
+      }
+
+      .er-seller-consultation-situations
+        .er-seller-consultation-situations-eyebrow::before,
+      .er-seller-consultation-situations
+        .er-seller-consultation-situations-eyebrow::after {
+        width: 18px;
+        flex-basis: 18px;
+      }
+
+      .er-seller-consultation-situations
+        .er-seller-consultation-situations-title {
+        font-size: clamp(1.9rem, 9vw, 2.4rem);
+      }
+
+      .er-seller-consultation-situations
+        .er-seller-consultation-situations-description {
+        font-size: 1rem;
+      }
+
+      .er-seller-consultation-situations
+        .er-seller-consultation-situations-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 15px;
+        margin-top: 38px;
+      }
+
+      .er-seller-consultation-situations
+        .er-seller-consultation-situations-card {
+        padding: 21px;
+      }
+
+      .er-seller-consultation-situations
+        .er-seller-consultation-situations-reassurance {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 14px;
+        margin-top: 30px;
+        padding: 23px;
+      }
+    }
+
+    @media (max-width: 360px) {
+      .er-seller-consultation-situations
+        .er-seller-consultation-situations-container {
+        width: min(calc(100% - 28px), 1200px);
+      }
+
+      .er-seller-consultation-situations
+        .er-seller-consultation-situations-eyebrow::after {
+        display: none;
+      }
+    }
+  </style>
+
+  <section
+    id="seller-preparation"
+    class="er-seller-consultation-situations-section"
+    aria-labelledby="er-seller-consultation-situations-title"
+  >
+    <div class="er-seller-consultation-situations-container">
+      <!-- Situations Introduction Start -->
+      <div class="er-seller-consultation-situations-intro">
+        <p class="er-seller-consultation-situations-eyebrow">
+          Designed around your situation
+        </p>
+
+        <h2
+          id="er-seller-consultation-situations-title"
+          class="er-seller-consultation-situations-title"
+        >
+          This consultation may be right for you if...
+        </h2>
+
+        <p class="er-seller-consultation-situations-description">
+          Every homeownerâ€™s circumstances are different. The conversation
+          will be tailored to your property, goals, questions, and timeline.
+        </p>
+      </div>
+      <!-- Situations Introduction End -->
+
+      <!-- Situation Cards Start -->
+      <ul class="er-seller-consultation-situations-grid">
+        <li class="er-seller-consultation-situations-card">
+          <span
+            class="er-seller-consultation-situations-check"
+            aria-hidden="true"
+          >âœ“</span>
+          <p class="er-seller-consultation-situations-card-text">
+            You are considering selling but are not sure where to begin.
+          </p>
+        </li>
+
+        <li class="er-seller-consultation-situations-card">
+          <span
+            class="er-seller-consultation-situations-check"
+            aria-hidden="true"
+          >âœ“</span>
+          <p class="er-seller-consultation-situations-card-text">
+            You want to understand your homeâ€™s current market position.
+          </p>
+        </li>
+
+        <li class="er-seller-consultation-situations-card">
+          <span
+            class="er-seller-consultation-situations-check"
+            aria-hidden="true"
+          >âœ“</span>
+          <p class="er-seller-consultation-situations-card-text">
+            You need guidance on repairs, improvements, or preparation.
+          </p>
+        </li>
+
+        <li class="er-seller-consultation-situations-card">
+          <span
+            class="er-seller-consultation-situations-check"
+            aria-hidden="true"
+          >âœ“</span>
+          <p class="er-seller-consultation-situations-card-text">
+            You are deciding whether now is the right time to sell.
+          </p>
+        </li>
+
+        <li class="er-seller-consultation-situations-card">
+          <span
+            class="er-seller-consultation-situations-check"
+            aria-hidden="true"
+          >âœ“</span>
+          <p class="er-seller-consultation-situations-card-text">
+            You will need to purchase another home after selling.
+          </p>
+        </li>
+
+        <li class="er-seller-consultation-situations-card">
+          <span
+            class="er-seller-consultation-situations-check"
+            aria-hidden="true"
+          >âœ“</span>
+          <p class="er-seller-consultation-situations-card-text">
+            Your property is occupied by you, a tenant, or another household
+            member.
+          </p>
+        </li>
+      </ul>
+      <!-- Situation Cards End -->
+
+      <!-- Reassurance Box Start -->
+      <aside
+        class="er-seller-consultation-situations-reassurance"
+        aria-labelledby="er-seller-consultation-situations-reassurance-title"
+      >
+        <span
+          class="er-seller-consultation-situations-reassurance-icon"
+          aria-hidden="true"
+        >?</span>
+
+        <div class="er-seller-consultation-situations-reassurance-copy">
+          <h3
+            id="er-seller-consultation-situations-reassurance-title"
+            class="er-seller-consultation-situations-reassurance-title"
+          >
+            You do not need to have everything figured out
+          </h3>
+
+          <p class="er-seller-consultation-situations-reassurance-text">
+            The purpose of the consultation is to help organize your questions
+            and identify the most appropriate next steps based on the
+            information you share.
+          </p>
+        </div>
+      </aside>
+      <!-- Reassurance Box End -->
+    </div>
+  </section>
+</div>
+<!-- Elite Realty Seller Consultation: Situations Section End -->
+
+<!-- Elite Realty Seller Consultation: Final CTA Start -->
+<div class="er-seller-consultation-final-cta">
+  <style>
+    .er-seller-consultation-final-cta {
+      --er-seller-final-primary: #245A4A;
+      --er-seller-final-secondary: #3C806A;
+      --er-seller-final-dark: #194438;
+      --er-seller-final-soft-sage: #E1F0EA;
+      --er-seller-final-gold: #D6A84B;
+      --er-seller-final-white: #FFFFFF;
+      --er-seller-final-border: #DCE7E2;
+      --er-seller-final-heading-font: Poppins, Arial, sans-serif;
+      --er-seller-final-body-font: Inter, Arial, sans-serif;
+
+      width: 100%;
+      max-width: 100%;
+      min-width: 0;
+      overflow-x: clip;
+      background: var(--er-seller-final-dark);
+      color: var(--er-seller-final-white);
+      font-family: var(--er-seller-final-body-font);
+    }
+
+    .er-seller-consultation-final-cta *,
+    .er-seller-consultation-final-cta *::before,
+    .er-seller-consultation-final-cta *::after {
+      box-sizing: border-box;
+    }
+
+    .er-seller-consultation-final-cta
+      .er-seller-consultation-final-section {
+      position: relative;
+      isolation: isolate;
+      overflow: hidden;
+      padding: clamp(82px, 9vw, 118px) 0;
+      background: var(--er-seller-final-dark);
+    }
+
+    .er-seller-consultation-final-cta
+      .er-seller-consultation-final-section::before {
+      position: absolute;
+      z-index: -2;
+      top: -230px;
+      right: -190px;
+      width: 520px;
+      height: 520px;
+      background: var(--er-seller-final-primary);
+      border-radius: 50%;
+      content: "";
+      opacity: 0.65;
+    }
+
+    .er-seller-consultation-final-cta
+      .er-seller-consultation-final-section::after {
+      position: absolute;
+      z-index: -2;
+      bottom: -260px;
+      left: -220px;
+      width: 520px;
+      height: 520px;
+      border: 2px solid var(--er-seller-final-secondary);
+      border-radius: 50%;
+      content: "";
+      opacity: 0.42;
+    }
+
+    .er-seller-consultation-final-cta
+      .er-seller-consultation-final-decoration {
+      position: absolute;
+      z-index: -1;
+      top: 56px;
+      left: 7%;
+      width: 68px;
+      height: 6px;
+      background: var(--er-seller-final-gold);
+      border-radius: 999px;
+      opacity: 0.8;
+      transform: rotate(-15deg);
+    }
+
+    .er-seller-consultation-final-cta
+      .er-seller-consultation-final-decoration::before,
+    .er-seller-consultation-final-cta
+      .er-seller-consultation-final-decoration::after {
+      position: absolute;
+      width: 9px;
+      height: 9px;
+      background: var(--er-seller-final-gold);
+      border-radius: 50%;
+      content: "";
+    }
+
+    .er-seller-consultation-final-cta
+      .er-seller-consultation-final-decoration::before {
+      top: 36px;
+      left: 17px;
+    }
+
+    .er-seller-consultation-final-cta
+      .er-seller-consultation-final-decoration::after {
+      top: 60px;
+      left: 45px;
+      width: 5px;
+      height: 5px;
+    }
+
+    .er-seller-consultation-final-cta
+      .er-seller-consultation-final-container {
+      width: min(calc(100% - 48px), 1200px);
+      margin-inline: auto;
+    }
+
+    .er-seller-consultation-final-cta
+      .er-seller-consultation-final-content {
+      max-width: 880px;
+      margin-inline: auto;
+      text-align: center;
+    }
+
+    .er-seller-consultation-final-cta
+      .er-seller-consultation-final-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      margin: 0 0 16px;
+      color: var(--er-seller-final-gold);
+      font-family: var(--er-seller-final-heading-font);
+      font-size: 0.8125rem;
+      font-weight: 700;
+      line-height: 1.4;
+      letter-spacing: 0.11em;
+    }
+
+    .er-seller-consultation-final-cta
+      .er-seller-consultation-final-eyebrow::before,
+    .er-seller-consultation-final-cta
+      .er-seller-consultation-final-eyebrow::after {
+      width: 28px;
+      height: 2px;
+      flex: 0 0 28px;
+      background: var(--er-seller-final-gold);
+      content: "";
+    }
+
+    .er-seller-consultation-final-cta
+      .er-seller-consultation-final-title {
+      max-width: 820px;
+      margin: 0 auto;
+      color: var(--er-seller-final-white);
+      font-family: var(--er-seller-final-heading-font);
+      font-size: clamp(2.25rem, 4.8vw, 3.65rem);
+      font-weight: 700;
+      line-height: 1.1;
+      letter-spacing: -0.04em;
+      text-wrap: balance;
+    }
+
+    .er-seller-consultation-final-cta
+      .er-seller-consultation-final-description {
+      max-width: 730px;
+      margin: 22px auto 0;
+      color: var(--er-seller-final-white);
+      font-size: 1.0625rem;
+      line-height: 1.72;
+      opacity: 0.88;
+    }
+
+    .er-seller-consultation-final-cta
+      .er-seller-consultation-final-button {
+      display: inline-flex;
+      min-height: 54px;
+      align-items: center;
+      justify-content: center;
+      margin-top: 31px;
+      padding: 15px 27px;
+      background: var(--er-seller-final-white);
+      border: 2px solid var(--er-seller-final-gold);
+      border-radius: 11px;
+      color: var(--er-seller-final-dark);
+      font-family: var(--er-seller-final-heading-font);
+      font-size: 0.9375rem;
+      font-weight: 700;
+      line-height: 1.3;
+      text-align: center;
+      text-decoration: none;
+      box-shadow: 0 9px 22px var(--er-seller-final-primary);
+      transition:
+        background-color 160ms ease,
+        border-color 160ms ease,
+        color 160ms ease,
+        transform 160ms ease;
+    }
+
+    .er-seller-consultation-final-cta
+      .er-seller-consultation-final-button:hover {
+      background: var(--er-seller-final-gold);
+      border-color: var(--er-seller-final-gold);
+      color: var(--er-seller-final-dark);
+      transform: translateY(-1px);
+    }
+
+    .er-seller-consultation-final-cta
+      .er-seller-consultation-final-button:focus-visible {
+      outline: 3px solid var(--er-seller-final-white);
+      outline-offset: 4px;
+    }
+
+    .er-seller-consultation-final-cta
+      .er-seller-consultation-final-reassurance-list {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+      max-width: 780px;
+      margin: 35px auto 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .er-seller-consultation-final-cta
+      .er-seller-consultation-final-reassurance-item {
+      display: flex;
+      min-width: 0;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      padding: 13px 15px;
+      background: var(--er-seller-final-primary);
+      border: 1px solid var(--er-seller-final-secondary);
+      border-radius: 12px;
+      color: var(--er-seller-final-white);
+      font-size: 0.875rem;
+      font-weight: 600;
+      line-height: 1.4;
+      text-align: left;
+    }
+
+    .er-seller-consultation-final-cta
+      .er-seller-consultation-final-reassurance-mark {
+      display: grid;
+      width: 23px;
+      height: 23px;
+      flex: 0 0 23px;
+      place-items: center;
+      background: var(--er-seller-final-soft-sage);
+      border-radius: 50%;
+      color: var(--er-seller-final-dark);
+      font-size: 0.75rem;
+      font-weight: 800;
+      line-height: 1;
+    }
+
+    .er-seller-consultation-final-cta
+      .er-seller-consultation-final-note {
+      max-width: 670px;
+      margin: 19px auto 0;
+      color: var(--er-seller-final-white);
+      font-size: 0.8125rem;
+      line-height: 1.6;
+      opacity: 0.78;
+    }
+
+    @media (max-width: 720px) {
+      .er-seller-consultation-final-cta
+        .er-seller-consultation-final-reassurance-list {
+        grid-template-columns: minmax(0, 1fr);
+        max-width: 460px;
+      }
+
+      .er-seller-consultation-final-cta
+        .er-seller-consultation-final-reassurance-item {
+        justify-content: flex-start;
+      }
+    }
+
+    @media (max-width: 620px) {
+      .er-seller-consultation-final-cta
+        .er-seller-consultation-final-section {
+        padding: 68px 0;
+      }
+
+      .er-seller-consultation-final-cta
+        .er-seller-consultation-final-container {
+        width: min(calc(100% - 36px), 1200px);
+      }
+
+      .er-seller-consultation-final-cta
+        .er-seller-consultation-final-eyebrow::before,
+      .er-seller-consultation-final-cta
+        .er-seller-consultation-final-eyebrow::after {
+        width: 18px;
+        flex-basis: 18px;
+      }
+
+      .er-seller-consultation-final-cta
+        .er-seller-consultation-final-title {
+        font-size: clamp(2rem, 10vw, 2.7rem);
+      }
+
+      .er-seller-consultation-final-cta
+        .er-seller-consultation-final-description {
+        margin-top: 19px;
+        font-size: 1rem;
+      }
+
+      .er-seller-consultation-final-cta
+        .er-seller-consultation-final-button {
+        width: 100%;
+        margin-top: 27px;
+      }
+
+      .er-seller-consultation-final-cta
+        .er-seller-consultation-final-decoration {
+        top: 34px;
+        left: 4%;
+        transform: scale(0.75) rotate(-15deg);
+      }
+    }
+
+    @media (max-width: 360px) {
+      .er-seller-consultation-final-cta
+        .er-seller-consultation-final-container {
+        width: min(calc(100% - 28px), 1200px);
+      }
+
+      .er-seller-consultation-final-cta
+        .er-seller-consultation-final-eyebrow::after {
+        display: none;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .er-seller-consultation-final-cta *,
+      .er-seller-consultation-final-cta *::before,
+      .er-seller-consultation-final-cta *::after {
+        transition-duration: 0.01ms !important;
+      }
+    }
+  </style>
+
+  <section
+    id="seller-final-cta"
+    class="er-seller-consultation-final-section"
+    aria-labelledby="er-seller-consultation-final-title"
+  >
+    <span
+      class="er-seller-consultation-final-decoration"
+      aria-hidden="true"
+    ></span>
+
+    <div class="er-seller-consultation-final-container">
+      <div class="er-seller-consultation-final-content">
+        <p class="er-seller-consultation-final-eyebrow">
+          Take the first step
+        </p>
+
+        <h2
+          id="er-seller-consultation-final-title"
+          class="er-seller-consultation-final-title"
+        >
+          Start planning your home sale with confidence
+        </h2>
+
+        <p class="er-seller-consultation-final-description">
+          Share your contact information and a few details about your
+          property. You will then be guided through a short seller assessment
+          and consultation booking.
+        </p>
+
+        <a
+          class="er-seller-consultation-final-button"
+          href="../step-02/index.html"
+        >
+          Start your seller consultation
+        </a>
+
+        <ul
+          class="er-seller-consultation-final-reassurance-list"
+          aria-label="Seller consultation reassurance"
+        >
+          <li class="er-seller-consultation-final-reassurance-item">
+            <span
+              class="er-seller-consultation-final-reassurance-mark"
+              aria-hidden="true"
+            >âœ“</span>
+            <span>Short guided process</span>
+          </li>
+
+          <li class="er-seller-consultation-final-reassurance-item">
+            <span
+              class="er-seller-consultation-final-reassurance-mark"
+              aria-hidden="true"
+            >âœ“</span>
+            <span>No-obligation consultation</span>
+          </li>
+
+          <li class="er-seller-consultation-final-reassurance-item">
+            <span
+              class="er-seller-consultation-final-reassurance-mark"
+              aria-hidden="true"
+            >âœ“</span>
+            <span>Personalized next steps</span>
+          </li>
+        </ul>
+
+        <p class="er-seller-consultation-final-note">
+          Submitting your information does not obligate you to list or sell
+          your property.
+        </p>
+      </div>
+    </div>
+  </section>
+</div>
+<!-- Elite Realty Seller Consultation: Final CTA End -->
+
+<!-- Elite Realty Seller Consultation: Footer Start -->
+<div class="er-seller-consultation-footer">
+  <style>
+    .er-seller-consultation-footer {
+      --er-seller-footer-primary: #245A4A;
+      --er-seller-footer-secondary: #3C806A;
+      --er-seller-footer-gold: #D6A84B;
+      --er-seller-footer-white: #FFFFFF;
+      --er-seller-footer-background: #173D33;
+      --er-seller-footer-heading-font: Poppins, Arial, sans-serif;
+      --er-seller-footer-body-font: Inter, Arial, sans-serif;
+
+      width: 100%;
+      max-width: 100%;
+      min-width: 0;
+      overflow-x: clip;
+      background: var(--er-seller-footer-background);
+      color: var(--er-seller-footer-white);
+      font-family: var(--er-seller-footer-body-font);
+    }
+
+    .er-seller-consultation-footer *,
+    .er-seller-consultation-footer *::before,
+    .er-seller-consultation-footer *::after {
+      box-sizing: border-box;
+    }
+
+    .er-seller-consultation-footer
+      .er-seller-consultation-footer-element {
+      padding: 66px 0 27px;
+      background: var(--er-seller-footer-background);
+      border-top: 1px solid var(--er-seller-footer-primary);
+    }
+
+    .er-seller-consultation-footer
+      .er-seller-consultation-footer-container {
+      width: min(calc(100% - 48px), 1200px);
+      margin-inline: auto;
+    }
+
+    .er-seller-consultation-footer
+      .er-seller-consultation-footer-grid {
+      display: grid;
+      grid-template-columns:
+        minmax(260px, 1.35fr)
+        minmax(180px, 0.72fr)
+        minmax(250px, 0.93fr);
+      gap: clamp(44px, 7vw, 90px);
+      align-items: start;
+    }
+
+    .er-seller-consultation-footer
+      .er-seller-consultation-footer-brand {
+      min-width: 0;
+    }
+
+    .er-seller-consultation-footer
+      .er-seller-consultation-footer-brand-name {
+      display: inline-flex;
+      align-items: center;
+      gap: 11px;
+      margin: 0;
+      color: var(--er-seller-footer-white);
+      font-family: var(--er-seller-footer-heading-font);
+      font-size: 1.2rem;
+      font-weight: 700;
+      line-height: 1.3;
+    }
+
+    .er-seller-consultation-footer
+      .er-seller-consultation-footer-brand-name::before {
+      width: 27px;
+      height: 3px;
+      flex: 0 0 27px;
+      background: var(--er-seller-footer-gold);
+      border-radius: 999px;
+      content: "";
+    }
+
+    .er-seller-consultation-footer
+      .er-seller-consultation-footer-brand-text {
+      max-width: 390px;
+      margin: 17px 0 0;
+      color: var(--er-seller-footer-white);
+      font-size: 0.9375rem;
+      line-height: 1.7;
+      opacity: 0.8;
+    }
+
+    .er-seller-consultation-footer
+      .er-seller-consultation-footer-heading {
+      margin: 0 0 18px;
+      color: var(--er-seller-footer-white);
+      font-family: var(--er-seller-footer-heading-font);
+      font-size: 0.9375rem;
+      font-weight: 700;
+      line-height: 1.4;
+    }
+
+    .er-seller-consultation-footer
+      .er-seller-consultation-footer-links,
+    .er-seller-consultation-footer
+      .er-seller-consultation-footer-contact-list {
+      display: grid;
+      gap: 11px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .er-seller-consultation-footer
+      .er-seller-consultation-footer-link {
+      display: inline-flex;
+      min-height: 32px;
+      align-items: center;
+      color: var(--er-seller-footer-white);
+      font-size: 0.875rem;
+      font-weight: 500;
+      line-height: 1.5;
+      text-decoration: none;
+      text-underline-offset: 5px;
+      opacity: 0.8;
+      transition:
+        color 160ms ease,
+        opacity 160ms ease;
+    }
+
+    .er-seller-consultation-footer
+      .er-seller-consultation-footer-link:hover {
+      color: var(--er-seller-footer-gold);
+      text-decoration: underline;
+      text-decoration-thickness: 1px;
+      opacity: 1;
+    }
+
+    .er-seller-consultation-footer
+      .er-seller-consultation-footer-link:focus-visible {
+      border-radius: 4px;
+      outline: 3px solid var(--er-seller-footer-gold);
+      outline-offset: 3px;
+    }
+
+    .er-seller-consultation-footer
+      .er-seller-consultation-footer-contact-item {
+      display: grid;
+      grid-template-columns: auto minmax(0, 1fr);
+      gap: 10px;
+      align-items: start;
+      color: var(--er-seller-footer-white);
+      font-size: 0.875rem;
+      line-height: 1.65;
+      opacity: 0.8;
+      overflow-wrap: anywhere;
+    }
+
+    .er-seller-consultation-footer
+      .er-seller-consultation-footer-contact-mark {
+      display: grid;
+      width: 24px;
+      height: 24px;
+      place-items: center;
+      margin-top: 1px;
+      background: var(--er-seller-footer-primary);
+      border-radius: 7px;
+      color: var(--er-seller-footer-gold);
+      font-size: 0.75rem;
+      font-weight: 700;
+      line-height: 1;
+    }
+
+    .er-seller-consultation-footer
+      .er-seller-consultation-footer-bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      margin-top: 48px;
+      padding-top: 24px;
+      border-top: 1px solid var(--er-seller-footer-primary);
+    }
+
+    .er-seller-consultation-footer
+      .er-seller-consultation-footer-copyright {
+      margin: 0;
+      color: var(--er-seller-footer-white);
+      font-size: 0.8125rem;
+      line-height: 1.5;
+      opacity: 0.76;
+    }
+
+    .er-seller-consultation-footer
+      .er-seller-consultation-footer-legal {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .er-seller-consultation-footer
+      .er-seller-consultation-footer-legal
+      .er-seller-consultation-footer-link {
+      min-height: 36px;
+      font-size: 0.8125rem;
+    }
+
+    .er-seller-consultation-footer
+      .er-seller-consultation-footer-disclaimer {
+      margin: 17px 0 0;
+      color: var(--er-seller-footer-white);
+      font-size: 0.8125rem;
+      line-height: 1.6;
+      opacity: 0.62;
+    }
+
+    @media (max-width: 900px) {
+      .er-seller-consultation-footer
+        .er-seller-consultation-footer-grid {
+        grid-template-columns:
+          minmax(0, 1.15fr)
+          minmax(170px, 0.7fr)
+          minmax(220px, 0.9fr);
+        gap: 36px;
+      }
+    }
+
+    @media (max-width: 720px) {
+      .er-seller-consultation-footer
+        .er-seller-consultation-footer-element {
+        padding: 54px 0 25px;
+      }
+
+      .er-seller-consultation-footer
+        .er-seller-consultation-footer-container {
+        width: min(calc(100% - 36px), 1200px);
+      }
+
+      .er-seller-consultation-footer
+        .er-seller-consultation-footer-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 34px;
+      }
+
+      .er-seller-consultation-footer
+        .er-seller-consultation-footer-brand-text {
+        max-width: 520px;
+      }
+
+      .er-seller-consultation-footer
+        .er-seller-consultation-footer-links {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 7px 20px;
+      }
+
+      .er-seller-consultation-footer
+        .er-seller-consultation-footer-link {
+        min-height: 40px;
+      }
+
+      .er-seller-consultation-footer
+        .er-seller-consultation-footer-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+        margin-top: 38px;
+      }
+    }
+
+    @media (max-width: 440px) {
+      .er-seller-consultation-footer
+        .er-seller-consultation-footer-links {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .er-seller-consultation-footer
+        .er-seller-consultation-footer-legal {
+        width: 100%;
+        gap: 8px 20px;
+      }
+
+      .er-seller-consultation-footer
+        .er-seller-consultation-footer-legal
+        .er-seller-consultation-footer-link {
+        min-height: 44px;
+      }
+    }
+
+    @media (max-width: 360px) {
+      .er-seller-consultation-footer
+        .er-seller-consultation-footer-container {
+        width: min(calc(100% - 28px), 1200px);
+      }
+    }
+  </style>
+
+  <footer class="er-seller-consultation-footer-element">
+    <div class="er-seller-consultation-footer-container">
+      <!-- Footer Columns Start -->
+      <div class="er-seller-consultation-footer-grid">
+        <div class="er-seller-consultation-footer-brand">
+          <p class="er-seller-consultation-footer-brand-name">
+            Elite Realty Group
+          </p>
+
+          <p class="er-seller-consultation-footer-brand-text">
+            Helping Austin-area buyers and sellers move forward with greater
+            clarity.
+          </p>
+        </div>
+
+        <nav
+          aria-labelledby="er-seller-consultation-footer-resources-heading"
+        >
+          <h2
+            id="er-seller-consultation-footer-resources-heading"
+            class="er-seller-consultation-footer-heading"
+          >
+            Seller resources
+          </h2>
+
+          <ul class="er-seller-consultation-footer-links">
+            <li>
+              <a
+                class="er-seller-consultation-footer-link"
+                href="#"
+              >
+                Seller consultation
+              </a>
+            </li>
+            <li>
+              <a
+                class="er-seller-consultation-footer-link"
+                href="#"
+              >
+                Home valuation
+              </a>
+            </li>
+            <li>
+              <a
+                class="er-seller-consultation-footer-link"
+                href="#"
+              >
+                Prepare to sell
+              </a>
+            </li>
+            <li>
+              <a
+                class="er-seller-consultation-footer-link"
+                href="#"
+              >
+                Contact
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <section
+          aria-labelledby="er-seller-consultation-footer-contact-heading"
+        >
+          <h2
+            id="er-seller-consultation-footer-contact-heading"
+            class="er-seller-consultation-footer-heading"
+          >
+            Contact
+          </h2>
+
+          <ul class="er-seller-consultation-footer-contact-list">
+            <li class="er-seller-consultation-footer-contact-item">
+              <span
+                class="er-seller-consultation-footer-contact-mark"
+                aria-hidden="true"
+              >T</span>
+              <span>(512) 555-0147</span>
+            </li>
+
+            <li class="er-seller-consultation-footer-contact-item">
+              <span
+                class="er-seller-consultation-footer-contact-mark"
+                aria-hidden="true"
+              >@</span>
+              <span>eliterealty.crm@gmail.com</span>
+            </li>
+
+            <li class="er-seller-consultation-footer-contact-item">
+              <span
+                class="er-seller-consultation-footer-contact-mark"
+                aria-hidden="true"
+              >â—</span>
+              <span>
+                1847 Meridian Grove Avenue, Suite 320<br>
+                Austin, TX 78704
+              </span>
+            </li>
+          </ul>
+        </section>
+      </div>
+      <!-- Footer Columns End -->
+
+      <!-- Footer Bottom Start -->
+      <div class="er-seller-consultation-footer-bottom">
+        <p class="er-seller-consultation-footer-copyright">
+          Â© 2026 Elite Realty Group. All rights reserved.
+        </p>
+
+        <nav
+          class="er-seller-consultation-footer-legal"
+          aria-label="Legal links"
+        >
+          <a
+            class="er-seller-consultation-footer-link"
+            href="#"
+          >
+            Privacy policy
+          </a>
+
+          <a
+            class="er-seller-consultation-footer-link"
+            href="#"
+          >
+            Terms
+          </a>
+        </nav>
+      </div>
+
+      <p class="er-seller-consultation-footer-disclaimer">
+        Elite Realty Group is a fictional business created for CRM and
+        automation demonstration purposes.
+      </p>
+      <!-- Footer Bottom End -->
+    </div>
+  </footer>
+</div>
+<!-- Elite Realty Seller Consultation: Footer End -->
+
+  <a class="funnel-next-button" href="../step-02/index.html" aria-label="Go to Seller Step 02" title="Next Page">
+    <span class="funnel-next-button__icon" aria-hidden="true">→</span>
+    <span>Next Page</span>
+  </a>
+</body>
+</html>

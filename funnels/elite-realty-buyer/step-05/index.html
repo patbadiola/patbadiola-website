@@ -1,0 +1,1849 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Your Elite Realty buyer consultation is confirmed. Review your appointment details and prepare for the meeting.">
+  <title>Consultation Confirmed | Elite Realty</title>
+  <style>
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap");
+
+html { scroll-behavior: smooth; }
+body { margin: 0; min-width: 320px; background: #f7f9fc; }
+
+.er-buyer-confirmation-page {
+      --er-buyer-confirmation-primary: #123b5d;
+      --er-buyer-confirmation-secondary: #1e88e5;
+      --er-buyer-confirmation-secondary-dark: #1565c0;
+      --er-buyer-confirmation-gold: #d6a84b;
+      --er-buyer-confirmation-body: #526273;
+      --er-buyer-confirmation-muted: #718096;
+      --er-buyer-confirmation-light: #f7f9fc;
+      --er-buyer-confirmation-white: #ffffff;
+      --er-buyer-confirmation-border: #e2e8f0;
+      --er-buyer-confirmation-soft-blue: #eaf4fc;
+      --er-buyer-confirmation-success: #2e8b57;
+      --er-buyer-confirmation-soft-success: #eaf7f0;
+      --er-buyer-confirmation-footer: #0e304b;
+      --er-buyer-confirmation-heading-font: Poppins, Arial, sans-serif;
+      --er-buyer-confirmation-body-font: Inter, Arial, sans-serif;
+      --er-buyer-confirmation-container-width: 1200px;
+
+      width: 100%;
+      max-width: 100%;
+      min-width: 0;
+      color: var(--er-buyer-confirmation-body);
+      background: var(--er-buyer-confirmation-light);
+      font-family: var(--er-buyer-confirmation-body-font);
+      font-size: 17px;
+      line-height: 1.65;
+      overflow-x: clip;
+    }
+
+    .er-buyer-confirmation-page *,
+    .er-buyer-confirmation-page *::before,
+    .er-buyer-confirmation-page *::after {
+      box-sizing: border-box;
+    }
+
+    .er-buyer-confirmation-page .er-buyer-confirmation-container {
+      width: min(
+        calc(100% - 48px),
+        var(--er-buyer-confirmation-container-width)
+      );
+      max-width: 100%;
+      margin-inline: auto;
+    }
+
+    .er-buyer-confirmation-page .er-buyer-confirmation-sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    .er-buyer-confirmation-page a:focus-visible {
+      border-radius: 4px;
+      outline: 3px solid var(--er-buyer-confirmation-gold);
+      outline-offset: 4px;
+    }
+
+    /* Minimal Header */
+    .er-buyer-confirmation-page .er-buyer-confirmation-header {
+      border-bottom: 1px solid var(--er-buyer-confirmation-border);
+      background: var(--er-buyer-confirmation-white);
+    }
+
+    .er-buyer-confirmation-page .er-buyer-confirmation-header-inner {
+      display: flex;
+      min-height: 68px;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.25rem;
+    }
+
+    .er-buyer-confirmation-page .er-buyer-confirmation-logo {
+      margin: 0;
+      color: var(--er-buyer-confirmation-primary);
+      font-family: var(--er-buyer-confirmation-heading-font);
+      font-size: 1.08rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+      white-space: nowrap;
+    }
+
+    .er-buyer-confirmation-page .er-buyer-confirmation-header-phone {
+      display: inline-flex;
+      min-height: 44px;
+      align-items: center;
+      color: var(--er-buyer-confirmation-body);
+      font-size: 0.9rem;
+      font-weight: 600;
+      line-height: 1.35;
+      text-decoration-color: var(--er-buyer-confirmation-muted);
+      text-decoration-thickness: 1px;
+      text-underline-offset: 4px;
+      white-space: nowrap;
+      transition:
+        color 160ms ease,
+        text-decoration-color 160ms ease;
+    }
+
+    .er-buyer-confirmation-page .er-buyer-confirmation-phone-number {
+      color: var(--er-buyer-confirmation-secondary-dark);
+      transition: color 160ms ease;
+    }
+
+    .er-buyer-confirmation-page
+      .er-buyer-confirmation-header-phone:hover,
+    .er-buyer-confirmation-page
+      .er-buyer-confirmation-header-phone:hover
+      .er-buyer-confirmation-phone-number {
+      color: var(--er-buyer-confirmation-primary);
+      text-decoration-color: var(--er-buyer-confirmation-secondary-dark);
+    }
+
+    .er-buyer-confirmation-page
+      .er-buyer-confirmation-support-mobile {
+      display: none;
+    }
+
+    /* Confirmation Section */
+    .er-buyer-confirmation-page .er-buyer-confirmation-intro-section {
+      background: var(--er-buyer-confirmation-light);
+      scroll-margin-top: 20px;
+    }
+
+    /* Completed Progress Indicator */
+    .er-buyer-confirmation-page
+      .er-buyer-confirmation-progress-region {
+      display: block;
+      padding-block: 26px 28px;
+      border-bottom: 1px solid var(--er-buyer-confirmation-border);
+      background: var(--er-buyer-confirmation-white);
+    }
+
+    .er-buyer-confirmation-page
+      .er-buyer-confirmation-progress-inner {
+      width: min(100%, 720px);
+      margin-inline: auto;
+    }
+
+    .er-buyer-confirmation-page
+      .er-buyer-confirmation-progress-summary {
+      margin: 0 0 0.9rem;
+      color: var(--er-buyer-confirmation-success);
+      font-family: var(--er-buyer-confirmation-heading-font);
+      font-size: 0.875rem;
+      font-weight: 700;
+      line-height: 1.4;
+      text-align: center;
+    }
+
+    .er-buyer-confirmation-page
+      .er-buyer-confirmation-progress-list {
+      position: relative;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      align-items: start;
+      gap: 1rem;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .er-buyer-confirmation-page
+      .er-buyer-confirmation-progress-list::before,
+    .er-buyer-confirmation-page
+      .er-buyer-confirmation-progress-list::after {
+      position: absolute;
+      top: 18px;
+      left: 16.667%;
+      height: 2px;
+      content: "";
+      pointer-events: none;
+    }
+
+    .er-buyer-confirmation-page
+      .er-buyer-confirmation-progress-list::before {
+      right: 16.667%;
+      background: var(--er-buyer-confirmation-border);
+    }
+
+    .er-buyer-confirmation-page
+      .er-buyer-confirmation-progress-list::after {
+      z-index: 1;
+      right: 16.667%;
+      background: var(--er-buyer-confirmation-success);
+    }
+
+    .er-buyer-confirmation-page
+      .er-buyer-confirmation-progress-step {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      min-width: 0;
+      flex-direction: column;
+      align-items: center;
+      color: var(--er-buyer-confirmation-body);
+      text-align: center;
+    }
+
+    .er-buyer-confirmation-page
+      .er-buyer-confirmation-progress-marker {
+      display: grid;
+      width: 38px;
+      height: 38px;
+      place-items: center;
+      border: 2px solid var(--er-buyer-confirmation-success);
+      border-radius: 50%;
+      color: var(--er-buyer-confirmation-white);
+      background: var(--er-buyer-confirmation-success);
+      font-family: var(--er-buyer-confirmation-heading-font);
+      font-size: 0.8125rem;
+      font-weight: 700;
+      line-height: 1;
+    }
+
+    .er-buyer-confirmation-page
+      .er-buyer-confirmation-progress-label {
+      display: block;
+      margin-top: 0.65rem;
+      color: var(--er-buyer-confirmation-body);
+      font-size: 0.875rem;
+      font-weight: 600;
+      line-height: 1.35;
+      overflow-wrap: anywhere;
+    }
+
+    .er-buyer-confirmation-page
+      .er-buyer-confirmation-progress-status {
+      display: block;
+      margin-top: 0.2rem;
+      color: var(--er-buyer-confirmation-success);
+      font-size: 0.8125rem;
+      font-weight: 700;
+      line-height: 1.3;
+    }
+
+    /* Confirmation Hero */
+    .er-buyer-confirmation-page .er-buyer-confirmation-introduction {
+      padding-block: clamp(3.125rem, 6vw, 4.25rem) 3.25rem;
+      background: var(--er-buyer-confirmation-light);
+    }
+
+    .er-buyer-confirmation-page
+      .er-buyer-confirmation-introduction-inner {
+      max-width: 860px;
+      margin-inline: auto;
+      text-align: center;
+    }
+
+    .er-buyer-confirmation-page
+      .er-buyer-confirmation-success-icon {
+      display: grid;
+      width: 78px;
+      height: 78px;
+      place-items: center;
+      margin: 0 auto 1.25rem;
+      border-radius: 50%;
+      color: var(--er-buyer-confirmation-success);
+      background: var(--er-buyer-confirmation-soft-success);
+      font-family: var(--er-buyer-confirmation-heading-font);
+      font-size: 2rem;
+      font-weight: 700;
+      line-height: 1;
+    }
+
+    .er-buyer-confirmation-page .er-buyer-confirmation-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.6rem;
+      margin: 0 0 1rem;
+      color: var(--er-buyer-confirmation-success);
+      font-family: var(--er-buyer-confirmation-heading-font);
+      font-size: 0.8125rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      line-height: 1.4;
+      text-transform: uppercase;
+    }
+
+    .er-buyer-confirmation-page
+      .er-buyer-confirmation-eyebrow::before {
+      width: 30px;
+      height: 2px;
+      background: var(--er-buyer-confirmation-gold);
+      content: "";
+    }
+
+    .er-buyer-confirmation-page .er-buyer-confirmation-title {
+      max-width: 820px;
+      margin: 0 auto 1rem;
+      color: var(--er-buyer-confirmation-primary);
+      font-family: var(--er-buyer-confirmation-heading-font);
+      font-size: clamp(2.35rem, 4.5vw, 3.4rem);
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      line-height: 1.12;
+    }
+
+    .er-buyer-confirmation-page .er-buyer-confirmation-greeting {
+      margin: 0 0 0.75rem;
+      color: var(--er-buyer-confirmation-primary);
+      font-family: var(--er-buyer-confirmation-heading-font);
+      font-size: 1.125rem;
+      font-weight: 600;
+      line-height: 1.45;
+    }
+
+    .er-buyer-confirmation-page .er-buyer-confirmation-supporting {
+      max-width: 760px;
+      margin: 0 auto;
+      color: var(--er-buyer-confirmation-body);
+      font-size: 1.0625rem;
+      line-height: 1.68;
+    }
+
+    .er-buyer-confirmation-page
+      .er-buyer-confirmation-reassurance-list {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: stretch;
+      justify-content: center;
+      gap: 0.85rem 1.15rem;
+      margin: 1.75rem 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .er-buyer-confirmation-page
+      .er-buyer-confirmation-reassurance-item {
+      display: flex;
+      min-width: 0;
+      flex: 1 1 220px;
+      align-items: center;
+      justify-content: center;
+      gap: 0.55rem;
+      color: var(--er-buyer-confirmation-body);
+      font-size: 0.875rem;
+      font-weight: 600;
+      line-height: 1.4;
+      text-align: left;
+    }
+
+    .er-buyer-confirmation-page
+      .er-buyer-confirmation-reassurance-icon {
+      display: grid;
+      width: 30px;
+      height: 30px;
+      flex: 0 0 30px;
+      place-items: center;
+      border-radius: 9px;
+      color: var(--er-buyer-confirmation-success);
+      background: var(--er-buyer-confirmation-soft-success);
+      font-family: var(--er-buyer-confirmation-heading-font);
+      font-size: 0.8125rem;
+      font-weight: 700;
+      line-height: 1;
+    }
+
+    @media (max-width: 700px) {
+      .er-buyer-confirmation-page {
+        font-size: 16px;
+      }
+
+      .er-buyer-confirmation-page
+        .er-buyer-confirmation-container {
+        width: min(
+          calc(100% - 36px),
+          var(--er-buyer-confirmation-container-width)
+        );
+      }
+
+      .er-buyer-confirmation-page
+        .er-buyer-confirmation-header-inner {
+        min-height: 66px;
+        gap: 0.75rem;
+      }
+
+      .er-buyer-confirmation-page .er-buyer-confirmation-logo {
+        font-size: 1rem;
+      }
+
+      .er-buyer-confirmation-page
+        .er-buyer-confirmation-header-phone {
+        font-size: 0.8125rem;
+      }
+
+      .er-buyer-confirmation-page
+        .er-buyer-confirmation-support-desktop {
+        display: none;
+      }
+
+      .er-buyer-confirmation-page
+        .er-buyer-confirmation-support-mobile {
+        display: inline;
+      }
+
+      .er-buyer-confirmation-page
+        .er-buyer-confirmation-progress-region {
+        padding-block: 22px 24px;
+      }
+
+      .er-buyer-confirmation-page
+        .er-buyer-confirmation-progress-summary {
+        margin-bottom: 0.8rem;
+        font-size: 0.8125rem;
+      }
+
+      .er-buyer-confirmation-page
+        .er-buyer-confirmation-progress-list {
+        gap: 0.45rem;
+      }
+
+      .er-buyer-confirmation-page
+        .er-buyer-confirmation-progress-list::before,
+      .er-buyer-confirmation-page
+        .er-buyer-confirmation-progress-list::after {
+        top: 17px;
+        height: 1px;
+      }
+
+      .er-buyer-confirmation-page
+        .er-buyer-confirmation-progress-marker {
+        width: 34px;
+        height: 34px;
+      }
+
+      .er-buyer-confirmation-page
+        .er-buyer-confirmation-progress-label {
+        max-width: 105px;
+        margin-top: 0.55rem;
+        font-size: 0.8125rem;
+      }
+
+      .er-buyer-confirmation-page
+        .er-buyer-confirmation-progress-status {
+        font-size: 0.8125rem;
+      }
+
+      .er-buyer-confirmation-page
+        .er-buyer-confirmation-introduction {
+        padding-block: clamp(2.25rem, 11vw, 3rem) 2.5rem;
+      }
+
+      .er-buyer-confirmation-page
+        .er-buyer-confirmation-success-icon {
+        width: 70px;
+        height: 70px;
+        margin-bottom: 1.1rem;
+        font-size: 1.75rem;
+      }
+
+      .er-buyer-confirmation-page .er-buyer-confirmation-title {
+        font-size: clamp(1.95rem, 9vw, 2.25rem);
+      }
+
+      .er-buyer-confirmation-page
+        .er-buyer-confirmation-greeting {
+        font-size: 1.0625rem;
+      }
+
+      .er-buyer-confirmation-page
+        .er-buyer-confirmation-supporting {
+        font-size: 1rem;
+      }
+
+      .er-buyer-confirmation-page
+        .er-buyer-confirmation-reassurance-list {
+        gap: 0.8rem;
+        margin-top: 1.5rem;
+      }
+
+      .er-buyer-confirmation-page
+        .er-buyer-confirmation-reassurance-item {
+        flex-basis: 190px;
+      }
+    }
+
+    @media (max-width: 420px) {
+      .er-buyer-confirmation-page
+        .er-buyer-confirmation-progress-label {
+        max-width: 88px;
+      }
+
+      .er-buyer-confirmation-page
+        .er-buyer-confirmation-reassurance-item {
+        max-width: 330px;
+        flex-basis: 100%;
+        justify-content: flex-start;
+      }
+    }
+
+    @media (max-width: 340px) {
+      .er-buyer-confirmation-page
+        .er-buyer-confirmation-container {
+        width: min(
+          calc(100% - 28px),
+          var(--er-buyer-confirmation-container-width)
+        );
+      }
+
+      .er-buyer-confirmation-page .er-buyer-confirmation-logo {
+        font-size: 0.94rem;
+      }
+
+      .er-buyer-confirmation-page
+        .er-buyer-confirmation-header-phone {
+        font-size: 0.8125rem;
+      }
+
+      .er-buyer-confirmation-page
+        .er-buyer-confirmation-progress-label {
+        max-width: 78px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .er-buyer-confirmation-page *,
+      .er-buyer-confirmation-page *::before,
+      .er-buyer-confirmation-page *::after {
+        transition-duration: 0.01ms !important;
+      }
+    }
+
+.er-buyer-confirmation-page .er-buyer-confirmation-details-section {
+      width: 100%;
+      overflow-x: clip;
+      padding: 4rem 0;
+      background: var(--er-buyer-confirmation-light, #f7f9fc);
+      color: var(--er-buyer-confirmation-body, #526273);
+      font-family: var(
+        --er-buyer-confirmation-body-font,
+        Inter,
+        Arial,
+        sans-serif
+      );
+    }
+
+    .er-buyer-confirmation-page .er-buyer-confirmation-details-container {
+      width: min(100%, 1000px);
+      margin: 0 auto;
+      padding: 0 24px;
+      box-sizing: border-box;
+    }
+
+    .er-buyer-confirmation-page .er-buyer-confirmation-appointment-card {
+      padding: 44px;
+      overflow: visible;
+      background: var(--er-buyer-confirmation-white, #ffffff);
+      border: 1px solid var(--er-buyer-confirmation-border, #e2e8f0);
+      border-radius: 18px;
+      box-shadow: 0 12px 30px rgba(18, 59, 93, 0.08);
+      box-sizing: border-box;
+    }
+
+    .er-buyer-confirmation-page .er-buyer-confirmation-eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin: 0 0 12px;
+      color: var(--er-buyer-confirmation-primary, #123b5d);
+      font-family: var(
+        --er-buyer-confirmation-heading-font,
+        Poppins,
+        Arial,
+        sans-serif
+      );
+      font-size: 0.8125rem;
+      font-weight: 700;
+      line-height: 1.4;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .er-buyer-confirmation-page .er-buyer-confirmation-eyebrow::before {
+      width: 24px;
+      height: 2px;
+      flex: 0 0 24px;
+      background: var(--er-buyer-confirmation-gold, #d6a84b);
+      content: "";
+    }
+
+    .er-buyer-confirmation-page .er-buyer-confirmation-details-heading,
+    .er-buyer-confirmation-page .er-buyer-confirmation-section-heading,
+    .er-buyer-confirmation-page .er-buyer-confirmation-next-title {
+      margin: 0;
+      color: var(--er-buyer-confirmation-primary, #123b5d);
+      font-family: var(
+        --er-buyer-confirmation-heading-font,
+        Poppins,
+        Arial,
+        sans-serif
+      );
+    }
+
+    .er-buyer-confirmation-page .er-buyer-confirmation-details-heading,
+    .er-buyer-confirmation-page .er-buyer-confirmation-section-heading {
+      font-size: clamp(1.45rem, 3vw, 2rem);
+      font-weight: 700;
+      line-height: 1.18;
+    }
+
+    .er-buyer-confirmation-page .er-buyer-confirmation-details-intro,
+    .er-buyer-confirmation-page .er-buyer-confirmation-section-intro,
+    .er-buyer-confirmation-page .er-buyer-confirmation-next-description,
+    .er-buyer-confirmation-page .er-buyer-confirmation-reassurance,
+    .er-buyer-confirmation-page .er-buyer-confirmation-reminder-text {
+      color: var(--er-buyer-confirmation-body, #526273);
+      font-family: var(
+        --er-buyer-confirmation-body-font,
+        Inter,
+        Arial,
+        sans-serif
+      );
+    }
+
+    .er-buyer-confirmation-page .er-buyer-confirmation-details-intro {
+      max-width: 720px;
+      margin: 12px 0 0;
+      font-size: 1rem;
+      line-height: 1.65;
+    }
+
+    .er-buyer-confirmation-page .er-buyer-confirmation-summary-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+      margin: 32px 0 0;
+    }
+
+    .er-buyer-confirmation-page .er-buyer-confirmation-summary-item {
+      display: flex;
+      min-width: 0;
+      gap: 13px;
+      padding: 17px;
+      background: var(--er-buyer-confirmation-light, #f7f9fc);
+      border: 1px solid var(--er-buyer-confirmation-border, #e2e8f0);
+      border-radius: 14px;
+      box-sizing: border-box;
+    }
+
+    .er-buyer-confirmation-page .er-buyer-confirmation-icon {
+      display: inline-flex;
+      width: 36px;
+      height: 36px;
+      flex: 0 0 36px;
+      align-items: center;
+      justify-content: center;
+      background: var(--er-buyer-confirmation-soft-blue, #eaf4fc);
+      border-radius: 10px;
+      color: var(--er-buyer-confirmation-secondary-dark, #1565c0);
+      font-family: Arial, sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
+      line-height: 1;
+    }
+
+    .er-buyer-confirmation-page .er-buyer-confirmation-summary-copy {
+      min-width: 0;
+    }
+
+    .er-buyer-confirmation-page .er-buyer-confirmation-summary-label,
+    .er-buyer-confirmation-page .er-buyer-confirmation-instructions-label {
+      margin: 0 0 4px;
+      color: var(--er-buyer-confirmation-primary, #123b5d);
+      font-family: var(
+        --er-buyer-confirmation-body-font,
+        Inter,
+        Arial,
+        sans-serif
+      );
+      font-size: 0.8125rem;
+      font-weight: 700;
+      line-height: 1.4;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+    }
+
+    .er-buyer-confirmation-page .er-buyer-confirmation-summary-value,
+    .er-buyer-confirmation-page .er-buyer-confirmation-instructions-value {
+      min-width: 0;
+      margin: 0;
+      overflow-wrap: anywhere;
+      color: var(--er-buyer-confirmation-heading, #182433);
+      font-family: var(
+        --er-buyer-confirmation-body-font,
+        Inter,
+        Arial,
+        sans-serif
+      );
+      font-size: 0.9375rem;
+      font-weight: 600;
+      line-height: 1.5;
+    }
+
+    .er-buyer-confirmation-page .er-buyer-confirmation-instructions {
+      display: flex;
+      gap: 13px;
+      margin-top: 18px;
+      padding: 18px;
+      background: var(--er-buyer-confirmation-soft-blue, #eaf4fc);
+      border: 1px solid var(--er-buyer-confirmation-border, #e2e8f0);
+      border-radius: 14px;
+      box-sizing: border-box;
+    }
+
+    .er-buyer-confirmation-page .er-buyer-confirmation-content-section {
+      margin-top: 52px;
+    }
+
+    .er-buyer-confirmation-page .er-buyer-confirmation-section-intro {
+      max-width: 700px;
+      margin: 10px 0 0;
+      font-size: 1rem;
+      line-height: 1.65;
+    }
+
+    .er-buyer-confirmation-page .er-buyer-confirmation-next-list {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 22px;
+      margin: 26px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .er-buyer-confirmation-page .er-buyer-confirmation-next-card {
+      min-width: 0;
+      padding: 24px;
+      background: var(--er-buyer-confirmation-white, #ffffff);
+      border: 1px solid var(--er-buyer-confirmation-border, #e2e8f0);
+      border-radius: 16px;
+      box-sizing: border-box;
+    }
+
+    .er-buyer-confirmation-page .er-buyer-confirmation-step-number {
+      display: inline-flex;
+      width: 42px;
+      height: 42px;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 16px;
+      background: var(--er-buyer-confirmation-soft-blue, #eaf4fc);
+      border-radius: 50%;
+      color: var(--er-buyer-confirmation-secondary-dark, #1565c0);
+      font-family: var(
+        --er-buyer-confirmation-heading-font,
+        Poppins,
+        Arial,
+        sans-serif
+      );
+      font-size: 0.875rem;
+      font-weight: 700;
+      line-height: 1;
+    }
+
+    .er-buyer-confirmation-page .er-buyer-confirmation-next-title {
+      font-size: 1.0625rem;
+      font-weight: 700;
+      line-height: 1.3;
+    }
+
+    .er-buyer-confirmation-page .er-buyer-confirmation-next-description {
+      margin: 9px 0 0;
+      font-size: 0.9375rem;
+      line-height: 1.65;
+    }
+
+    .er-buyer-confirmation-page .er-buyer-confirmation-preparation {
+      padding: 30px;
+      background: var(--er-buyer-confirmation-soft-blue, #eaf4fc);
+      border: 1px solid var(--er-buyer-confirmation-border, #e2e8f0);
+      border-radius: 16px;
+      box-sizing: border-box;
+    }
+
+    .er-buyer-confirmation-page .er-buyer-confirmation-checklist {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px 24px;
+      margin: 24px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .er-buyer-confirmation-page .er-buyer-confirmation-checklist-item {
+      display: flex;
+      min-width: 0;
+      align-items: flex-start;
+      gap: 10px;
+      color: var(--er-buyer-confirmation-heading, #182433);
+      font-family: var(
+        --er-buyer-confirmation-body-font,
+        Inter,
+        Arial,
+        sans-serif
+      );
+      font-size: 0.9375rem;
+      font-weight: 600;
+      line-height: 1.55;
+    }
+
+    .er-buyer-confirmation-page .er-buyer-confirmation-check-icon {
+      display: inline-flex;
+      width: 24px;
+      height: 24px;
+      flex: 0 0 24px;
+      align-items: center;
+      justify-content: center;
+      margin-top: 1px;
+      background: var(--er-buyer-confirmation-soft-success, #eaf7f0);
+      border-radius: 50%;
+      color: var(--er-buyer-confirmation-success, #2e8b57);
+      font-family: Arial, sans-serif;
+      font-size: 0.8125rem;
+      font-weight: 700;
+      line-height: 1;
+    }
+
+    .er-buyer-confirmation-page .er-buyer-confirmation-reassurance {
+      margin: 24px 0 0;
+      padding-top: 18px;
+      border-top: 1px solid var(--er-buyer-confirmation-border, #e2e8f0);
+      font-size: 0.875rem;
+      font-weight: 600;
+      line-height: 1.6;
+    }
+
+    .er-buyer-confirmation-page .er-buyer-confirmation-reminder {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      margin-top: 22px;
+      padding: 0 2px;
+    }
+
+    .er-buyer-confirmation-page .er-buyer-confirmation-reminder-text {
+      margin: 4px 0 0;
+      font-size: 0.875rem;
+      line-height: 1.6;
+    }
+
+    @media (max-width: 900px) {
+      .er-buyer-confirmation-page
+        .er-buyer-confirmation-appointment-card {
+        padding: 34px;
+      }
+
+      .er-buyer-confirmation-page
+        .er-buyer-confirmation-summary-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 700px) {
+      .er-buyer-confirmation-page
+        .er-buyer-confirmation-details-section {
+        padding: 44px 0;
+      }
+
+      .er-buyer-confirmation-page
+        .er-buyer-confirmation-details-container {
+        padding: 0 18px;
+      }
+
+      .er-buyer-confirmation-page
+        .er-buyer-confirmation-next-list,
+      .er-buyer-confirmation-page
+        .er-buyer-confirmation-checklist {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .er-buyer-confirmation-page
+        .er-buyer-confirmation-content-section {
+        margin-top: 42px;
+      }
+
+      .er-buyer-confirmation-page
+        .er-buyer-confirmation-next-card {
+        padding: 22px;
+      }
+
+      .er-buyer-confirmation-page
+        .er-buyer-confirmation-preparation {
+        padding: 24px;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .er-buyer-confirmation-page
+        .er-buyer-confirmation-details-section {
+        padding: 38px 0;
+      }
+
+      .er-buyer-confirmation-page
+        .er-buyer-confirmation-appointment-card {
+        padding: 24px;
+      }
+
+      .er-buyer-confirmation-page
+        .er-buyer-confirmation-summary-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 14px;
+        margin-top: 26px;
+      }
+
+      .er-buyer-confirmation-page
+        .er-buyer-confirmation-summary-item,
+      .er-buyer-confirmation-page
+        .er-buyer-confirmation-instructions {
+        padding: 16px;
+      }
+
+      .er-buyer-confirmation-page
+        .er-buyer-confirmation-preparation {
+        padding: 22px;
+      }
+    }
+
+.er-buyer-confirmation-page .er-buyer-confirmation-support-section {
+      width: 100%;
+      overflow-x: clip;
+      padding: 34px 0 64px;
+      background: var(--er-buyer-confirmation-light, #F7F9FC);
+      color: var(--er-buyer-confirmation-body, #526273);
+      font-family: var(--er-buyer-confirmation-body-font, Inter, Arial, sans-serif);
+    }
+
+    .er-buyer-confirmation-page .er-buyer-confirmation-support-container {
+      width: min(100%, 1000px);
+      margin: 0 auto;
+      padding: 0 24px;
+      box-sizing: border-box;
+    }
+
+    .er-buyer-confirmation-page .er-buyer-confirmation-support-box {
+      display: grid;
+      grid-template-columns: auto minmax(0, 1fr) auto;
+      gap: 20px;
+      align-items: center;
+      padding: 26px;
+      background: var(--er-buyer-confirmation-soft-blue, #EAF4FC);
+      border: 1px solid var(--er-buyer-confirmation-border, #E2E8F0);
+      border-radius: 16px;
+      box-sizing: border-box;
+    }
+
+    .er-buyer-confirmation-page .er-buyer-confirmation-support-icon {
+      display: inline-flex;
+      width: 48px;
+      height: 48px;
+      flex: 0 0 48px;
+      align-items: center;
+      justify-content: center;
+      background: var(--er-buyer-confirmation-primary, #123B5D);
+      border-radius: 12px;
+      color: var(--er-buyer-confirmation-white, #FFFFFF);
+      font-family: Arial, sans-serif;
+      font-size: 1.25rem;
+      font-weight: 700;
+      line-height: 1;
+    }
+
+    .er-buyer-confirmation-page .er-buyer-confirmation-support-content {
+      min-width: 0;
+    }
+
+    .er-buyer-confirmation-page .er-buyer-confirmation-support-heading {
+      margin: 0;
+      color: var(--er-buyer-confirmation-primary, #123B5D);
+      font-family: var(--er-buyer-confirmation-heading-font, Poppins, Arial, sans-serif);
+      font-size: 1.125rem;
+      font-weight: 700;
+      line-height: 1.3;
+    }
+
+    .er-buyer-confirmation-page .er-buyer-confirmation-support-text,
+    .er-buyer-confirmation-page .er-buyer-confirmation-support-secondary,
+    .er-buyer-confirmation-page .er-buyer-confirmation-management-note {
+      color: var(--er-buyer-confirmation-body, #526273);
+      font-family: var(--er-buyer-confirmation-body-font, Inter, Arial, sans-serif);
+    }
+
+    .er-buyer-confirmation-page .er-buyer-confirmation-support-text {
+      margin: 7px 0 0;
+      font-size: 1rem;
+      line-height: 1.65;
+    }
+
+    .er-buyer-confirmation-page .er-buyer-confirmation-support-secondary {
+      margin: 5px 0 0;
+      font-size: 0.875rem;
+      line-height: 1.6;
+    }
+
+    .er-buyer-confirmation-page .er-buyer-confirmation-contact-link {
+      display: inline;
+      overflow-wrap: anywhere;
+      color: var(--er-buyer-confirmation-secondary-dark, #1565C0);
+      font-weight: 700;
+      text-decoration: underline;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+      transition: color 160ms ease;
+    }
+
+    .er-buyer-confirmation-page .er-buyer-confirmation-contact-link:hover {
+      color: var(--er-buyer-confirmation-primary, #123B5D);
+    }
+
+    .er-buyer-confirmation-page .er-buyer-confirmation-return-link {
+      display: inline-flex;
+      min-height: 50px;
+      flex: 0 0 auto;
+      align-items: center;
+      justify-content: center;
+      padding: 14px 24px;
+      background: var(--er-buyer-confirmation-white, #FFFFFF);
+      border: 1px solid var(--er-buyer-confirmation-primary, #123B5D);
+      border-radius: 11px;
+      color: var(--er-buyer-confirmation-primary, #123B5D);
+      font-family: var(--er-buyer-confirmation-heading-font, Poppins, Arial, sans-serif);
+      font-size: 0.9375rem;
+      font-weight: 600;
+      line-height: 1.3;
+      text-align: center;
+      text-decoration: none;
+      box-sizing: border-box;
+      transition:
+        background-color 160ms ease,
+        color 160ms ease,
+        border-color 160ms ease;
+    }
+
+    .er-buyer-confirmation-page .er-buyer-confirmation-return-link:hover {
+      background: var(--er-buyer-confirmation-primary, #123B5D);
+      border-color: var(--er-buyer-confirmation-primary, #123B5D);
+      color: var(--er-buyer-confirmation-white, #FFFFFF);
+    }
+
+    .er-buyer-confirmation-page .er-buyer-confirmation-contact-link:focus-visible,
+    .er-buyer-confirmation-page .er-buyer-confirmation-return-link:focus-visible,
+    .er-buyer-confirmation-page .er-buyer-confirmation-footer-link:focus-visible {
+      outline: 3px solid var(--er-buyer-confirmation-secondary, #1E88E5);
+      outline-offset: 3px;
+    }
+
+    .er-buyer-confirmation-page .er-buyer-confirmation-management-note {
+      max-width: 700px;
+      margin: 20px auto 0;
+      padding: 0 8px;
+      color: var(--er-buyer-confirmation-muted, #718096);
+      font-size: 0.875rem;
+      line-height: 1.6;
+      text-align: center;
+    }
+
+    .er-buyer-confirmation-page .er-buyer-confirmation-footer {
+      width: 100%;
+      padding: 32px 0;
+      background: var(--er-buyer-confirmation-footer, #0E304B);
+      border-top: 1px solid var(--er-buyer-confirmation-primary, #123B5D);
+      color: var(--er-buyer-confirmation-white, #FFFFFF);
+      font-family: var(--er-buyer-confirmation-body-font, Inter, Arial, sans-serif);
+      box-sizing: border-box;
+    }
+
+    .er-buyer-confirmation-page .er-buyer-confirmation-footer-container {
+      width: min(100%, 1200px);
+      margin: 0 auto;
+      padding: 0 24px;
+      box-sizing: border-box;
+    }
+
+    .er-buyer-confirmation-page .er-buyer-confirmation-footer-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 28px;
+    }
+
+    .er-buyer-confirmation-page .er-buyer-confirmation-footer-brand {
+      margin: 0;
+      color: var(--er-buyer-confirmation-white, #FFFFFF);
+      font-family: var(--er-buyer-confirmation-heading-font, Poppins, Arial, sans-serif);
+      font-size: 1rem;
+      font-weight: 700;
+      line-height: 1.4;
+    }
+
+    .er-buyer-confirmation-page .er-buyer-confirmation-footer-location {
+      margin: 4px 0 0;
+      color: var(--er-buyer-confirmation-white, #FFFFFF);
+      font-size: 0.8125rem;
+      line-height: 1.5;
+      opacity: 0.8;
+    }
+
+    .er-buyer-confirmation-page .er-buyer-confirmation-footer-links {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+    }
+
+    .er-buyer-confirmation-page .er-buyer-confirmation-footer-link {
+      display: inline-flex;
+      min-height: 44px;
+      align-items: center;
+      color: var(--er-buyer-confirmation-white, #FFFFFF);
+      font-size: 0.8125rem;
+      font-weight: 600;
+      line-height: 1.4;
+      text-decoration: underline;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 4px;
+      transition: color 160ms ease;
+    }
+
+    .er-buyer-confirmation-page .er-buyer-confirmation-footer-link:hover {
+      color: var(--er-buyer-confirmation-soft-blue, #EAF4FC);
+    }
+
+    .er-buyer-confirmation-page .er-buyer-confirmation-footer-bottom {
+      margin-top: 18px;
+      padding-top: 18px;
+      border-top: 1px solid var(--er-buyer-confirmation-primary, #123B5D);
+    }
+
+    .er-buyer-confirmation-page .er-buyer-confirmation-copyright {
+      margin: 0;
+      color: var(--er-buyer-confirmation-white, #FFFFFF);
+      font-size: 0.8125rem;
+      line-height: 1.5;
+      opacity: 0.8;
+    }
+
+    @media (max-width: 820px) {
+      .er-buyer-confirmation-page .er-buyer-confirmation-support-box {
+        grid-template-columns: auto minmax(0, 1fr);
+      }
+
+      .er-buyer-confirmation-page .er-buyer-confirmation-return-link {
+        grid-column: 2;
+        justify-self: start;
+      }
+    }
+
+    @media (max-width: 620px) {
+      .er-buyer-confirmation-page .er-buyer-confirmation-support-section {
+        padding: 28px 0 44px;
+      }
+
+      .er-buyer-confirmation-page .er-buyer-confirmation-support-container,
+      .er-buyer-confirmation-page .er-buyer-confirmation-footer-container {
+        padding-right: 18px;
+        padding-left: 18px;
+      }
+
+      .er-buyer-confirmation-page .er-buyer-confirmation-support-box {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 16px;
+        padding: 22px;
+      }
+
+      .er-buyer-confirmation-page .er-buyer-confirmation-return-link {
+        grid-column: 1;
+        width: 100%;
+        justify-self: stretch;
+      }
+
+      .er-buyer-confirmation-page .er-buyer-confirmation-footer {
+        padding: 28px 0;
+      }
+
+      .er-buyer-confirmation-page .er-buyer-confirmation-footer-top {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 14px;
+      }
+
+      .er-buyer-confirmation-page .er-buyer-confirmation-footer-links {
+        flex-wrap: wrap;
+        gap: 4px 22px;
+      }
+
+      .er-buyer-confirmation-page .er-buyer-confirmation-footer-bottom {
+        margin-top: 12px;
+        padding-top: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="er-buyer-confirmation-page">
+<!-- Minimal Header: Begin -->
+  <header class="er-buyer-confirmation-header">
+    <div class="er-buyer-confirmation-container er-buyer-confirmation-header-inner">
+      <p class="er-buyer-confirmation-logo">Elite Realty</p>
+
+      <a
+        class="er-buyer-confirmation-header-phone"
+        href="tel:+15125550147"
+        aria-label="Call Elite Realty for help at 512-555-0147"
+      >
+        <span
+          class="er-buyer-confirmation-support-desktop"
+          aria-hidden="true"
+        >
+          Need help?
+          <span class="er-buyer-confirmation-phone-number">
+            (512) 555-0147
+          </span>
+        </span>
+
+        <span
+          class="er-buyer-confirmation-support-mobile"
+          aria-hidden="true"
+        >
+          Call
+          <span class="er-buyer-confirmation-phone-number">
+            (512) 555-0147
+          </span>
+        </span>
+      </a>
+    </div>
+  </header>
+  <!-- Minimal Header: End -->
+
+  <!-- Buyer Booking Confirmation Section: Begin -->
+  <section
+    class="er-buyer-confirmation-intro-section"
+    id="buyer-booking-confirmation"
+    aria-labelledby="er-buyer-confirmation-title"
+  >
+    <!-- Completed Progress Indicator: Begin -->
+    <nav
+      class="er-buyer-confirmation-progress-region"
+      aria-label="Completed buyer consultation process"
+    >
+      <div class="er-buyer-confirmation-container">
+        <div class="er-buyer-confirmation-progress-inner">
+          <p class="er-buyer-confirmation-progress-summary">
+            Process Complete
+          </p>
+
+          <ol class="er-buyer-confirmation-progress-list">
+            <li class="er-buyer-confirmation-progress-step">
+              <span
+                class="er-buyer-confirmation-progress-marker"
+                aria-hidden="true"
+              >✓</span>
+              <span class="er-buyer-confirmation-sr-only">
+                Step 1, completed.
+              </span>
+              <span class="er-buyer-confirmation-progress-label">
+                Contact Details
+              </span>
+              <span class="er-buyer-confirmation-progress-status">
+                Complete
+              </span>
+            </li>
+
+            <li class="er-buyer-confirmation-progress-step">
+              <span
+                class="er-buyer-confirmation-progress-marker"
+                aria-hidden="true"
+              >✓</span>
+              <span class="er-buyer-confirmation-sr-only">
+                Step 2, completed.
+              </span>
+              <span class="er-buyer-confirmation-progress-label">
+                Buyer Assessment
+              </span>
+              <span class="er-buyer-confirmation-progress-status">
+                Complete
+              </span>
+            </li>
+
+            <li class="er-buyer-confirmation-progress-step">
+              <span
+                class="er-buyer-confirmation-progress-marker"
+                aria-hidden="true"
+              >✓</span>
+              <span class="er-buyer-confirmation-sr-only">
+                Step 3, completed.
+              </span>
+              <span class="er-buyer-confirmation-progress-label">
+                Book Consultation
+              </span>
+              <span class="er-buyer-confirmation-progress-status">
+                Complete
+              </span>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </nav>
+    <!-- Completed Progress Indicator: End -->
+
+    <!-- Confirmation Hero: Begin -->
+    <div class="er-buyer-confirmation-introduction">
+      <div class="er-buyer-confirmation-container er-buyer-confirmation-introduction-inner">
+        <span
+          class="er-buyer-confirmation-success-icon"
+          aria-hidden="true"
+        >✓</span>
+
+        <p class="er-buyer-confirmation-eyebrow">
+          Appointment Confirmed
+        </p>
+
+        <h1
+          class="er-buyer-confirmation-title"
+          id="er-buyer-confirmation-title"
+        >
+          Your Buyer Consultation Is Confirmed
+        </h1>
+
+        <p class="er-buyer-confirmation-greeting">
+          Thanks, <span id="er-confirmation-first-name">there</span>.
+        </p>
+
+        <p class="er-buyer-confirmation-supporting">
+          Your appointment with Ethan Brooks has been scheduled. Elite Realty
+          will review the information you provided so your consultation can
+          focus on your goals, questions, and next steps.
+        </p>
+
+        <ul
+          class="er-buyer-confirmation-reassurance-list"
+          aria-label="Confirmation reassurance"
+        >
+          <li class="er-buyer-confirmation-reassurance-item">
+            <span
+              class="er-buyer-confirmation-reassurance-icon"
+              aria-hidden="true"
+            >✓</span>
+            <span>Your appointment has been received</span>
+          </li>
+
+          <li class="er-buyer-confirmation-reassurance-item">
+            <span
+              class="er-buyer-confirmation-reassurance-icon"
+              aria-hidden="true"
+            >✉</span>
+            <span>Confirmation details will be sent to you</span>
+          </li>
+
+          <li class="er-buyer-confirmation-reassurance-item">
+            <span
+              class="er-buyer-confirmation-reassurance-icon"
+              aria-hidden="true"
+            >✓</span>
+            <span>
+              Ethan will review your Buyer Qualification responses
+            </span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- Confirmation Hero: End -->
+  </section>
+  <!-- Buyer Booking Confirmation Section: End -->
+
+<!-- Appointment Details Section Start -->
+  <section
+    id="buyer-confirmation-details"
+    class="er-buyer-confirmation-details-section"
+    aria-labelledby="er-buyer-confirmation-details-heading"
+  >
+    <div class="er-buyer-confirmation-details-container">
+
+      <!-- Appointment Details Card Start -->
+      <article class="er-buyer-confirmation-appointment-card">
+        <p class="er-buyer-confirmation-eyebrow">
+          Appointment Details
+        </p>
+
+        <h2
+          id="er-buyer-confirmation-details-heading"
+          class="er-buyer-confirmation-details-heading"
+        >
+          Your Scheduled Buyer Consultation
+        </h2>
+
+        <p class="er-buyer-confirmation-details-intro">
+          Your appointment has been successfully scheduled. The exact date,
+          time, and available meeting details are included in the confirmation
+          sent using the contact information you provided.
+        </p>
+
+        <!-- Appointment Summary Start -->
+        <dl class="er-buyer-confirmation-summary-grid">
+
+          <div class="er-buyer-confirmation-summary-item">
+            <span
+              class="er-buyer-confirmation-icon"
+              aria-hidden="true"
+            >
+              ▣
+            </span>
+
+            <div class="er-buyer-confirmation-summary-copy">
+              <dt class="er-buyer-confirmation-summary-label">
+                Appointment
+              </dt>
+
+              <dd class="er-buyer-confirmation-summary-value">
+                Buyer Consultation
+              </dd>
+            </div>
+          </div>
+
+          <div class="er-buyer-confirmation-summary-item">
+            <span
+              class="er-buyer-confirmation-icon"
+              aria-hidden="true"
+            >
+              ●
+            </span>
+
+            <div class="er-buyer-confirmation-summary-copy">
+              <dt class="er-buyer-confirmation-summary-label">
+                Buyer Specialist
+              </dt>
+
+              <dd class="er-buyer-confirmation-summary-value">
+                Ethan Brooks
+              </dd>
+            </div>
+          </div>
+
+          <div class="er-buyer-confirmation-summary-item">
+            <span
+              class="er-buyer-confirmation-icon"
+              aria-hidden="true"
+            >
+              ◷
+            </span>
+
+            <div class="er-buyer-confirmation-summary-copy">
+              <dt class="er-buyer-confirmation-summary-label">
+                Date and Time
+              </dt>
+
+              <dd class="er-buyer-confirmation-summary-value">
+                See your appointment confirmation
+              </dd>
+            </div>
+          </div>
+
+          <div class="er-buyer-confirmation-summary-item">
+            <span
+              class="er-buyer-confirmation-icon"
+              aria-hidden="true"
+            >
+              ◎
+            </span>
+
+            <div class="er-buyer-confirmation-summary-copy">
+              <dt class="er-buyer-confirmation-summary-label">
+                Time Zone
+              </dt>
+
+              <dd class="er-buyer-confirmation-summary-value">
+                Central Time
+              </dd>
+            </div>
+          </div>
+
+          <div class="er-buyer-confirmation-summary-item">
+            <span
+              class="er-buyer-confirmation-icon"
+              aria-hidden="true"
+            >
+              ⌖
+            </span>
+
+            <div class="er-buyer-confirmation-summary-copy">
+              <dt class="er-buyer-confirmation-summary-label">
+                Meeting Details
+              </dt>
+
+              <dd class="er-buyer-confirmation-summary-value">
+                Included in your confirmation message
+              </dd>
+            </div>
+          </div>
+
+          <div class="er-buyer-confirmation-summary-item">
+            <span
+              class="er-buyer-confirmation-icon"
+              aria-hidden="true"
+            >
+              ✓
+            </span>
+
+            <div class="er-buyer-confirmation-summary-copy">
+              <dt class="er-buyer-confirmation-summary-label">
+                Booking Status
+              </dt>
+
+              <dd class="er-buyer-confirmation-summary-value">
+                Confirmed
+              </dd>
+            </div>
+          </div>
+
+        </dl>
+        <!-- Appointment Summary End -->
+
+        <div class="er-buyer-confirmation-instructions">
+          <span
+            class="er-buyer-confirmation-icon"
+            aria-hidden="true"
+          >
+            i
+          </span>
+
+          <div class="er-buyer-confirmation-summary-copy">
+            <p class="er-buyer-confirmation-instructions-label">
+              Meeting Instructions
+            </p>
+
+            <p class="er-buyer-confirmation-instructions-value">
+              Please review the confirmation sent to your email or phone for
+              your scheduled date, time, meeting location, and any available
+              instructions.
+            </p>
+          </div>
+        </div>
+      </article>
+      <!-- Appointment Details Card End -->
+
+      <!-- What Happens Next Start -->
+      <section
+        class="er-buyer-confirmation-content-section"
+        aria-labelledby="er-buyer-confirmation-next-heading"
+      >
+        <h2
+          id="er-buyer-confirmation-next-heading"
+          class="er-buyer-confirmation-section-heading"
+        >
+          What Happens Next
+        </h2>
+
+        <ol class="er-buyer-confirmation-next-list">
+          <li class="er-buyer-confirmation-next-card">
+            <span class="er-buyer-confirmation-step-number">
+              01
+            </span>
+
+            <h3 class="er-buyer-confirmation-next-title">
+              Check Your Confirmation
+            </h3>
+
+            <p class="er-buyer-confirmation-next-description">
+              Look for the appointment confirmation sent using the contact
+              information you provided.
+            </p>
+          </li>
+
+          <li class="er-buyer-confirmation-next-card">
+            <span class="er-buyer-confirmation-step-number">
+              02
+            </span>
+
+            <h3 class="er-buyer-confirmation-next-title">
+              Prepare Your Questions
+            </h3>
+
+            <p class="er-buyer-confirmation-next-description">
+              Write down any questions about financing, neighborhoods,
+              property types, showings, offers, or the buying process.
+            </p>
+          </li>
+
+          <li class="er-buyer-confirmation-next-card">
+            <span class="er-buyer-confirmation-step-number">
+              03
+            </span>
+
+            <h3 class="er-buyer-confirmation-next-title">
+              Attend Your Consultation
+            </h3>
+
+            <p class="er-buyer-confirmation-next-description">
+              Meet with Ethan Brooks to review your goals and discuss the most
+              appropriate next steps for your home search.
+            </p>
+          </li>
+        </ol>
+      </section>
+      <!-- What Happens Next End -->
+
+      <!-- Preparation Checklist Start -->
+      <section
+        class="er-buyer-confirmation-content-section er-buyer-confirmation-preparation"
+        aria-labelledby="er-buyer-confirmation-preparation-heading"
+      >
+        <h2
+          id="er-buyer-confirmation-preparation-heading"
+          class="er-buyer-confirmation-section-heading"
+        >
+          Prepare for a Productive Consultation
+        </h2>
+
+        <p class="er-buyer-confirmation-section-intro">
+          Having the following information ready can help make your
+          conversation more useful.
+        </p>
+
+        <ul class="er-buyer-confirmation-checklist">
+          <li class="er-buyer-confirmation-checklist-item">
+            <span
+              class="er-buyer-confirmation-check-icon"
+              aria-hidden="true"
+            >
+              ✓
+            </span>
+
+            <span>
+              Your comfortable purchase budget
+            </span>
+          </li>
+
+          <li class="er-buyer-confirmation-checklist-item">
+            <span
+              class="er-buyer-confirmation-check-icon"
+              aria-hidden="true"
+            >
+              ✓
+            </span>
+
+            <span>
+              Your preferred Austin or Central Texas areas
+            </span>
+          </li>
+
+          <li class="er-buyer-confirmation-checklist-item">
+            <span
+              class="er-buyer-confirmation-check-icon"
+              aria-hidden="true"
+            >
+              ✓
+            </span>
+
+            <span>
+              Your must-have property features
+            </span>
+          </li>
+
+          <li class="er-buyer-confirmation-checklist-item">
+            <span
+              class="er-buyer-confirmation-check-icon"
+              aria-hidden="true"
+            >
+              ✓
+            </span>
+
+            <span>
+              Questions about financing, showings, offers, or representation
+            </span>
+          </li>
+        </ul>
+
+        <p class="er-buyer-confirmation-reassurance">
+          Ethan will also review the Buyer Qualification information you
+          submitted before the meeting.
+        </p>
+      </section>
+      <!-- Preparation Checklist End -->
+
+      <!-- Appointment Reminder Note Start -->
+      <div class="er-buyer-confirmation-reminder">
+        <span
+          class="er-buyer-confirmation-icon"
+          aria-hidden="true"
+        >
+          ◉
+        </span>
+
+        <p class="er-buyer-confirmation-reminder-text">
+          You may receive appointment reminders before your consultation.
+          Keep your contact information available so you do not miss important
+          updates.
+        </p>
+      </div>
+      <!-- Appointment Reminder Note End -->
+
+    </div>
+  </section>
+  <!-- Appointment Details Section End -->
+
+<!-- Support Information Start -->
+  <section
+    id="buyer-confirmation-support"
+    class="er-buyer-confirmation-support-section"
+    aria-labelledby="er-buyer-confirmation-support-heading"
+  >
+    <div class="er-buyer-confirmation-support-container">
+      <div class="er-buyer-confirmation-support-box">
+        <span
+          class="er-buyer-confirmation-support-icon"
+          aria-hidden="true"
+        >?</span>
+
+        <div class="er-buyer-confirmation-support-content">
+          <h2
+            id="er-buyer-confirmation-support-heading"
+            class="er-buyer-confirmation-support-heading"
+          >
+            Need Help With Your Appointment?
+          </h2>
+
+          <p class="er-buyer-confirmation-support-text">
+            Call Elite Realty at
+            <a
+              class="er-buyer-confirmation-contact-link"
+              href="tel:+15125550147"
+              aria-label="Call Elite Realty at 512-555-0147"
+            >(512) 555-0147</a>
+            or email
+            <a
+              class="er-buyer-confirmation-contact-link"
+              href="mailto:eliterealty.crm@gmail.com"
+              aria-label="Email Elite Realty at eliterealty.crm@gmail.com"
+            >eliterealty.crm@gmail.com</a>
+            if you have questions about your consultation.
+          </p>
+
+          <p class="er-buyer-confirmation-support-secondary">
+            Keep your appointment confirmation available when contacting the team.
+          </p>
+        </div>
+
+        <a
+          class="er-buyer-confirmation-return-link"
+          href="../../../index.html#projects"
+          aria-label="Return to portfolio"
+        >
+          Return to Portfolio
+        </a>
+      </div>
+
+      <!-- Appointment Management Note Start -->
+      <p class="er-buyer-confirmation-management-note">
+        Need to make a change? Use the reschedule or cancellation link included in your appointment confirmation, when available.
+      </p>
+      <!-- Appointment Management Note End -->
+    </div>
+  </section>
+  <!-- Support Information End -->
+
+  <!-- Compact Footer Start -->
+  <footer class="er-buyer-confirmation-footer">
+    <div class="er-buyer-confirmation-footer-container">
+      <div class="er-buyer-confirmation-footer-top">
+        <div class="er-buyer-confirmation-footer-identity">
+          <p class="er-buyer-confirmation-footer-brand">
+            Elite Realty Group
+          </p>
+          <p class="er-buyer-confirmation-footer-location">
+            Austin, TX 78704
+          </p>
+        </div>
+
+        <nav
+          class="er-buyer-confirmation-footer-links"
+          aria-label="Legal links"
+        >
+          <a
+            class="er-buyer-confirmation-footer-link"
+            href="#privacy-policy"
+          >
+            Privacy Policy
+          </a>
+
+          <a
+            class="er-buyer-confirmation-footer-link"
+            href="#terms-of-service"
+          >
+            Terms of Service
+          </a>
+        </nav>
+      </div>
+
+      <div class="er-buyer-confirmation-footer-bottom">
+        <p class="er-buyer-confirmation-copyright">
+          © 2026 Elite Realty Group
+        </p>
+      </div>
+    </div>
+  </footer>
+  <!-- Compact Footer End -->
+</div>
+
+<script>
+(function () {
+    function updateConfirmationFirstName() {
+      const firstNameElement = document.getElementById(
+        "er-confirmation-first-name"
+      );
+
+      if (!firstNameElement) {
+        return;
+      }
+
+      const urlParameters = new URLSearchParams(window.location.search);
+      const firstNameParameter = urlParameters.get("first_name");
+
+      const cleanFirstName = firstNameParameter
+        ? firstNameParameter.trim()
+        : "";
+
+      firstNameElement.textContent = cleanFirstName || "there";
+    }
+
+    if (document.readyState === "loading") {
+      document.addEventListener(
+        "DOMContentLoaded",
+        updateConfirmationFirstName
+      );
+    } else {
+      updateConfirmationFirstName();
+    }
+  })();
+</script>
+</body>
+</html>
+

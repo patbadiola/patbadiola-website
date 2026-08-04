@@ -1,0 +1,3894 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Prepare for and schedule an Elevate Academy coaching discovery call.">
+  <title>Elevate Discovery Call Booking | Step 03</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+  <style>
+    html {
+      min-width: 320px;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      min-width: 320px;
+      margin: 0;
+      background: #ffffff;
+    }
+
+    .funnel-next-button {
+      position: fixed;
+      z-index: 99999;
+      right: 24px;
+      bottom: 24px;
+      display: inline-flex;
+      min-height: 54px;
+      padding: 0 20px 0 10px;
+      align-items: center;
+      gap: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      border-radius: 999px;
+      background: linear-gradient(135deg, #676cc2, #4b4f9e);
+      box-shadow: 0 15px 36px rgba(75, 79, 158, 0.3);
+      color: #ffffff;
+      font: 700 0.88rem/1 Inter, Arial, sans-serif;
+      text-decoration: none;
+      transition: transform 180ms ease, box-shadow 180ms ease;
+    }
+
+    .funnel-next-button:hover {
+      color: #ffffff;
+      box-shadow: 0 20px 44px rgba(75, 79, 158, 0.4);
+      transform: translateY(-3px);
+    }
+
+    .funnel-next-button:focus-visible {
+      outline: 3px solid #e87862;
+      outline-offset: 4px;
+    }
+
+    .funnel-next-button__icon {
+      display: grid;
+      width: 34px;
+      height: 34px;
+      place-items: center;
+      border-radius: 50%;
+      background: #fbeae6;
+      color: #4b4f9e;
+      font-size: 1.1rem;
+    }
+
+    @media (max-width: 640px) {
+      .funnel-next-button {
+        right: 16px;
+        bottom: 16px;
+        min-height: 50px;
+        padding-right: 16px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      .funnel-next-button {
+        transition: none;
+      }
+    }
+  </style>
+</head>
+<body>
+<!-- Section 1: Discovery Call Booking Hero Start -->
+<section
+  class="ea-discovery-call-booking-hero"
+  id="ea-discovery-call-booking-hero"
+  aria-labelledby="ea-discovery-call-booking-hero-heading"
+>
+  <style>
+    .ea-discovery-call-booking-hero {
+      position: relative;
+      width: 100%;
+      max-width: 100%;
+      overflow-x: hidden;
+      background: #faf6f0;
+      color: #4c4f61;
+      font-family: Inter, Arial, sans-serif;
+    }
+
+    .ea-discovery-call-booking-hero * {
+      box-sizing: border-box;
+    }
+
+    .ea-discovery-call-booking-hero a {
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .ea-discovery-call-booking-hero .ea-discovery-call-booking-hero__header {
+      position: relative;
+      z-index: 10;
+      border-bottom: 1px solid #dddff0;
+      background: rgba(255, 255, 255, 0.95);
+    }
+
+    .ea-discovery-call-booking-hero .ea-discovery-call-booking-hero__header-container {
+      display: flex;
+      width: min(100% - 64px, 1180px);
+      min-height: 74px;
+      margin-inline: auto;
+      align-items: center;
+      justify-content: space-between;
+      gap: 26px;
+    }
+
+    .ea-discovery-call-booking-hero .ea-discovery-call-booking-hero__brand {
+      display: inline-flex;
+      min-width: 0;
+      align-items: center;
+      gap: 11px;
+      color: #292d67;
+      font-family: Sora, Arial, sans-serif;
+      font-size: 19px;
+      font-weight: 800;
+      line-height: 1.2;
+      letter-spacing: -0.025em;
+      white-space: nowrap;
+    }
+
+    .ea-discovery-call-booking-hero .ea-discovery-call-booking-hero__brand-icon {
+      display: grid;
+      width: 39px;
+      height: 39px;
+      flex: 0 0 39px;
+      place-items: center;
+      border: 1px solid #ced0eb;
+      border-radius: 12px;
+      background: #ebecfa;
+      color: #4b4f9e;
+    }
+
+    .ea-discovery-call-booking-hero .ea-discovery-call-booking-hero__brand-icon svg {
+      width: 26px;
+      height: 26px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 1.65;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .ea-discovery-call-booking-hero .ea-discovery-call-booking-hero__navigation {
+      display: flex;
+      min-width: 0;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 7px;
+    }
+
+    .ea-discovery-call-booking-hero .ea-discovery-call-booking-hero__nav-link {
+      display: inline-flex;
+      min-height: 44px;
+      align-items: center;
+      justify-content: center;
+      padding: 9px 13px;
+      border-radius: 10px;
+      color: #4c4f61;
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 1.35;
+      text-align: center;
+      text-decoration: none;
+      transition:
+        background-color 170ms ease,
+        color 170ms ease,
+        transform 170ms ease;
+    }
+
+    .ea-discovery-call-booking-hero .ea-discovery-call-booking-hero__nav-link:hover {
+      background: #ebecfa;
+      color: #292d67;
+    }
+
+    .ea-discovery-call-booking-hero .ea-discovery-call-booking-hero__nav-link:active {
+      transform: translateY(1px);
+    }
+
+    .ea-discovery-call-booking-hero .ea-discovery-call-booking-hero__nav-link:focus-visible {
+      outline: 3px solid #676cc2;
+      outline-offset: 3px;
+    }
+
+    .ea-discovery-call-booking-hero .ea-discovery-call-booking-hero__nav-button {
+      display: inline-flex;
+      min-height: 44px;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 18px;
+      border: 1px solid #bc5544;
+      border-radius: 12px;
+      background: #e87862;
+      color: #ffffff;
+      font-family: Sora, Arial, sans-serif;
+      font-size: 14px;
+      font-weight: 800;
+      line-height: 1.35;
+      text-align: center;
+      text-decoration: none;
+      box-shadow: 0 8px 18px rgba(188, 85, 68, 0.17);
+      transition:
+        background-color 170ms ease,
+        border-color 170ms ease,
+        box-shadow 170ms ease,
+        transform 170ms ease;
+    }
+
+    .ea-discovery-call-booking-hero .ea-discovery-call-booking-hero__nav-button:hover {
+      border-color: #9d4537;
+      background: #bc5544;
+      box-shadow: 0 11px 23px rgba(188, 85, 68, 0.23);
+      transform: translateY(-1px);
+    }
+
+    .ea-discovery-call-booking-hero .ea-discovery-call-booking-hero__nav-button:active {
+      transform: translateY(1px);
+    }
+
+    .ea-discovery-call-booking-hero .ea-discovery-call-booking-hero__nav-button:focus-visible {
+      outline: 3px solid #4b4f9e;
+      outline-offset: 3px;
+    }
+
+    .ea-discovery-call-booking-hero .ea-discovery-call-booking-hero__body {
+      position: relative;
+      isolation: isolate;
+      padding: 78px 0 84px;
+    }
+
+    .ea-discovery-call-booking-hero .ea-discovery-call-booking-hero__body::before {
+      position: absolute;
+      z-index: -2;
+      top: 70px;
+      left: -112px;
+      width: 280px;
+      height: 280px;
+      border: 23px solid rgba(235, 236, 250, 0.78);
+      border-radius: 50%;
+      content: "";
+    }
+
+    .ea-discovery-call-booking-hero .ea-discovery-call-booking-hero__body::after {
+      position: absolute;
+      z-index: -2;
+      right: -108px;
+      bottom: -145px;
+      width: 335px;
+      height: 335px;
+      border-radius: 50%;
+      background: rgba(251, 234, 230, 0.78);
+      content: "";
+    }
+
+    .ea-discovery-call-booking-hero .ea-discovery-call-booking-hero__pattern {
+      position: absolute;
+      z-index: -1;
+      top: 48px;
+      right: 4%;
+      width: 150px;
+      height: 150px;
+      opacity: 0.34;
+      background-image: radial-gradient(
+        circle,
+        rgba(75, 79, 158, 0.3) 1.3px,
+        transparent 1.5px
+      );
+      background-size: 16px 16px;
+      pointer-events: none;
+    }
+
+    .ea-discovery-call-booking-hero .ea-discovery-call-booking-hero__container {
+      display: grid;
+      width: min(100% - 64px, 1180px);
+      margin-inline: auto;
+      grid-template-columns: minmax(0, 1.16fr) minmax(390px, 0.84fr);
+      gap: clamp(48px, 7vw, 88px);
+      align-items: center;
+    }
+
+    .ea-discovery-call-booking-hero .ea-discovery-call-booking-hero__content {
+      min-width: 0;
+    }
+
+    .ea-discovery-call-booking-hero .ea-discovery-call-booking-hero__eyebrow {
+      display: inline-flex;
+      margin: 0 0 17px;
+      align-items: center;
+      gap: 9px;
+      color: #bc5544;
+      font-family: Sora, Arial, sans-serif;
+      font-size: 13px;
+      font-weight: 800;
+      line-height: 1.4;
+      letter-spacing: 0.12em;
+    }
+
+    .ea-discovery-call-booking-hero .ea-discovery-call-booking-hero__eyebrow::before {
+      width: 28px;
+      height: 2px;
+      border-radius: 999px;
+      background: #e87862;
+      content: "";
+    }
+
+    .ea-discovery-call-booking-hero .ea-discovery-call-booking-hero__heading {
+      max-width: 730px;
+      margin: 0;
+      color: #292d67;
+      font-family: Sora, Arial, sans-serif;
+      font-size: clamp(40px, 5.1vw, 63px);
+      font-weight: 800;
+      line-height: 1.07;
+      letter-spacing: -0.045em;
+      text-wrap: balance;
+    }
+
+    .ea-discovery-call-booking-hero .ea-discovery-call-booking-hero__description {
+      max-width: 700px;
+      margin: 23px 0 0;
+      color: #4c4f61;
+      font-size: 17px;
+      line-height: 1.74;
+    }
+
+    .ea-discovery-call-booking-hero .ea-discovery-call-booking-hero__description + .ea-discovery-call-booking-hero__description {
+      margin-top: 11px;
+    }
+
+    .ea-discovery-call-booking-hero .ea-discovery-call-booking-hero__expectation {
+      display: flex;
+      max-width: 700px;
+      margin: 21px 0 0;
+      padding: 15px 17px;
+      align-items: flex-start;
+      gap: 11px;
+      border: 1px solid #f0c8c0;
+      border-radius: 14px;
+      background: rgba(251, 234, 230, 0.88);
+      color: #654c51;
+      font-size: 14px;
+      font-weight: 650;
+      line-height: 1.62;
+    }
+
+    .ea-discovery-call-booking-hero .ea-discovery-call-booking-hero__expectation-icon {
+      display: grid;
+      width: 26px;
+      height: 26px;
+      flex: 0 0 26px;
+      margin-top: 1px;
+      place-items: center;
+      border-radius: 9px;
+      background: #ffffff;
+      color: #bc5544;
+    }
+
+    .ea-discovery-call-booking-hero .ea-discovery-call-booking-hero__expectation-icon svg {
+      width: 16px;
+      height: 16px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .ea-discovery-call-booking-hero .ea-discovery-call-booking-hero__benefits {
+      display: grid;
+      gap: 12px;
+      margin: 25px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .ea-discovery-call-booking-hero .ea-discovery-call-booking-hero__benefit {
+      display: flex;
+      align-items: flex-start;
+      gap: 11px;
+      color: #4c4f61;
+      font-size: 15px;
+      font-weight: 650;
+      line-height: 1.55;
+    }
+
+    .ea-discovery-call-booking-hero .ea-discovery-call-booking-hero__benefit-icon {
+      display: grid;
+      width: 25px;
+      height: 25px;
+      flex: 0 0 25px;
+      margin-top: 1px;
+      place-items: center;
+      border: 1px solid #d1d3eb;
+      border-radius: 8px;
+      background: #ebecfa;
+      color: #4b4f9e;
+    }
+
+    .ea-discovery-call-booking-hero .ea-discovery-call-booking-hero__benefit-icon svg {
+      width: 15px;
+      height: 15px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .ea-discovery-call-booking-hero .ea-discovery-call-booking-hero__actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 29px;
+    }
+
+    .ea-discovery-call-booking-hero .ea-discovery-call-booking-hero__primary-cta {
+      display: inline-flex;
+      min-height: 50px;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      padding: 13px 22px;
+      border: 1px solid #bc5544;
+      border-radius: 13px;
+      background: #e87862;
+      color: #ffffff;
+      font-family: Sora, Arial, sans-serif;
+      font-size: 15px;
+      font-weight: 800;
+      line-height: 1.4;
+      text-align: center;
+      text-decoration: none;
+      box-shadow: 0 11px 24px rgba(188, 85, 68, 0.19);
+      transition:
+        background-color 180ms ease,
+        border-color 180ms ease,
+        box-shadow 180ms ease,
+        transform 180ms ease;
+    }
+
+    .ea-discovery-call-booking-hero .ea-discovery-call-booking-hero__primary-cta:hover {
+      border-color: #9d4537;
+      background: #bc5544;
+      box-shadow: 0 14px 29px rgba(188, 85, 68, 0.25);
+      transform: translateY(-2px);
+    }
+
+    .ea-discovery-call-booking-hero .ea-discovery-call-booking-hero__primary-cta:active {
+      transform: translateY(1px);
+    }
+
+    .ea-discovery-call-booking-hero .ea-discovery-call-booking-hero__primary-cta:focus-visible {
+      outline: 3px solid #4b4f9e;
+      outline-offset: 4px;
+    }
+
+    .ea-discovery-call-booking-hero .ea-discovery-call-booking-hero__secondary-cta {
+      display: inline-flex;
+      min-height: 50px;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 13px 20px;
+      border: 1px solid #aaadd8;
+      border-radius: 13px;
+      background: #ffffff;
+      color: #4b4f9e;
+      font-family: Sora, Arial, sans-serif;
+      font-size: 14px;
+      font-weight: 800;
+      line-height: 1.4;
+      text-align: center;
+      text-decoration: none;
+      transition:
+        background-color 180ms ease,
+        border-color 180ms ease,
+        color 180ms ease,
+        transform 180ms ease;
+    }
+
+    .ea-discovery-call-booking-hero .ea-discovery-call-booking-hero__secondary-cta:hover {
+      border-color: #676cc2;
+      background: #ebecfa;
+      color: #292d67;
+      transform: translateY(-2px);
+    }
+
+    .ea-discovery-call-booking-hero .ea-discovery-call-booking-hero__secondary-cta:active {
+      transform: translateY(1px);
+    }
+
+    .ea-discovery-call-booking-hero .ea-discovery-call-booking-hero__secondary-cta:focus-visible {
+      outline: 3px solid #e87862;
+      outline-offset: 4px;
+    }
+
+    .ea-discovery-call-booking-hero .ea-discovery-call-booking-hero__primary-cta svg {
+      width: 18px;
+      height: 18px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .ea-discovery-call-booking-hero .ea-discovery-call-booking-hero__secondary-cta svg {
+      width: 18px;
+      height: 18px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .ea-discovery-call-booking-hero .ea-discovery-call-booking-hero__reassurance {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 18px;
+      margin: 20px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .ea-discovery-call-booking-hero .ea-discovery-call-booking-hero__reassurance-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      color: #777a8a;
+      font-size: 12px;
+      font-weight: 700;
+      line-height: 1.5;
+    }
+
+    .ea-discovery-call-booking-hero .ea-discovery-call-booking-hero__reassurance-icon {
+      display: grid;
+      width: 20px;
+      height: 20px;
+      flex: 0 0 20px;
+      place-items: center;
+      border-radius: 50%;
+      background: #e6f3ec;
+      color: #3a8b68;
+    }
+
+    .ea-discovery-call-booking-hero .ea-discovery-call-booking-hero__reassurance-icon svg {
+      width: 12px;
+      height: 12px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 2.1;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .ea-discovery-call-booking-hero .ea-discovery-call-booking-hero__visual {
+      position: relative;
+      min-width: 0;
+    }
+
+    .ea-discovery-call-booking-hero .ea-discovery-call-booking-hero__visual::before {
+      position: absolute;
+      top: -28px;
+      right: -31px;
+      width: 110px;
+      height: 110px;
+      border: 17px solid rgba(232, 120, 98, 0.12);
+      border-radius: 50%;
+      content: "";
+      pointer-events: none;
+    }
+
+    .ea-discovery-call-booking-hero .ea-discovery-call-booking-hero__visual::after {
+      position: absolute;
+      bottom: -24px;
+      left: -24px;
+      width: 74px;
+      height: 74px;
+      border: 2px dashed rgba(75, 79, 158, 0.2);
+      border-radius: 50%;
+      content: "";
+      pointer-events: none;
+    }
+
+    .ea-discovery-call-booking-hero .ea-discovery-call-booking-hero__dashboard {
+      position: relative;
+      z-index: 1;
+      min-width: 0;
+      padding: clamp(24px, 3.3vw, 35px);
+      border: 1px solid #dddff0;
+      border-radius: 26px;
+      background: #ffffff;
+      box-shadow: 0 24px 55px rgba(41, 45, 103, 0.12);
+    }
+
+    .ea-discovery-call-booking-hero .ea-discovery-call-booking-hero__dashboard-header {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 18px;
+      padding-bottom: 21px;
+      border-bottom: 1px solid #e8e9f3;
+    }
+
+    .ea-discovery-call-booking-hero .ea-discovery-call-booking-hero__dashboard-brand {
+      margin: 0;
+      color: #676cc2;
+      font-family: Sora, Arial, sans-serif;
+      font-size: 11px;
+      font-weight: 800;
+      line-height: 1.4;
+      letter-spacing: 0.08em;
+    }
+
+    .ea-discovery-call-booking-hero .ea-discovery-call-booking-hero__dashboard-title {
+      margin: 5px 0 0;
+      color: #292d67;
+      font-family: Sora, Arial, sans-serif;
+      font-size: 23px;
+      font-weight: 800;
+      line-height: 1.3;
+      letter-spacing: -0.025em;
+    }
+
+    .ea-discovery-call-booking-hero .ea-discovery-call-booking-hero__status {
+      display: inline-flex;
+      flex: 0 0 auto;
+      align-items: center;
+      gap: 7px;
+      padding: 7px 10px;
+      border: 1px solid #f0c8c0;
+      border-radius: 999px;
+      background: #fbeae6;
+      color: #a14839;
+      font-size: 10px;
+      font-weight: 800;
+      line-height: 1.4;
+    }
+
+    .ea-discovery-call-booking-hero .ea-discovery-call-booking-hero__status::before {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #e87862;
+      content: "";
+    }
+
+    .ea-discovery-call-booking-hero .ea-discovery-call-booking-hero__dashboard-label {
+      margin: 20px 0 0;
+      color: #777a8a;
+      font-family: Sora, Arial, sans-serif;
+      font-size: 11px;
+      font-weight: 800;
+      line-height: 1.4;
+      letter-spacing: 0.08em;
+    }
+
+    .ea-discovery-call-booking-hero .ea-discovery-call-booking-hero__progress {
+      position: relative;
+      display: grid;
+      margin-top: 16px;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .ea-discovery-call-booking-hero .ea-discovery-call-booking-hero__progress::before {
+      position: absolute;
+      top: 18px;
+      right: 16.5%;
+      left: 16.5%;
+      height: 2px;
+      background: #dddff0;
+      content: "";
+    }
+
+    .ea-discovery-call-booking-hero .ea-discovery-call-booking-hero__progress::after {
+      position: absolute;
+      top: 18px;
+      left: 16.5%;
+      width: 33.5%;
+      height: 2px;
+      background: #e87862;
+      content: "";
+    }
+
+    .ea-discovery-call-booking-hero .ea-discovery-call-booking-hero__stage {
+      position: relative;
+      z-index: 1;
+      min-width: 0;
+      text-align: center;
+    }
+
+    .ea-discovery-call-booking-hero .ea-discovery-call-booking-hero__stage-marker {
+      display: grid;
+      width: 36px;
+      height: 36px;
+      margin: 0 auto 10px;
+      place-items: center;
+      border: 2px solid #d2d4e9;
+      border-radius: 50%;
+      background: #ffffff;
+      color: #777a8a;
+      font-family: Sora, Arial, sans-serif;
+      font-size: 11px;
+      font-weight: 800;
+    }
+
+    .ea-discovery-call-booking-hero .ea-discovery-call-booking-hero__stage--complete .ea-discovery-call-booking-hero__stage-marker {
+      border-color: #3a8b68;
+      background: #3a8b68;
+      color: #ffffff;
+    }
+
+    .ea-discovery-call-booking-hero .ea-discovery-call-booking-hero__stage--current .ea-discovery-call-booking-hero__stage-marker {
+      border-color: #e87862;
+      background: #fbeae6;
+      color: #bc5544;
+    }
+
+    .ea-discovery-call-booking-hero .ea-discovery-call-booking-hero__stage-marker svg {
+      width: 18px;
+      height: 18px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 2.1;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .ea-discovery-call-booking-hero .ea-discovery-call-booking-hero__stage-name {
+      margin: 0;
+      color: #6c6f81;
+      font-size: 11px;
+      font-weight: 700;
+      line-height: 1.45;
+    }
+
+    .ea-discovery-call-booking-hero .ea-discovery-call-booking-hero__stage--complete .ea-discovery-call-booking-hero__stage-name {
+      color: #347a5e;
+    }
+
+    .ea-discovery-call-booking-hero .ea-discovery-call-booking-hero__stage--current .ea-discovery-call-booking-hero__stage-name {
+      color: #a14839;
+    }
+
+    .ea-discovery-call-booking-hero .ea-discovery-call-booking-hero__preparation-card {
+      margin-top: 25px;
+      padding: 18px;
+      border: 1px solid #dddff0;
+      border-radius: 16px;
+      background: #f7f7fb;
+    }
+
+    .ea-discovery-call-booking-hero .ea-discovery-call-booking-hero__preparation-title {
+      margin: 0;
+      color: #292d67;
+      font-family: Sora, Arial, sans-serif;
+      font-size: 14px;
+      font-weight: 800;
+      line-height: 1.4;
+    }
+
+    .ea-discovery-call-booking-hero .ea-discovery-call-booking-hero__topics {
+      display: grid;
+      gap: 8px;
+      margin: 14px 0 0;
+    }
+
+    .ea-discovery-call-booking-hero .ea-discovery-call-booking-hero__topic {
+      display: flex;
+      min-width: 0;
+      min-height: 39px;
+      padding: 8px 10px;
+      align-items: center;
+      gap: 9px;
+      border: 1px solid #e5e6f2;
+      border-radius: 10px;
+      background: #ffffff;
+      color: #5d6072;
+      font-size: 11px;
+      font-weight: 700;
+      line-height: 1.45;
+    }
+
+    .ea-discovery-call-booking-hero .ea-discovery-call-booking-hero__topic-icon {
+      display: grid;
+      width: 24px;
+      height: 24px;
+      flex: 0 0 24px;
+      place-items: center;
+      border-radius: 7px;
+      background: #ebecfa;
+      color: #4b4f9e;
+    }
+
+    .ea-discovery-call-booking-hero .ea-discovery-call-booking-hero__topic-icon svg {
+      width: 14px;
+      height: 14px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 1.9;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .ea-discovery-call-booking-hero .ea-discovery-call-booking-hero__dashboard-note {
+      display: flex;
+      margin: 17px 0 0;
+      padding: 13px;
+      align-items: flex-start;
+      gap: 9px;
+      border: 1px solid #f0c8c0;
+      border-radius: 12px;
+      background: #fbeae6;
+      color: #654c51;
+      font-size: 11px;
+      line-height: 1.6;
+    }
+
+    .ea-discovery-call-booking-hero .ea-discovery-call-booking-hero__dashboard-note svg {
+      width: 19px;
+      height: 19px;
+      flex: 0 0 19px;
+      fill: none;
+      stroke: #bc5544;
+      stroke-width: 1.9;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    @media (max-width: 1020px) {
+      .ea-discovery-call-booking-hero .ea-discovery-call-booking-hero__header-container {
+        gap: 18px;
+      }
+
+      .ea-discovery-call-booking-hero .ea-discovery-call-booking-hero__navigation {
+        gap: 3px;
+      }
+
+      .ea-discovery-call-booking-hero .ea-discovery-call-booking-hero__nav-link {
+        padding-inline: 9px;
+      }
+
+      .ea-discovery-call-booking-hero .ea-discovery-call-booking-hero__container {
+        grid-template-columns: minmax(0, 1.08fr) minmax(365px, 0.92fr);
+        gap: 40px;
+      }
+    }
+
+    @media (max-width: 880px) {
+      .ea-discovery-call-booking-hero .ea-discovery-call-booking-hero__header-container {
+        width: min(100% - 40px, 1180px);
+      }
+
+      .ea-discovery-call-booking-hero .ea-discovery-call-booking-hero__nav-link {
+        display: none;
+      }
+
+      .ea-discovery-call-booking-hero .ea-discovery-call-booking-hero__container {
+        width: min(100% - 40px, 760px);
+        grid-template-columns: minmax(0, 1fr);
+        gap: 50px;
+      }
+
+      .ea-discovery-call-booking-hero .ea-discovery-call-booking-hero__visual {
+        width: min(100%, 590px);
+        margin-inline: auto;
+      }
+    }
+
+    @media (max-width: 599px) {
+      .ea-discovery-call-booking-hero .ea-discovery-call-booking-hero__header-container {
+        width: min(100% - 32px, 1180px);
+        min-height: 68px;
+        gap: 12px;
+      }
+
+      .ea-discovery-call-booking-hero .ea-discovery-call-booking-hero__brand {
+        gap: 8px;
+        font-size: 16px;
+      }
+
+      .ea-discovery-call-booking-hero .ea-discovery-call-booking-hero__brand-icon {
+        width: 34px;
+        height: 34px;
+        flex-basis: 34px;
+        border-radius: 10px;
+      }
+
+      .ea-discovery-call-booking-hero .ea-discovery-call-booking-hero__nav-button {
+        padding-inline: 12px;
+        font-size: 12px;
+      }
+
+      .ea-discovery-call-booking-hero .ea-discovery-call-booking-hero__body {
+        padding: 58px 0 62px;
+      }
+
+      .ea-discovery-call-booking-hero .ea-discovery-call-booking-hero__container {
+        width: min(100% - 32px, 760px);
+        gap: 43px;
+      }
+
+      .ea-discovery-call-booking-hero .ea-discovery-call-booking-hero__heading {
+        font-size: clamp(35px, 11vw, 47px);
+      }
+
+      .ea-discovery-call-booking-hero .ea-discovery-call-booking-hero__description {
+        font-size: 16px;
+      }
+
+      .ea-discovery-call-booking-hero .ea-discovery-call-booking-hero__actions {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .ea-discovery-call-booking-hero .ea-discovery-call-booking-hero__primary-cta {
+        width: 100%;
+      }
+
+      .ea-discovery-call-booking-hero .ea-discovery-call-booking-hero__secondary-cta {
+        width: 100%;
+      }
+
+      .ea-discovery-call-booking-hero .ea-discovery-call-booking-hero__reassurance {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .ea-discovery-call-booking-hero .ea-discovery-call-booking-hero__dashboard {
+        padding: 22px 17px;
+        border-radius: 21px;
+      }
+
+      .ea-discovery-call-booking-hero .ea-discovery-call-booking-hero__dashboard-header {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .ea-discovery-call-booking-hero .ea-discovery-call-booking-hero__progress {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 10px;
+      }
+
+      .ea-discovery-call-booking-hero .ea-discovery-call-booking-hero__progress::before {
+        top: 18px;
+        bottom: 18px;
+        left: 17px;
+        width: 2px;
+        height: auto;
+      }
+
+      .ea-discovery-call-booking-hero .ea-discovery-call-booking-hero__progress::after {
+        top: 18px;
+        left: 17px;
+        width: 2px;
+        height: 57px;
+      }
+
+      .ea-discovery-call-booking-hero .ea-discovery-call-booking-hero__stage {
+        display: grid;
+        min-height: 47px;
+        grid-template-columns: 36px minmax(0, 1fr);
+        gap: 12px;
+        align-items: center;
+        text-align: left;
+      }
+
+      .ea-discovery-call-booking-hero .ea-discovery-call-booking-hero__stage-marker {
+        margin: 0;
+      }
+    }
+
+    @media (max-width: 374px) {
+      .ea-discovery-call-booking-hero .ea-discovery-call-booking-hero__header-container {
+        width: min(100% - 24px, 1180px);
+      }
+
+      .ea-discovery-call-booking-hero .ea-discovery-call-booking-hero__brand {
+        max-width: 145px;
+        white-space: normal;
+      }
+
+      .ea-discovery-call-booking-hero .ea-discovery-call-booking-hero__nav-button {
+        max-width: 112px;
+        padding-inline: 9px;
+      }
+
+      .ea-discovery-call-booking-hero .ea-discovery-call-booking-hero__container {
+        width: min(100% - 24px, 760px);
+      }
+
+      .ea-discovery-call-booking-hero .ea-discovery-call-booking-hero__expectation {
+        padding: 13px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .ea-discovery-call-booking-hero .ea-discovery-call-booking-hero__nav-link {
+        transition: none;
+      }
+
+      .ea-discovery-call-booking-hero .ea-discovery-call-booking-hero__nav-button {
+        transition: none;
+      }
+
+      .ea-discovery-call-booking-hero .ea-discovery-call-booking-hero__primary-cta {
+        transition: none;
+      }
+
+      .ea-discovery-call-booking-hero .ea-discovery-call-booking-hero__secondary-cta {
+        transition: none;
+      }
+    }
+  </style>
+
+  <header class="ea-discovery-call-booking-hero__header">
+    <div class="ea-discovery-call-booking-hero__header-container">
+      <div
+        class="ea-discovery-call-booking-hero__brand"
+        aria-label="Elevate Academy"
+      >
+        <span
+          class="ea-discovery-call-booking-hero__brand-icon"
+          aria-hidden="true"
+        >
+          <svg viewBox="0 0 32 32" focusable="false">
+            <rect x="3" y="5" width="18" height="18" rx="3"></rect>
+            <path d="M7 3v5"></path>
+            <path d="M17 3v5"></path>
+            <path d="M3 11h18"></path>
+            <path
+              d="M18 15h10a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-4l-4 3v-3h-2"
+            ></path>
+            <path d="m24 17 3 2-3 2"></path>
+          </svg>
+        </span>
+        <span>Elevate Academy</span>
+      </div>
+
+      <nav
+        class="ea-discovery-call-booking-hero__navigation"
+        aria-label="Discovery Call booking navigation"
+      >
+        <!-- Scroll to: EA | FUN | Coaching Application Step 03 Section 1 call overview -->
+        <a
+          class="ea-discovery-call-booking-hero__nav-link"
+          href="#ea-discovery-call-overview"
+        >
+          Call Overview
+        </a>
+
+        <!-- Scroll to: EA | FUN | Coaching Application Step 03 Section 2 -->
+        <a
+          class="ea-discovery-call-booking-hero__nav-link"
+          href="#ea-discovery-call-expectations"
+        >
+          What to Expect
+        </a>
+
+        <!-- Scroll to: EA | FUN | Coaching Application Step 03 Section 3 calendar area -->
+        <a
+          class="ea-discovery-call-booking-hero__nav-button"
+          href="#ea-discovery-call-calendar"
+        >
+          Book Your Call
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <div
+    class="ea-discovery-call-booking-hero__body"
+    id="ea-discovery-call-overview"
+  >
+    <span
+      class="ea-discovery-call-booking-hero__pattern"
+      aria-hidden="true"
+    ></span>
+
+    <div class="ea-discovery-call-booking-hero__container">
+      <div class="ea-discovery-call-booking-hero__content">
+        <p class="ea-discovery-call-booking-hero__eyebrow">
+          DISCOVERY CALL BOOKING
+        </p>
+
+        <h1
+          class="ea-discovery-call-booking-hero__heading"
+          id="ea-discovery-call-booking-hero-heading"
+        >
+          Choose a Time to Discuss Your Coaching Application
+        </h1>
+
+        <p class="ea-discovery-call-booking-hero__description">
+          Book an available discovery call to discuss your business
+          situation, goals, challenges, preferred program, and possible next
+          step.
+        </p>
+
+        <p class="ea-discovery-call-booking-hero__description">
+          The conversation is intended to clarify your needs and determine
+          whether One-on-One Coaching, Group Coaching, or another Elevate
+          Academy option may be suitable.
+        </p>
+
+        <p class="ea-discovery-call-booking-hero__expectation">
+          <span
+            class="ea-discovery-call-booking-hero__expectation-icon"
+            aria-hidden="true"
+          >
+            <svg viewBox="0 0 24 24" focusable="false">
+              <circle cx="12" cy="12" r="9"></circle>
+              <path d="M12 11v5"></path>
+              <path d="M12 8h.01"></path>
+            </svg>
+          </span>
+          <span>
+            Booking a discovery call does not guarantee coaching acceptance,
+            enrollment, availability, or a specific recommendation.
+          </span>
+        </p>
+
+        <ul
+          class="ea-discovery-call-booking-hero__benefits"
+          aria-label="Discovery Call benefits"
+        >
+          <li class="ea-discovery-call-booking-hero__benefit">
+            <span
+              class="ea-discovery-call-booking-hero__benefit-icon"
+              aria-hidden="true"
+            >
+              <svg viewBox="0 0 20 20" focusable="false">
+                <path d="m4 10 3.5 3.5L16 5"></path>
+              </svg>
+            </span>
+            <span>Discuss your current business priorities</span>
+          </li>
+
+          <li class="ea-discovery-call-booking-hero__benefit">
+            <span
+              class="ea-discovery-call-booking-hero__benefit-icon"
+              aria-hidden="true"
+            >
+              <svg viewBox="0 0 20 20" focusable="false">
+                <path d="m4 10 3.5 3.5L16 5"></path>
+              </svg>
+            </span>
+            <span>Clarify the type of support you need</span>
+          </li>
+
+          <li class="ea-discovery-call-booking-hero__benefit">
+            <span
+              class="ea-discovery-call-booking-hero__benefit-icon"
+              aria-hidden="true"
+            >
+              <svg viewBox="0 0 20 20" focusable="false">
+                <path d="m4 10 3.5 3.5L16 5"></path>
+              </svg>
+            </span>
+            <span>Ask questions about the coaching process</span>
+          </li>
+        </ul>
+
+        <div class="ea-discovery-call-booking-hero__actions">
+          <a
+            class="ea-discovery-call-booking-hero__primary-cta"
+            href="#ea-discovery-call-calendar"
+          >
+            View Available Times
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path d="M5 12h14"></path>
+              <path d="m14 7 5 5-5 5"></path>
+            </svg>
+          </a>
+
+          <a
+            class="ea-discovery-call-booking-hero__secondary-cta"
+            href="#ea-discovery-call-expectations"
+          >
+            What to Expect During the Call
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path d="M7 17 17 7"></path>
+              <path d="M8 7h9v9"></path>
+            </svg>
+          </a>
+        </div>
+
+        <ul
+          class="ea-discovery-call-booking-hero__reassurance"
+          aria-label="Booking reminders"
+        >
+          <li class="ea-discovery-call-booking-hero__reassurance-item">
+            <span
+              class="ea-discovery-call-booking-hero__reassurance-icon"
+              aria-hidden="true"
+            >
+              <svg viewBox="0 0 20 20" focusable="false">
+                <path d="m4 10 3.5 3.5L16 5"></path>
+              </svg>
+            </span>
+            <span>Choose a time you can attend</span>
+          </li>
+
+          <li class="ea-discovery-call-booking-hero__reassurance-item">
+            <span
+              class="ea-discovery-call-booking-hero__reassurance-icon"
+              aria-hidden="true"
+            >
+              <svg viewBox="0 0 20 20" focusable="false">
+                <path d="m4 10 3.5 3.5L16 5"></path>
+              </svg>
+            </span>
+            <span>Prepare your main questions</span>
+          </li>
+
+          <li class="ea-discovery-call-booking-hero__reassurance-item">
+            <span
+              class="ea-discovery-call-booking-hero__reassurance-icon"
+              aria-hidden="true"
+            >
+              <svg viewBox="0 0 20 20" focusable="false">
+                <path d="m4 10 3.5 3.5L16 5"></path>
+              </svg>
+            </span>
+            <span>Reschedule when necessary</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="ea-discovery-call-booking-hero__visual">
+        <article
+          class="ea-discovery-call-booking-hero__dashboard"
+          aria-label="Discovery Call booking preparation dashboard"
+        >
+          <header class="ea-discovery-call-booking-hero__dashboard-header">
+            <div>
+              <p class="ea-discovery-call-booking-hero__dashboard-brand">
+                ELEVATE ACADEMY
+              </p>
+
+              <h2 class="ea-discovery-call-booking-hero__dashboard-title">
+                Discovery Call
+              </h2>
+            </div>
+
+            <span class="ea-discovery-call-booking-hero__status">
+              Not Yet Scheduled
+            </span>
+          </header>
+
+          <p class="ea-discovery-call-booking-hero__dashboard-label">
+            BOOKING STATUS
+          </p>
+
+          <div
+            class="ea-discovery-call-booking-hero__progress"
+            aria-label="Discovery Call booking stages"
+          >
+            <div class="ea-discovery-call-booking-hero__stage ea-discovery-call-booking-hero__stage--complete">
+              <span class="ea-discovery-call-booking-hero__stage-marker">
+                <svg viewBox="0 0 20 20" aria-hidden="true" focusable="false">
+                  <path d="m4 10 3.5 3.5L16 5"></path>
+                </svg>
+              </span>
+              <p class="ea-discovery-call-booking-hero__stage-name">
+                Application Submitted
+              </p>
+            </div>
+
+            <div class="ea-discovery-call-booking-hero__stage ea-discovery-call-booking-hero__stage--current">
+              <span class="ea-discovery-call-booking-hero__stage-marker">
+                2
+              </span>
+              <p class="ea-discovery-call-booking-hero__stage-name">
+                Discovery Call Booked
+              </p>
+            </div>
+
+            <div class="ea-discovery-call-booking-hero__stage">
+              <span class="ea-discovery-call-booking-hero__stage-marker">
+                3
+              </span>
+              <p class="ea-discovery-call-booking-hero__stage-name">
+                Coaching Decision
+              </p>
+            </div>
+          </div>
+
+          <div class="ea-discovery-call-booking-hero__preparation-card">
+            <h3 class="ea-discovery-call-booking-hero__preparation-title">
+              Call Preparation
+            </h3>
+
+            <div class="ea-discovery-call-booking-hero__topics">
+              <div class="ea-discovery-call-booking-hero__topic">
+                <span
+                  class="ea-discovery-call-booking-hero__topic-icon"
+                  aria-hidden="true"
+                >
+                  <svg viewBox="0 0 20 20" focusable="false">
+                    <path d="M3 17h14"></path>
+                    <path d="M5 17V8l5-4 5 4v9"></path>
+                  </svg>
+                </span>
+                <span>Your Current Situation</span>
+              </div>
+
+              <div class="ea-discovery-call-booking-hero__topic">
+                <span
+                  class="ea-discovery-call-booking-hero__topic-icon"
+                  aria-hidden="true"
+                >
+                  <svg viewBox="0 0 20 20" focusable="false">
+                    <path d="M10 3 3 17h14L10 3Z"></path>
+                    <path d="M10 8v4"></path>
+                  </svg>
+                </span>
+                <span>Your Main Challenge</span>
+              </div>
+
+              <div class="ea-discovery-call-booking-hero__topic">
+                <span
+                  class="ea-discovery-call-booking-hero__topic-icon"
+                  aria-hidden="true"
+                >
+                  <svg viewBox="0 0 20 20" focusable="false">
+                    <circle cx="10" cy="10" r="7"></circle>
+                    <circle cx="10" cy="10" r="3"></circle>
+                  </svg>
+                </span>
+                <span>Your Primary Goal</span>
+              </div>
+
+              <div class="ea-discovery-call-booking-hero__topic">
+                <span
+                  class="ea-discovery-call-booking-hero__topic-icon"
+                  aria-hidden="true"
+                >
+                  <svg viewBox="0 0 20 20" focusable="false">
+                    <rect x="3" y="3" width="14" height="14" rx="2"></rect>
+                    <path d="m6.5 10 2.2 2.2 4.8-4.8"></path>
+                  </svg>
+                </span>
+                <span>Your Preferred Program</span>
+              </div>
+
+              <div class="ea-discovery-call-booking-hero__topic">
+                <span
+                  class="ea-discovery-call-booking-hero__topic-icon"
+                  aria-hidden="true"
+                >
+                  <svg viewBox="0 0 20 20" focusable="false">
+                    <path
+                      d="M3 3h14v10H9l-4 3v-3H3Z"
+                    ></path>
+                    <path d="M8 7h5"></path>
+                    <path d="M8 10h3"></path>
+                  </svg>
+                </span>
+                <span>Your Questions</span>
+              </div>
+            </div>
+
+            <p class="ea-discovery-call-booking-hero__dashboard-note">
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <circle cx="12" cy="12" r="9"></circle>
+                <path d="M12 11v5"></path>
+                <path d="M12 8h.01"></path>
+              </svg>
+              <span>
+                Prepare these topics before selecting your appointment time.
+              </span>
+            </p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Section 1: Discovery Call Booking Hero End -->
+<!-- Section 2: What to Expect During the Call Start -->
+<section
+  class="ea-discovery-call-expectations"
+  id="ea-discovery-call-expectations"
+  aria-labelledby="ea-discovery-call-expectations-heading"
+>
+  <style>
+    .ea-discovery-call-expectations {
+      width: 100%;
+      max-width: 100%;
+      overflow-x: hidden;
+      padding: 82px 0;
+      background: #fdfbf8;
+      color: #4c4f61;
+      font-family: Inter, Arial, sans-serif;
+    }
+
+    .ea-discovery-call-expectations * {
+      box-sizing: border-box;
+    }
+
+    .ea-discovery-call-expectations a {
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .ea-discovery-call-expectations .ea-discovery-call-expectations__container {
+      width: min(100% - 64px, 1180px);
+      margin-inline: auto;
+    }
+
+    .ea-discovery-call-expectations .ea-discovery-call-expectations__introduction {
+      max-width: 830px;
+      margin: 0 auto 48px;
+      text-align: center;
+    }
+
+    .ea-discovery-call-expectations .ea-discovery-call-expectations__eyebrow {
+      display: inline-flex;
+      margin: 0 0 15px;
+      align-items: center;
+      gap: 9px;
+      color: #bc5544;
+      font-family: Sora, Arial, sans-serif;
+      font-size: 13px;
+      font-weight: 800;
+      line-height: 1.4;
+      letter-spacing: 0.12em;
+    }
+
+    .ea-discovery-call-expectations .ea-discovery-call-expectations__eyebrow::before {
+      width: 27px;
+      height: 2px;
+      border-radius: 999px;
+      background: #e87862;
+      content: "";
+    }
+
+    .ea-discovery-call-expectations .ea-discovery-call-expectations__heading {
+      margin: 0;
+      color: #292d67;
+      font-family: Sora, Arial, sans-serif;
+      font-size: clamp(35px, 4.5vw, 52px);
+      font-weight: 800;
+      line-height: 1.12;
+      letter-spacing: -0.04em;
+      text-wrap: balance;
+    }
+
+    .ea-discovery-call-expectations .ea-discovery-call-expectations__description {
+      max-width: 780px;
+      margin: 21px auto 0;
+      color: #4c4f61;
+      font-size: 17px;
+      line-height: 1.74;
+    }
+
+    .ea-discovery-call-expectations .ea-discovery-call-expectations__description + .ea-discovery-call-expectations__description {
+      margin-top: 10px;
+    }
+
+    .ea-discovery-call-expectations .ea-discovery-call-expectations__statement {
+      display: flex;
+      max-width: 760px;
+      margin: 24px auto 0;
+      padding: 15px 17px;
+      align-items: flex-start;
+      justify-content: center;
+      gap: 11px;
+      border: 1px solid #f0c8c0;
+      border-radius: 14px;
+      background: #fbeae6;
+      color: #654c51;
+      font-size: 14px;
+      font-weight: 650;
+      line-height: 1.62;
+      text-align: left;
+    }
+
+    .ea-discovery-call-expectations .ea-discovery-call-expectations__statement-icon {
+      display: grid;
+      width: 26px;
+      height: 26px;
+      flex: 0 0 26px;
+      margin-top: 1px;
+      place-items: center;
+      border-radius: 9px;
+      background: #ffffff;
+      color: #bc5544;
+    }
+
+    .ea-discovery-call-expectations .ea-discovery-call-expectations__statement-icon svg {
+      width: 16px;
+      height: 16px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .ea-discovery-call-expectations .ea-discovery-call-expectations__agenda {
+      display: grid;
+      margin: 0;
+      padding: 0;
+      grid-template-columns: repeat(6, minmax(0, 1fr));
+      gap: 22px;
+      list-style: none;
+    }
+
+    .ea-discovery-call-expectations .ea-discovery-call-expectations__agenda-item {
+      display: flex;
+      min-width: 0;
+      grid-column: span 2;
+    }
+
+    .ea-discovery-call-expectations .ea-discovery-call-expectations__agenda-item:nth-child(4) {
+      grid-column: 2 / span 2;
+    }
+
+    .ea-discovery-call-expectations .ea-discovery-call-expectations__agenda-item:nth-child(5) {
+      grid-column: 4 / span 2;
+    }
+
+    .ea-discovery-call-expectations .ea-discovery-call-expectations__card {
+      display: flex;
+      width: 100%;
+      min-width: 0;
+      padding: 27px;
+      flex-direction: column;
+      border: 1px solid #dddff0;
+      border-radius: 20px;
+      background: #ffffff;
+      box-shadow: 0 12px 30px rgba(41, 45, 103, 0.07);
+    }
+
+    .ea-discovery-call-expectations .ea-discovery-call-expectations__card-top {
+      display: flex;
+      margin-bottom: 21px;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+    }
+
+    .ea-discovery-call-expectations .ea-discovery-call-expectations__number {
+      display: inline-flex;
+      min-width: 49px;
+      min-height: 34px;
+      padding: 6px 12px;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid #f0c8c0;
+      border-radius: 999px;
+      background: #fbeae6;
+      color: #bc5544;
+      font-family: Sora, Arial, sans-serif;
+      font-size: 13px;
+      font-weight: 800;
+      line-height: 1;
+      letter-spacing: 0.08em;
+    }
+
+    .ea-discovery-call-expectations .ea-discovery-call-expectations__icon {
+      display: grid;
+      width: 50px;
+      height: 50px;
+      flex: 0 0 50px;
+      place-items: center;
+      border: 1px solid #d1d3eb;
+      border-radius: 15px;
+      background: #ebecfa;
+      color: #4b4f9e;
+    }
+
+    .ea-discovery-call-expectations .ea-discovery-call-expectations__icon svg {
+      width: 27px;
+      height: 27px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 1.7;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .ea-discovery-call-expectations .ea-discovery-call-expectations__card-title {
+      margin: 0;
+      color: #292d67;
+      font-family: Sora, Arial, sans-serif;
+      font-size: 19px;
+      font-weight: 800;
+      line-height: 1.35;
+      letter-spacing: -0.02em;
+    }
+
+    .ea-discovery-call-expectations .ea-discovery-call-expectations__card-description {
+      margin: 12px 0 20px;
+      color: #4c4f61;
+      font-size: 15px;
+      line-height: 1.7;
+    }
+
+    .ea-discovery-call-expectations .ea-discovery-call-expectations__prompt {
+      display: flex;
+      margin: auto 0 0;
+      padding: 14px;
+      align-items: flex-start;
+      gap: 10px;
+      border: 1px solid #e4e5f2;
+      border-radius: 13px;
+      background: #f7f7fb;
+      color: #4c4f61;
+      font-size: 13px;
+      line-height: 1.62;
+    }
+
+    .ea-discovery-call-expectations .ea-discovery-call-expectations__prompt-icon {
+      display: grid;
+      width: 21px;
+      height: 21px;
+      flex: 0 0 21px;
+      margin-top: 1px;
+      place-items: center;
+      border-radius: 7px;
+      background: #fbeae6;
+      color: #bc5544;
+    }
+
+    .ea-discovery-call-expectations .ea-discovery-call-expectations__prompt-icon svg {
+      width: 14px;
+      height: 14px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 1.9;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .ea-discovery-call-expectations .ea-discovery-call-expectations__prompt strong {
+      color: #292d67;
+      font-weight: 800;
+    }
+
+    .ea-discovery-call-expectations .ea-discovery-call-expectations__preparation {
+      display: grid;
+      margin-top: 48px;
+      padding: clamp(28px, 5vw, 44px);
+      grid-template-columns: minmax(230px, 0.72fr) minmax(0, 1.28fr);
+      gap: 38px;
+      align-items: center;
+      border: 1px solid #d1d3eb;
+      border-radius: 22px;
+      background: #ebecfa;
+    }
+
+    .ea-discovery-call-expectations .ea-discovery-call-expectations__panel-eyebrow {
+      display: inline-flex;
+      margin: 0 0 11px;
+      align-items: center;
+      gap: 8px;
+      color: #4b4f9e;
+      font-family: Sora, Arial, sans-serif;
+      font-size: 12px;
+      font-weight: 800;
+      line-height: 1.4;
+      letter-spacing: 0.12em;
+    }
+
+    .ea-discovery-call-expectations .ea-discovery-call-expectations__panel-eyebrow::before {
+      width: 22px;
+      height: 2px;
+      border-radius: 999px;
+      background: #676cc2;
+      content: "";
+    }
+
+    .ea-discovery-call-expectations .ea-discovery-call-expectations__panel-heading {
+      margin: 0;
+      color: #292d67;
+      font-family: Sora, Arial, sans-serif;
+      font-size: clamp(24px, 3vw, 32px);
+      font-weight: 800;
+      line-height: 1.25;
+      letter-spacing: -0.03em;
+    }
+
+    .ea-discovery-call-expectations .ea-discovery-call-expectations__checklist {
+      display: grid;
+      margin: 0;
+      padding: 0;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px 22px;
+      list-style: none;
+    }
+
+    .ea-discovery-call-expectations .ea-discovery-call-expectations__checklist-item {
+      display: flex;
+      min-width: 0;
+      align-items: flex-start;
+      gap: 10px;
+      color: #3f435b;
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 1.55;
+    }
+
+    .ea-discovery-call-expectations .ea-discovery-call-expectations__check-icon {
+      display: grid;
+      width: 23px;
+      height: 23px;
+      flex: 0 0 23px;
+      place-items: center;
+      border: 1px solid #d4e9df;
+      border-radius: 8px;
+      background: #ffffff;
+      color: #3a8b68;
+    }
+
+    .ea-discovery-call-expectations .ea-discovery-call-expectations__check-icon svg {
+      width: 14px;
+      height: 14px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 2.2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .ea-discovery-call-expectations .ea-discovery-call-expectations__lower-panels {
+      display: grid;
+      margin-top: 24px;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 24px;
+      align-items: stretch;
+    }
+
+    .ea-discovery-call-expectations .ea-discovery-call-expectations__boundaries {
+      min-width: 0;
+      padding: clamp(26px, 4vw, 36px);
+      border: 1px solid #f0c8c0;
+      border-radius: 20px;
+      background: #fbeae6;
+    }
+
+    .ea-discovery-call-expectations .ea-discovery-call-expectations__booking {
+      display: flex;
+      min-width: 0;
+      padding: clamp(26px, 4vw, 36px);
+      flex-direction: column;
+      border: 1px solid #dddff0;
+      border-radius: 20px;
+      background: #ffffff;
+      box-shadow: 0 10px 26px rgba(41, 45, 103, 0.06);
+    }
+
+    .ea-discovery-call-expectations .ea-discovery-call-expectations__lower-heading {
+      margin: 0;
+      color: #292d67;
+      font-family: Sora, Arial, sans-serif;
+      font-size: 22px;
+      font-weight: 800;
+      line-height: 1.35;
+      letter-spacing: -0.025em;
+    }
+
+    .ea-discovery-call-expectations .ea-discovery-call-expectations__boundary-list {
+      display: grid;
+      margin: 21px 0 0;
+      padding: 0;
+      gap: 12px;
+      list-style: none;
+    }
+
+    .ea-discovery-call-expectations .ea-discovery-call-expectations__boundary-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      color: #4c4f61;
+      font-size: 14px;
+      line-height: 1.55;
+    }
+
+    .ea-discovery-call-expectations .ea-discovery-call-expectations__boundary-icon {
+      display: grid;
+      width: 22px;
+      height: 22px;
+      flex: 0 0 22px;
+      place-items: center;
+      border-radius: 8px;
+      background: #ffffff;
+      color: #bc5544;
+    }
+
+    .ea-discovery-call-expectations .ea-discovery-call-expectations__boundary-icon svg {
+      width: 13px;
+      height: 13px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 2.2;
+      stroke-linecap: round;
+    }
+
+    .ea-discovery-call-expectations .ea-discovery-call-expectations__boundary-statement {
+      margin: 21px 0 0;
+      padding-top: 17px;
+      border-top: 1px solid rgba(188, 85, 68, 0.2);
+      color: #713d35;
+      font-size: 13px;
+      font-weight: 650;
+      line-height: 1.65;
+    }
+
+    .ea-discovery-call-expectations .ea-discovery-call-expectations__booking-copy {
+      margin: 14px 0 24px;
+      color: #4c4f61;
+      font-size: 15px;
+      line-height: 1.7;
+    }
+
+    .ea-discovery-call-expectations .ea-discovery-call-expectations__cta {
+      display: inline-flex;
+      min-height: 50px;
+      margin-top: auto;
+      padding: 13px 22px;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      align-self: flex-start;
+      border: 1px solid #bc5544;
+      border-radius: 13px;
+      background: #e87862;
+      color: #ffffff;
+      font-family: Sora, Arial, sans-serif;
+      font-size: 15px;
+      font-weight: 800;
+      line-height: 1.4;
+      text-align: center;
+      text-decoration: none;
+      box-shadow: 0 11px 24px rgba(188, 85, 68, 0.19);
+      transition:
+        background-color 180ms ease,
+        border-color 180ms ease,
+        box-shadow 180ms ease,
+        transform 180ms ease;
+    }
+
+    .ea-discovery-call-expectations .ea-discovery-call-expectations__cta:hover {
+      border-color: #9d4537;
+      background: #bc5544;
+      box-shadow: 0 14px 29px rgba(188, 85, 68, 0.25);
+      transform: translateY(-2px);
+    }
+
+    .ea-discovery-call-expectations .ea-discovery-call-expectations__cta:active {
+      transform: translateY(1px);
+    }
+
+    .ea-discovery-call-expectations .ea-discovery-call-expectations__cta:focus-visible {
+      outline: 3px solid #4b4f9e;
+      outline-offset: 4px;
+    }
+
+    .ea-discovery-call-expectations .ea-discovery-call-expectations__cta svg {
+      width: 18px;
+      height: 18px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    @media (max-width: 920px) {
+      .ea-discovery-call-expectations .ea-discovery-call-expectations__agenda {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .ea-discovery-call-expectations .ea-discovery-call-expectations__agenda-item,
+      .ea-discovery-call-expectations .ea-discovery-call-expectations__agenda-item:nth-child(4),
+      .ea-discovery-call-expectations .ea-discovery-call-expectations__agenda-item:nth-child(5) {
+        grid-column: auto;
+      }
+
+      .ea-discovery-call-expectations .ea-discovery-call-expectations__agenda-item:last-child {
+        grid-column: 1 / -1;
+      }
+
+      .ea-discovery-call-expectations .ea-discovery-call-expectations__preparation {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 26px;
+      }
+    }
+
+    @media (max-width: 767px) {
+      .ea-discovery-call-expectations {
+        padding: 64px 0;
+      }
+
+      .ea-discovery-call-expectations .ea-discovery-call-expectations__container {
+        width: min(100% - 40px, 1180px);
+      }
+
+      .ea-discovery-call-expectations .ea-discovery-call-expectations__introduction {
+        margin-bottom: 38px;
+      }
+
+      .ea-discovery-call-expectations .ea-discovery-call-expectations__lower-panels {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .ea-discovery-call-expectations .ea-discovery-call-expectations__cta {
+        align-self: stretch;
+      }
+    }
+
+    @media (max-width: 599px) {
+      .ea-discovery-call-expectations {
+        padding: 56px 0;
+      }
+
+      .ea-discovery-call-expectations .ea-discovery-call-expectations__container {
+        width: min(100% - 32px, 1180px);
+      }
+
+      .ea-discovery-call-expectations .ea-discovery-call-expectations__agenda {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 18px;
+      }
+
+      .ea-discovery-call-expectations .ea-discovery-call-expectations__agenda-item:last-child {
+        grid-column: auto;
+      }
+
+      .ea-discovery-call-expectations .ea-discovery-call-expectations__card {
+        padding: 23px;
+      }
+
+      .ea-discovery-call-expectations .ea-discovery-call-expectations__preparation {
+        margin-top: 36px;
+        padding: 26px 22px;
+      }
+
+      .ea-discovery-call-expectations .ea-discovery-call-expectations__checklist {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 12px;
+      }
+
+      .ea-discovery-call-expectations .ea-discovery-call-expectations__boundaries {
+        padding: 25px 22px;
+      }
+
+      .ea-discovery-call-expectations .ea-discovery-call-expectations__booking {
+        padding: 25px 22px;
+      }
+
+      .ea-discovery-call-expectations .ea-discovery-call-expectations__cta {
+        width: 100%;
+      }
+    }
+
+    @media (max-width: 374px) {
+      .ea-discovery-call-expectations .ea-discovery-call-expectations__container {
+        width: min(100% - 24px, 1180px);
+      }
+
+      .ea-discovery-call-expectations .ea-discovery-call-expectations__heading {
+        font-size: 32px;
+      }
+
+      .ea-discovery-call-expectations .ea-discovery-call-expectations__description {
+        font-size: 16px;
+      }
+
+      .ea-discovery-call-expectations .ea-discovery-call-expectations__statement {
+        padding: 13px;
+      }
+
+      .ea-discovery-call-expectations .ea-discovery-call-expectations__card {
+        padding: 21px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .ea-discovery-call-expectations .ea-discovery-call-expectations__cta {
+        transition: none;
+      }
+
+      .ea-discovery-call-expectations .ea-discovery-call-expectations__cta:hover {
+        transform: none;
+      }
+    }
+  </style>
+
+  <div class="ea-discovery-call-expectations__container">
+    <header class="ea-discovery-call-expectations__introduction">
+      <p class="ea-discovery-call-expectations__eyebrow">
+        WHAT TO EXPECT
+      </p>
+
+      <h2
+        class="ea-discovery-call-expectations__heading"
+        id="ea-discovery-call-expectations-heading"
+      >
+        A Focused Conversation About Your Goals, Challenges, and Next Step
+      </h2>
+
+      <p class="ea-discovery-call-expectations__description">
+        The discovery call is an exploratory conversation based on your
+        submitted application and current business situation.
+      </p>
+
+      <p class="ea-discovery-call-expectations__description">
+        It is intended to clarify your needs, answer general questions, and
+        discuss whether an Elevate Academy option may be suitable.
+      </p>
+
+      <p class="ea-discovery-call-expectations__statement">
+        <span
+          class="ea-discovery-call-expectations__statement-icon"
+          aria-hidden="true"
+        >
+          <svg viewBox="0 0 24 24" focusable="false">
+            <circle cx="12" cy="12" r="9"></circle>
+            <path d="M12 11v5"></path>
+            <path d="M12 8h.01"></path>
+          </svg>
+        </span>
+
+        <span>
+          The discovery call is not a full coaching session and does not
+          guarantee acceptance or enrollment.
+        </span>
+      </p>
+    </header>
+
+    <ol
+      class="ea-discovery-call-expectations__agenda"
+      aria-label="Discovery Call agenda"
+    >
+      <li class="ea-discovery-call-expectations__agenda-item">
+        <article class="ea-discovery-call-expectations__card">
+          <div class="ea-discovery-call-expectations__card-top">
+            <span class="ea-discovery-call-expectations__number">
+              01
+            </span>
+
+            <span
+              class="ea-discovery-call-expectations__icon"
+              aria-hidden="true"
+            >
+              <svg viewBox="0 0 32 32" focusable="false">
+                <path d="M4 6h14a3 3 0 0 1 3 3v6a3 3 0 0 1-3 3h-6l-5 4v-4H7a3 3 0 0 1-3-3Z"></path>
+                <path d="M21 11h4a3 3 0 0 1 3 3v4a3 3 0 0 1-3 3h-1v3l-3-3"></path>
+                <circle cx="12.5" cy="11.5" r="2.2"></circle>
+              </svg>
+            </span>
+          </div>
+
+          <h3 class="ea-discovery-call-expectations__card-title">
+            Introductions and Context
+          </h3>
+
+          <p class="ea-discovery-call-expectations__card-description">
+            Begin with a brief overview of your business, current stage, and
+            reason for applying.
+          </p>
+
+          <p class="ea-discovery-call-expectations__prompt">
+            <span
+              class="ea-discovery-call-expectations__prompt-icon"
+              aria-hidden="true"
+            >
+              <svg viewBox="0 0 20 20" focusable="false">
+                <path d="M10 3a5 5 0 0 0-3 9v2h6v-2a5 5 0 0 0-3-9Z"></path>
+                <path d="M8 17h4"></path>
+              </svg>
+            </span>
+
+            <span>
+              <strong>Prepare:</strong> Be ready to explain what your business
+              currently offers and who you serve.
+            </span>
+          </p>
+        </article>
+      </li>
+
+      <li class="ea-discovery-call-expectations__agenda-item">
+        <article class="ea-discovery-call-expectations__card">
+          <div class="ea-discovery-call-expectations__card-top">
+            <span class="ea-discovery-call-expectations__number">
+              02
+            </span>
+
+            <span
+              class="ea-discovery-call-expectations__icon"
+              aria-hidden="true"
+            >
+              <svg viewBox="0 0 32 32" focusable="false">
+                <circle cx="5" cy="23" r="2"></circle>
+                <circle cx="27" cy="8" r="2"></circle>
+                <path d="M7 23h5l3-5 3 4 3-9h4"></path>
+                <path d="m15 12 3-3 3 3"></path>
+                <path d="M18 9v6"></path>
+              </svg>
+            </span>
+          </div>
+
+          <h3 class="ea-discovery-call-expectations__card-title">
+            Current Challenge
+          </h3>
+
+          <p class="ea-discovery-call-expectations__card-description">
+            Discuss the main challenge affecting your progress, client
+            acquisition, offer, systems, or decision-making.
+          </p>
+
+          <p class="ea-discovery-call-expectations__prompt">
+            <span
+              class="ea-discovery-call-expectations__prompt-icon"
+              aria-hidden="true"
+            >
+              <svg viewBox="0 0 20 20" focusable="false">
+                <path d="M10 3a5 5 0 0 0-3 9v2h6v-2a5 5 0 0 0-3-9Z"></path>
+                <path d="M8 17h4"></path>
+              </svg>
+            </span>
+
+            <span>
+              <strong>Prepare:</strong> Choose one primary challenge rather
+              than listing every issue in the business.
+            </span>
+          </p>
+        </article>
+      </li>
+
+      <li class="ea-discovery-call-expectations__agenda-item">
+        <article class="ea-discovery-call-expectations__card">
+          <div class="ea-discovery-call-expectations__card-top">
+            <span class="ea-discovery-call-expectations__number">
+              03
+            </span>
+
+            <span
+              class="ea-discovery-call-expectations__icon"
+              aria-hidden="true"
+            >
+              <svg viewBox="0 0 32 32" focusable="false">
+                <circle cx="15" cy="16" r="10"></circle>
+                <circle cx="15" cy="16" r="5"></circle>
+                <circle cx="15" cy="16" r="1.5"></circle>
+                <path d="m19 12 7-7"></path>
+                <path d="M21 5h5v5"></path>
+              </svg>
+            </span>
+          </div>
+
+          <h3 class="ea-discovery-call-expectations__card-title">
+            Goals and Priorities
+          </h3>
+
+          <p class="ea-discovery-call-expectations__card-description">
+            Explain the result or improvement you want to work toward and why
+            it matters now.
+          </p>
+
+          <p class="ea-discovery-call-expectations__prompt">
+            <span
+              class="ea-discovery-call-expectations__prompt-icon"
+              aria-hidden="true"
+            >
+              <svg viewBox="0 0 20 20" focusable="false">
+                <path d="M10 3a5 5 0 0 0-3 9v2h6v-2a5 5 0 0 0-3-9Z"></path>
+                <path d="M8 17h4"></path>
+              </svg>
+            </span>
+
+            <span>
+              <strong>Prepare:</strong> Describe a realistic priority that
+              coaching could help you clarify or address.
+            </span>
+          </p>
+        </article>
+      </li>
+
+      <li class="ea-discovery-call-expectations__agenda-item">
+        <article class="ea-discovery-call-expectations__card">
+          <div class="ea-discovery-call-expectations__card-top">
+            <span class="ea-discovery-call-expectations__number">
+              04
+            </span>
+
+            <span
+              class="ea-discovery-call-expectations__icon"
+              aria-hidden="true"
+            >
+              <svg viewBox="0 0 32 32" focusable="false">
+                <circle cx="5" cy="16" r="2"></circle>
+                <path d="M7 16h5"></path>
+                <path d="M12 16c4 0 3-8 8-8h4"></path>
+                <path d="M12 16h12"></path>
+                <path d="M12 16c4 0 3 8 8 8h4"></path>
+                <circle cx="27" cy="8" r="2"></circle>
+                <circle cx="27" cy="16" r="2"></circle>
+                <circle cx="27" cy="24" r="2"></circle>
+              </svg>
+            </span>
+          </div>
+
+          <h3 class="ea-discovery-call-expectations__card-title">
+            Support and Program Fit
+          </h3>
+
+          <p class="ea-discovery-call-expectations__card-description">
+            Discuss whether One-on-One Coaching, Group Coaching, or the
+            Self-Paced Course may align with your preferred way of learning.
+          </p>
+
+          <p class="ea-discovery-call-expectations__prompt">
+            <span
+              class="ea-discovery-call-expectations__prompt-icon"
+              aria-hidden="true"
+            >
+              <svg viewBox="0 0 20 20" focusable="false">
+                <path d="M10 3a5 5 0 0 0-3 9v2h6v-2a5 5 0 0 0-3-9Z"></path>
+                <path d="M8 17h4"></path>
+              </svg>
+            </span>
+
+            <span>
+              <strong>Prepare:</strong> Consider the level of guidance,
+              interaction, accountability, and independence you need.
+            </span>
+          </p>
+        </article>
+      </li>
+
+      <li class="ea-discovery-call-expectations__agenda-item">
+        <article class="ea-discovery-call-expectations__card">
+          <div class="ea-discovery-call-expectations__card-top">
+            <span class="ea-discovery-call-expectations__number">
+              05
+            </span>
+
+            <span
+              class="ea-discovery-call-expectations__icon"
+              aria-hidden="true"
+            >
+              <svg viewBox="0 0 32 32" focusable="false">
+                <circle cx="5" cy="16" r="2"></circle>
+                <path d="M7 16h8"></path>
+                <path d="M15 16c4 0 3-7 7-7h3"></path>
+                <path d="M15 16c4 0 3 7 7 7h3"></path>
+                <path d="m23 6 4 3-4 3"></path>
+                <path d="m23 20 4 3-4 3"></path>
+              </svg>
+            </span>
+          </div>
+
+          <h3 class="ea-discovery-call-expectations__card-title">
+            Possible Next Step
+          </h3>
+
+          <p class="ea-discovery-call-expectations__card-description">
+            Review the possible next action based on the conversation, fit,
+            readiness, and program availability.
+          </p>
+
+          <p class="ea-discovery-call-expectations__prompt">
+            <span
+              class="ea-discovery-call-expectations__prompt-icon"
+              aria-hidden="true"
+            >
+              <svg viewBox="0 0 20 20" focusable="false">
+                <path d="M10 3a5 5 0 0 0-3 9v2h6v-2a5 5 0 0 0-3-9Z"></path>
+                <path d="M8 17h4"></path>
+              </svg>
+            </span>
+
+            <span>
+              <strong>Prepare:</strong> Prepare questions about expectations,
+              participation, and the enrollment process.
+            </span>
+          </p>
+        </article>
+      </li>
+    </ol>
+
+    <aside
+      class="ea-discovery-call-expectations__preparation"
+      aria-labelledby="ea-discovery-call-preparation-heading"
+    >
+      <div>
+        <p class="ea-discovery-call-expectations__panel-eyebrow">
+          BEFORE YOUR CALL
+        </p>
+
+        <h3
+          class="ea-discovery-call-expectations__panel-heading"
+          id="ea-discovery-call-preparation-heading"
+        >
+          Prepare These Details Before Booking
+        </h3>
+      </div>
+
+      <ul class="ea-discovery-call-expectations__checklist">
+        <li class="ea-discovery-call-expectations__checklist-item">
+          <span
+            class="ea-discovery-call-expectations__check-icon"
+            aria-hidden="true"
+          >
+            <svg viewBox="0 0 16 16" focusable="false">
+              <path d="m3 8 3 3 7-7"></path>
+            </svg>
+          </span>
+          <span>Your primary business goal</span>
+        </li>
+
+        <li class="ea-discovery-call-expectations__checklist-item">
+          <span
+            class="ea-discovery-call-expectations__check-icon"
+            aria-hidden="true"
+          >
+            <svg viewBox="0 0 16 16" focusable="false">
+              <path d="m3 8 3 3 7-7"></path>
+            </svg>
+          </span>
+          <span>The challenge creating the most difficulty</span>
+        </li>
+
+        <li class="ea-discovery-call-expectations__checklist-item">
+          <span
+            class="ea-discovery-call-expectations__check-icon"
+            aria-hidden="true"
+          >
+            <svg viewBox="0 0 16 16" focusable="false">
+              <path d="m3 8 3 3 7-7"></path>
+            </svg>
+          </span>
+          <span>What you have already tried</span>
+        </li>
+
+        <li class="ea-discovery-call-expectations__checklist-item">
+          <span
+            class="ea-discovery-call-expectations__check-icon"
+            aria-hidden="true"
+          >
+            <svg viewBox="0 0 16 16" focusable="false">
+              <path d="m3 8 3 3 7-7"></path>
+            </svg>
+          </span>
+          <span>Your preferred program</span>
+        </li>
+
+        <li class="ea-discovery-call-expectations__checklist-item">
+          <span
+            class="ea-discovery-call-expectations__check-icon"
+            aria-hidden="true"
+          >
+            <svg viewBox="0 0 16 16" focusable="false">
+              <path d="m3 8 3 3 7-7"></path>
+            </svg>
+          </span>
+          <span>The type of support you need</span>
+        </li>
+
+        <li class="ea-discovery-call-expectations__checklist-item">
+          <span
+            class="ea-discovery-call-expectations__check-icon"
+            aria-hidden="true"
+          >
+            <svg viewBox="0 0 16 16" focusable="false">
+              <path d="m3 8 3 3 7-7"></path>
+            </svg>
+          </span>
+          <span>Questions about coaching expectations</span>
+        </li>
+
+        <li class="ea-discovery-call-expectations__checklist-item">
+          <span
+            class="ea-discovery-call-expectations__check-icon"
+            aria-hidden="true"
+          >
+            <svg viewBox="0 0 16 16" focusable="false">
+              <path d="m3 8 3 3 7-7"></path>
+            </svg>
+          </span>
+          <span>Your realistic availability and readiness</span>
+        </li>
+      </ul>
+    </aside>
+
+    <div class="ea-discovery-call-expectations__lower-panels">
+      <aside
+        class="ea-discovery-call-expectations__boundaries"
+        aria-labelledby="ea-discovery-call-boundaries-heading"
+      >
+        <h3
+          class="ea-discovery-call-expectations__lower-heading"
+          id="ea-discovery-call-boundaries-heading"
+        >
+          What the Discovery Call Does Not Guarantee
+        </h3>
+
+        <ul class="ea-discovery-call-expectations__boundary-list">
+          <li class="ea-discovery-call-expectations__boundary-item">
+            <span
+              class="ea-discovery-call-expectations__boundary-icon"
+              aria-hidden="true"
+            >
+              <svg viewBox="0 0 14 14" focusable="false">
+                <path d="M4 4l6 6"></path>
+                <path d="m10 4-6 6"></path>
+              </svg>
+            </span>
+            <span>Acceptance into One-on-One Coaching</span>
+          </li>
+
+          <li class="ea-discovery-call-expectations__boundary-item">
+            <span
+              class="ea-discovery-call-expectations__boundary-icon"
+              aria-hidden="true"
+            >
+              <svg viewBox="0 0 14 14" focusable="false">
+                <path d="M4 4l6 6"></path>
+                <path d="m10 4-6 6"></path>
+              </svg>
+            </span>
+            <span>Enrollment in Group Coaching</span>
+          </li>
+
+          <li class="ea-discovery-call-expectations__boundary-item">
+            <span
+              class="ea-discovery-call-expectations__boundary-icon"
+              aria-hidden="true"
+            >
+              <svg viewBox="0 0 14 14" focusable="false">
+                <path d="M4 4l6 6"></path>
+                <path d="m10 4-6 6"></path>
+              </svg>
+            </span>
+            <span>Immediate program availability</span>
+          </li>
+
+          <li class="ea-discovery-call-expectations__boundary-item">
+            <span
+              class="ea-discovery-call-expectations__boundary-icon"
+              aria-hidden="true"
+            >
+              <svg viewBox="0 0 14 14" focusable="false">
+                <path d="M4 4l6 6"></path>
+                <path d="m10 4-6 6"></path>
+              </svg>
+            </span>
+            <span>A specific business recommendation</span>
+          </li>
+
+          <li class="ea-discovery-call-expectations__boundary-item">
+            <span
+              class="ea-discovery-call-expectations__boundary-icon"
+              aria-hidden="true"
+            >
+              <svg viewBox="0 0 14 14" focusable="false">
+                <path d="M4 4l6 6"></path>
+                <path d="m10 4-6 6"></path>
+              </svg>
+            </span>
+            <span>Clients, revenue, income, or financial results</span>
+          </li>
+        </ul>
+
+        <p class="ea-discovery-call-expectations__boundary-statement">
+          Any possible next step depends on fit, readiness, availability, and
+          the information discussed during the call.
+        </p>
+      </aside>
+
+      <aside
+        class="ea-discovery-call-expectations__booking"
+        aria-labelledby="ea-discovery-call-booking-heading"
+      >
+        <h3
+          class="ea-discovery-call-expectations__lower-heading"
+          id="ea-discovery-call-booking-heading"
+        >
+          Book a Time You Can Attend
+        </h3>
+
+        <p class="ea-discovery-call-expectations__booking-copy">
+          Select an available appointment time that you can realistically
+          attend. Use the official rescheduling or cancellation option if your
+          availability changes.
+        </p>
+
+        <a
+          class="ea-discovery-call-expectations__cta"
+          href="#ea-discovery-call-calendar"
+        >
+          Continue to Available Times
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M5 12h14"></path>
+            <path d="m14 7 5 5-5 5"></path>
+          </svg>
+        </a>
+      </aside>
+    </div>
+  </div>
+</section>
+<!-- Section 2: What to Expect During the Call End -->
+<!-- Section 3: Discovery Call Calendar and Footer Start -->
+<section
+  class="ea-discovery-call-calendar-section"
+  id="ea-discovery-call-calendar-section"
+  aria-labelledby="ea-discovery-call-calendar-section-heading"
+>
+  <style>
+    .ea-discovery-call-calendar-section {
+      width: 100%;
+      max-width: 100%;
+      overflow-x: hidden;
+      background: #faf6f0;
+      color: #4c4f61;
+      font-family: Inter, Arial, sans-serif;
+    }
+
+    .ea-discovery-call-calendar-section * {
+      box-sizing: border-box;
+    }
+
+    .ea-discovery-call-calendar-section a,
+    .ea-discovery-call-calendar-section button {
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .ea-discovery-call-calendar-section .ea-discovery-call-calendar-section__main {
+      padding: 78px 0 84px;
+    }
+
+    .ea-discovery-call-calendar-section .ea-discovery-call-calendar-section__container {
+      width: min(100% - 64px, 1180px);
+      margin-inline: auto;
+    }
+
+    .ea-discovery-call-calendar-section .ea-discovery-call-calendar-section__layout {
+      display: grid;
+      grid-template-columns: minmax(280px, 0.7fr) minmax(0, 1.3fr);
+      gap: clamp(38px, 5vw, 64px);
+      align-items: start;
+    }
+
+    .ea-discovery-call-calendar-section .ea-discovery-call-calendar-section__information {
+      min-width: 0;
+    }
+
+    .ea-discovery-call-calendar-section .ea-discovery-call-calendar-section__eyebrow {
+      display: inline-flex;
+      margin: 0 0 15px;
+      align-items: center;
+      gap: 9px;
+      color: #bc5544;
+      font-family: Sora, Arial, sans-serif;
+      font-size: 13px;
+      font-weight: 800;
+      line-height: 1.4;
+      letter-spacing: 0.12em;
+    }
+
+    .ea-discovery-call-calendar-section .ea-discovery-call-calendar-section__eyebrow::before {
+      width: 27px;
+      height: 2px;
+      border-radius: 999px;
+      background: #e87862;
+      content: "";
+    }
+
+    .ea-discovery-call-calendar-section .ea-discovery-call-calendar-section__heading {
+      margin: 0;
+      color: #292d67;
+      font-family: Sora, Arial, sans-serif;
+      font-size: clamp(34px, 4.3vw, 49px);
+      font-weight: 800;
+      line-height: 1.12;
+      letter-spacing: -0.04em;
+      text-wrap: balance;
+    }
+
+    .ea-discovery-call-calendar-section .ea-discovery-call-calendar-section__description {
+      margin: 20px 0 0;
+      color: #4c4f61;
+      font-size: 16px;
+      line-height: 1.72;
+    }
+
+    .ea-discovery-call-calendar-section .ea-discovery-call-calendar-section__description + .ea-discovery-call-calendar-section__description {
+      margin-top: 10px;
+    }
+
+    .ea-discovery-call-calendar-section .ea-discovery-call-calendar-section__subheading {
+      margin: 31px 0 0;
+      color: #292d67;
+      font-family: Sora, Arial, sans-serif;
+      font-size: 20px;
+      font-weight: 800;
+      line-height: 1.4;
+    }
+
+    .ea-discovery-call-calendar-section .ea-discovery-call-calendar-section__checklist {
+      display: grid;
+      gap: 11px;
+      margin: 17px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .ea-discovery-call-calendar-section .ea-discovery-call-calendar-section__checklist-item {
+      display: flex;
+      min-width: 0;
+      align-items: flex-start;
+      gap: 10px;
+      color: #4c4f61;
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 1.55;
+    }
+
+    .ea-discovery-call-calendar-section .ea-discovery-call-calendar-section__check-icon {
+      display: grid;
+      width: 23px;
+      height: 23px;
+      flex: 0 0 23px;
+      margin-top: 1px;
+      place-items: center;
+      border: 1px solid #d1d3eb;
+      border-radius: 8px;
+      background: #ebecfa;
+      color: #4b4f9e;
+    }
+
+    .ea-discovery-call-calendar-section .ea-discovery-call-calendar-section__check-icon svg {
+      width: 14px;
+      height: 14px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 2.2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .ea-discovery-call-calendar-section .ea-discovery-call-calendar-section__expectation {
+      display: flex;
+      margin: 27px 0 0;
+      padding: 15px;
+      align-items: flex-start;
+      gap: 10px;
+      border: 1px solid #f0c8c0;
+      border-radius: 14px;
+      background: #fbeae6;
+      color: #654c51;
+      font-size: 13px;
+      font-weight: 650;
+      line-height: 1.62;
+    }
+
+    .ea-discovery-call-calendar-section .ea-discovery-call-calendar-section__notice-icon {
+      display: grid;
+      width: 24px;
+      height: 24px;
+      flex: 0 0 24px;
+      place-items: center;
+      border-radius: 8px;
+      background: #ffffff;
+      color: #bc5544;
+    }
+
+    .ea-discovery-call-calendar-section .ea-discovery-call-calendar-section__notice-icon svg {
+      width: 15px;
+      height: 15px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .ea-discovery-call-calendar-section .ea-discovery-call-calendar-section__privacy {
+      display: flex;
+      margin: 13px 0 0;
+      padding: 14px 15px;
+      align-items: flex-start;
+      gap: 10px;
+      border: 1px solid #dddff0;
+      border-radius: 14px;
+      background: #ffffff;
+      color: #4c4f61;
+      font-size: 13px;
+      line-height: 1.62;
+    }
+
+    .ea-discovery-call-calendar-section .ea-discovery-call-calendar-section__privacy .ea-discovery-call-calendar-section__notice-icon {
+      background: #ebecfa;
+      color: #4b4f9e;
+    }
+
+    .ea-discovery-call-calendar-section .ea-discovery-call-calendar-section__reminder {
+      margin-top: 21px;
+      padding: 21px;
+      border: 1px solid #d1d3eb;
+      border-radius: 17px;
+      background: #ebecfa;
+    }
+
+    .ea-discovery-call-calendar-section .ea-discovery-call-calendar-section__reminder-heading {
+      margin: 0;
+      color: #292d67;
+      font-family: Sora, Arial, sans-serif;
+      font-size: 17px;
+      font-weight: 800;
+      line-height: 1.4;
+    }
+
+    .ea-discovery-call-calendar-section .ea-discovery-call-calendar-section__reminder-list {
+      display: grid;
+      gap: 10px;
+      margin: 15px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .ea-discovery-call-calendar-section .ea-discovery-call-calendar-section__reminder-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 9px;
+      color: #4c4f61;
+      font-size: 13px;
+      line-height: 1.55;
+    }
+
+    .ea-discovery-call-calendar-section .ea-discovery-call-calendar-section__reminder-marker {
+      width: 7px;
+      height: 7px;
+      margin-top: 7px;
+      flex: 0 0 7px;
+      border-radius: 50%;
+      background: #e87862;
+    }
+
+    .ea-discovery-call-calendar-section .ea-discovery-call-calendar-section__calendar-column {
+      min-width: 0;
+      scroll-margin-top: 24px;
+    }
+
+    .ea-discovery-call-calendar-section .ea-discovery-call-calendar-section__calendar-card {
+      width: 100%;
+      min-width: 0;
+      padding: clamp(25px, 4vw, 42px);
+      border: 1px solid #d1d3eb;
+      border-radius: 26px;
+      background: #ffffff;
+      box-shadow: 0 22px 52px rgba(41, 45, 103, 0.11);
+    }
+
+    .ea-discovery-call-calendar-section .ea-discovery-call-calendar-section__calendar-heading {
+      margin: 0;
+      color: #292d67;
+      font-family: Sora, Arial, sans-serif;
+      font-size: clamp(25px, 3vw, 34px);
+      font-weight: 800;
+      line-height: 1.25;
+      letter-spacing: -0.03em;
+    }
+
+    .ea-discovery-call-calendar-section .ea-discovery-call-calendar-section__calendar-description {
+      max-width: 680px;
+      margin: 13px 0 0;
+      color: #4c4f61;
+      font-size: 15px;
+      line-height: 1.7;
+    }
+
+    .ea-discovery-call-calendar-section .ea-discovery-call-calendar-section__embed-area {
+      width: 100%;
+      min-width: 0;
+      margin-top: 27px;
+    }
+
+    .ea-discovery-call-calendar-section .ea-discovery-call-calendar-section__placeholder {
+      width: 100%;
+      min-width: 0;
+      padding: clamp(24px, 4vw, 36px);
+      border: 2px dashed #aaadd8;
+      border-radius: 20px;
+      background: #f7f7fb;
+    }
+
+    .ea-discovery-call-calendar-section .ea-discovery-call-calendar-section__integration-label {
+      display: inline-flex;
+      min-height: 30px;
+      padding: 6px 12px;
+      align-items: center;
+      border: 1px solid #d1d3eb;
+      border-radius: 999px;
+      background: #ebecfa;
+      color: #4b4f9e;
+      font-family: Sora, Arial, sans-serif;
+      font-size: 11px;
+      font-weight: 800;
+      line-height: 1.35;
+      letter-spacing: 0.08em;
+    }
+
+    .ea-discovery-call-calendar-section .ea-discovery-call-calendar-section__placeholder-header {
+      max-width: 580px;
+      margin: 25px auto 0;
+      text-align: center;
+    }
+
+    .ea-discovery-call-calendar-section .ea-discovery-call-calendar-section__placeholder-icon {
+      display: grid;
+      width: 68px;
+      height: 68px;
+      margin: 0 auto 18px;
+      place-items: center;
+      border: 1px solid #d1d3eb;
+      border-radius: 20px;
+      background: #ffffff;
+      color: #4b4f9e;
+      box-shadow: 0 8px 20px rgba(41, 45, 103, 0.08);
+    }
+
+    .ea-discovery-call-calendar-section .ea-discovery-call-calendar-section__placeholder-icon svg {
+      width: 36px;
+      height: 36px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 1.7;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .ea-discovery-call-calendar-section .ea-discovery-call-calendar-section__placeholder-title {
+      margin: 0;
+      color: #292d67;
+      font-family: Sora, Arial, sans-serif;
+      font-size: clamp(20px, 2.5vw, 25px);
+      font-weight: 800;
+      line-height: 1.38;
+      letter-spacing: -0.025em;
+    }
+
+    .ea-discovery-call-calendar-section .ea-discovery-call-calendar-section__stages {
+      position: relative;
+      display: grid;
+      margin-top: 30px;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .ea-discovery-call-calendar-section .ea-discovery-call-calendar-section__stages::before {
+      position: absolute;
+      top: 21px;
+      right: 12.5%;
+      left: 12.5%;
+      height: 2px;
+      background: #dddff0;
+      content: "";
+    }
+
+    .ea-discovery-call-calendar-section .ea-discovery-call-calendar-section__stage {
+      position: relative;
+      z-index: 1;
+      min-width: 0;
+      text-align: center;
+    }
+
+    .ea-discovery-call-calendar-section .ea-discovery-call-calendar-section__stage-number {
+      display: grid;
+      width: 44px;
+      height: 44px;
+      margin: 0 auto 11px;
+      place-items: center;
+      border: 2px solid #d1d3eb;
+      border-radius: 50%;
+      background: #ffffff;
+      color: #4b4f9e;
+      font-family: Sora, Arial, sans-serif;
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    .ea-discovery-call-calendar-section .ea-discovery-call-calendar-section__stage:first-child .ea-discovery-call-calendar-section__stage-number {
+      border-color: #e87862;
+      background: #fbeae6;
+      color: #bc5544;
+    }
+
+    .ea-discovery-call-calendar-section .ea-discovery-call-calendar-section__stage-label {
+      display: block;
+      color: #4c4f61;
+      font-family: Sora, Arial, sans-serif;
+      font-size: 12px;
+      font-weight: 700;
+      line-height: 1.45;
+      overflow-wrap: anywhere;
+    }
+
+    .ea-discovery-call-calendar-section .ea-discovery-call-calendar-section__button-preview {
+      display: flex;
+      width: min(100%, 330px);
+      min-height: 50px;
+      margin: 30px auto 0;
+      padding: 13px 22px;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      border: 1px solid #bc5544;
+      border-radius: 13px;
+      background: #e87862;
+      color: #ffffff;
+      font-family: Sora, Arial, sans-serif;
+      font-size: 15px;
+      font-weight: 800;
+      line-height: 1.4;
+      cursor: default;
+      box-shadow: 0 11px 24px rgba(188, 85, 68, 0.19);
+      transition:
+        background-color 170ms ease,
+        border-color 170ms ease,
+        box-shadow 170ms ease;
+    }
+
+    .ea-discovery-call-calendar-section .ea-discovery-call-calendar-section__button-preview:hover {
+      border-color: #9d4537;
+      background: #bc5544;
+      box-shadow: 0 14px 29px rgba(188, 85, 68, 0.24);
+    }
+
+    .ea-discovery-call-calendar-section .ea-discovery-call-calendar-section__button-preview:active {
+      border-color: #8d3d31;
+      background: #a8493b;
+    }
+
+    .ea-discovery-call-calendar-section .ea-discovery-call-calendar-section__button-preview:focus-visible {
+      outline: 3px solid #4b4f9e;
+      outline-offset: 4px;
+    }
+
+    .ea-discovery-call-calendar-section .ea-discovery-call-calendar-section__button-preview svg {
+      width: 18px;
+      height: 18px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .ea-discovery-call-calendar-section .ea-discovery-call-calendar-section__availability-note {
+      max-width: 560px;
+      margin: 18px auto 0;
+      color: #777a8a;
+      font-size: 12px;
+      font-weight: 650;
+      line-height: 1.6;
+      text-align: center;
+    }
+
+    .ea-discovery-call-calendar-section .ea-discovery-call-calendar-section__trust-list {
+      display: grid;
+      margin: 24px 0 0;
+      padding: 22px 0 0;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+      border-top: 1px solid #dddff0;
+      list-style: none;
+    }
+
+    .ea-discovery-call-calendar-section .ea-discovery-call-calendar-section__trust-item {
+      display: flex;
+      min-width: 0;
+      align-items: flex-start;
+      gap: 9px;
+      color: #4c4f61;
+      font-size: 12px;
+      font-weight: 600;
+      line-height: 1.55;
+    }
+
+    .ea-discovery-call-calendar-section .ea-discovery-call-calendar-section__trust-icon {
+      display: grid;
+      width: 23px;
+      height: 23px;
+      flex: 0 0 23px;
+      place-items: center;
+      border: 1px solid #d4e9df;
+      border-radius: 8px;
+      background: #e6f3ec;
+      color: #3a8b68;
+    }
+
+    .ea-discovery-call-calendar-section .ea-discovery-call-calendar-section__trust-icon svg {
+      width: 14px;
+      height: 14px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .ea-discovery-call-calendar-section .ea-discovery-call-calendar-section__footer {
+      padding: 58px 0 27px;
+      background: #292d67;
+      color: #ffffff;
+    }
+
+    .ea-discovery-call-calendar-section .ea-discovery-call-calendar-section__footer-columns {
+      display: grid;
+      grid-template-columns:
+        minmax(0, 1.25fr)
+        minmax(190px, 0.7fr)
+        minmax(210px, 0.75fr);
+      gap: clamp(38px, 7vw, 80px);
+      padding-bottom: 37px;
+    }
+
+    .ea-discovery-call-calendar-section .ea-discovery-call-calendar-section__footer-column {
+      min-width: 0;
+    }
+
+    .ea-discovery-call-calendar-section .ea-discovery-call-calendar-section__brand {
+      display: flex;
+      margin: 0;
+      align-items: center;
+      gap: 12px;
+      color: #ffffff;
+      font-family: Sora, Arial, sans-serif;
+      font-size: 22px;
+      font-weight: 800;
+      line-height: 1.35;
+      letter-spacing: -0.025em;
+    }
+
+    .ea-discovery-call-calendar-section .ea-discovery-call-calendar-section__brand-icon {
+      display: grid;
+      width: 43px;
+      height: 43px;
+      flex: 0 0 43px;
+      place-items: center;
+      border: 1px solid rgba(251, 234, 230, 0.24);
+      border-radius: 13px;
+      background: rgba(255, 255, 255, 0.08);
+      color: #f09886;
+    }
+
+    .ea-discovery-call-calendar-section .ea-discovery-call-calendar-section__brand-icon svg {
+      width: 28px;
+      height: 28px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 1.6;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .ea-discovery-call-calendar-section .ea-discovery-call-calendar-section__brand-description {
+      max-width: 430px;
+      margin: 17px 0 0;
+      color: #ebecfa;
+      font-size: 14px;
+      line-height: 1.7;
+      opacity: 0.86;
+    }
+
+    .ea-discovery-call-calendar-section .ea-discovery-call-calendar-section__brand-accent {
+      width: 47px;
+      height: 3px;
+      margin-top: 18px;
+      border-radius: 999px;
+      background: #e87862;
+    }
+
+    .ea-discovery-call-calendar-section .ea-discovery-call-calendar-section__footer-heading {
+      margin: 0 0 16px;
+      color: #ffffff;
+      font-family: Sora, Arial, sans-serif;
+      font-size: 16px;
+      font-weight: 800;
+      line-height: 1.4;
+    }
+
+    .ea-discovery-call-calendar-section .ea-discovery-call-calendar-section__footer-links {
+      display: grid;
+      gap: 6px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .ea-discovery-call-calendar-section .ea-discovery-call-calendar-section__footer-link {
+      display: inline-flex;
+      min-height: 44px;
+      padding: 8px 0;
+      align-items: center;
+      color: #ebecfa;
+      font-size: 14px;
+      line-height: 1.5;
+      text-decoration: none;
+      text-underline-offset: 4px;
+      overflow-wrap: anywhere;
+      transition:
+        color 160ms ease,
+        text-decoration-color 160ms ease,
+        transform 160ms ease;
+    }
+
+    .ea-discovery-call-calendar-section .ea-discovery-call-calendar-section__footer-link:hover {
+      color: #f09886;
+      text-decoration: underline;
+      text-decoration-color: #e87862;
+    }
+
+    .ea-discovery-call-calendar-section .ea-discovery-call-calendar-section__footer-link:active {
+      color: #ffffff;
+      transform: translateY(1px);
+    }
+
+    .ea-discovery-call-calendar-section .ea-discovery-call-calendar-section__footer-link:focus-visible {
+      border-radius: 6px;
+      outline: 3px solid #f09886;
+      outline-offset: 3px;
+    }
+
+    .ea-discovery-call-calendar-section .ea-discovery-call-calendar-section__footer-bottom {
+      padding-top: 24px;
+      border-top: 1px solid rgba(235, 236, 250, 0.18);
+    }
+
+    .ea-discovery-call-calendar-section .ea-discovery-call-calendar-section__copyright {
+      margin: 0;
+      color: #ffffff;
+      font-size: 13px;
+      line-height: 1.6;
+    }
+
+    .ea-discovery-call-calendar-section .ea-discovery-call-calendar-section__disclaimers {
+      display: grid;
+      max-width: 980px;
+      margin-top: 17px;
+      gap: 8px;
+    }
+
+    .ea-discovery-call-calendar-section .ea-discovery-call-calendar-section__disclaimer {
+      margin: 0;
+      color: #ebecfa;
+      font-size: 12px;
+      line-height: 1.65;
+      opacity: 0.72;
+    }
+
+    @media (max-width: 960px) {
+      .ea-discovery-call-calendar-section .ea-discovery-call-calendar-section__layout {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .ea-discovery-call-calendar-section .ea-discovery-call-calendar-section__information {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0 30px;
+      }
+
+      .ea-discovery-call-calendar-section .ea-discovery-call-calendar-section__introduction {
+        grid-column: 1 / -1;
+      }
+
+      .ea-discovery-call-calendar-section .ea-discovery-call-calendar-section__pre-booking {
+        grid-column: 1;
+      }
+
+      .ea-discovery-call-calendar-section .ea-discovery-call-calendar-section__information-panels {
+        grid-column: 2;
+        padding-top: 31px;
+      }
+
+      .ea-discovery-call-calendar-section .ea-discovery-call-calendar-section__footer-columns {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .ea-discovery-call-calendar-section .ea-discovery-call-calendar-section__footer-column:first-child {
+        grid-column: 1 / -1;
+      }
+    }
+
+    @media (max-width: 767px) {
+      .ea-discovery-call-calendar-section .ea-discovery-call-calendar-section__main {
+        padding: 62px 0 68px;
+      }
+
+      .ea-discovery-call-calendar-section .ea-discovery-call-calendar-section__container {
+        width: min(100% - 40px, 1180px);
+      }
+
+      .ea-discovery-call-calendar-section .ea-discovery-call-calendar-section__information {
+        display: block;
+      }
+
+      .ea-discovery-call-calendar-section .ea-discovery-call-calendar-section__information-panels {
+        padding-top: 0;
+      }
+
+      .ea-discovery-call-calendar-section .ea-discovery-call-calendar-section__calendar-card {
+        border-radius: 22px;
+      }
+
+      .ea-discovery-call-calendar-section .ea-discovery-call-calendar-section__trust-list {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    @media (max-width: 599px) {
+      .ea-discovery-call-calendar-section .ea-discovery-call-calendar-section__main {
+        padding: 55px 0 60px;
+      }
+
+      .ea-discovery-call-calendar-section .ea-discovery-call-calendar-section__container {
+        width: min(100% - 32px, 1180px);
+      }
+
+      .ea-discovery-call-calendar-section .ea-discovery-call-calendar-section__calendar-card {
+        padding: 24px 20px;
+      }
+
+      .ea-discovery-call-calendar-section .ea-discovery-call-calendar-section__placeholder {
+        padding: 24px 16px;
+      }
+
+      .ea-discovery-call-calendar-section .ea-discovery-call-calendar-section__stages {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 10px;
+      }
+
+      .ea-discovery-call-calendar-section .ea-discovery-call-calendar-section__stages::before {
+        display: none;
+      }
+
+      .ea-discovery-call-calendar-section .ea-discovery-call-calendar-section__stage {
+        display: flex;
+        min-height: 48px;
+        padding: 7px 11px;
+        align-items: center;
+        gap: 11px;
+        border: 1px solid #dddff0;
+        border-radius: 12px;
+        background: #ffffff;
+        text-align: left;
+      }
+
+      .ea-discovery-call-calendar-section .ea-discovery-call-calendar-section__stage-number {
+        width: 34px;
+        height: 34px;
+        margin: 0;
+        flex: 0 0 34px;
+      }
+
+      .ea-discovery-call-calendar-section .ea-discovery-call-calendar-section__button-preview {
+        width: 100%;
+      }
+
+      .ea-discovery-call-calendar-section .ea-discovery-call-calendar-section__footer-columns {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 31px;
+      }
+
+      .ea-discovery-call-calendar-section .ea-discovery-call-calendar-section__footer-column:first-child {
+        grid-column: auto;
+      }
+    }
+
+    @media (max-width: 374px) {
+      .ea-discovery-call-calendar-section .ea-discovery-call-calendar-section__container {
+        width: min(100% - 24px, 1180px);
+      }
+
+      .ea-discovery-call-calendar-section .ea-discovery-call-calendar-section__heading {
+        font-size: 31px;
+      }
+
+      .ea-discovery-call-calendar-section .ea-discovery-call-calendar-section__description {
+        font-size: 15px;
+      }
+
+      .ea-discovery-call-calendar-section .ea-discovery-call-calendar-section__calendar-card {
+        padding: 21px 15px;
+      }
+
+      .ea-discovery-call-calendar-section .ea-discovery-call-calendar-section__placeholder {
+        padding: 21px 13px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .ea-discovery-call-calendar-section .ea-discovery-call-calendar-section__button-preview {
+        transition: none;
+      }
+
+      .ea-discovery-call-calendar-section .ea-discovery-call-calendar-section__footer-link {
+        transition: none;
+      }
+    }
+  </style>
+
+  <div class="ea-discovery-call-calendar-section__main">
+    <div class="ea-discovery-call-calendar-section__container">
+      <div class="ea-discovery-call-calendar-section__layout">
+        <div class="ea-discovery-call-calendar-section__information">
+          <header class="ea-discovery-call-calendar-section__introduction">
+            <p class="ea-discovery-call-calendar-section__eyebrow">
+              BOOK YOUR DISCOVERY CALL
+            </p>
+
+            <h2
+              class="ea-discovery-call-calendar-section__heading"
+              id="ea-discovery-call-calendar-section-heading"
+            >
+              Choose an Available Time for Your Conversation
+            </h2>
+
+            <p class="ea-discovery-call-calendar-section__description">
+              Select an available appointment time using the official Elevate
+              Academy Discovery Call calendar.
+            </p>
+
+            <p class="ea-discovery-call-calendar-section__description">
+              The calendar will show the current available dates, times,
+              timezone information, and required booking details.
+            </p>
+          </header>
+
+          <div class="ea-discovery-call-calendar-section__pre-booking">
+            <h3 class="ea-discovery-call-calendar-section__subheading">
+              Before You Book
+            </h3>
+
+            <ul class="ea-discovery-call-calendar-section__checklist">
+              <li class="ea-discovery-call-calendar-section__checklist-item">
+                <span
+                  class="ea-discovery-call-calendar-section__check-icon"
+                  aria-hidden="true"
+                >
+                  <svg viewBox="0 0 16 16" focusable="false">
+                    <path d="m3 8 3 3 7-7"></path>
+                  </svg>
+                </span>
+                <span>Choose a time you can realistically attend</span>
+              </li>
+
+              <li class="ea-discovery-call-calendar-section__checklist-item">
+                <span
+                  class="ea-discovery-call-calendar-section__check-icon"
+                  aria-hidden="true"
+                >
+                  <svg viewBox="0 0 16 16" focusable="false">
+                    <path d="m3 8 3 3 7-7"></path>
+                  </svg>
+                </span>
+                <span>Use an email address you regularly check</span>
+              </li>
+
+              <li class="ea-discovery-call-calendar-section__checklist-item">
+                <span
+                  class="ea-discovery-call-calendar-section__check-icon"
+                  aria-hidden="true"
+                >
+                  <svg viewBox="0 0 16 16" focusable="false">
+                    <path d="m3 8 3 3 7-7"></path>
+                  </svg>
+                </span>
+                <span>Review your coaching application</span>
+              </li>
+
+              <li class="ea-discovery-call-calendar-section__checklist-item">
+                <span
+                  class="ea-discovery-call-calendar-section__check-icon"
+                  aria-hidden="true"
+                >
+                  <svg viewBox="0 0 16 16" focusable="false">
+                    <path d="m3 8 3 3 7-7"></path>
+                  </svg>
+                </span>
+                <span>Prepare your primary questions</span>
+              </li>
+
+              <li class="ea-discovery-call-calendar-section__checklist-item">
+                <span
+                  class="ea-discovery-call-calendar-section__check-icon"
+                  aria-hidden="true"
+                >
+                  <svg viewBox="0 0 16 16" focusable="false">
+                    <path d="m3 8 3 3 7-7"></path>
+                  </svg>
+                </span>
+                <span>Confirm your timezone before submitting</span>
+              </li>
+
+              <li class="ea-discovery-call-calendar-section__checklist-item">
+                <span
+                  class="ea-discovery-call-calendar-section__check-icon"
+                  aria-hidden="true"
+                >
+                  <svg viewBox="0 0 16 16" focusable="false">
+                    <path d="m3 8 3 3 7-7"></path>
+                  </svg>
+                </span>
+                <span>
+                  Use rescheduling or cancellation options when needed
+                </span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="ea-discovery-call-calendar-section__information-panels">
+            <p class="ea-discovery-call-calendar-section__expectation">
+              <span
+                class="ea-discovery-call-calendar-section__notice-icon"
+                aria-hidden="true"
+              >
+                <svg viewBox="0 0 24 24" focusable="false">
+                  <circle cx="12" cy="12" r="9"></circle>
+                  <path d="M12 11v5"></path>
+                  <path d="M12 8h.01"></path>
+                </svg>
+              </span>
+
+              <span>
+                Booking a discovery call does not guarantee coaching
+                acceptance, program availability, or enrollment.
+              </span>
+            </p>
+
+            <p class="ea-discovery-call-calendar-section__privacy">
+              <span
+                class="ea-discovery-call-calendar-section__notice-icon"
+                aria-hidden="true"
+              >
+                <svg viewBox="0 0 24 24" focusable="false">
+                  <rect x="5" y="10" width="14" height="10" rx="2"></rect>
+                  <path d="M8 10V7a4 4 0 0 1 8 0v3"></path>
+                  <path d="M12 14v2"></path>
+                </svg>
+              </span>
+
+              <span>
+                Do not enter payment-card details, passwords, or highly
+                sensitive information in the booking form.
+              </span>
+            </p>
+
+            <aside
+              class="ea-discovery-call-calendar-section__reminder"
+              aria-labelledby="ea-discovery-call-after-booking-heading"
+            >
+              <h3
+                class="ea-discovery-call-calendar-section__reminder-heading"
+                id="ea-discovery-call-after-booking-heading"
+              >
+                After Booking
+              </h3>
+
+              <ul class="ea-discovery-call-calendar-section__reminder-list">
+                <li class="ea-discovery-call-calendar-section__reminder-item">
+                  <span
+                    class="ea-discovery-call-calendar-section__reminder-marker"
+                    aria-hidden="true"
+                  ></span>
+                  <span>Review the appointment confirmation</span>
+                </li>
+
+                <li class="ea-discovery-call-calendar-section__reminder-item">
+                  <span
+                    class="ea-discovery-call-calendar-section__reminder-marker"
+                    aria-hidden="true"
+                  ></span>
+                  <span>Save the date and time</span>
+                </li>
+
+                <li class="ea-discovery-call-calendar-section__reminder-item">
+                  <span
+                    class="ea-discovery-call-calendar-section__reminder-marker"
+                    aria-hidden="true"
+                  ></span>
+                  <span>Check your email for instructions</span>
+                </li>
+
+                <li class="ea-discovery-call-calendar-section__reminder-item">
+                  <span
+                    class="ea-discovery-call-calendar-section__reminder-marker"
+                    aria-hidden="true"
+                  ></span>
+                  <span>
+                    Use the provided rescheduling or cancellation link if
+                    necessary
+                  </span>
+                </li>
+              </ul>
+            </aside>
+          </div>
+        </div>
+
+        <div
+          class="ea-discovery-call-calendar-section__calendar-column"
+          id="ea-discovery-call-calendar"
+        >
+          <article
+            class="ea-discovery-call-calendar-section__calendar-card"
+            aria-labelledby="ea-discovery-call-calendar-card-heading"
+          >
+            <h3
+              class="ea-discovery-call-calendar-section__calendar-heading"
+              id="ea-discovery-call-calendar-card-heading"
+            >
+              Discovery Call Calendar
+            </h3>
+
+            <p class="ea-discovery-call-calendar-section__calendar-description">
+              Choose an available date and time, enter the requested booking
+              information, and confirm your appointment.
+            </p>
+
+            <div class="ea-discovery-call-calendar-section__embed-area">
+              <!--
+              GOHIGHLEVEL CALENDAR PLACEHOLDER
+
+              Insert the GoHighLevel calendar embed code for:
+
+              EA | CAL | Discovery Call
+
+              The connected calendar must control:
+
+              - Current appointment availability
+              - Date selection
+              - Time selection
+              - Contact information
+              - Timezone display
+              - Appointment confirmation
+              - Rescheduling behavior
+              - Cancellation behavior
+              - Assigned user or team member
+              - Meeting location or conferencing details
+              - Confirmation and reminder workflows
+
+              Do not manually recreate dates, time slots, contact fields, or booking behavior in custom HTML.
+
+              Do not hard-code a coach name, appointment duration, meeting platform, or availability unless those details are confirmed in the final calendar configuration.
+
+              After a successful booking, use the calendar’s configured confirmation behavior.
+
+              Recommended options:
+
+              - Display the GoHighLevel calendar confirmation message
+              or
+              - Redirect to a dedicated booking-confirmation page if one is created later
+
+              Remove this development placeholder after inserting the live GoHighLevel calendar embed code.
+              -->
+
+              <div
+                class="ea-discovery-call-calendar-section__placeholder"
+                role="group"
+                aria-labelledby="ea-discovery-call-calendar-placeholder-title"
+              >
+                <span class="ea-discovery-call-calendar-section__integration-label">
+                  Calendar embed placeholder
+                </span>
+
+                <div class="ea-discovery-call-calendar-section__placeholder-header">
+                  <span
+                    class="ea-discovery-call-calendar-section__placeholder-icon"
+                    aria-hidden="true"
+                  >
+                    <svg viewBox="0 0 40 40" focusable="false">
+                      <rect x="6" y="8" width="28" height="26" rx="4"></rect>
+                      <path d="M6 15h28"></path>
+                      <path d="M13 5v6"></path>
+                      <path d="M27 5v6"></path>
+                      <path d="m14 25 4 4 8-9"></path>
+                    </svg>
+                  </span>
+
+                  <h4
+                    class="ea-discovery-call-calendar-section__placeholder-title"
+                    id="ea-discovery-call-calendar-placeholder-title"
+                  >
+                    GoHighLevel Discovery Call Calendar Will Be Embedded Here
+                  </h4>
+                </div>
+
+                <div
+                  class="ea-discovery-call-calendar-section__stages"
+                  aria-label="Calendar booking stages preview"
+                >
+                  <div class="ea-discovery-call-calendar-section__stage">
+                    <span class="ea-discovery-call-calendar-section__stage-number">
+                      1
+                    </span>
+                    <span class="ea-discovery-call-calendar-section__stage-label">
+                      Select a Date
+                    </span>
+                  </div>
+
+                  <div class="ea-discovery-call-calendar-section__stage">
+                    <span class="ea-discovery-call-calendar-section__stage-number">
+                      2
+                    </span>
+                    <span class="ea-discovery-call-calendar-section__stage-label">
+                      Choose a Time
+                    </span>
+                  </div>
+
+                  <div class="ea-discovery-call-calendar-section__stage">
+                    <span class="ea-discovery-call-calendar-section__stage-number">
+                      3
+                    </span>
+                    <span class="ea-discovery-call-calendar-section__stage-label">
+                      Enter Your Details
+                    </span>
+                  </div>
+
+                  <div class="ea-discovery-call-calendar-section__stage">
+                    <span class="ea-discovery-call-calendar-section__stage-number">
+                      4
+                    </span>
+                    <span class="ea-discovery-call-calendar-section__stage-label">
+                      Confirm Appointment
+                    </span>
+                  </div>
+                </div>
+
+                <button
+                  class="ea-discovery-call-calendar-section__button-preview"
+                  type="button"
+                  aria-label="Visual preview of the discovery call confirmation button"
+                >
+                  <svg viewBox="0 0 20 20" aria-hidden="true" focusable="false">
+                    <rect x="3" y="4" width="14" height="13" rx="2"></rect>
+                    <path d="M6 2.5v3"></path>
+                    <path d="M14 2.5v3"></path>
+                    <path d="M3 8h14"></path>
+                    <path d="m7 12 2 2 4-4"></path>
+                  </svg>
+                  <span>Confirm Discovery Call</span>
+                </button>
+
+                <p class="ea-discovery-call-calendar-section__availability-note">
+                  Available dates and times must come directly from the
+                  connected GoHighLevel calendar.
+                </p>
+
+                <ul class="ea-discovery-call-calendar-section__trust-list">
+                  <li class="ea-discovery-call-calendar-section__trust-item">
+                    <span
+                      class="ea-discovery-call-calendar-section__trust-icon"
+                      aria-hidden="true"
+                    >
+                      <svg viewBox="0 0 16 16" focusable="false">
+                        <path d="m3 8 3 3 7-7"></path>
+                      </svg>
+                    </span>
+                    <span>Live availability shown in the calendar</span>
+                  </li>
+
+                  <li class="ea-discovery-call-calendar-section__trust-item">
+                    <span
+                      class="ea-discovery-call-calendar-section__trust-icon"
+                      aria-hidden="true"
+                    >
+                      <svg viewBox="0 0 16 16" focusable="false">
+                        <circle cx="8" cy="8" r="5.5"></circle>
+                        <path d="M8 4.5V8l2.5 1.5"></path>
+                      </svg>
+                    </span>
+                    <span>Timezone confirmed before booking</span>
+                  </li>
+
+                  <li class="ea-discovery-call-calendar-section__trust-item">
+                    <span
+                      class="ea-discovery-call-calendar-section__trust-icon"
+                      aria-hidden="true"
+                    >
+                      <svg viewBox="0 0 16 16" focusable="false">
+                        <path d="M3 4.5h10v7H7l-3 2v-2H3Z"></path>
+                        <path d="M5.5 7h5"></path>
+                        <path d="M5.5 9h3"></path>
+                      </svg>
+                    </span>
+                    <span>
+                      Rescheduling information provided after booking
+                    </span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer
+    class="ea-discovery-call-calendar-section__footer"
+    aria-labelledby="ea-discovery-call-footer-brand"
+  >
+    <div class="ea-discovery-call-calendar-section__container">
+      <div class="ea-discovery-call-calendar-section__footer-columns">
+        <div class="ea-discovery-call-calendar-section__footer-column">
+          <h2
+            class="ea-discovery-call-calendar-section__brand"
+            id="ea-discovery-call-footer-brand"
+          >
+            <span
+              class="ea-discovery-call-calendar-section__brand-icon"
+              aria-hidden="true"
+            >
+              <svg viewBox="0 0 32 32" focusable="false">
+                <rect x="3" y="4" width="18" height="17" rx="3"></rect>
+                <path d="M3 10h18"></path>
+                <path d="M8 2v5"></path>
+                <path d="M17 2v5"></path>
+                <path d="M19 14h8a3 3 0 0 1 3 3v4a3 3 0 0 1-3 3h-2v3l-3-3h-3"></path>
+                <path d="M12 25h7"></path>
+                <path d="m16 21 4 4-4 4"></path>
+              </svg>
+            </span>
+
+            <span>Elevate Academy</span>
+          </h2>
+
+          <p class="ea-discovery-call-calendar-section__brand-description">
+            Practical courses and coaching designed to help business owners
+            build clearer strategies, stronger systems, and more consistent
+            progress.
+          </p>
+
+          <div
+            class="ea-discovery-call-calendar-section__brand-accent"
+            aria-hidden="true"
+          ></div>
+        </div>
+
+        <nav
+          class="ea-discovery-call-calendar-section__footer-column"
+          aria-labelledby="ea-discovery-call-footer-navigation"
+        >
+          <h3
+            class="ea-discovery-call-calendar-section__footer-heading"
+            id="ea-discovery-call-footer-navigation"
+          >
+            Discovery Call
+          </h3>
+
+          <ul class="ea-discovery-call-calendar-section__footer-links">
+            <li>
+              <!-- Scroll to: EA | FUN | Coaching Application Step 03 Section 1 -->
+              <a
+                class="ea-discovery-call-calendar-section__footer-link"
+                href="#ea-discovery-call-overview"
+              >
+                Call overview
+              </a>
+            </li>
+
+            <li>
+              <!-- Scroll to: EA | FUN | Coaching Application Step 03 Section 2 -->
+              <a
+                class="ea-discovery-call-calendar-section__footer-link"
+                href="#ea-discovery-call-expectations"
+              >
+                What to expect
+              </a>
+            </li>
+
+            <li>
+              <!-- Scroll to: EA | FUN | Coaching Application Step 03 Section 3 calendar -->
+              <a
+                class="ea-discovery-call-calendar-section__footer-link"
+                href="#ea-discovery-call-calendar"
+              >
+                Book your call
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <nav
+          class="ea-discovery-call-calendar-section__footer-column"
+          aria-labelledby="ea-discovery-call-footer-support"
+        >
+          <h3
+            class="ea-discovery-call-calendar-section__footer-heading"
+            id="ea-discovery-call-footer-support"
+          >
+            Support and Policies
+          </h3>
+
+          <ul class="ea-discovery-call-calendar-section__footer-links">
+            <li>
+              <!-- Replace with: Elevate Academy customer-support or contact URL -->
+              <a
+                class="ea-discovery-call-calendar-section__footer-link"
+                href="#"
+              >
+                Contact support
+              </a>
+            </li>
+
+            <li>
+              <!-- Replace with: Elevate Academy Privacy Policy URL -->
+              <a
+                class="ea-discovery-call-calendar-section__footer-link"
+                href="#"
+              >
+                Privacy policy
+              </a>
+            </li>
+
+            <li>
+              <!-- Replace with: Elevate Academy Terms and Conditions URL -->
+              <a
+                class="ea-discovery-call-calendar-section__footer-link"
+                href="#"
+              >
+                Terms
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="ea-discovery-call-calendar-section__footer-bottom">
+        <p class="ea-discovery-call-calendar-section__copyright">
+          © 2026 Elevate Academy. All rights reserved.
+        </p>
+
+        <div class="ea-discovery-call-calendar-section__disclaimers">
+          <p class="ea-discovery-call-calendar-section__disclaimer">
+            Elevate Academy is a fictional business created for CRM, funnel,
+            and automation demonstration purposes.
+          </p>
+
+          <p class="ea-discovery-call-calendar-section__disclaimer">
+            Submitting a coaching application or booking a discovery call does
+            not guarantee coaching acceptance, program availability, or
+            enrollment.
+          </p>
+
+          <p class="ea-discovery-call-calendar-section__disclaimer">
+            Elevate Academy programs provide general educational guidance and
+            do not guarantee clients, revenue, income, or specific business
+            results.
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+</section>
+<!-- Section 3: Discovery Call Calendar and Footer End -->
+<a
+  class="funnel-next-button"
+  href="../step-01/index.html"
+  aria-label="Restart the Coaching Application Funnel from Step 01"
+  title="Restart Funnel"
+>
+  <span class="funnel-next-button__icon" aria-hidden="true">&rarr;</span>
+  <span>Restart Funnel</span>
+</a>
+</body>
+</html>
+

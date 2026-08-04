@@ -1,0 +1,2867 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Complete a private Elite Realty client experience survey and share feedback with the team.">
+  <title>Elite Realty Client Review Survey | Step 02</title>
+  <style>
+    html { scroll-behavior: smooth; }
+    body { margin: 0; min-width: 320px; background: #ffffff; }
+
+    .er-client-review-native-survey-section,
+    .er-client-review-native-survey-section * { box-sizing: border-box; }
+
+    .er-client-review-native-survey-section {
+      --review-gold: #cf9a37;
+      --review-dark-gold: #956a24;
+      --review-dark: #1d2b32;
+      --review-heading: #344654;
+      --review-body: #55646d;
+      --review-border: #dfe4e8;
+      --review-surface: #f7f9fb;
+      padding: 52px 20px 66px;
+      background: #ffffff;
+      color: var(--review-body);
+      font-family: Inter, Arial, sans-serif;
+    }
+
+    .er-client-review-native-survey-heading {
+      width: min(100%, 668px);
+      margin: 0 auto 24px;
+    }
+
+    .er-client-review-native-survey-kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      margin-bottom: 8px;
+      color: var(--review-dark-gold);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+    }
+
+    .er-client-review-native-survey-kicker::before {
+      content: "";
+      width: 25px;
+      height: 2px;
+      background: var(--review-gold);
+    }
+
+    .er-client-review-native-survey-heading h2 {
+      margin: 0 0 8px;
+      color: #0f293d;
+      font: 700 clamp(25px,4vw,32px)/1.25 Poppins,Arial,sans-serif;
+    }
+
+    .er-client-review-native-survey-heading p {
+      margin: 0;
+      font-size: 15px;
+      line-height: 1.65;
+    }
+
+    .er-client-review-native-survey {
+      width: min(100%, 668px);
+      margin: 0 auto;
+      overflow: hidden;
+      border: 1px solid var(--review-border);
+      border-radius: 11px;
+      background: #ffffff;
+      box-shadow: 0 13px 28px rgba(29,43,50,.15);
+    }
+
+    .er-review-status {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      padding: 15px 16px;
+      border-bottom: 1px solid var(--review-border);
+      color: var(--review-dark-gold);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: .05em;
+      text-transform: uppercase;
+    }
+
+    .er-review-progress {
+      height: 6px;
+      flex: 1;
+      overflow: hidden;
+      border-radius: 99px;
+      background: #f1e7d4;
+    }
+
+    .er-review-progress span {
+      display: block;
+      width: 33.333%;
+      height: 100%;
+      border-radius: inherit;
+      background: linear-gradient(90deg,var(--review-dark-gold),var(--review-gold));
+      transition: width 220ms ease;
+    }
+
+    .er-review-panel {
+      display: grid;
+      gap: 28px;
+      padding: 20px 15px 0;
+      background: #ffffff;
+    }
+
+    .er-review-panel[hidden] { display: none; }
+
+    .er-review-question {
+      display: grid;
+      gap: 10px;
+      min-width: 0;
+      margin: 0;
+      padding: 0;
+      border: 0;
+    }
+
+    .er-review-question > label,
+    .er-review-question legend {
+      color: var(--review-heading);
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 1.4;
+    }
+
+    .er-review-rating-options,
+    .er-review-choice {
+      display: grid;
+      gap: 10px;
+    }
+
+    .er-review-rating-options label,
+    .er-review-choice label {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      color: var(--review-heading);
+      font-size: 14px;
+      cursor: pointer;
+    }
+
+    .er-review-question input[type="radio"] {
+      width: 14px;
+      height: 14px;
+      margin: 0;
+      accent-color: var(--review-gold);
+    }
+
+    .er-review-question textarea {
+      width: 100%;
+      min-height: 90px;
+      padding: 10px;
+      border: 1px solid #ccd5df;
+      border-radius: 4px;
+      background: #ffffff;
+      color: var(--review-dark);
+      font: 400 14px/1.5 Inter,Arial,sans-serif;
+      resize: vertical;
+    }
+
+    .er-review-question textarea::placeholder { color: #6c7a91; opacity: 1; }
+
+    .er-review-question textarea:focus {
+      outline: none;
+      border-color: var(--review-gold);
+      box-shadow: 0 0 0 3px rgba(207,154,55,.17);
+    }
+
+    .er-review-actions {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      min-height: 48px;
+      margin: 0 -15px;
+      padding: 0 21px;
+      background: var(--review-gold);
+    }
+
+    .er-review-actions-first { justify-content: flex-end; }
+
+    .er-review-actions button {
+      min-height: 40px;
+      padding: 0;
+      border: 0;
+      background: transparent;
+      color: #ffffff;
+      font: 800 14px/1 Inter,Arial,sans-serif;
+      cursor: pointer;
+    }
+
+    .er-review-actions button:hover { color: #1d2b32; }
+
+    .er-review-actions button:focus-visible {
+      outline: 3px solid #ffffff;
+      outline-offset: 3px;
+      border-radius: 3px;
+    }
+
+    .funnel-next-button {
+      position: fixed;
+      right: 24px;
+      bottom: 24px;
+      z-index: 99999;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      min-height: 54px;
+      padding: 0 20px 0 10px;
+      border: 1px solid rgba(255,255,255,.24);
+      border-radius: 999px;
+      background: linear-gradient(135deg,#956a24,#c7953e);
+      box-shadow: 0 14px 34px rgba(29,43,50,.30);
+      color: #ffffff;
+      font: 700 14px/1 Inter,Arial,sans-serif;
+      text-decoration: none;
+      transition: transform 180ms ease,box-shadow 180ms ease,background 180ms ease;
+      isolation: isolate;
+    }
+
+    .funnel-next-button::after {
+      content: "";
+      position: absolute;
+      right: 18px;
+      bottom: -7px;
+      z-index: -1;
+      width: 18px;
+      height: 18px;
+      border-radius: 0 0 5px 0;
+      background: #c7953e;
+      transform: rotate(35deg);
+    }
+
+    .funnel-next-button:hover {
+      background: linear-gradient(135deg,#1d2b32,#344654);
+      box-shadow: 0 18px 40px rgba(29,43,50,.42);
+      color: #ffffff;
+      transform: translateY(-3px);
+    }
+
+    .funnel-next-button:focus-visible {
+      outline: 3px solid #f7eedc;
+      outline-offset: 4px;
+    }
+
+    .funnel-next-button__icon {
+      display: inline-grid;
+      width: 36px;
+      height: 36px;
+      flex: 0 0 36px;
+      place-items: center;
+      border-radius: 50%;
+      background: #f7eedc;
+      color: #956a24;
+      font-size: 19px;
+    }
+
+    @media (max-width: 640px) {
+      .er-client-review-native-survey-section { padding: 38px 12px 50px; }
+      .er-review-status { align-items: flex-start; flex-direction: column; gap: 8px; }
+      .er-review-progress { width: 100%; flex: none; }
+      .funnel-next-button { right: 16px; bottom: 16px; min-height: 50px; padding-right: 17px; }
+      .funnel-next-button__icon { width: 32px; height: 32px; flex-basis: 32px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .er-review-progress span,
+      .funnel-next-button { transition: none; }
+    }
+  </style>
+</head>
+<body>
+<!-- Section 1: Header, Progress, and Survey Introduction Start -->
+<section
+  class="er-client-review-survey-header"
+  id="client-review-survey-header"
+  aria-labelledby="client-review-survey-heading"
+>
+  <style>
+    .er-client-review-survey-header {
+      width: 100%;
+      max-width: 100%;
+      overflow-x: hidden;
+      background: #ffffff;
+      color: #55646d;
+      font-family: Inter, Arial, sans-serif;
+    }
+
+    .er-client-review-survey-header,
+    .er-client-review-survey-header * {
+      box-sizing: border-box;
+    }
+
+    .er-client-review-survey-header .er-client-review-survey-header__container {
+      width: min(100% - 40px, 1180px);
+      margin-inline: auto;
+    }
+
+    .er-client-review-survey-header .er-client-review-survey-header__topbar {
+      background: #ffffff;
+      border-bottom: 1px solid #e4ded2;
+    }
+
+    .er-client-review-survey-header .er-client-review-survey-header__topbar-inner {
+      display: flex;
+      min-height: 76px;
+      align-items: center;
+      justify-content: space-between;
+      gap: 28px;
+    }
+
+    .er-client-review-survey-header .er-client-review-survey-header__brand {
+      position: relative;
+      display: inline-flex;
+      flex-shrink: 0;
+      align-items: center;
+      margin: 0;
+      padding-left: 18px;
+      color: #1d2b32;
+      font-family: Poppins, Arial, sans-serif;
+      font-size: 21px;
+      font-weight: 700;
+      line-height: 1.25;
+      letter-spacing: -0.025em;
+    }
+
+    .er-client-review-survey-header .er-client-review-survey-header__brand::before {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: 4px;
+      height: 30px;
+      border-radius: 999px;
+      background: linear-gradient(180deg, #c7953e, #d9b465);
+      content: "";
+      transform: translateY(-50%);
+    }
+
+    .er-client-review-survey-header .er-client-review-survey-header__back-link {
+      display: inline-flex;
+      min-height: 42px;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 2px;
+      color: #344654;
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 1.4;
+      text-align: right;
+      text-decoration: none;
+      text-underline-offset: 4px;
+      transition:
+        color 160ms ease,
+        transform 160ms ease;
+    }
+
+    .er-client-review-survey-header .er-client-review-survey-header__back-link:hover {
+      color: #956a24;
+      text-decoration: underline;
+      text-decoration-color: #c7953e;
+      transform: translateX(-2px);
+    }
+
+    .er-client-review-survey-header .er-client-review-survey-header__back-link:focus-visible {
+      border-radius: 6px;
+      outline: 3px solid rgba(199, 149, 62, 0.4);
+      outline-offset: 4px;
+    }
+
+    .er-client-review-survey-header .er-client-review-survey-header__back-icon {
+      width: 18px;
+      height: 18px;
+      flex: 0 0 18px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .er-client-review-survey-header .er-client-review-survey-header__progress {
+      padding: 20px 0 22px;
+      background: #fcf8f0;
+      border-bottom: 1px solid #e4ded2;
+    }
+
+    .er-client-review-survey-header .er-client-review-survey-header__progress-heading {
+      margin: 0 0 15px;
+      color: #1d2b32;
+      font-family: Poppins, Arial, sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 1.4;
+    }
+
+    .er-client-review-survey-header .er-client-review-survey-header__progress-list {
+      position: relative;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .er-client-review-survey-header .er-client-review-survey-header__progress-list::before {
+      position: absolute;
+      top: 19px;
+      right: calc(16.666% + 19px);
+      left: calc(16.666% + 19px);
+      height: 2px;
+      background: #d9dde0;
+      content: "";
+    }
+
+    .er-client-review-survey-header .er-client-review-survey-header__progress-list::after {
+      position: absolute;
+      top: 19px;
+      left: calc(16.666% + 19px);
+      width: calc(33.333% - 38px);
+      height: 2px;
+      background: #2e8b57;
+      content: "";
+    }
+
+    .er-client-review-survey-header .er-client-review-survey-header__step {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      min-width: 0;
+      justify-items: center;
+      padding-inline: 8px;
+      text-align: center;
+    }
+
+    .er-client-review-survey-header .er-client-review-survey-header__step-indicator {
+      display: grid;
+      width: 40px;
+      height: 40px;
+      place-items: center;
+      border: 2px solid #cbd3d7;
+      border-radius: 50%;
+      background: #ffffff;
+      color: #78868e;
+      font-family: Poppins, Arial, sans-serif;
+      font-size: 12px;
+      font-weight: 700;
+      line-height: 1;
+    }
+
+    .er-client-review-survey-header .er-client-review-survey-header__step--complete .er-client-review-survey-header__step-indicator {
+      border-color: #2e8b57;
+      background: #2e8b57;
+      color: #ffffff;
+    }
+
+    .er-client-review-survey-header .er-client-review-survey-header__step--current .er-client-review-survey-header__step-indicator {
+      border-color: #c7953e;
+      background: #c7953e;
+      color: #ffffff;
+      box-shadow: 0 0 0 5px rgba(199, 149, 62, 0.14);
+    }
+
+    .er-client-review-survey-header .er-client-review-survey-header__step-check {
+      width: 18px;
+      height: 18px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 2.4;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .er-client-review-survey-header .er-client-review-survey-header__step-label {
+      max-width: 175px;
+      margin-top: 10px;
+      color: #55646d;
+      font-family: Poppins, Arial, sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      line-height: 1.35;
+    }
+
+    .er-client-review-survey-header .er-client-review-survey-header__step--current .er-client-review-survey-header__step-label {
+      color: #956a24;
+    }
+
+    .er-client-review-survey-header .er-client-review-survey-header__step--upcoming .er-client-review-survey-header__step-label {
+      color: #78868e;
+    }
+
+    .er-client-review-survey-header .er-client-review-survey-header__step-status {
+      margin-top: 3px;
+      color: #78868e;
+      font-size: 11px;
+      font-weight: 600;
+      line-height: 1.3;
+    }
+
+    .er-client-review-survey-header .er-client-review-survey-header__step--complete .er-client-review-survey-header__step-status {
+      color: #2e8b57;
+    }
+
+    .er-client-review-survey-header .er-client-review-survey-header__step--current .er-client-review-survey-header__step-status {
+      color: #956a24;
+    }
+
+    .er-client-review-survey-header .er-client-review-survey-header__introduction {
+      position: relative;
+      overflow: hidden;
+      padding: clamp(48px, 6vw, 72px) 0;
+      background:
+        radial-gradient(
+          circle at 93% 8%,
+          rgba(199, 149, 62, 0.1) 0,
+          rgba(199, 149, 62, 0.1) 125px,
+          transparent 126px
+        ),
+        linear-gradient(135deg, #fffdf8 0%, #ffffff 54%, #eaf0f3 100%);
+    }
+
+    .er-client-review-survey-header .er-client-review-survey-header__introduction::before {
+      position: absolute;
+      bottom: -78px;
+      left: -58px;
+      width: 195px;
+      height: 195px;
+      border: 1px solid rgba(83, 107, 121, 0.14);
+      border-radius: 50%;
+      content: "";
+      pointer-events: none;
+    }
+
+    .er-client-review-survey-header .er-client-review-survey-header__introduction-grid {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: minmax(0, 1.08fr) minmax(360px, 0.82fr);
+      gap: clamp(40px, 7vw, 82px);
+      align-items: center;
+    }
+
+    .er-client-review-survey-header .er-client-review-survey-header__content {
+      min-width: 0;
+    }
+
+    .er-client-review-survey-header .er-client-review-survey-header__eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 11px;
+      margin: 0 0 13px;
+      color: #956a24;
+      font-family: Poppins, Arial, sans-serif;
+      font-size: 12px;
+      font-weight: 700;
+      line-height: 1.4;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    .er-client-review-survey-header .er-client-review-survey-header__eyebrow::before {
+      width: 35px;
+      height: 3px;
+      flex: 0 0 35px;
+      border-radius: 999px;
+      background: #c7953e;
+      content: "";
+    }
+
+    .er-client-review-survey-header .er-client-review-survey-header__heading {
+      max-width: 700px;
+      margin: 0;
+      color: #1d2b32;
+      font-family: Poppins, Arial, sans-serif;
+      font-size: clamp(32px, 4vw, 50px);
+      font-weight: 700;
+      line-height: 1.1;
+      letter-spacing: -0.035em;
+    }
+
+    .er-client-review-survey-header .er-client-review-survey-header__supporting {
+      max-width: 690px;
+      margin: 19px 0 0;
+      color: #55646d;
+      font-size: 16px;
+      line-height: 1.75;
+    }
+
+    .er-client-review-survey-header .er-client-review-survey-header__privacy {
+      display: grid;
+      max-width: 700px;
+      grid-template-columns: 34px minmax(0, 1fr);
+      gap: 12px;
+      align-items: start;
+      margin: 22px 0 0;
+      padding: 15px 17px;
+      border: 1px solid #e4ded2;
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.84);
+      color: #4d5d66;
+      font-size: 13px;
+      line-height: 1.65;
+      box-shadow: 0 8px 22px rgba(36, 52, 63, 0.06);
+    }
+
+    .er-client-review-survey-header .er-client-review-survey-header__privacy-icon {
+      display: grid;
+      width: 32px;
+      height: 32px;
+      place-items: center;
+      border-radius: 50%;
+      background: #f7eedc;
+      color: #956a24;
+    }
+
+    .er-client-review-survey-header .er-client-review-survey-header__privacy-icon svg {
+      width: 17px;
+      height: 17px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .er-client-review-survey-header .er-client-review-survey-header__reassurance-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 20px;
+      margin: 22px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .er-client-review-survey-header .er-client-review-survey-header__reassurance-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: #465963;
+      font-size: 13px;
+      font-weight: 700;
+      line-height: 1.45;
+    }
+
+    .er-client-review-survey-header .er-client-review-survey-header__check {
+      display: grid;
+      width: 21px;
+      height: 21px;
+      flex: 0 0 21px;
+      place-items: center;
+      border-radius: 50%;
+      background: #f7eedc;
+      color: #956a24;
+    }
+
+    .er-client-review-survey-header .er-client-review-survey-header__reassurance-item:nth-child(2) .er-client-review-survey-header__check {
+      background: #eaf0f3;
+      color: #344654;
+    }
+
+    .er-client-review-survey-header .er-client-review-survey-header__reassurance-item:nth-child(3) .er-client-review-survey-header__check {
+      background: rgba(46, 139, 87, 0.11);
+      color: #2e8b57;
+    }
+
+    .er-client-review-survey-header .er-client-review-survey-header__check svg {
+      width: 12px;
+      height: 12px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 2.7;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .er-client-review-survey-header .er-client-review-survey-header__actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 27px;
+    }
+
+    .er-client-review-survey-header .er-client-review-survey-header__cta {
+      display: inline-flex;
+      min-height: 50px;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 13px 22px;
+      border: 1px solid #c7953e;
+      border-radius: 10px;
+      background: #c7953e;
+      color: #ffffff;
+      font-family: Poppins, Arial, sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 1.4;
+      text-align: center;
+      text-decoration: none;
+      box-shadow: 0 10px 24px rgba(149, 106, 36, 0.2);
+      transition:
+        background 160ms ease,
+        border-color 160ms ease,
+        box-shadow 160ms ease,
+        transform 160ms ease;
+    }
+
+    .er-client-review-survey-header .er-client-review-survey-header__cta:hover {
+      border-color: #956a24;
+      background: #956a24;
+      box-shadow: 0 13px 28px rgba(149, 106, 36, 0.26);
+      transform: translateY(-2px);
+    }
+
+    .er-client-review-survey-header .er-client-review-survey-header__cta:focus-visible {
+      outline: 3px solid rgba(52, 70, 84, 0.34);
+      outline-offset: 4px;
+    }
+
+    .er-client-review-survey-header .er-client-review-survey-header__cta-icon {
+      width: 18px;
+      height: 18px;
+      flex: 0 0 18px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .er-client-review-survey-header .er-client-review-survey-header__summary-card {
+      position: relative;
+      min-width: 0;
+      overflow: hidden;
+      padding: 27px;
+      border: 1px solid #e4ded2;
+      border-radius: 20px;
+      background: #ffffff;
+      box-shadow: 0 20px 50px rgba(36, 52, 63, 0.12);
+    }
+
+    .er-client-review-survey-header .er-client-review-survey-header__summary-card::before {
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      height: 5px;
+      background: linear-gradient(90deg, #c7953e, #d9b465, #536b79);
+      content: "";
+    }
+
+    .er-client-review-survey-header .er-client-review-survey-header__card-header {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 18px;
+      margin-bottom: 20px;
+    }
+
+    .er-client-review-survey-header .er-client-review-survey-header__card-title {
+      margin: 0;
+      color: #1d2b32;
+      font-family: Poppins, Arial, sans-serif;
+      font-size: 22px;
+      font-weight: 700;
+      line-height: 1.3;
+      letter-spacing: -0.02em;
+    }
+
+    .er-client-review-survey-header .er-client-review-survey-header__badge {
+      display: inline-flex;
+      min-height: 29px;
+      flex: 0 0 auto;
+      align-items: center;
+      padding: 5px 11px;
+      border: 1px solid #eadbbd;
+      border-radius: 999px;
+      background: #fcf8f0;
+      color: #956a24;
+      font-family: Poppins, Arial, sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      line-height: 1.4;
+      white-space: nowrap;
+    }
+
+    .er-client-review-survey-header .er-client-review-survey-header__summary-list {
+      display: grid;
+      gap: 9px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .er-client-review-survey-header .er-client-review-survey-header__summary-item {
+      display: grid;
+      min-width: 0;
+      grid-template-columns: 35px minmax(0, 1fr);
+      gap: 12px;
+      align-items: center;
+      padding: 10px 12px;
+      border: 1px solid #e4e9eb;
+      border-radius: 11px;
+      background: #f7f8f8;
+      color: #465963;
+      font-size: 13px;
+      font-weight: 700;
+      line-height: 1.45;
+    }
+
+    .er-client-review-survey-header .er-client-review-survey-header__summary-number {
+      display: grid;
+      width: 35px;
+      height: 35px;
+      place-items: center;
+      border-radius: 10px;
+      background: #f7eedc;
+      color: #956a24;
+      font-family: Poppins, Arial, sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      line-height: 1;
+    }
+
+    .er-client-review-survey-header .er-client-review-survey-header__summary-item:nth-child(even) .er-client-review-survey-header__summary-number {
+      background: #eaf0f3;
+      color: #344654;
+    }
+
+    .er-client-review-survey-header .er-client-review-survey-header__card-note {
+      display: grid;
+      grid-template-columns: 28px minmax(0, 1fr);
+      gap: 11px;
+      align-items: start;
+      margin: 18px 0 0;
+      padding: 14px;
+      border-left: 4px solid #c7953e;
+      border-radius: 8px 12px 12px 8px;
+      background: #fcf8f0;
+      color: #625740;
+      font-size: 12px;
+      line-height: 1.6;
+    }
+
+    .er-client-review-survey-header .er-client-review-survey-header__note-icon {
+      display: grid;
+      width: 27px;
+      height: 27px;
+      place-items: center;
+      border-radius: 50%;
+      background: #ffffff;
+      color: #956a24;
+    }
+
+    .er-client-review-survey-header .er-client-review-survey-header__note-icon svg {
+      width: 15px;
+      height: 15px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .er-client-review-survey-header .er-client-review-survey-header__downward-cue {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      margin: 20px 0 0;
+      color: #344654;
+      font-size: 12px;
+      font-weight: 700;
+      line-height: 1.4;
+      text-align: center;
+    }
+
+    .er-client-review-survey-header .er-client-review-survey-header__downward-cue svg {
+      width: 17px;
+      height: 17px;
+      fill: none;
+      stroke: #c7953e;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    @media (max-width: 900px) {
+      .er-client-review-survey-header .er-client-review-survey-header__introduction-grid {
+        grid-template-columns: minmax(0, 1fr) minmax(320px, 0.8fr);
+        gap: 36px;
+      }
+
+      .er-client-review-survey-header .er-client-review-survey-header__summary-card {
+        padding: 23px;
+      }
+
+      .er-client-review-survey-header .er-client-review-survey-header__card-header {
+        align-items: flex-start;
+        flex-direction: column-reverse;
+        gap: 10px;
+      }
+    }
+
+    @media (max-width: 767px) {
+      .er-client-review-survey-header .er-client-review-survey-header__container {
+        width: min(100% - 32px, 1180px);
+      }
+
+      .er-client-review-survey-header .er-client-review-survey-header__topbar-inner {
+        min-height: 70px;
+      }
+
+      .er-client-review-survey-header .er-client-review-survey-header__brand {
+        font-size: 18px;
+      }
+
+      .er-client-review-survey-header .er-client-review-survey-header__progress-list::before {
+        right: calc(16.666% + 17px);
+        left: calc(16.666% + 17px);
+      }
+
+      .er-client-review-survey-header .er-client-review-survey-header__progress-list::after {
+        left: calc(16.666% + 17px);
+        width: calc(33.333% - 34px);
+      }
+
+      .er-client-review-survey-header .er-client-review-survey-header__introduction-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 34px;
+      }
+
+      .er-client-review-survey-header .er-client-review-survey-header__summary-card {
+        width: min(100%, 630px);
+      }
+    }
+
+    @media (max-width: 599px) {
+      .er-client-review-survey-header .er-client-review-survey-header__topbar-inner {
+        gap: 14px;
+      }
+
+      .er-client-review-survey-header .er-client-review-survey-header__brand {
+        max-width: 155px;
+        padding-left: 14px;
+        font-size: 16px;
+      }
+
+      .er-client-review-survey-header .er-client-review-survey-header__brand::before {
+        width: 3px;
+        height: 26px;
+      }
+
+      .er-client-review-survey-header .er-client-review-survey-header__back-link {
+        max-width: 135px;
+        justify-content: flex-end;
+        font-size: 12px;
+      }
+
+      .er-client-review-survey-header .er-client-review-survey-header__step {
+        padding-inline: 3px;
+      }
+
+      .er-client-review-survey-header .er-client-review-survey-header__step-indicator {
+        width: 35px;
+        height: 35px;
+        font-size: 10px;
+      }
+
+      .er-client-review-survey-header .er-client-review-survey-header__progress-list::before,
+      .er-client-review-survey-header .er-client-review-survey-header__progress-list::after {
+        top: 16.5px;
+      }
+
+      .er-client-review-survey-header .er-client-review-survey-header__progress-list::before {
+        right: calc(16.666% + 15px);
+        left: calc(16.666% + 15px);
+      }
+
+      .er-client-review-survey-header .er-client-review-survey-header__progress-list::after {
+        left: calc(16.666% + 15px);
+        width: calc(33.333% - 30px);
+      }
+
+      .er-client-review-survey-header .er-client-review-survey-header__step-label {
+        margin-top: 8px;
+        font-size: 10px;
+      }
+
+      .er-client-review-survey-header .er-client-review-survey-header__step-status {
+        font-size: 9px;
+      }
+
+      .er-client-review-survey-header .er-client-review-survey-header__introduction {
+        padding: 42px 0;
+      }
+
+      .er-client-review-survey-header .er-client-review-survey-header__heading {
+        font-size: clamp(29px, 9vw, 38px);
+      }
+
+      .er-client-review-survey-header .er-client-review-survey-header__supporting {
+        font-size: 15px;
+      }
+
+      .er-client-review-survey-header .er-client-review-survey-header__privacy {
+        grid-template-columns: 30px minmax(0, 1fr);
+        padding: 14px;
+      }
+
+      .er-client-review-survey-header .er-client-review-survey-header__privacy-icon {
+        width: 29px;
+        height: 29px;
+      }
+
+      .er-client-review-survey-header .er-client-review-survey-header__reassurance-list {
+        display: grid;
+        gap: 10px;
+      }
+
+      .er-client-review-survey-header .er-client-review-survey-header__cta {
+        width: 100%;
+      }
+
+      .er-client-review-survey-header .er-client-review-survey-header__card-title {
+        font-size: 20px;
+      }
+    }
+
+    @media (max-width: 399px) {
+      .er-client-review-survey-header .er-client-review-survey-header__container {
+        width: min(100% - 24px, 1180px);
+      }
+
+      .er-client-review-survey-header .er-client-review-survey-header__brand {
+        max-width: 125px;
+        font-size: 14px;
+      }
+
+      .er-client-review-survey-header .er-client-review-survey-header__back-link {
+        max-width: 125px;
+        font-size: 11px;
+      }
+
+      .er-client-review-survey-header .er-client-review-survey-header__step-label {
+        font-size: 9px;
+      }
+
+      .er-client-review-survey-header .er-client-review-survey-header__step-status {
+        font-size: 8px;
+      }
+
+      .er-client-review-survey-header .er-client-review-survey-header__summary-card {
+        padding: 21px 16px;
+        border-radius: 16px;
+      }
+
+      .er-client-review-survey-header .er-client-review-survey-header__summary-item {
+        grid-template-columns: 32px minmax(0, 1fr);
+        gap: 10px;
+        padding: 10px;
+      }
+
+      .er-client-review-survey-header .er-client-review-survey-header__summary-number {
+        width: 32px;
+        height: 32px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .er-client-review-survey-header .er-client-review-survey-header__back-link,
+      .er-client-review-survey-header .er-client-review-survey-header__cta {
+        transition: none;
+      }
+    }
+  </style>
+
+  <header class="er-client-review-survey-header__topbar">
+    <div
+      class="er-client-review-survey-header__container er-client-review-survey-header__topbar-inner"
+    >
+      <p class="er-client-review-survey-header__brand">
+        Elite Realty Group
+      </p>
+
+      <!-- Replace with: 01 | Client Review Landing URL -->
+      <a
+        class="er-client-review-survey-header__back-link"
+        href="../step-01/index.html#client-review-value"
+      >
+        <svg
+          class="er-client-review-survey-header__back-icon"
+          viewBox="0 0 24 24"
+          aria-hidden="true"
+          focusable="false"
+        >
+          <path d="m15 18-6-6 6-6"></path>
+        </svg>
+
+        <span>Back to review details</span>
+      </a>
+    </div>
+  </header>
+
+  <div
+    class="er-client-review-survey-header__progress"
+    aria-label="Client review progress"
+  >
+    <div class="er-client-review-survey-header__container">
+      <p class="er-client-review-survey-header__progress-heading">
+        Step 2 of 3
+      </p>
+
+      <ol class="er-client-review-survey-header__progress-list">
+        <li
+          class="er-client-review-survey-header__step er-client-review-survey-header__step--complete"
+        >
+          <span class="er-client-review-survey-header__step-indicator">
+            <svg
+              class="er-client-review-survey-header__step-check"
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+              focusable="false"
+            >
+              <path d="m5 12 4 4L19 6"></path>
+            </svg>
+          </span>
+
+          <span class="er-client-review-survey-header__step-label">
+            01 Review details
+          </span>
+
+          <span class="er-client-review-survey-header__step-status">
+            Complete
+          </span>
+        </li>
+
+        <li
+          class="er-client-review-survey-header__step er-client-review-survey-header__step--current"
+          aria-current="step"
+        >
+          <span class="er-client-review-survey-header__step-indicator">
+            02
+          </span>
+
+          <span class="er-client-review-survey-header__step-label">
+            02 Client survey
+          </span>
+
+          <span class="er-client-review-survey-header__step-status">
+            Current
+          </span>
+        </li>
+
+        <li
+          class="er-client-review-survey-header__step er-client-review-survey-header__step--upcoming"
+        >
+          <span class="er-client-review-survey-header__step-indicator">
+            03
+          </span>
+
+          <span class="er-client-review-survey-header__step-label">
+            03 Confirmation
+          </span>
+
+          <span class="er-client-review-survey-header__step-status">
+            Upcoming
+          </span>
+        </li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="er-client-review-survey-header__introduction">
+    <div
+      class="er-client-review-survey-header__container er-client-review-survey-header__introduction-grid"
+    >
+      <div class="er-client-review-survey-header__content">
+        <p class="er-client-review-survey-header__eyebrow">
+          Client experience survey
+        </p>
+
+        <h1
+          class="er-client-review-survey-header__heading"
+          id="client-review-survey-heading"
+        >
+          Tell us about your experience with Elite Realty
+        </h1>
+
+        <p class="er-client-review-survey-header__supporting">
+          Share your honest feedback about the communication, guidance,
+          responsiveness, professionalism, and overall experience you received.
+        </p>
+
+        <div class="er-client-review-survey-header__privacy">
+          <span
+            class="er-client-review-survey-header__privacy-icon"
+            aria-hidden="true"
+          >
+            <svg viewBox="0 0 24 24" focusable="false">
+              <rect x="5" y="10" width="14" height="10" rx="2"></rect>
+              <path d="M8 10V7a4 4 0 0 1 8 0v3"></path>
+              <path d="M12 14v2"></path>
+            </svg>
+          </span>
+
+          <span>
+            Your responses are treated as private client feedback unless you
+            separately grant permission for Elite Realty to use specific
+            comments as a testimonial.
+          </span>
+        </div>
+
+        <ul
+          class="er-client-review-survey-header__reassurance-list"
+          aria-label="Client survey features"
+        >
+          <li class="er-client-review-survey-header__reassurance-item">
+            <span
+              class="er-client-review-survey-header__check"
+              aria-hidden="true"
+            >
+              <svg viewBox="0 0 20 20" focusable="false">
+                <path d="m4.5 10 3.3 3.3 7.7-7.6"></path>
+              </svg>
+            </span>
+
+            <span>Short online survey</span>
+          </li>
+
+          <li class="er-client-review-survey-header__reassurance-item">
+            <span
+              class="er-client-review-survey-header__check"
+              aria-hidden="true"
+            >
+              <svg viewBox="0 0 20 20" focusable="false">
+                <path d="m4.5 10 3.3 3.3 7.7-7.6"></path>
+              </svg>
+            </span>
+
+            <span>Honest feedback is welcome</span>
+          </li>
+
+          <li class="er-client-review-survey-header__reassurance-item">
+            <span
+              class="er-client-review-survey-header__check"
+              aria-hidden="true"
+            >
+              <svg viewBox="0 0 20 20" focusable="false">
+                <path d="m4.5 10 3.3 3.3 7.7-7.6"></path>
+              </svg>
+            </span>
+
+            <span>Testimonial permission is optional</span>
+          </li>
+        </ul>
+
+        <div class="er-client-review-survey-header__actions">
+          <!-- Internal link: Native Post-Closing Experience Survey -->
+          <a
+            class="er-client-review-survey-header__cta"
+            href="#client-review-survey"
+          >
+            <span>Start the client survey</span>
+
+            <svg
+              class="er-client-review-survey-header__cta-icon"
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+              focusable="false"
+            >
+              <path d="M5 12h14"></path>
+              <path d="m13 6 6 6-6 6"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <aside
+        class="er-client-review-survey-header__summary-card"
+        aria-labelledby="client-review-survey-summary-title"
+      >
+        <div class="er-client-review-survey-header__card-header">
+          <h2
+            class="er-client-review-survey-header__card-title"
+            id="client-review-survey-summary-title"
+          >
+            What the survey covers
+          </h2>
+
+          <span class="er-client-review-survey-header__badge">
+            Step 2 of 3
+          </span>
+        </div>
+
+        <ol class="er-client-review-survey-header__summary-list">
+          <li class="er-client-review-survey-header__summary-item">
+            <span class="er-client-review-survey-header__summary-number">
+              01
+            </span>
+
+            <span>Overall experience</span>
+          </li>
+
+          <li class="er-client-review-survey-header__summary-item">
+            <span class="er-client-review-survey-header__summary-number">
+              02
+            </span>
+
+            <span>Communication and responsiveness</span>
+          </li>
+
+          <li class="er-client-review-survey-header__summary-item">
+            <span class="er-client-review-survey-header__summary-number">
+              03
+            </span>
+
+            <span>Professionalism and process clarity</span>
+          </li>
+
+          <li class="er-client-review-survey-header__summary-item">
+            <span class="er-client-review-survey-header__summary-number">
+              04
+            </span>
+
+            <span>What went well and what could improve</span>
+          </li>
+
+          <li class="er-client-review-survey-header__summary-item">
+            <span class="er-client-review-survey-header__summary-number">
+              05
+            </span>
+
+            <span>Optional testimonial permission</span>
+          </li>
+        </ol>
+
+        <div class="er-client-review-survey-header__card-note">
+          <span
+            class="er-client-review-survey-header__note-icon"
+            aria-hidden="true"
+          >
+            <svg viewBox="0 0 24 24" focusable="false">
+              <circle cx="12" cy="12" r="9"></circle>
+              <path d="M12 11v5"></path>
+              <path d="M12 8h.01"></path>
+            </svg>
+          </span>
+
+          <span>
+            Private feedback, testimonial permission, and public reviews are
+            separate choices.
+          </span>
+        </div>
+
+        <p class="er-client-review-survey-header__downward-cue">
+          <span>Complete the survey below</span>
+
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M12 5v14"></path>
+            <path d="m6 13 6 6 6-6"></path>
+          </svg>
+        </p>
+      </aside>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      function initializeClientReviewSurveyScroll() {
+        var section = document.getElementById(
+          "client-review-survey-header"
+        );
+
+        if (!section) {
+          return;
+        }
+
+        var surveyLinks = section.querySelectorAll(
+          'a[href="#client-review-survey"]'
+        );
+
+        surveyLinks.forEach(function (surveyLink) {
+          surveyLink.addEventListener("click", function (event) {
+            event.preventDefault();
+
+            var clientReviewSurvey = document.querySelector(
+              ".client-review-survey"
+            );
+
+            if (!clientReviewSurvey) {
+              return;
+            }
+
+            clientReviewSurvey.scrollIntoView({
+              behavior: "smooth",
+              block: "start"
+            });
+          });
+        });
+      }
+
+      if (document.readyState === "loading") {
+        document.addEventListener(
+          "DOMContentLoaded",
+          initializeClientReviewSurveyScroll
+        );
+      } else {
+        initializeClientReviewSurveyScroll();
+      }
+    })();
+  </script>
+</section>
+<!-- Section 1: Header, Progress, and Survey Introduction End -->
+
+  <!-- Client Review Survey Start -->
+  <section id="client-review-survey" class="er-client-review-native-survey-section" aria-labelledby="client-review-native-survey-title">
+    <div class="er-client-review-native-survey-heading">
+      <span class="er-client-review-native-survey-kicker">Private client survey</span>
+      <h2 id="client-review-native-survey-title">Tell Us About Your Experience</h2>
+      <p>Your answers begin unselected and remain private unless you separately authorize testimonial use.</p>
+    </div>
+
+    <form id="client-review-native-survey" class="er-client-review-native-survey" action="../step-03/index.html" method="get">
+      <div class="er-review-status">
+        <span id="client-review-step-label">Step 1 of 3</span>
+        <div class="er-review-progress" aria-hidden="true"><span id="client-review-progress-bar"></span></div>
+      </div>
+
+      <div class="er-review-panel" data-review-step="0">
+        <fieldset class="er-review-question er-review-rating">
+          <legend>How satisfied are you with your overall experience? <span aria-hidden="true">*</span></legend>
+          <div class="er-review-rating-options">
+            <label><input type="radio" name="overall_satisfaction" value="1" required> <span>1</span></label>
+            <label><input type="radio" name="overall_satisfaction" value="2"> <span>2</span></label>
+            <label><input type="radio" name="overall_satisfaction" value="3"> <span>3</span></label>
+            <label><input type="radio" name="overall_satisfaction" value="4"> <span>4</span></label>
+            <label><input type="radio" name="overall_satisfaction" value="5"> <span>5</span></label>
+          </div>
+        </fieldset>
+        <fieldset class="er-review-question er-review-rating">
+          <legend>How satisfied are you with your agent’s communication? <span aria-hidden="true">*</span></legend>
+          <div class="er-review-rating-options">
+            <label><input type="radio" name="agent_communication" value="1" required> <span>1</span></label>
+            <label><input type="radio" name="agent_communication" value="2"> <span>2</span></label>
+            <label><input type="radio" name="agent_communication" value="3"> <span>3</span></label>
+            <label><input type="radio" name="agent_communication" value="4"> <span>4</span></label>
+            <label><input type="radio" name="agent_communication" value="5"> <span>5</span></label>
+          </div>
+        </fieldset>
+        <fieldset class="er-review-question er-review-rating">
+          <legend>How satisfied are you with the transaction process? <span aria-hidden="true">*</span></legend>
+          <div class="er-review-rating-options">
+            <label><input type="radio" name="transaction_process" value="1" required> <span>1</span></label>
+            <label><input type="radio" name="transaction_process" value="2"> <span>2</span></label>
+            <label><input type="radio" name="transaction_process" value="3"> <span>3</span></label>
+            <label><input type="radio" name="transaction_process" value="4"> <span>4</span></label>
+            <label><input type="radio" name="transaction_process" value="5"> <span>5</span></label>
+          </div>
+        </fieldset>
+        <fieldset class="er-review-question er-review-rating">
+          <legend>How likely are you to recommend Elite Realty? <span aria-hidden="true">*</span></legend>
+          <div class="er-review-rating-options">
+            <label><input type="radio" name="recommend_elite_realty" value="1" required> <span>1</span></label>
+            <label><input type="radio" name="recommend_elite_realty" value="2"> <span>2</span></label>
+            <label><input type="radio" name="recommend_elite_realty" value="3"> <span>3</span></label>
+            <label><input type="radio" name="recommend_elite_realty" value="4"> <span>4</span></label>
+            <label><input type="radio" name="recommend_elite_realty" value="5"> <span>5</span></label>
+          </div>
+        </fieldset>
+
+        <div class="er-review-actions er-review-actions-first">
+          <button type="button" data-review-next>Next <span aria-hidden="true">→</span></button>
+        </div>
+      </div>
+
+      <div class="er-review-panel" data-review-step="1" hidden>
+        <div class="er-review-question">
+          <label for="review-did-well">What did we do well? <span aria-hidden="true">*</span></label>
+          <textarea id="review-did-well" name="what_went_well" rows="4" placeholder="Type your message here" required></textarea>
+        </div>
+
+        <div class="er-review-question">
+          <label for="review-improve">What could we improve? <span aria-hidden="true">*</span></label>
+          <textarea id="review-improve" name="what_could_improve" rows="4" placeholder="Type your message here" required></textarea>
+        </div>
+
+        <fieldset class="er-review-question er-review-choice">
+          <legend>May we use your feedback as a testimonial? <span aria-hidden="true">*</span></legend>
+          <label><input type="radio" name="testimonial_permission" value="yes" required> <span>Yes</span></label>
+          <label><input type="radio" name="testimonial_permission" value="no"> <span>No</span></label>
+        </fieldset>
+
+        <fieldset class="er-review-question er-review-choice">
+          <legend>Would you like a manager to contact you? <span aria-hidden="true">*</span></legend>
+          <label><input type="radio" name="manager_contact" value="yes" required> <span>Yes</span></label>
+          <label><input type="radio" name="manager_contact" value="no"> <span>No</span></label>
+        </fieldset>
+
+        <div class="er-review-actions">
+          <button type="button" data-review-back><span aria-hidden="true">←</span> Go Back</button>
+          <button type="button" data-review-next>Next <span aria-hidden="true">→</span></button>
+        </div>
+      </div>
+
+      <div class="er-review-panel" data-review-step="2" hidden>
+        <fieldset class="er-review-question er-review-choice">
+          <legend>Do you know someone planning to buy or sell?</legend>
+          <label><input type="radio" name="referral_opportunity" value="yes"> <span>Yes</span></label>
+          <label><input type="radio" name="referral_opportunity" value="not-right-now"> <span>Not right now</span></label>
+        </fieldset>
+
+        <div class="er-review-actions">
+          <button type="button" data-review-back><span aria-hidden="true">←</span> Go Back</button>
+          <button type="submit">Submit</button>
+        </div>
+      </div>
+    </form>
+  </section>
+  <!-- Client Review Survey End -->
+
+<!-- Section 2: Privacy and Feedback Use Start -->
+<section
+  class="er-client-review-survey-privacy"
+  id="client-review-survey-privacy"
+  aria-labelledby="client-review-survey-privacy-heading"
+>
+  <style>
+    .er-client-review-survey-privacy {
+      width: 100%;
+      max-width: 100%;
+      overflow-x: hidden;
+      padding: clamp(56px, 7vw, 82px) 0;
+      background:
+        radial-gradient(
+          circle at 95% 7%,
+          rgba(199, 149, 62, 0.08) 0,
+          rgba(199, 149, 62, 0.08) 125px,
+          transparent 126px
+        ),
+        #fffdf8;
+      color: #55646d;
+      font-family: Inter, Arial, sans-serif;
+    }
+
+    .er-client-review-survey-privacy,
+    .er-client-review-survey-privacy * {
+      box-sizing: border-box;
+    }
+
+    .er-client-review-survey-privacy .er-client-review-survey-privacy__container {
+      width: min(100% - 40px, 1180px);
+      margin-inline: auto;
+    }
+
+    .er-client-review-survey-privacy .er-client-review-survey-privacy__header {
+      max-width: 790px;
+      margin: 0 auto 36px;
+      text-align: center;
+    }
+
+    .er-client-review-survey-privacy .er-client-review-survey-privacy__eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin: 0 0 12px;
+      color: #956a24;
+      font-family: Poppins, Arial, sans-serif;
+      font-size: 12px;
+      font-weight: 700;
+      line-height: 1.4;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    .er-client-review-survey-privacy .er-client-review-survey-privacy__eyebrow::before,
+    .er-client-review-survey-privacy .er-client-review-survey-privacy__eyebrow::after {
+      width: 28px;
+      height: 2px;
+      flex: 0 0 28px;
+      border-radius: 999px;
+      background: #c7953e;
+      content: "";
+    }
+
+    .er-client-review-survey-privacy .er-client-review-survey-privacy__heading {
+      margin: 0;
+      color: #1d2b32;
+      font-family: Poppins, Arial, sans-serif;
+      font-size: clamp(30px, 4vw, 44px);
+      font-weight: 700;
+      line-height: 1.15;
+      letter-spacing: -0.035em;
+    }
+
+    .er-client-review-survey-privacy .er-client-review-survey-privacy__supporting {
+      max-width: 730px;
+      margin: 16px auto 0;
+      color: #55646d;
+      font-size: 16px;
+      line-height: 1.75;
+    }
+
+    .er-client-review-survey-privacy .er-client-review-survey-privacy__cards {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 20px;
+    }
+
+    .er-client-review-survey-privacy .er-client-review-survey-privacy__card {
+      position: relative;
+      display: flex;
+      min-width: 0;
+      min-height: 100%;
+      flex-direction: column;
+      overflow: hidden;
+      padding: 25px;
+      border: 1px solid #e4ded2;
+      border-radius: 17px;
+      background: #ffffff;
+      box-shadow: 0 12px 30px rgba(36, 52, 63, 0.08);
+      transition:
+        border-color 180ms ease,
+        box-shadow 180ms ease,
+        transform 180ms ease;
+    }
+
+    .er-client-review-survey-privacy .er-client-review-survey-privacy__card::before {
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      height: 4px;
+      background: linear-gradient(90deg, #c7953e, #d9b465);
+      content: "";
+    }
+
+    .er-client-review-survey-privacy .er-client-review-survey-privacy__card:nth-child(2)::before {
+      background: linear-gradient(90deg, #536b79, #c7953e);
+    }
+
+    .er-client-review-survey-privacy .er-client-review-survey-privacy__card:nth-child(3)::before {
+      background: linear-gradient(90deg, #2e8b57, #d9b465);
+    }
+
+    .er-client-review-survey-privacy .er-client-review-survey-privacy__card:hover {
+      border-color: #d9c8a8;
+      box-shadow: 0 17px 38px rgba(36, 52, 63, 0.12);
+      transform: translateY(-3px);
+    }
+
+    .er-client-review-survey-privacy .er-client-review-survey-privacy__card-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 19px;
+    }
+
+    .er-client-review-survey-privacy .er-client-review-survey-privacy__number {
+      display: grid;
+      width: 43px;
+      height: 43px;
+      flex: 0 0 43px;
+      place-items: center;
+      border-radius: 13px;
+      background: #c7953e;
+      color: #ffffff;
+      font-family: Poppins, Arial, sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      line-height: 1;
+      box-shadow: 0 8px 18px rgba(149, 106, 36, 0.2);
+    }
+
+    .er-client-review-survey-privacy .er-client-review-survey-privacy__card:nth-child(2) .er-client-review-survey-privacy__number {
+      background: #536b79;
+      box-shadow: 0 8px 18px rgba(83, 107, 121, 0.2);
+    }
+
+    .er-client-review-survey-privacy .er-client-review-survey-privacy__card:nth-child(3) .er-client-review-survey-privacy__number {
+      background: #2e8b57;
+      box-shadow: 0 8px 18px rgba(46, 139, 87, 0.2);
+    }
+
+    .er-client-review-survey-privacy .er-client-review-survey-privacy__icon {
+      display: grid;
+      width: 44px;
+      height: 44px;
+      flex: 0 0 44px;
+      place-items: center;
+      border-radius: 50%;
+      background: #f7eedc;
+      color: #956a24;
+    }
+
+    .er-client-review-survey-privacy .er-client-review-survey-privacy__card:nth-child(2) .er-client-review-survey-privacy__icon {
+      background: #eaf0f3;
+      color: #344654;
+    }
+
+    .er-client-review-survey-privacy .er-client-review-survey-privacy__card:nth-child(3) .er-client-review-survey-privacy__icon {
+      background: rgba(46, 139, 87, 0.11);
+      color: #2e8b57;
+    }
+
+    .er-client-review-survey-privacy .er-client-review-survey-privacy__icon svg {
+      width: 23px;
+      height: 23px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 1.8;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .er-client-review-survey-privacy .er-client-review-survey-privacy__card-title {
+      margin: 0;
+      color: #344654;
+      font-family: Poppins, Arial, sans-serif;
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 1.35;
+    }
+
+    .er-client-review-survey-privacy .er-client-review-survey-privacy__card-description {
+      margin: 10px 0 0;
+      color: #55646d;
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    .er-client-review-survey-privacy .er-client-review-survey-privacy__privacy-panel {
+      position: relative;
+      display: grid;
+      grid-template-columns: minmax(270px, 0.72fr) minmax(0, 1.28fr);
+      gap: clamp(28px, 5vw, 58px);
+      align-items: center;
+      margin-top: 28px;
+      overflow: hidden;
+      padding: clamp(28px, 4vw, 42px);
+      border: 1px solid #e4ded2;
+      border-radius: 20px;
+      background:
+        radial-gradient(
+          circle at 96% 10%,
+          rgba(199, 149, 62, 0.09) 0,
+          rgba(199, 149, 62, 0.09) 95px,
+          transparent 96px
+        ),
+        linear-gradient(135deg, #f7eedc 0%, #fcf8f0 48%, #eaf0f3 100%);
+    }
+
+    .er-client-review-survey-privacy .er-client-review-survey-privacy__privacy-panel::after {
+      position: absolute;
+      right: -55px;
+      bottom: -65px;
+      width: 165px;
+      height: 165px;
+      border: 25px solid rgba(83, 107, 121, 0.07);
+      border-radius: 50%;
+      content: "";
+      pointer-events: none;
+    }
+
+    .er-client-review-survey-privacy .er-client-review-survey-privacy__privacy-content {
+      position: relative;
+      z-index: 1;
+      min-width: 0;
+    }
+
+    .er-client-review-survey-privacy .er-client-review-survey-privacy__privacy-heading-row {
+      display: flex;
+      align-items: center;
+      gap: 13px;
+      margin-bottom: 14px;
+    }
+
+    .er-client-review-survey-privacy .er-client-review-survey-privacy__privacy-icon {
+      display: grid;
+      width: 48px;
+      height: 48px;
+      flex: 0 0 48px;
+      place-items: center;
+      border-radius: 14px;
+      background: #ffffff;
+      color: #956a24;
+      box-shadow: 0 8px 20px rgba(149, 106, 36, 0.1);
+    }
+
+    .er-client-review-survey-privacy .er-client-review-survey-privacy__privacy-icon svg {
+      width: 24px;
+      height: 24px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 1.9;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .er-client-review-survey-privacy .er-client-review-survey-privacy__privacy-heading {
+      margin: 0;
+      color: #24343f;
+      font-family: Poppins, Arial, sans-serif;
+      font-size: 23px;
+      font-weight: 700;
+      line-height: 1.3;
+      letter-spacing: -0.02em;
+    }
+
+    .er-client-review-survey-privacy .er-client-review-survey-privacy__privacy-copy {
+      margin: 0;
+      color: #55646d;
+      font-size: 14px;
+      line-height: 1.75;
+    }
+
+    .er-client-review-survey-privacy .er-client-review-survey-privacy__privacy-list {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      gap: 10px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .er-client-review-survey-privacy .er-client-review-survey-privacy__privacy-item {
+      display: grid;
+      min-width: 0;
+      grid-template-columns: 30px minmax(0, 1fr);
+      gap: 11px;
+      align-items: center;
+      padding: 11px 14px;
+      border: 1px solid rgba(199, 149, 62, 0.18);
+      border-radius: 11px;
+      background: rgba(255, 255, 255, 0.82);
+      color: #465963;
+      font-size: 13px;
+      font-weight: 600;
+      line-height: 1.55;
+    }
+
+    .er-client-review-survey-privacy .er-client-review-survey-privacy__privacy-check {
+      display: grid;
+      width: 29px;
+      height: 29px;
+      place-items: center;
+      border-radius: 50%;
+      background: #344654;
+      color: #ffffff;
+    }
+
+    .er-client-review-survey-privacy .er-client-review-survey-privacy__privacy-item:nth-child(2) .er-client-review-survey-privacy__privacy-check {
+      background: #c7953e;
+    }
+
+    .er-client-review-survey-privacy .er-client-review-survey-privacy__privacy-item:nth-child(3) .er-client-review-survey-privacy__privacy-check {
+      background: #2e8b57;
+    }
+
+    .er-client-review-survey-privacy .er-client-review-survey-privacy__privacy-item:nth-child(4) .er-client-review-survey-privacy__privacy-check {
+      background: #536b79;
+    }
+
+    .er-client-review-survey-privacy .er-client-review-survey-privacy__privacy-check svg {
+      width: 15px;
+      height: 15px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 2.4;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .er-client-review-survey-privacy .er-client-review-survey-privacy__navigation {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 14px 22px;
+      margin-top: 28px;
+    }
+
+    .er-client-review-survey-privacy .er-client-review-survey-privacy__back-link {
+      display: inline-flex;
+      min-height: 48px;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 11px 4px;
+      color: #344654;
+      font-family: Poppins, Arial, sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 1.4;
+      text-decoration: none;
+      text-underline-offset: 4px;
+      transition:
+        color 160ms ease,
+        transform 160ms ease;
+    }
+
+    .er-client-review-survey-privacy .er-client-review-survey-privacy__back-link:hover {
+      color: #956a24;
+      text-decoration: underline;
+      text-decoration-color: #c7953e;
+      transform: translateX(-2px);
+    }
+
+    .er-client-review-survey-privacy .er-client-review-survey-privacy__return-link {
+      display: inline-flex;
+      min-height: 48px;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      padding: 12px 20px;
+      border: 1px solid #c7953e;
+      border-radius: 10px;
+      background: #c7953e;
+      color: #ffffff;
+      font-family: Poppins, Arial, sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 1.4;
+      text-align: center;
+      text-decoration: none;
+      box-shadow: 0 9px 22px rgba(149, 106, 36, 0.2);
+      transition:
+        background 160ms ease,
+        border-color 160ms ease,
+        box-shadow 160ms ease,
+        transform 160ms ease;
+    }
+
+    .er-client-review-survey-privacy .er-client-review-survey-privacy__return-link:hover {
+      border-color: #956a24;
+      background: #956a24;
+      box-shadow: 0 12px 27px rgba(149, 106, 36, 0.26);
+      transform: translateY(-2px);
+    }
+
+    .er-client-review-survey-privacy .er-client-review-survey-privacy__back-link:focus-visible,
+    .er-client-review-survey-privacy .er-client-review-survey-privacy__return-link:focus-visible {
+      border-radius: 7px;
+      outline: 3px solid rgba(52, 70, 84, 0.34);
+      outline-offset: 4px;
+    }
+
+    .er-client-review-survey-privacy .er-client-review-survey-privacy__navigation-icon {
+      width: 18px;
+      height: 18px;
+      flex: 0 0 18px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    @media (max-width: 900px) {
+      .er-client-review-survey-privacy .er-client-review-survey-privacy__cards {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .er-client-review-survey-privacy .er-client-review-survey-privacy__card:last-child {
+        grid-column: 1 / -1;
+      }
+
+      .er-client-review-survey-privacy .er-client-review-survey-privacy__privacy-panel {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 24px;
+      }
+    }
+
+    @media (max-width: 767px) {
+      .er-client-review-survey-privacy .er-client-review-survey-privacy__container {
+        width: min(100% - 32px, 1180px);
+      }
+
+      .er-client-review-survey-privacy .er-client-review-survey-privacy__cards {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .er-client-review-survey-privacy .er-client-review-survey-privacy__card:last-child {
+        grid-column: auto;
+      }
+
+      .er-client-review-survey-privacy .er-client-review-survey-privacy__privacy-panel {
+        padding: 27px 23px;
+      }
+    }
+
+    @media (max-width: 599px) {
+      .er-client-review-survey-privacy {
+        padding: 48px 0;
+      }
+
+      .er-client-review-survey-privacy .er-client-review-survey-privacy__header {
+        margin-bottom: 28px;
+      }
+
+      .er-client-review-survey-privacy .er-client-review-survey-privacy__eyebrow::before,
+      .er-client-review-survey-privacy .er-client-review-survey-privacy__eyebrow::after {
+        width: 20px;
+        flex-basis: 20px;
+      }
+
+      .er-client-review-survey-privacy .er-client-review-survey-privacy__heading {
+        font-size: clamp(28px, 9vw, 36px);
+      }
+
+      .er-client-review-survey-privacy .er-client-review-survey-privacy__supporting {
+        font-size: 15px;
+      }
+
+      .er-client-review-survey-privacy .er-client-review-survey-privacy__card {
+        padding: 23px;
+      }
+
+      .er-client-review-survey-privacy .er-client-review-survey-privacy__privacy-heading-row {
+        align-items: flex-start;
+      }
+
+      .er-client-review-survey-privacy .er-client-review-survey-privacy__privacy-heading {
+        font-size: 21px;
+      }
+
+      .er-client-review-survey-privacy .er-client-review-survey-privacy__navigation {
+        align-items: stretch;
+        flex-direction: column;
+      }
+
+      .er-client-review-survey-privacy .er-client-review-survey-privacy__back-link,
+      .er-client-review-survey-privacy .er-client-review-survey-privacy__return-link {
+        width: 100%;
+      }
+    }
+
+    @media (max-width: 399px) {
+      .er-client-review-survey-privacy .er-client-review-survey-privacy__container {
+        width: min(100% - 24px, 1180px);
+      }
+
+      .er-client-review-survey-privacy .er-client-review-survey-privacy__card {
+        padding: 21px 18px;
+      }
+
+      .er-client-review-survey-privacy .er-client-review-survey-privacy__privacy-panel {
+        padding: 24px 17px;
+        border-radius: 16px;
+      }
+
+      .er-client-review-survey-privacy .er-client-review-survey-privacy__privacy-item {
+        padding: 11px;
+        font-size: 12px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .er-client-review-survey-privacy .er-client-review-survey-privacy__card,
+      .er-client-review-survey-privacy .er-client-review-survey-privacy__back-link,
+      .er-client-review-survey-privacy .er-client-review-survey-privacy__return-link {
+        transition: none;
+      }
+    }
+  </style>
+
+  <div class="er-client-review-survey-privacy__container">
+    <header class="er-client-review-survey-privacy__header">
+      <p class="er-client-review-survey-privacy__eyebrow">
+        How your feedback is handled
+      </p>
+
+      <h2
+        class="er-client-review-survey-privacy__heading"
+        id="client-review-survey-privacy-heading"
+      >
+        Private feedback and public reviews remain separate
+      </h2>
+
+      <p class="er-client-review-survey-privacy__supporting">
+        Elite Realty may review submitted feedback internally to understand
+        the client experience and identify opportunities to improve future
+        service.
+      </p>
+    </header>
+
+    <div class="er-client-review-survey-privacy__cards">
+      <article class="er-client-review-survey-privacy__card">
+        <div class="er-client-review-survey-privacy__card-top">
+          <span class="er-client-review-survey-privacy__number">
+            01
+          </span>
+
+          <span
+            class="er-client-review-survey-privacy__icon"
+            aria-hidden="true"
+          >
+            <svg viewBox="0 0 24 24" focusable="false">
+              <path d="M7 3h7l4 4v14H7z"></path>
+              <path d="M14 3v5h5"></path>
+              <path d="m9 14 2 2 4-5"></path>
+            </svg>
+          </span>
+        </div>
+
+        <h3 class="er-client-review-survey-privacy__card-title">
+          Your feedback is submitted
+        </h3>
+
+        <p class="er-client-review-survey-privacy__card-description">
+          The ratings and comments you provide are saved as part of your
+          post-closing feedback response.
+        </p>
+      </article>
+
+      <article class="er-client-review-survey-privacy__card">
+        <div class="er-client-review-survey-privacy__card-top">
+          <span class="er-client-review-survey-privacy__number">
+            02
+          </span>
+
+          <span
+            class="er-client-review-survey-privacy__icon"
+            aria-hidden="true"
+          >
+            <svg viewBox="0 0 24 24" focusable="false">
+              <rect x="5" y="4" width="14" height="17" rx="2"></rect>
+              <path d="M9 4.5V3h6v1.5"></path>
+              <path d="M9 10h6"></path>
+              <path d="m9 15 2 2 4-5"></path>
+            </svg>
+          </span>
+        </div>
+
+        <h3 class="er-client-review-survey-privacy__card-title">
+          Elite Realty reviews the response
+        </h3>
+
+        <p class="er-client-review-survey-privacy__card-description">
+          The team may review your feedback to understand what worked well and
+          where the client experience could improve.
+        </p>
+      </article>
+
+      <article class="er-client-review-survey-privacy__card">
+        <div class="er-client-review-survey-privacy__card-top">
+          <span class="er-client-review-survey-privacy__number">
+            03
+          </span>
+
+          <span
+            class="er-client-review-survey-privacy__icon"
+            aria-hidden="true"
+          >
+            <svg viewBox="0 0 24 24" focusable="false">
+              <path d="M12 3 20 6v5c0 5.2-3.3 8.4-8 10-4.7-1.6-8-4.8-8-10V6z"></path>
+              <path d="m8.5 12 2.2 2.2 4.8-4.8"></path>
+            </svg>
+          </span>
+        </div>
+
+        <h3 class="er-client-review-survey-privacy__card-title">
+          Permissions are respected
+        </h3>
+
+        <p class="er-client-review-survey-privacy__card-description">
+          Comments should only be used publicly as a testimonial when you
+          separately provide permission.
+        </p>
+      </article>
+    </div>
+
+    <aside
+      class="er-client-review-survey-privacy__privacy-panel"
+      aria-labelledby="client-review-survey-choices-heading"
+    >
+      <div class="er-client-review-survey-privacy__privacy-content">
+        <div class="er-client-review-survey-privacy__privacy-heading-row">
+          <span
+            class="er-client-review-survey-privacy__privacy-icon"
+            aria-hidden="true"
+          >
+            <svg viewBox="0 0 24 24" focusable="false">
+              <rect x="5" y="10" width="14" height="10" rx="2"></rect>
+              <path d="M8 10V7a4 4 0 0 1 8 0v3"></path>
+              <path d="M12 14v2"></path>
+            </svg>
+          </span>
+
+          <h3
+            class="er-client-review-survey-privacy__privacy-heading"
+            id="client-review-survey-choices-heading"
+          >
+            Your choices remain separate
+          </h3>
+        </div>
+
+        <p class="er-client-review-survey-privacy__privacy-copy">
+          Submitting the survey provides private feedback to Elite Realty.
+          Testimonial permission and public-review interest are separate
+          options and should not be assumed from your ratings or comments.
+        </p>
+      </div>
+
+      <ul class="er-client-review-survey-privacy__privacy-list">
+        <li class="er-client-review-survey-privacy__privacy-item">
+          <span
+            class="er-client-review-survey-privacy__privacy-check"
+            aria-hidden="true"
+          >
+            <svg viewBox="0 0 20 20" focusable="false">
+              <path d="m4.5 10 3.3 3.3 7.7-7.6"></path>
+            </svg>
+          </span>
+
+          <span>
+            You may provide positive, neutral, or constructive feedback
+          </span>
+        </li>
+
+        <li class="er-client-review-survey-privacy__privacy-item">
+          <span
+            class="er-client-review-survey-privacy__privacy-check"
+            aria-hidden="true"
+          >
+            <svg viewBox="0 0 20 20" focusable="false">
+              <path d="m4.5 10 3.3 3.3 7.7-7.6"></path>
+            </svg>
+          </span>
+
+          <span>Private feedback is not automatically posted publicly</span>
+        </li>
+
+        <li class="er-client-review-survey-privacy__privacy-item">
+          <span
+            class="er-client-review-survey-privacy__privacy-check"
+            aria-hidden="true"
+          >
+            <svg viewBox="0 0 20 20" focusable="false">
+              <path d="m4.5 10 3.3 3.3 7.7-7.6"></path>
+            </svg>
+          </span>
+
+          <span>Testimonial use requires separate permission</span>
+        </li>
+
+        <li class="er-client-review-survey-privacy__privacy-item">
+          <span
+            class="er-client-review-survey-privacy__privacy-check"
+            aria-hidden="true"
+          >
+            <svg viewBox="0 0 20 20" focusable="false">
+              <path d="m4.5 10 3.3 3.3 7.7-7.6"></path>
+            </svg>
+          </span>
+
+          <span>A public review is an optional separate action</span>
+        </li>
+      </ul>
+    </aside>
+
+    <nav
+      class="er-client-review-survey-privacy__navigation"
+      aria-label="Client survey navigation"
+    >
+      <!-- Replace with: 01 | Client Review Landing URL -->
+      <a
+        class="er-client-review-survey-privacy__back-link"
+        href="../step-01/index.html#client-review-value"
+      >
+        <svg
+          class="er-client-review-survey-privacy__navigation-icon"
+          viewBox="0 0 24 24"
+          aria-hidden="true"
+          focusable="false"
+        >
+          <path d="m15 18-6-6 6-6"></path>
+        </svg>
+
+        <span>Back to review details</span>
+      </a>
+
+      <!-- Internal link: Native Post-Closing Experience Survey -->
+      <a
+        class="er-client-review-survey-privacy__return-link"
+        href="#client-review-survey"
+      >
+        <span>Return to the client survey</span>
+
+        <svg
+          class="er-client-review-survey-privacy__navigation-icon"
+          viewBox="0 0 24 24"
+          aria-hidden="true"
+          focusable="false"
+        >
+          <path d="M12 19V5"></path>
+          <path d="m6 11 6-6 6 6"></path>
+        </svg>
+      </a>
+    </nav>
+  </div>
+
+  <script>
+    (function () {
+      function initializeClientReviewSurveyReturnScroll() {
+        var section = document.getElementById(
+          "client-review-survey-privacy"
+        );
+
+        if (!section) {
+          return;
+        }
+
+        var surveyLinks = section.querySelectorAll(
+          'a[href="#client-review-survey"]'
+        );
+
+        surveyLinks.forEach(function (surveyLink) {
+          surveyLink.addEventListener("click", function (event) {
+            event.preventDefault();
+
+            var clientReviewSurvey = document.querySelector(
+              ".client-review-survey"
+            );
+
+            if (!clientReviewSurvey) {
+              return;
+            }
+
+            clientReviewSurvey.scrollIntoView({
+              behavior: "smooth",
+              block: "start"
+            });
+          });
+        });
+      }
+
+      if (document.readyState === "loading") {
+        document.addEventListener(
+          "DOMContentLoaded",
+          initializeClientReviewSurveyReturnScroll
+        );
+      } else {
+        initializeClientReviewSurveyReturnScroll();
+      }
+    })();
+  </script>
+</section>
+<!-- Section 2: Privacy and Feedback Use End -->
+
+<!-- Section 3: Footer Start -->
+<footer
+  class="er-client-review-survey-footer"
+  id="client-review-survey-footer"
+  aria-labelledby="client-review-survey-footer-brand"
+>
+  <style>
+    .er-client-review-survey-footer {
+      width: 100%;
+      max-width: 100%;
+      overflow-x: hidden;
+      padding: 68px 0 28px;
+      background: #263944;
+      color: #ffffff;
+      font-family: Inter, Arial, sans-serif;
+    }
+
+    .er-client-review-survey-footer,
+    .er-client-review-survey-footer * {
+      box-sizing: border-box;
+    }
+
+    .er-client-review-survey-footer .er-client-review-survey-footer__container {
+      width: min(100% - 40px, 1180px);
+      margin-inline: auto;
+    }
+
+    .er-client-review-survey-footer .er-client-review-survey-footer__columns {
+      display: grid;
+      grid-template-columns:
+        minmax(0, 1.25fr)
+        minmax(210px, 0.75fr)
+        minmax(260px, 0.9fr);
+      gap: clamp(42px, 7vw, 88px);
+      padding-bottom: 42px;
+    }
+
+    .er-client-review-survey-footer .er-client-review-survey-footer__column {
+      min-width: 0;
+    }
+
+    .er-client-review-survey-footer .er-client-review-survey-footer__brand {
+      position: relative;
+      display: inline-block;
+      margin: 0;
+      padding-bottom: 10px;
+      color: #ffffff;
+      font-family: Poppins, Arial, sans-serif;
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 1.25;
+      letter-spacing: -0.02em;
+    }
+
+    .er-client-review-survey-footer .er-client-review-survey-footer__brand::after {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 43px;
+      height: 3px;
+      border-radius: 999px;
+      background: linear-gradient(90deg, #c7953e, #d9b465);
+      content: "";
+    }
+
+    .er-client-review-survey-footer .er-client-review-survey-footer__description {
+      max-width: 420px;
+      margin: 18px 0 0;
+      color: #eaf0f3;
+      font-size: 15px;
+      line-height: 1.7;
+      opacity: 0.82;
+    }
+
+    .er-client-review-survey-footer .er-client-review-survey-footer__heading {
+      margin: 0 0 18px;
+      color: #ffffff;
+      font-family: Poppins, Arial, sans-serif;
+      font-size: 17px;
+      font-weight: 700;
+      line-height: 1.4;
+    }
+
+    .er-client-review-survey-footer .er-client-review-survey-footer__links,
+    .er-client-review-survey-footer .er-client-review-survey-footer__contact-list {
+      display: grid;
+      gap: 11px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .er-client-review-survey-footer .er-client-review-survey-footer__links a,
+    .er-client-review-survey-footer .er-client-review-survey-footer__contact-list a,
+    .er-client-review-survey-footer .er-client-review-survey-footer__legal-links a {
+      color: #eaf0f3;
+      font-size: 14px;
+      line-height: 1.55;
+      text-decoration: none;
+      text-underline-offset: 4px;
+      overflow-wrap: anywhere;
+      transition: color 160ms ease;
+    }
+
+    .er-client-review-survey-footer .er-client-review-survey-footer__links a {
+      display: inline-flex;
+      min-height: 32px;
+      align-items: center;
+    }
+
+    .er-client-review-survey-footer .er-client-review-survey-footer__links a:hover,
+    .er-client-review-survey-footer .er-client-review-survey-footer__contact-list a:hover,
+    .er-client-review-survey-footer .er-client-review-survey-footer__legal-links a:hover {
+      color: #d9b465;
+      text-decoration: underline;
+      text-decoration-color: #c7953e;
+    }
+
+    .er-client-review-survey-footer .er-client-review-survey-footer__links a:focus-visible,
+    .er-client-review-survey-footer .er-client-review-survey-footer__contact-list a:focus-visible,
+    .er-client-review-survey-footer .er-client-review-survey-footer__legal-links a:focus-visible {
+      border-radius: 5px;
+      outline: 3px solid #d9b465;
+      outline-offset: 4px;
+    }
+
+    .er-client-review-survey-footer .er-client-review-survey-footer__contact-item {
+      display: grid;
+      min-width: 0;
+      grid-template-columns: 22px minmax(0, 1fr);
+      gap: 10px;
+      align-items: start;
+      color: #eaf0f3;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    .er-client-review-survey-footer .er-client-review-survey-footer__contact-icon {
+      display: grid;
+      width: 22px;
+      height: 22px;
+      margin-top: 1px;
+      place-items: center;
+      color: #d9b465;
+    }
+
+    .er-client-review-survey-footer .er-client-review-survey-footer__contact-icon svg {
+      width: 18px;
+      height: 18px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 1.8;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .er-client-review-survey-footer .er-client-review-survey-footer__contact-value {
+      min-width: 0;
+      overflow-wrap: anywhere;
+    }
+
+    .er-client-review-survey-footer .er-client-review-survey-footer__address {
+      margin: 0;
+      color: #eaf0f3;
+      font-style: normal;
+      opacity: 0.82;
+    }
+
+    .er-client-review-survey-footer .er-client-review-survey-footer__bottom {
+      padding-top: 26px;
+      border-top: 1px solid rgba(234, 240, 243, 0.18);
+    }
+
+    .er-client-review-survey-footer .er-client-review-survey-footer__bottom-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .er-client-review-survey-footer .er-client-review-survey-footer__copyright {
+      margin: 0;
+      color: #eaf0f3;
+      font-size: 13px;
+      line-height: 1.6;
+      opacity: 0.78;
+    }
+
+    .er-client-review-survey-footer .er-client-review-survey-footer__legal-links {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 10px 20px;
+    }
+
+    .er-client-review-survey-footer .er-client-review-survey-footer__disclaimer {
+      max-width: 900px;
+      margin: 20px auto 0;
+      color: #eaf0f3;
+      font-size: 13px;
+      line-height: 1.65;
+      text-align: center;
+      opacity: 0.62;
+    }
+
+    @media (max-width: 900px) {
+      .er-client-review-survey-footer .er-client-review-survey-footer__columns {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .er-client-review-survey-footer .er-client-review-survey-footer__column:first-child {
+        grid-column: 1 / -1;
+      }
+
+      .er-client-review-survey-footer .er-client-review-survey-footer__description {
+        max-width: 560px;
+      }
+    }
+
+    @media (max-width: 767px) {
+      .er-client-review-survey-footer {
+        padding-top: 58px;
+      }
+
+      .er-client-review-survey-footer .er-client-review-survey-footer__container {
+        width: min(100% - 32px, 1180px);
+      }
+    }
+
+    @media (max-width: 599px) {
+      .er-client-review-survey-footer .er-client-review-survey-footer__columns {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 36px;
+      }
+
+      .er-client-review-survey-footer .er-client-review-survey-footer__column:first-child {
+        grid-column: auto;
+      }
+
+      .er-client-review-survey-footer .er-client-review-survey-footer__links {
+        gap: 7px;
+      }
+
+      .er-client-review-survey-footer .er-client-review-survey-footer__bottom-row {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 14px;
+      }
+
+      .er-client-review-survey-footer .er-client-review-survey-footer__legal-links {
+        justify-content: flex-start;
+      }
+
+      .er-client-review-survey-footer .er-client-review-survey-footer__disclaimer {
+        text-align: left;
+      }
+    }
+
+    @media (max-width: 479px) {
+      .er-client-review-survey-footer {
+        padding: 50px 0 24px;
+      }
+
+      .er-client-review-survey-footer .er-client-review-survey-footer__container {
+        width: min(100% - 24px, 1180px);
+      }
+
+      .er-client-review-survey-footer .er-client-review-survey-footer__brand {
+        font-size: 21px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .er-client-review-survey-footer .er-client-review-survey-footer__links a,
+      .er-client-review-survey-footer .er-client-review-survey-footer__contact-list a,
+      .er-client-review-survey-footer .er-client-review-survey-footer__legal-links a {
+        transition: none;
+      }
+    }
+  </style>
+
+  <div class="er-client-review-survey-footer__container">
+    <div class="er-client-review-survey-footer__columns">
+      <div class="er-client-review-survey-footer__column">
+        <h2
+          class="er-client-review-survey-footer__brand"
+          id="client-review-survey-footer-brand"
+        >
+          Elite Realty Group
+        </h2>
+
+        <p class="er-client-review-survey-footer__description">
+          Helping Austin-area buyers and sellers move forward with greater
+          clarity.
+        </p>
+      </div>
+
+      <nav
+        class="er-client-review-survey-footer__column"
+        aria-labelledby="client-review-survey-footer-links"
+      >
+        <h3
+          class="er-client-review-survey-footer__heading"
+          id="client-review-survey-footer-links"
+        >
+          Helpful links
+        </h3>
+
+        <ul class="er-client-review-survey-footer__links">
+          <li>
+            <!-- Replace with: 01 | Client Review Landing URL -->
+            <a href="../step-01/index.html#client-review-value">Review details</a>
+          </li>
+
+          <li>
+            <!-- Replace with: ER | FNL | Client Referral landing-page URL -->
+            <a href="https://sites.leadconnectorhq.com/preview/F9mWxK9EaeotlOeQgoWu">Client referrals</a>
+          </li>
+
+          <li>
+            <!-- Replace with: ER | FNL | Buyer Consultation landing-page URL -->
+            <a href="https://sites.leadconnectorhq.com/preview/P8icrqPDum0vsJjbDxRw">Buyer consultation</a>
+          </li>
+
+          <li>
+            <!-- Replace with: ER | FNL | Seller Consultation landing-page URL -->
+            <a href="https://sites.leadconnectorhq.com/preview/q1IYtcM5sFIIA07GUTxz">Seller consultation</a>
+          </li>
+
+          <li>
+            <!-- Replace with: Elite Realty contact-page URL -->
+            <a href="#">Contact</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div
+        class="er-client-review-survey-footer__column"
+        aria-labelledby="client-review-survey-footer-contact"
+      >
+        <h3
+          class="er-client-review-survey-footer__heading"
+          id="client-review-survey-footer-contact"
+        >
+          Contact
+        </h3>
+
+        <ul class="er-client-review-survey-footer__contact-list">
+          <li class="er-client-review-survey-footer__contact-item">
+            <span
+              class="er-client-review-survey-footer__contact-icon"
+              aria-hidden="true"
+            >
+              <svg viewBox="0 0 24 24" focusable="false">
+                <path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.9a2 2 0 0 1-.5 2.1L8 10a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.9.6 2.9.7a2 2 0 0 1 1.7 2Z"></path>
+              </svg>
+            </span>
+
+            <span class="er-client-review-survey-footer__contact-value">
+              <a href="tel:+15125550147">(512) 555-0147</a>
+            </span>
+          </li>
+
+          <li class="er-client-review-survey-footer__contact-item">
+            <span
+              class="er-client-review-survey-footer__contact-icon"
+              aria-hidden="true"
+            >
+              <svg viewBox="0 0 24 24" focusable="false">
+                <rect x="3" y="5" width="18" height="14" rx="2"></rect>
+                <path d="m3 7 9 6 9-6"></path>
+              </svg>
+            </span>
+
+            <span class="er-client-review-survey-footer__contact-value">
+              <a href="mailto:eliterealty.crm@gmail.com">
+                eliterealty.crm@gmail.com
+              </a>
+            </span>
+          </li>
+
+          <li class="er-client-review-survey-footer__contact-item">
+            <span
+              class="er-client-review-survey-footer__contact-icon"
+              aria-hidden="true"
+            >
+              <svg viewBox="0 0 24 24" focusable="false">
+                <path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z"></path>
+                <circle cx="12" cy="10" r="2.5"></circle>
+              </svg>
+            </span>
+
+            <address class="er-client-review-survey-footer__address">
+              1847 Meridian Grove Avenue, Suite 320<br>
+              Austin, TX 78704
+            </address>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="er-client-review-survey-footer__bottom">
+      <div class="er-client-review-survey-footer__bottom-row">
+        <p class="er-client-review-survey-footer__copyright">
+          © 2026 Elite Realty Group. All rights reserved.
+        </p>
+
+        <nav
+          class="er-client-review-survey-footer__legal-links"
+          aria-label="Legal information"
+        >
+          <!-- Replace with: Elite Realty Privacy Policy URL -->
+          <a href="#">Privacy policy</a>
+
+          <!-- Replace with: Elite Realty Terms and Conditions URL -->
+          <a href="#">Terms</a>
+        </nav>
+      </div>
+
+      <p class="er-client-review-survey-footer__disclaimer">
+        Elite Realty Group is a fictional business created for CRM and
+        automation demonstration purposes.
+      </p>
+    </div>
+  </div>
+</footer>
+<!-- Section 3: Footer End -->
+
+  <a class="funnel-next-button" href="../step-03/index.html" aria-label="Go to Client Review Step 03" title="Next Page">
+    <span class="funnel-next-button__icon" aria-hidden="true">→</span>
+    <span>Next Page</span>
+  </a>
+
+  <script>
+    (function () {
+      var form = document.getElementById("client-review-native-survey");
+      if (!form) return;
+
+      var panels = Array.prototype.slice.call(form.querySelectorAll("[data-review-step]"));
+      var stepLabel = document.getElementById("client-review-step-label");
+      var progressBar = document.getElementById("client-review-progress-bar");
+      var currentStep = 0;
+
+      function showStep(index, shouldFocus) {
+        currentStep = Math.max(0, Math.min(index, panels.length - 1));
+
+        panels.forEach(function (panel, panelIndex) {
+          panel.hidden = panelIndex !== currentStep;
+        });
+
+        stepLabel.textContent = "Step " + (currentStep + 1) + " of " + panels.length;
+        progressBar.style.width = ((currentStep + 1) / panels.length) * 100 + "%";
+
+        if (shouldFocus) {
+          var firstField = panels[currentStep].querySelector("input, textarea");
+          if (firstField) firstField.focus({ preventScroll: true });
+
+          form.scrollIntoView({
+            behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth",
+            block: "start"
+          });
+        }
+      }
+
+      function validatePanel(panel) {
+        var fields = Array.prototype.slice.call(panel.querySelectorAll("input, textarea"));
+
+        for (var index = 0; index < fields.length; index += 1) {
+          if (!fields[index].checkValidity()) {
+            fields[index].reportValidity();
+            return false;
+          }
+        }
+
+        return true;
+      }
+
+      form.addEventListener("click", function (event) {
+        var nextButton = event.target.closest("[data-review-next]");
+        var backButton = event.target.closest("[data-review-back]");
+
+        if (nextButton && validatePanel(panels[currentStep])) {
+          showStep(currentStep + 1, true);
+        }
+
+        if (backButton) {
+          showStep(currentStep - 1, true);
+        }
+      });
+
+      form.addEventListener("submit", function (event) {
+        if (!form.checkValidity()) {
+          event.preventDefault();
+
+          for (var index = 0; index < panels.length; index += 1) {
+            var invalid = panels[index].querySelector(":invalid");
+            if (invalid) {
+              showStep(index, false);
+              invalid.reportValidity();
+              break;
+            }
+          }
+        }
+      });
+
+      showStep(0, false);
+    })();
+  </script>
+</body>
+</html>

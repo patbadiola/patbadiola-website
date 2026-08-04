@@ -1,0 +1,1930 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Choose a date and time for your Elite Realty buyer consultation with Ethan Brooks.">
+  <title>Book Your Buyer Consultation | Elite Realty</title>
+  <style>
+.er-buyer-booking-page {
+      --er-buyer-booking-primary: #123b5d;
+      --er-buyer-booking-secondary: #1e88e5;
+      --er-buyer-booking-secondary-dark: #1565c0;
+      --er-buyer-booking-gold: #d6a84b;
+      --er-buyer-booking-body: #526273;
+      --er-buyer-booking-muted: #718096;
+      --er-buyer-booking-light: #f7f9fc;
+      --er-buyer-booking-white: #ffffff;
+      --er-buyer-booking-border: #e2e8f0;
+      --er-buyer-booking-soft-blue: #eaf4fc;
+      --er-buyer-booking-success: #2e8b57;
+      --er-buyer-booking-footer: #0e304b;
+      --er-buyer-booking-heading-font: Poppins, Arial, sans-serif;
+      --er-buyer-booking-body-font: Inter, Arial, sans-serif;
+      --er-buyer-booking-container-width: 1200px;
+
+      width: 100%;
+      max-width: 100%;
+      min-width: 0;
+      color: var(--er-buyer-booking-body);
+      background: var(--er-buyer-booking-light);
+      font-family: var(--er-buyer-booking-body-font);
+      font-size: 17px;
+      line-height: 1.65;
+      overflow-x: clip;
+    }
+
+    .er-buyer-booking-page *,
+    .er-buyer-booking-page *::before,
+    .er-buyer-booking-page *::after {
+      box-sizing: border-box;
+    }
+
+    .er-buyer-booking-page .er-buyer-booking-container {
+      width: min(
+        calc(100% - 48px),
+        var(--er-buyer-booking-container-width)
+      );
+      max-width: 100%;
+      margin-inline: auto;
+    }
+
+    .er-buyer-booking-page .er-buyer-booking-sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    .er-buyer-booking-page a:focus-visible {
+      border-radius: 4px;
+      outline: 3px solid var(--er-buyer-booking-gold);
+      outline-offset: 4px;
+    }
+
+    /* Minimal Header */
+    .er-buyer-booking-page .er-buyer-booking-header {
+      border-bottom: 1px solid var(--er-buyer-booking-border);
+      background: var(--er-buyer-booking-white);
+    }
+
+    .er-buyer-booking-page .er-buyer-booking-header-inner {
+      display: flex;
+      min-height: 68px;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.25rem;
+    }
+
+    .er-buyer-booking-page .er-buyer-booking-logo {
+      margin: 0;
+      color: var(--er-buyer-booking-primary);
+      font-family: var(--er-buyer-booking-heading-font);
+      font-size: 1.08rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+      white-space: nowrap;
+    }
+
+    .er-buyer-booking-page .er-buyer-booking-header-phone {
+      display: inline-flex;
+      min-height: 44px;
+      align-items: center;
+      color: var(--er-buyer-booking-body);
+      font-size: 0.9rem;
+      font-weight: 600;
+      line-height: 1.35;
+      text-decoration-color: var(--er-buyer-booking-muted);
+      text-decoration-thickness: 1px;
+      text-underline-offset: 4px;
+      white-space: nowrap;
+      transition:
+        color 160ms ease,
+        text-decoration-color 160ms ease;
+    }
+
+    .er-buyer-booking-page .er-buyer-booking-phone-number {
+      color: var(--er-buyer-booking-secondary-dark);
+      transition: color 160ms ease;
+    }
+
+    .er-buyer-booking-page .er-buyer-booking-header-phone:hover,
+    .er-buyer-booking-page
+      .er-buyer-booking-header-phone:hover
+      .er-buyer-booking-phone-number {
+      color: var(--er-buyer-booking-primary);
+      text-decoration-color: var(--er-buyer-booking-secondary-dark);
+    }
+
+    .er-buyer-booking-page .er-buyer-booking-support-mobile {
+      display: none;
+    }
+
+    /* Introduction Section */
+    .er-buyer-booking-page .er-buyer-booking-intro-section {
+      background: var(--er-buyer-booking-light);
+      scroll-margin-top: 20px;
+    }
+
+    /* Progress Indicator */
+    .er-buyer-booking-page .er-buyer-booking-progress-region {
+      display: block;
+      padding-block: 26px 28px;
+      border-bottom: 1px solid var(--er-buyer-booking-border);
+      background: var(--er-buyer-booking-white);
+    }
+
+    .er-buyer-booking-page .er-buyer-booking-progress-inner {
+      width: min(100%, 720px);
+      margin-inline: auto;
+    }
+
+    .er-buyer-booking-page .er-buyer-booking-progress-summary {
+      margin: 0 0 0.9rem;
+      color: var(--er-buyer-booking-primary);
+      font-family: var(--er-buyer-booking-heading-font);
+      font-size: 0.875rem;
+      font-weight: 700;
+      line-height: 1.4;
+      text-align: center;
+    }
+
+    .er-buyer-booking-page .er-buyer-booking-progress-list {
+      position: relative;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      align-items: start;
+      gap: 1rem;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .er-buyer-booking-page
+      .er-buyer-booking-progress-list::before,
+    .er-buyer-booking-page
+      .er-buyer-booking-progress-list::after {
+      position: absolute;
+      top: 18px;
+      left: 16.667%;
+      height: 2px;
+      content: "";
+      pointer-events: none;
+    }
+
+    .er-buyer-booking-page
+      .er-buyer-booking-progress-list::before {
+      right: 16.667%;
+      background: var(--er-buyer-booking-border);
+    }
+
+    .er-buyer-booking-page
+      .er-buyer-booking-progress-list::after {
+      z-index: 1;
+      right: 16.667%;
+      background: var(--er-buyer-booking-secondary);
+    }
+
+    .er-buyer-booking-page .er-buyer-booking-progress-step {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      min-width: 0;
+      flex-direction: column;
+      align-items: center;
+      color: var(--er-buyer-booking-muted);
+      text-align: center;
+    }
+
+    .er-buyer-booking-page .er-buyer-booking-progress-marker {
+      display: grid;
+      width: 38px;
+      height: 38px;
+      place-items: center;
+      border: 2px solid var(--er-buyer-booking-border);
+      border-radius: 50%;
+      color: var(--er-buyer-booking-muted);
+      background: var(--er-buyer-booking-white);
+      font-family: var(--er-buyer-booking-heading-font);
+      font-size: 0.8125rem;
+      font-weight: 700;
+      line-height: 1;
+    }
+
+    .er-buyer-booking-page .er-buyer-booking-progress-label {
+      display: block;
+      margin-top: 0.65rem;
+      color: var(--er-buyer-booking-muted);
+      font-size: 0.875rem;
+      font-weight: 600;
+      line-height: 1.35;
+      overflow-wrap: anywhere;
+    }
+
+    .er-buyer-booking-page .er-buyer-booking-progress-status {
+      display: block;
+      margin-top: 0.2rem;
+      font-size: 0.8125rem;
+      font-weight: 700;
+      line-height: 1.3;
+    }
+
+    .er-buyer-booking-page
+      .er-buyer-booking-progress-step-completed
+      .er-buyer-booking-progress-marker {
+      border-color: var(--er-buyer-booking-success);
+      color: var(--er-buyer-booking-white);
+      background: var(--er-buyer-booking-success);
+    }
+
+    .er-buyer-booking-page
+      .er-buyer-booking-progress-step-completed
+      .er-buyer-booking-progress-label {
+      color: var(--er-buyer-booking-body);
+    }
+
+    .er-buyer-booking-page
+      .er-buyer-booking-progress-step-completed
+      .er-buyer-booking-progress-status {
+      color: var(--er-buyer-booking-success);
+    }
+
+    .er-buyer-booking-page
+      .er-buyer-booking-progress-step-active
+      .er-buyer-booking-progress-marker {
+      border-color: var(--er-buyer-booking-secondary);
+      color: var(--er-buyer-booking-white);
+      background: var(--er-buyer-booking-secondary);
+      box-shadow: 0 0 0 5px var(--er-buyer-booking-soft-blue);
+    }
+
+    .er-buyer-booking-page
+      .er-buyer-booking-progress-step-active
+      .er-buyer-booking-progress-label {
+      color: var(--er-buyer-booking-primary);
+      font-weight: 700;
+    }
+
+    .er-buyer-booking-page
+      .er-buyer-booking-progress-step-active
+      .er-buyer-booking-progress-status {
+      color: var(--er-buyer-booking-secondary-dark);
+    }
+
+    /* Booking Introduction */
+    .er-buyer-booking-page .er-buyer-booking-introduction {
+      padding-block: clamp(3.25rem, 6vw, 4.125rem) 2.75rem;
+      background: var(--er-buyer-booking-light);
+    }
+
+    .er-buyer-booking-page
+      .er-buyer-booking-introduction-inner {
+      max-width: 760px;
+      margin-inline: auto;
+      text-align: center;
+    }
+
+    .er-buyer-booking-page .er-buyer-booking-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.6rem;
+      margin: 0 0 1rem;
+      color: var(--er-buyer-booking-primary);
+      font-family: var(--er-buyer-booking-heading-font);
+      font-size: 0.8125rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      line-height: 1.4;
+      text-transform: uppercase;
+    }
+
+    .er-buyer-booking-page .er-buyer-booking-eyebrow::before {
+      width: 30px;
+      height: 2px;
+      background: var(--er-buyer-booking-gold);
+      content: "";
+    }
+
+    .er-buyer-booking-page .er-buyer-booking-title {
+      max-width: 740px;
+      margin: 0 auto 1.15rem;
+      color: var(--er-buyer-booking-primary);
+      font-family: var(--er-buyer-booking-heading-font);
+      font-size: clamp(2.25rem, 4vw, 3.1rem);
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      line-height: 1.12;
+    }
+
+    .er-buyer-booking-page .er-buyer-booking-supporting {
+      max-width: 720px;
+      margin: 0 auto;
+      color: var(--er-buyer-booking-body);
+      font-size: 1.0625rem;
+      line-height: 1.68;
+    }
+
+    .er-buyer-booking-page
+      .er-buyer-booking-reassurance-list {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: stretch;
+      justify-content: center;
+      gap: 0.85rem 1.15rem;
+      margin: 1.75rem 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .er-buyer-booking-page
+      .er-buyer-booking-reassurance-item {
+      display: flex;
+      min-width: 0;
+      flex: 1 1 210px;
+      align-items: center;
+      justify-content: center;
+      gap: 0.55rem;
+      color: var(--er-buyer-booking-body);
+      font-size: 0.875rem;
+      font-weight: 600;
+      line-height: 1.4;
+      text-align: left;
+    }
+
+    .er-buyer-booking-page
+      .er-buyer-booking-reassurance-icon {
+      display: grid;
+      width: 30px;
+      height: 30px;
+      flex: 0 0 30px;
+      place-items: center;
+      border-radius: 9px;
+      color: var(--er-buyer-booking-primary);
+      background: var(--er-buyer-booking-soft-blue);
+      font-family: var(--er-buyer-booking-heading-font);
+      font-size: 0.8125rem;
+      font-weight: 700;
+      line-height: 1;
+    }
+
+    @media (max-width: 700px) {
+      .er-buyer-booking-page {
+        font-size: 16px;
+      }
+
+      .er-buyer-booking-page .er-buyer-booking-container {
+        width: min(
+          calc(100% - 36px),
+          var(--er-buyer-booking-container-width)
+        );
+      }
+
+      .er-buyer-booking-page .er-buyer-booking-header-inner {
+        min-height: 66px;
+        gap: 0.75rem;
+      }
+
+      .er-buyer-booking-page .er-buyer-booking-logo {
+        font-size: 1rem;
+      }
+
+      .er-buyer-booking-page .er-buyer-booking-header-phone {
+        font-size: 0.8125rem;
+      }
+
+      .er-buyer-booking-page
+        .er-buyer-booking-support-desktop {
+        display: none;
+      }
+
+      .er-buyer-booking-page
+        .er-buyer-booking-support-mobile {
+        display: inline;
+      }
+
+      .er-buyer-booking-page
+        .er-buyer-booking-progress-region {
+        padding-block: 22px 24px;
+      }
+
+      .er-buyer-booking-page
+        .er-buyer-booking-progress-summary {
+        margin-bottom: 0.8rem;
+        font-size: 0.8125rem;
+      }
+
+      .er-buyer-booking-page
+        .er-buyer-booking-progress-list {
+        gap: 0.45rem;
+      }
+
+      .er-buyer-booking-page
+        .er-buyer-booking-progress-list::before,
+      .er-buyer-booking-page
+        .er-buyer-booking-progress-list::after {
+        top: 17px;
+        height: 1px;
+      }
+
+      .er-buyer-booking-page
+        .er-buyer-booking-progress-marker {
+        width: 34px;
+        height: 34px;
+      }
+
+      .er-buyer-booking-page
+        .er-buyer-booking-progress-label {
+        max-width: 105px;
+        margin-top: 0.55rem;
+        font-size: 0.8125rem;
+      }
+
+      .er-buyer-booking-page
+        .er-buyer-booking-progress-status {
+        font-size: 0.8125rem;
+      }
+
+      .er-buyer-booking-page .er-buyer-booking-introduction {
+        padding-block: clamp(2.375rem, 11vw, 2.875rem) 2.125rem;
+      }
+
+      .er-buyer-booking-page .er-buyer-booking-title {
+        font-size: clamp(1.9rem, 9vw, 2.15rem);
+      }
+
+      .er-buyer-booking-page .er-buyer-booking-supporting {
+        font-size: 1rem;
+      }
+
+      .er-buyer-booking-page
+        .er-buyer-booking-reassurance-list {
+        gap: 0.8rem;
+        margin-top: 1.5rem;
+      }
+
+      .er-buyer-booking-page
+        .er-buyer-booking-reassurance-item {
+        flex-basis: 190px;
+      }
+    }
+
+    @media (max-width: 420px) {
+      .er-buyer-booking-page
+        .er-buyer-booking-progress-label {
+        max-width: 88px;
+      }
+
+      .er-buyer-booking-page
+        .er-buyer-booking-reassurance-item {
+        max-width: 310px;
+        flex-basis: 100%;
+        justify-content: flex-start;
+      }
+    }
+
+    @media (max-width: 340px) {
+      .er-buyer-booking-page .er-buyer-booking-container {
+        width: min(
+          calc(100% - 28px),
+          var(--er-buyer-booking-container-width)
+        );
+      }
+
+      .er-buyer-booking-page .er-buyer-booking-logo {
+        font-size: 0.94rem;
+      }
+
+      .er-buyer-booking-page .er-buyer-booking-header-phone {
+        font-size: 0.8125rem;
+      }
+
+      .er-buyer-booking-page
+        .er-buyer-booking-progress-label {
+        max-width: 78px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .er-buyer-booking-page *,
+      .er-buyer-booking-page *::before,
+      .er-buyer-booking-page *::after {
+        transition-duration: 0.01ms !important;
+      }
+    }
+
+.er-buyer-booking-page .er-buyer-booking-calendar-section {
+      padding-block: 1.75rem 5.125rem;
+      background: var(--er-buyer-booking-light);
+      scroll-margin-top: 20px;
+    }
+
+    .er-buyer-booking-page .er-buyer-booking-card {
+      width: min(100%, 1100px);
+      max-width: 1100px;
+      min-width: 0;
+      margin-inline: auto;
+      padding: 46px;
+      border: 1px solid var(--er-buyer-booking-border);
+      border-radius: 18px;
+      background: var(--er-buyer-booking-white);
+      box-shadow: 0 14px 34px var(--er-buyer-booking-border);
+      overflow: visible;
+    }
+
+    .er-buyer-booking-page .er-buyer-booking-card > * {
+      max-width: 100%;
+    }
+
+    .er-buyer-booking-page .er-buyer-booking-card-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      margin: 0 0 0.8rem;
+      color: var(--er-buyer-booking-primary);
+      font-family: var(--er-buyer-booking-heading-font);
+      font-size: 0.8125rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      line-height: 1.4;
+      text-transform: uppercase;
+    }
+
+    .er-buyer-booking-page .er-buyer-booking-card-label::before {
+      width: 30px;
+      height: 2px;
+      background: var(--er-buyer-booking-gold);
+      content: "";
+    }
+
+    .er-buyer-booking-page .er-buyer-booking-card-title {
+      margin: 0 0 0.85rem;
+      color: var(--er-buyer-booking-primary);
+      font-family: var(--er-buyer-booking-heading-font);
+      font-size: clamp(1.7rem, 3vw, 2rem);
+      font-weight: 700;
+      letter-spacing: -0.025em;
+      line-height: 1.16;
+    }
+
+    .er-buyer-booking-page .er-buyer-booking-card-supporting {
+      max-width: 760px;
+      margin: 0;
+      color: var(--er-buyer-booking-body);
+      font-size: 1.0625rem;
+      line-height: 1.65;
+    }
+
+    /* Appointment Details */
+    .er-buyer-booking-page .er-buyer-booking-details-list {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 0;
+      margin: 26px 0 0;
+      padding: 16px 0;
+      border-top: 1px solid var(--er-buyer-booking-border);
+      border-bottom: 1px solid var(--er-buyer-booking-border);
+      list-style: none;
+    }
+
+    .er-buyer-booking-page .er-buyer-booking-detail-item {
+      display: grid;
+      min-width: 0;
+      grid-template-columns: auto minmax(0, 1fr);
+      align-items: center;
+      gap: 0.75rem;
+      padding: 8px 16px;
+      border-right: 1px solid var(--er-buyer-booking-border);
+    }
+
+    .er-buyer-booking-page .er-buyer-booking-detail-item:last-child {
+      border-right: 0;
+    }
+
+    .er-buyer-booking-page .er-buyer-booking-detail-icon,
+    .er-buyer-booking-page .er-buyer-booking-completion-icon {
+      display: grid;
+      width: 34px;
+      height: 34px;
+      flex: 0 0 34px;
+      place-items: center;
+      border-radius: 10px;
+      color: var(--er-buyer-booking-primary);
+      background: var(--er-buyer-booking-soft-blue);
+      font-family: var(--er-buyer-booking-heading-font);
+      font-size: 0.8125rem;
+      font-weight: 700;
+      line-height: 1;
+    }
+
+    .er-buyer-booking-page .er-buyer-booking-detail-content {
+      min-width: 0;
+    }
+
+    .er-buyer-booking-page .er-buyer-booking-detail-label {
+      display: block;
+      margin: 0 0 0.15rem;
+      color: var(--er-buyer-booking-muted);
+      font-size: 0.8125rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      line-height: 1.35;
+    }
+
+    .er-buyer-booking-page .er-buyer-booking-detail-value {
+      display: block;
+      color: var(--er-buyer-booking-primary);
+      font-family: var(--er-buyer-booking-heading-font);
+      font-size: 0.9375rem;
+      font-weight: 700;
+      line-height: 1.4;
+      overflow-wrap: anywhere;
+    }
+
+    /* Standalone Consultation Calendar */
+    .er-buyer-booking-page .er-buyer-booking-calendar-embed {
+      display: block;
+      width: 100%;
+      max-width: 1000px;
+      min-width: 0;
+      margin: 30px auto 0;
+      padding: 0;
+      border: 0;
+      border-radius: 0;
+      background: transparent;
+      overflow: visible;
+    }
+
+    /* Preparation Note */
+    .er-buyer-booking-page .er-buyer-booking-preparation {
+      width: 100%;
+      max-width: 1000px;
+      margin: 30px auto 0;
+      padding: 22px;
+      border: 1px solid var(--er-buyer-booking-border);
+      border-radius: 15px;
+      background: var(--er-buyer-booking-soft-blue);
+    }
+
+    .er-buyer-booking-page .er-buyer-booking-preparation-title {
+      margin: 0 0 0.35rem;
+      color: var(--er-buyer-booking-primary);
+      font-family: var(--er-buyer-booking-heading-font);
+      font-size: 1.2rem;
+      font-weight: 700;
+      line-height: 1.35;
+    }
+
+    .er-buyer-booking-page .er-buyer-booking-preparation-copy {
+      max-width: 720px;
+      margin: 0;
+      color: var(--er-buyer-booking-body);
+      font-size: 0.9375rem;
+      line-height: 1.6;
+    }
+
+    .er-buyer-booking-page .er-buyer-booking-preparation-list {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1rem;
+      margin: 18px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .er-buyer-booking-page .er-buyer-booking-preparation-item {
+      display: grid;
+      min-width: 0;
+      grid-template-columns: auto minmax(0, 1fr);
+      align-items: start;
+      gap: 0.6rem;
+      color: var(--er-buyer-booking-body);
+      font-size: 0.875rem;
+      font-weight: 600;
+      line-height: 1.5;
+    }
+
+    .er-buyer-booking-page .er-buyer-booking-check-icon {
+      display: grid;
+      width: 24px;
+      height: 24px;
+      place-items: center;
+      border-radius: 8px;
+      color: var(--er-buyer-booking-white);
+      background: var(--er-buyer-booking-success);
+      font-family: var(--er-buyer-booking-heading-font);
+      font-size: 0.8125rem;
+      font-weight: 700;
+      line-height: 1;
+    }
+
+    .er-buyer-booking-page
+      .er-buyer-booking-preparation-reassurance {
+      margin: 18px 0 0;
+      padding-top: 16px;
+      border-top: 1px solid var(--er-buyer-booking-border);
+      color: var(--er-buyer-booking-muted);
+      font-size: 0.875rem;
+      line-height: 1.55;
+    }
+
+    /* Booking Completion Note */
+    .er-buyer-booking-page .er-buyer-booking-completion-note {
+      display: grid;
+      width: 100%;
+      max-width: 1000px;
+      grid-template-columns: auto minmax(0, 1fr);
+      align-items: start;
+      gap: 0.75rem;
+      margin: 24px auto 0;
+      padding-top: 20px;
+      border-top: 1px solid var(--er-buyer-booking-border);
+    }
+
+    .er-buyer-booking-page .er-buyer-booking-completion-copy,
+    .er-buyer-booking-page .er-buyer-booking-reminder-copy {
+      margin: 0;
+      color: var(--er-buyer-booking-muted);
+      font-size: 0.875rem;
+      line-height: 1.58;
+    }
+
+    .er-buyer-booking-page .er-buyer-booking-reminder-copy {
+      margin-top: 0.35rem;
+      font-size: 0.8125rem;
+    }
+
+    /* Support Box */
+    .er-buyer-booking-page .er-buyer-booking-support-box {
+      display: grid;
+      width: min(100%, 1100px);
+      max-width: 1100px;
+      min-width: 0;
+      grid-template-columns: auto minmax(0, 1fr);
+      align-items: start;
+      gap: 1rem;
+      margin: 24px auto 0;
+      padding: 22px;
+      border: 1px solid var(--er-buyer-booking-border);
+      border-radius: 15px;
+      background: var(--er-buyer-booking-soft-blue);
+    }
+
+    .er-buyer-booking-page .er-buyer-booking-support-icon {
+      display: grid;
+      width: 42px;
+      height: 42px;
+      place-items: center;
+      border-radius: 12px;
+      color: var(--er-buyer-booking-white);
+      background: var(--er-buyer-booking-primary);
+      font-family: var(--er-buyer-booking-heading-font);
+      font-size: 1rem;
+      font-weight: 700;
+      line-height: 1;
+    }
+
+    .er-buyer-booking-page .er-buyer-booking-support-content {
+      min-width: 0;
+    }
+
+    .er-buyer-booking-page .er-buyer-booking-support-title {
+      margin: 0 0 0.25rem;
+      color: var(--er-buyer-booking-primary);
+      font-family: var(--er-buyer-booking-heading-font);
+      font-size: 1.05rem;
+      font-weight: 700;
+      line-height: 1.35;
+    }
+
+    .er-buyer-booking-page .er-buyer-booking-support-copy,
+    .er-buyer-booking-page .er-buyer-booking-support-additional {
+      margin: 0;
+      color: var(--er-buyer-booking-body);
+      font-size: 0.9375rem;
+      line-height: 1.6;
+    }
+
+    .er-buyer-booking-page .er-buyer-booking-support-additional {
+      margin-top: 0.35rem;
+      color: var(--er-buyer-booking-muted);
+      font-size: 0.875rem;
+    }
+
+    .er-buyer-booking-page .er-buyer-booking-support-link {
+      display: inline-flex;
+      min-height: 44px;
+      max-width: 100%;
+      min-width: 0;
+      align-items: center;
+      color: var(--er-buyer-booking-secondary-dark);
+      font-weight: 700;
+      text-decoration-color: var(--er-buyer-booking-secondary-dark);
+      text-decoration-thickness: 1px;
+      text-underline-offset: 4px;
+      overflow-wrap: anywhere;
+      word-break: break-word;
+      transition:
+        color 160ms ease,
+        text-decoration-color 160ms ease;
+    }
+
+    .er-buyer-booking-page .er-buyer-booking-support-link:hover {
+      color: var(--er-buyer-booking-primary);
+      text-decoration-color: var(--er-buyer-booking-primary);
+    }
+
+    .er-buyer-booking-page
+      .er-buyer-booking-support-link:focus-visible,
+    .er-buyer-booking-page
+      .er-buyer-booking-footer-link:focus-visible {
+      border-radius: 4px;
+      outline: 3px solid var(--er-buyer-booking-gold);
+      outline-offset: 4px;
+    }
+
+    /* Compact Footer */
+    .er-buyer-booking-page .er-buyer-booking-footer {
+      padding-block: 32px 26px;
+      border-top: 1px solid var(--er-buyer-booking-primary);
+      color: var(--er-buyer-booking-white);
+      background: var(--er-buyer-booking-footer);
+      font-size: 0.875rem;
+      line-height: 1.55;
+    }
+
+    .er-buyer-booking-page .er-buyer-booking-footer-main {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 2rem;
+    }
+
+    .er-buyer-booking-page .er-buyer-booking-footer-brand {
+      margin: 0 0 0.2rem;
+      color: var(--er-buyer-booking-white);
+      font-family: var(--er-buyer-booking-heading-font);
+      font-size: 1rem;
+      font-weight: 700;
+      line-height: 1.4;
+    }
+
+    .er-buyer-booking-page .er-buyer-booking-footer-location {
+      margin: 0;
+      color: var(--er-buyer-booking-white);
+      opacity: 0.8;
+    }
+
+    .er-buyer-booking-page .er-buyer-booking-footer-legal {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 0.4rem 1.15rem;
+    }
+
+    .er-buyer-booking-page .er-buyer-booking-footer-link {
+      display: inline-flex;
+      min-height: 44px;
+      align-items: center;
+      color: var(--er-buyer-booking-white);
+      font-size: 0.875rem;
+      font-weight: 600;
+      text-decoration-color: var(--er-buyer-booking-white);
+      text-decoration-thickness: 1px;
+      text-underline-offset: 4px;
+      transition:
+        color 160ms ease,
+        text-decoration-color 160ms ease;
+    }
+
+    .er-buyer-booking-page .er-buyer-booking-footer-link:hover {
+      color: var(--er-buyer-booking-white);
+      text-decoration-color: var(--er-buyer-booking-gold);
+    }
+
+    .er-buyer-booking-page .er-buyer-booking-footer-copyright {
+      margin: 18px 0 0;
+      padding-top: 16px;
+      border-top: 1px solid var(--er-buyer-booking-primary);
+      color: var(--er-buyer-booking-white);
+      font-size: 0.8125rem;
+      line-height: 1.5;
+      opacity: 0.76;
+    }
+
+    @media (max-width: 900px) {
+      .er-buyer-booking-page .er-buyer-booking-card {
+        padding: 36px;
+      }
+
+      .er-buyer-booking-page .er-buyer-booking-details-list {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .er-buyer-booking-page
+        .er-buyer-booking-detail-item:nth-child(2) {
+        border-right: 0;
+      }
+
+      .er-buyer-booking-page
+        .er-buyer-booking-detail-item:nth-child(-n + 2) {
+        padding-bottom: 14px;
+        border-bottom: 1px solid var(--er-buyer-booking-border);
+      }
+
+      .er-buyer-booking-page
+        .er-buyer-booking-detail-item:nth-child(n + 3) {
+        padding-top: 14px;
+      }
+
+      .er-buyer-booking-page .er-buyer-booking-preparation-list {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 700px) {
+      .er-buyer-booking-page .er-buyer-booking-calendar-section {
+        padding-block: 1.375rem 3.75rem;
+      }
+
+      .er-buyer-booking-page .er-buyer-booking-card {
+        padding: 24px;
+      }
+
+      .er-buyer-booking-page .er-buyer-booking-card-title {
+        font-size: clamp(1.45rem, 7vw, 1.7rem);
+      }
+
+      .er-buyer-booking-page .er-buyer-booking-card-supporting {
+        font-size: 1rem;
+      }
+
+      .er-buyer-booking-page .er-buyer-booking-preparation-list {
+        grid-template-columns: 1fr;
+      }
+
+      .er-buyer-booking-page .er-buyer-booking-support-box {
+        padding: 20px;
+      }
+
+      .er-buyer-booking-page .er-buyer-booking-footer {
+        padding-block: 28px 24px;
+      }
+
+      .er-buyer-booking-page .er-buyer-booking-footer-main {
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      .er-buyer-booking-page .er-buyer-booking-footer-legal {
+        justify-content: flex-start;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .er-buyer-booking-page .er-buyer-booking-details-list {
+        grid-template-columns: 1fr;
+        padding-block: 8px;
+      }
+
+      .er-buyer-booking-page .er-buyer-booking-detail-item,
+      .er-buyer-booking-page
+        .er-buyer-booking-detail-item:nth-child(n) {
+        padding: 12px 0;
+        border-right: 0;
+        border-bottom: 1px solid var(--er-buyer-booking-border);
+      }
+
+      .er-buyer-booking-page
+        .er-buyer-booking-detail-item:last-child {
+        border-bottom: 0;
+      }
+
+      .er-buyer-booking-page .er-buyer-booking-completion-note,
+      .er-buyer-booking-page .er-buyer-booking-support-box {
+        grid-template-columns: 1fr;
+      }
+    }
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap");
+
+html { scroll-behavior: smooth; }
+body { margin: 0; min-width: 320px; background: #f7f9fc; }
+
+.er-calendar {
+  display: grid;
+  width: 100%;
+  max-width: 1000px;
+  min-height: 655px;
+  grid-template-columns: 33.333% minmax(0, 1fr);
+  margin: 30px auto 0;
+  border: 1px solid #d9dee5;
+  border-radius: 9px;
+  color: #18202f;
+  background: #fff;
+  font-family: Inter, Arial, sans-serif;
+  overflow: hidden;
+}
+
+.er-calendar-summary {
+  position: relative;
+  padding: 52px 24px;
+  border-right: 1px solid #d9dee5;
+}
+
+.er-calendar-back {
+  display: grid;
+  width: 40px;
+  height: 40px;
+  place-items: center;
+  margin: -30px 0 28px;
+  border: 1px solid #d9dee5;
+  border-radius: 50%;
+  color: #1565c0;
+  background: #fff;
+  font-size: 26px;
+  cursor: pointer;
+}
+
+.er-calendar-kicker {
+  margin: 0 0 10px;
+  color: #6d7480;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.er-calendar-summary h3 {
+  margin: 0 0 16px;
+  color: #111827;
+  font: 500 23px/1.32 Inter, Arial, sans-serif;
+}
+
+.er-calendar-meta {
+  display: grid;
+  grid-template-columns: 20px minmax(0, 1fr);
+  gap: 9px;
+  margin: 10px 0 0;
+  color: #6d7480;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.45;
+}
+
+.er-calendar-workspace {
+  min-width: 0;
+  padding: 28px 24px;
+}
+
+.er-calendar-workspace > h3 {
+  margin: 0 0 20px;
+  color: #18202f;
+  font: 600 18px/1.4 Inter, Arial, sans-serif;
+}
+
+.er-calendar-picker-grid {
+  display: grid;
+  grid-template-columns: minmax(340px, 1fr) 200px;
+  gap: 28px;
+}
+
+.er-calendar-date-pane { min-width: 0; }
+
+.er-calendar-month-nav {
+  display: grid;
+  grid-template-columns: 42px minmax(0, 1fr) 42px;
+  align-items: center;
+  margin-bottom: 14px;
+  text-align: center;
+}
+
+.er-calendar-month-nav strong { font-size: 14px; font-weight: 600; }
+.er-calendar-month-nav button {
+  display: grid;
+  width: 42px;
+  height: 42px;
+  place-items: center;
+  border: 0;
+  border-radius: 50%;
+  color: #1565c0;
+  background: #edf4ff;
+  font-size: 30px;
+  line-height: 1;
+  cursor: pointer;
+}
+.er-calendar-month-nav button:first-child { color: #68758d; background: transparent; }
+
+.er-calendar-weekdays,
+.er-calendar-days {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.er-calendar-weekdays {
+  margin-bottom: 12px;
+  font-size: 12px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.er-calendar-days button,
+.er-calendar-days span {
+  display: grid;
+  aspect-ratio: 1;
+  place-items: center;
+  border: 0;
+  border-radius: 50%;
+  font: 500 14px/1 Inter, Arial, sans-serif;
+}
+
+.er-calendar-days span { color: #b6bcc5; }
+.er-calendar-days button {
+  color: #075cff;
+  background: #edf4ff;
+  cursor: pointer;
+}
+.er-calendar-days button:hover { background: #dce9ff; }
+.er-calendar-days button.is-selected { color: #fff; background: #1766ed; }
+.er-calendar-days button:focus-visible { outline: 3px solid rgba(23, 102, 237, .28); outline-offset: 2px; }
+
+.er-calendar-zone {
+  display: grid;
+  gap: 7px;
+  margin-top: 28px;
+  color: #18202f;
+  font-size: 13px;
+}
+.er-calendar-zone > span { font-weight: 500; }
+.er-calendar-zone button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 0;
+  border: 0;
+  color: #253044;
+  background: transparent;
+  font-size: 12px;
+  text-align: left;
+}
+
+.er-calendar-times {
+  display: grid;
+  max-height: 510px;
+  align-content: start;
+  gap: 16px;
+  padding-right: 4px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+}
+
+.er-calendar-slot-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+}
+
+.er-calendar-slot-row.is-pending { grid-template-columns: minmax(84px, 1fr) 80px; }
+
+.er-calendar-slot,
+.er-calendar-confirm {
+  min-height: 48px;
+  border: 1px solid #075cff;
+  border-radius: 4px;
+  color: #075cff;
+  background: #fff;
+  font: 600 13px/1 Inter, Arial, sans-serif;
+  cursor: pointer;
+}
+.er-calendar-slot:hover { background: #f5f8ff; }
+.er-calendar-slot[aria-pressed="true"] { border-color: #777b85; color: #fff; background: #777b85; }
+.er-calendar-confirm { color: #fff; background: #1f5ff5; }
+
+.er-calendar-details { padding: 40px 38px 28px; }
+.er-calendar-details form { display: grid; gap: 18px; }
+.er-calendar-details label {
+  display: grid;
+  gap: 8px;
+  color: #35445a;
+  font-size: 14px;
+  font-weight: 600;
+}
+.er-calendar-details input,
+.er-calendar-details select {
+  width: 100%;
+  height: 42px;
+  padding: 0 10px;
+  border: 1px solid #c4cfdb;
+  border-radius: 5px;
+  color: #35445a;
+  background: #fff;
+  font: 400 15px/1.2 Inter, Arial, sans-serif;
+  outline: 0;
+}
+.er-calendar-details input:focus,
+.er-calendar-details select:focus {
+  border-color: #075cff;
+  box-shadow: 0 0 0 3px rgba(7, 92, 255, .12);
+}
+.er-calendar-schedule {
+  justify-self: end;
+  min-height: 40px;
+  margin-top: 8px;
+  padding: 0 16px;
+  border: 0;
+  border-radius: 7px;
+  color: #fff;
+  background: #1f5ff5;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.funnel-next-button {
+  position: fixed;
+  z-index: 2147483647;
+  right: 24px;
+  bottom: 24px;
+  display: inline-flex;
+  min-height: 56px;
+  align-items: center;
+  justify-content: center;
+  gap: .65rem;
+  padding: .85rem 1.25rem;
+  border: 1px solid rgba(255,255,255,.3);
+  border-radius: 999px;
+  color: #fff;
+  background: #1565c0;
+  box-shadow: 0 14px 34px rgba(18,59,93,.3);
+  font: 700 .92rem/1 Poppins, Arial, sans-serif;
+  text-decoration: none;
+}
+.funnel-next-button:hover { background: #0d4f9a; transform: translateY(-3px); }
+.funnel-next-button:focus-visible { outline: 3px solid #d6a84b; outline-offset: 4px; }
+.funnel-next-button__arrow { font-size: 1.2rem; line-height: 0; }
+
+@media (max-width: 900px) {
+  .er-calendar { grid-template-columns: 1fr; }
+  .er-calendar-summary { padding: 28px 24px; border-right: 0; border-bottom: 1px solid #d9dee5; }
+  .er-calendar-back { margin: 0 0 20px; }
+}
+
+@media (max-width: 700px) {
+  .er-calendar { min-height: 0; }
+  .er-calendar-workspace { padding: 24px 18px; }
+  .er-calendar-picker-grid { grid-template-columns: 1fr; }
+  .er-calendar-times { grid-template-columns: repeat(2, minmax(0, 1fr)); max-height: none; overflow: visible; }
+  .er-calendar-slot-row.is-pending { grid-column: 1 / -1; }
+  .er-calendar-details { padding: 28px 20px; }
+  .funnel-next-button { right: 16px; bottom: 16px; min-height: 52px; padding: .78rem 1.05rem; }
+}
+
+@media (max-width: 430px) {
+  .er-calendar-summary h3 { font-size: 20px; }
+  .er-calendar-picker-grid { gap: 22px; }
+  .er-calendar-weekdays, .er-calendar-days { gap: 5px; }
+  .er-calendar-days button, .er-calendar-days span { font-size: 12px; }
+  .er-calendar-times { grid-template-columns: 1fr; }
+  .er-calendar-slot-row.is-pending { grid-column: auto; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .funnel-next-button { transition: none; }
+}
+  </style>
+</head>
+<body>
+<div class="er-buyer-booking-page">
+<!-- Minimal Header: Begin -->
+  <header class="er-buyer-booking-header">
+    <div class="er-buyer-booking-container er-buyer-booking-header-inner">
+      <p class="er-buyer-booking-logo">Elite Realty</p>
+
+      <a
+        class="er-buyer-booking-header-phone"
+        href="tel:+15125550147"
+        aria-label="Call Elite Realty for help at 512-555-0147"
+      >
+        <span class="er-buyer-booking-support-desktop" aria-hidden="true">
+          Need help?
+          <span class="er-buyer-booking-phone-number">(512) 555-0147</span>
+        </span>
+
+        <span class="er-buyer-booking-support-mobile" aria-hidden="true">
+          Call
+          <span class="er-buyer-booking-phone-number">(512) 555-0147</span>
+        </span>
+      </a>
+    </div>
+  </header>
+  <!-- Minimal Header: End -->
+
+  <!-- Booking Introduction Section: Begin -->
+  <section
+    class="er-buyer-booking-intro-section"
+    id="buyer-booking-intro"
+    aria-labelledby="er-buyer-booking-title"
+  >
+    <!-- Progress Indicator: Begin -->
+    <nav
+      class="er-buyer-booking-progress-region"
+      aria-label="Buyer consultation progress"
+    >
+      <div class="er-buyer-booking-container">
+        <div class="er-buyer-booking-progress-inner">
+          <p class="er-buyer-booking-progress-summary">Step 3 of 3</p>
+
+          <ol class="er-buyer-booking-progress-list">
+            <li class="er-buyer-booking-progress-step er-buyer-booking-progress-step-completed">
+              <span
+                class="er-buyer-booking-progress-marker"
+                aria-hidden="true"
+              >✓</span>
+              <span class="er-buyer-booking-sr-only">
+                Step 1, completed.
+              </span>
+              <span class="er-buyer-booking-progress-label">
+                Contact Details
+              </span>
+              <span class="er-buyer-booking-progress-status">
+                Complete
+              </span>
+            </li>
+
+            <li class="er-buyer-booking-progress-step er-buyer-booking-progress-step-completed">
+              <span
+                class="er-buyer-booking-progress-marker"
+                aria-hidden="true"
+              >✓</span>
+              <span class="er-buyer-booking-sr-only">
+                Step 2, completed.
+              </span>
+              <span class="er-buyer-booking-progress-label">
+                Buyer Assessment
+              </span>
+              <span class="er-buyer-booking-progress-status">
+                Complete
+              </span>
+            </li>
+
+            <li
+              class="er-buyer-booking-progress-step er-buyer-booking-progress-step-active"
+              aria-current="step"
+            >
+              <span
+                class="er-buyer-booking-progress-marker"
+                aria-hidden="true"
+              >3</span>
+              <span class="er-buyer-booking-sr-only">
+                Step 3, current step.
+              </span>
+              <span class="er-buyer-booking-progress-label">
+                Book Consultation
+              </span>
+              <span class="er-buyer-booking-progress-status">
+                Current
+              </span>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </nav>
+    <!-- Progress Indicator: End -->
+
+    <!-- Booking Introduction: Begin -->
+    <div class="er-buyer-booking-introduction">
+      <div class="er-buyer-booking-container er-buyer-booking-introduction-inner">
+        <p class="er-buyer-booking-eyebrow">
+          Schedule Your Consultation
+        </p>
+
+        <h1 class="er-buyer-booking-title" id="er-buyer-booking-title">
+          Choose a Time for Your Buyer Consultation
+        </h1>
+
+        <p class="er-buyer-booking-supporting">
+          Select an available date and time to speak with Ethan Brooks about your
+          home-buying goals, questions, and recommended next steps.
+        </p>
+
+        <ul
+          class="er-buyer-booking-reassurance-list"
+          aria-label="Booking reassurance"
+        >
+          <li class="er-buyer-booking-reassurance-item">
+            <span
+              class="er-buyer-booking-reassurance-icon"
+              aria-hidden="true"
+            >◷</span>
+            <span>45-minute consultation</span>
+          </li>
+
+          <li class="er-buyer-booking-reassurance-item">
+            <span
+              class="er-buyer-booking-reassurance-icon"
+              aria-hidden="true"
+            >◫</span>
+            <span>Central Time</span>
+          </li>
+
+          <li class="er-buyer-booking-reassurance-item">
+            <span
+              class="er-buyer-booking-reassurance-icon"
+              aria-hidden="true"
+            >✓</span>
+            <span>Your assessment will be reviewed beforehand</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- Booking Introduction: End -->
+  </section>
+  <!-- Booking Introduction Section: End -->
+
+<!-- Buyer Consultation Booking Section: Begin -->
+  <section
+    class="er-buyer-booking-calendar-section"
+    id="buyer-consultation-booking"
+    aria-labelledby="er-buyer-booking-card-title"
+  >
+    <div class="er-buyer-booking-container">
+      <!-- Booking Card: Begin -->
+      <article class="er-buyer-booking-card">
+        <p class="er-buyer-booking-card-label">Buyer Consultation</p>
+
+        <h2
+          class="er-buyer-booking-card-title"
+          id="er-buyer-booking-card-title"
+        >
+          Book Your Consultation With Ethan Brooks
+        </h2>
+
+        <p class="er-buyer-booking-card-supporting">
+          Choose an available date and time below. Ethan will review your Buyer
+          Qualification responses before the meeting.
+        </p>
+
+        <!-- Appointment Details: Begin -->
+        <ul
+          class="er-buyer-booking-details-list"
+          aria-label="Appointment details"
+        >
+          <li class="er-buyer-booking-detail-item">
+            <span
+              class="er-buyer-booking-detail-icon"
+              aria-hidden="true"
+            >◎</span>
+            <span class="er-buyer-booking-detail-content">
+              <span class="er-buyer-booking-detail-label">
+                Buyer Specialist
+              </span>
+              <span class="er-buyer-booking-detail-value">
+                Ethan Brooks
+              </span>
+            </span>
+          </li>
+
+          <li class="er-buyer-booking-detail-item">
+            <span
+              class="er-buyer-booking-detail-icon"
+              aria-hidden="true"
+            >◷</span>
+            <span class="er-buyer-booking-detail-content">
+              <span class="er-buyer-booking-detail-label">Duration</span>
+              <span class="er-buyer-booking-detail-value">
+                45 minutes
+              </span>
+            </span>
+          </li>
+
+          <li class="er-buyer-booking-detail-item">
+            <span
+              class="er-buyer-booking-detail-icon"
+              aria-hidden="true"
+            >◉</span>
+            <span class="er-buyer-booking-detail-content">
+              <span class="er-buyer-booking-detail-label">Time Zone</span>
+              <span class="er-buyer-booking-detail-value">
+                Central Time
+              </span>
+            </span>
+          </li>
+
+          <li class="er-buyer-booking-detail-item">
+            <span
+              class="er-buyer-booking-detail-icon"
+              aria-hidden="true"
+            >✓</span>
+            <span class="er-buyer-booking-detail-content">
+              <span class="er-buyer-booking-detail-label">
+                Meeting Purpose
+              </span>
+              <span class="er-buyer-booking-detail-value">
+                Review your goals and next steps
+              </span>
+            </span>
+          </li>
+        </ul>
+        <!-- Appointment Details: End -->
+
+        <!-- Standalone Consultation Calendar: Begin -->
+        <div class="er-calendar" id="er-consultation-calendar">
+          <aside class="er-calendar-summary">
+            <button class="er-calendar-back" id="er-calendar-back" type="button" aria-label="Return to date and time selection" hidden>←</button>
+            <p class="er-calendar-kicker">ER | CAL-GRP | Consultations</p>
+            <h3>ER | CAL | Buyer<br>Consultation</h3>
+            <p class="er-calendar-meta"><span aria-hidden="true">◷</span><span>45 min</span></p>
+            <p class="er-calendar-meta"><span aria-hidden="true">▣</span><span id="er-calendar-summary-date">Tue, Aug 4, 2026</span></p>
+            <p class="er-calendar-meta" id="er-calendar-summary-time" hidden><span aria-hidden="true">◷</span><span></span></p>
+            <p class="er-calendar-meta" id="er-calendar-summary-zone" hidden><span aria-hidden="true">◎</span><span>Asia/Shanghai (GMT+8)</span></p>
+          </aside>
+
+          <section class="er-calendar-workspace" id="er-calendar-picker" aria-labelledby="er-calendar-picker-title">
+            <h3 id="er-calendar-picker-title">Select Date &amp; Time</h3>
+            <div class="er-calendar-picker-grid">
+              <div class="er-calendar-date-pane">
+                <div class="er-calendar-month-nav">
+                  <button type="button" id="er-calendar-prev" aria-label="Previous month">‹</button>
+                  <strong id="er-calendar-month-label">August 2026</strong>
+                  <button type="button" id="er-calendar-next" aria-label="Next month">›</button>
+                </div>
+                <div class="er-calendar-weekdays" aria-hidden="true">
+                  <span>Sun</span><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span>
+                </div>
+                <div class="er-calendar-days" id="er-calendar-days" role="grid" aria-label="Appointment dates"></div>
+                <div class="er-calendar-zone">
+                  <span>Time zone</span>
+                  <button type="button"><span aria-hidden="true">◎</span> GMT+08:00 Asia/Shanghai (GMT+8) <span aria-hidden="true">⌄</span></button>
+                </div>
+              </div>
+              <div class="er-calendar-times" id="er-calendar-times" aria-label="Available appointment times"></div>
+            </div>
+          </section>
+
+          <section class="er-calendar-workspace er-calendar-details" id="er-calendar-details" aria-labelledby="er-calendar-details-title" hidden>
+            <h3 id="er-calendar-details-title">Enter details</h3>
+            <form id="er-calendar-details-form" action="../step-05/index.html" method="get">
+              <label><span>First Name</span><input name="first_name" type="text" autocomplete="given-name" placeholder="Enter your first name" required></label>
+              <label><span>Last Name</span><input name="last_name" type="text" autocomplete="family-name" placeholder="Enter your last name" required></label>
+              <label><span>Phone *</span><input name="phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="+1 (555) 000-0000" required></label>
+              <label><span>Email *</span><input name="email" type="email" autocomplete="email" placeholder="your@email.com" required></label>
+              <label><span>How would you like to meet?</span>
+                <select name="meeting_preference" required>
+                  <option value="" selected>Select a meeting preference</option>
+                  <option>Phone call</option>
+                  <option>Video call</option>
+                  <option>In person</option>
+                </select>
+              </label>
+              <button class="er-calendar-schedule" type="submit">Schedule meeting</button>
+            </form>
+          </section>
+        </div>
+        <!-- Standalone Consultation Calendar: End -->
+
+        <!-- Preparation Note: Begin -->
+        <section
+          class="er-buyer-booking-preparation"
+          aria-labelledby="er-buyer-booking-preparation-title"
+        >
+          <h3
+            class="er-buyer-booking-preparation-title"
+            id="er-buyer-booking-preparation-title"
+          >
+            Before Your Consultation
+          </h3>
+
+          <p class="er-buyer-booking-preparation-copy">
+            A little preparation can help you get more value from your
+            conversation with Ethan.
+          </p>
+
+          <ul class="er-buyer-booking-preparation-list">
+            <li class="er-buyer-booking-preparation-item">
+              <span
+                class="er-buyer-booking-check-icon"
+                aria-hidden="true"
+              >✓</span>
+              <span>Review your estimated buying budget</span>
+            </li>
+
+            <li class="er-buyer-booking-preparation-item">
+              <span
+                class="er-buyer-booking-check-icon"
+                aria-hidden="true"
+              >✓</span>
+              <span>
+                Write down your preferred areas and must-have features
+              </span>
+            </li>
+
+            <li class="er-buyer-booking-preparation-item">
+              <span
+                class="er-buyer-booking-check-icon"
+                aria-hidden="true"
+              >✓</span>
+              <span>
+                Prepare any questions about financing, showings, offers, or the
+                buying process
+              </span>
+            </li>
+          </ul>
+
+          <p class="er-buyer-booking-preparation-reassurance">
+            Ethan will already have access to the Buyer Qualification
+            information you submitted.
+          </p>
+        </section>
+        <!-- Preparation Note: End -->
+
+        <!-- Booking Completion Note: Begin -->
+        <div class="er-buyer-booking-completion-note">
+          <span
+            class="er-buyer-booking-completion-icon"
+            aria-hidden="true"
+          >✓</span>
+
+          <div>
+            <p class="er-buyer-booking-completion-copy">
+              After booking, you’ll receive a confirmation with your appointment
+              details and any available meeting instructions.
+            </p>
+            <p class="er-buyer-booking-reminder-copy">
+              You may also receive appointment reminders before the
+              consultation.
+            </p>
+          </div>
+        </div>
+        <!-- Booking Completion Note: End -->
+      </article>
+      <!-- Booking Card: End -->
+
+      <!-- Support Box: Begin -->
+      <aside
+        class="er-buyer-booking-support-box"
+        aria-labelledby="er-buyer-booking-support-title"
+      >
+        <span
+          class="er-buyer-booking-support-icon"
+          aria-hidden="true"
+        >?</span>
+
+        <div class="er-buyer-booking-support-content">
+          <h3
+            class="er-buyer-booking-support-title"
+            id="er-buyer-booking-support-title"
+          >
+            Having trouble finding a time?
+          </h3>
+
+          <p class="er-buyer-booking-support-copy">
+            Call Elite Realty at
+            <a
+              class="er-buyer-booking-support-link"
+              href="tel:+15125550147"
+              aria-label="Call Elite Realty at 512-555-0147"
+            >(512) 555-0147</a>
+            or email
+            <a
+              class="er-buyer-booking-support-link"
+              href="mailto:eliterealty.crm@gmail.com"
+              aria-label="Email Elite Realty at eliterealty.crm@gmail.com"
+            >eliterealty.crm@gmail.com</a>.
+          </p>
+
+          <p class="er-buyer-booking-support-additional">
+            Our team can help you review available consultation options.
+          </p>
+        </div>
+      </aside>
+      <!-- Support Box: End -->
+    </div>
+  </section>
+  <!-- Buyer Consultation Booking Section: End -->
+
+  <!-- Compact Footer: Begin -->
+  <footer class="er-buyer-booking-footer">
+    <div class="er-buyer-booking-container">
+      <div class="er-buyer-booking-footer-main">
+        <div>
+          <p class="er-buyer-booking-footer-brand">
+            Elite Realty Group
+          </p>
+          <p class="er-buyer-booking-footer-location">
+            Austin, TX 78704
+          </p>
+        </div>
+
+        <nav
+          class="er-buyer-booking-footer-legal"
+          aria-label="Legal links"
+        >
+          <a
+            class="er-buyer-booking-footer-link"
+            href="#privacy-policy"
+          >
+            Privacy Policy
+          </a>
+          <a
+            class="er-buyer-booking-footer-link"
+            href="#terms-of-service"
+          >
+            Terms of Service
+          </a>
+        </nav>
+      </div>
+
+      <p class="er-buyer-booking-footer-copyright">
+        © 2026 Elite Realty Group
+      </p>
+    </div>
+  </footer>
+  <!-- Compact Footer: End -->
+</div>
+
+<a class="funnel-next-button" href="../step-05/index.html" aria-label="Go to Step 05">
+  <span>Next Page</span>
+  <span class="funnel-next-button__arrow" aria-hidden="true">→</span>
+</a>
+
+<script>
+(function () {
+  const calendar = document.getElementById("er-consultation-calendar");
+  if (!calendar) return;
+
+  const monthLabel = document.getElementById("er-calendar-month-label");
+  const daysGrid = document.getElementById("er-calendar-days");
+  const times = document.getElementById("er-calendar-times");
+  const picker = document.getElementById("er-calendar-picker");
+  const details = document.getElementById("er-calendar-details");
+  const back = document.getElementById("er-calendar-back");
+  const summaryDate = document.getElementById("er-calendar-summary-date");
+  const summaryTime = document.getElementById("er-calendar-summary-time");
+  const summaryZone = document.getElementById("er-calendar-summary-zone");
+  const form = document.getElementById("er-calendar-details-form");
+
+  let viewYear = 2026;
+  let viewMonth = 7;
+  let selectedDay = 4;
+  let selectedTime = "";
+
+  const monthNames = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+  const shortMonths = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+  const weekNames = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];
+
+  function dateLabel(day) {
+    const date = new Date(viewYear, viewMonth, day);
+    return weekNames[date.getDay()] + ", " + shortMonths[viewMonth] + " " + day + ", " + viewYear;
+  }
+
+  function isAvailable(day) {
+    const date = new Date(viewYear, viewMonth, day);
+    if (viewYear === 2026 && viewMonth === 7 && day < 4) return false;
+    return date.getDay() !== 0;
+  }
+
+  function slotsFor(day) {
+    if (viewYear === 2026 && viewMonth === 7 && day <= 8) {
+      return ["09:00 PM","09:30 PM","10:00 PM","10:30 PM","11:00 PM","11:30 PM"];
+    }
+    return ["12:00 AM","12:30 AM","01:00 AM","01:30 AM","02:00 AM","02:30 AM","03:00 AM","03:30 AM"];
+  }
+
+  function renderDays() {
+    monthLabel.textContent = monthNames[viewMonth] + " " + viewYear;
+    daysGrid.innerHTML = "";
+    const firstDay = new Date(viewYear, viewMonth, 1).getDay();
+    const count = new Date(viewYear, viewMonth + 1, 0).getDate();
+
+    for (let i = 0; i < firstDay; i += 1) {
+      const empty = document.createElement("span");
+      empty.setAttribute("aria-hidden", "true");
+      daysGrid.appendChild(empty);
+    }
+
+    for (let day = 1; day <= count; day += 1) {
+      if (!isAvailable(day)) {
+        const unavailable = document.createElement("span");
+        unavailable.textContent = day;
+        daysGrid.appendChild(unavailable);
+        continue;
+      }
+      const button = document.createElement("button");
+      button.type = "button";
+      button.textContent = day;
+      button.setAttribute("aria-label", dateLabel(day));
+      button.classList.toggle("is-selected", day === selectedDay);
+      button.addEventListener("click", function () {
+        selectedDay = day;
+        selectedTime = "";
+        summaryDate.textContent = dateLabel(day);
+        summaryTime.hidden = true;
+        renderDays();
+        renderTimes();
+      });
+      daysGrid.appendChild(button);
+    }
+  }
+
+  function renderTimes() {
+    times.innerHTML = "";
+    slotsFor(selectedDay).forEach(function (time) {
+      const row = document.createElement("div");
+      row.className = "er-calendar-slot-row" + (time === selectedTime ? " is-pending" : "");
+
+      const slot = document.createElement("button");
+      slot.type = "button";
+      slot.className = "er-calendar-slot";
+      slot.textContent = time;
+      slot.setAttribute("aria-pressed", String(time === selectedTime));
+      slot.addEventListener("click", function () {
+        selectedTime = time;
+        summaryTime.hidden = false;
+        summaryTime.querySelector("span:last-child").textContent = time + " - " + endTime(time);
+        renderTimes();
+      });
+      row.appendChild(slot);
+
+      if (time === selectedTime) {
+        const confirm = document.createElement("button");
+        confirm.type = "button";
+        confirm.className = "er-calendar-confirm";
+        confirm.textContent = "Select";
+        confirm.addEventListener("click", showDetails);
+        row.appendChild(confirm);
+      }
+
+      times.appendChild(row);
+    });
+  }
+
+  function endTime(time) {
+    const match = time.match(/(\d+):(\d+)\s(AM|PM)/);
+    if (!match) return time;
+    let hour = Number(match[1]);
+    let minute = Number(match[2]) + 45;
+    let period = match[3];
+    if (minute >= 60) { minute -= 60; hour += 1; }
+    if (hour === 12 && minute > 0) period = period === "AM" ? "PM" : "AM";
+    if (hour > 12) hour -= 12;
+    return String(hour).padStart(2, "0") + ":" + String(minute).padStart(2, "0") + " " + period;
+  }
+
+  function showDetails() {
+    if (!selectedTime) return;
+    picker.hidden = true;
+    details.hidden = false;
+    back.hidden = false;
+    summaryZone.hidden = false;
+    details.querySelector("input").focus({ preventScroll: true });
+  }
+
+  back.addEventListener("click", function () {
+    details.hidden = true;
+    picker.hidden = false;
+    back.hidden = true;
+    summaryZone.hidden = true;
+  });
+
+  document.getElementById("er-calendar-prev").addEventListener("click", function () {
+    viewMonth -= 1;
+    if (viewMonth < 0) { viewMonth = 11; viewYear -= 1; }
+    selectedDay = 1;
+    while (!isAvailable(selectedDay)) selectedDay += 1;
+    selectedTime = "";
+    summaryDate.textContent = dateLabel(selectedDay);
+    summaryTime.hidden = true;
+    renderDays();
+    renderTimes();
+  });
+
+  document.getElementById("er-calendar-next").addEventListener("click", function () {
+    viewMonth += 1;
+    if (viewMonth > 11) { viewMonth = 0; viewYear += 1; }
+    selectedDay = 1;
+    while (!isAvailable(selectedDay)) selectedDay += 1;
+    selectedTime = "";
+    summaryDate.textContent = dateLabel(selectedDay);
+    summaryTime.hidden = true;
+    renderDays();
+    renderTimes();
+  });
+
+  form.addEventListener("submit", function (event) {
+    event.preventDefault();
+    if (!form.reportValidity()) return;
+    const firstName = form.elements.first_name.value.trim();
+    window.location.href = "../step-05/index.html?first_name=" + encodeURIComponent(firstName);
+  });
+
+  renderDays();
+  renderTimes();
+})();
+</script>
+</body>
+</html>

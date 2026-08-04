@@ -1,0 +1,1531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Complete the Elite Realty buyer assessment so your specialist can prepare for your consultation.">
+  <title>Buyer Assessment | Elite Realty</title>
+  <style>
+/* Elite Realty Buyer Qualification | Section 1 Styles: Begin */
+.er-buyer-qualification-page {
+  --er-buyer-qualification-primary: #123b5d;
+  --er-buyer-qualification-secondary: #1e88e5;
+  --er-buyer-qualification-secondary-dark: #1565c0;
+  --er-buyer-qualification-gold: #d6a84b;
+  --er-buyer-qualification-heading: #182433;
+  --er-buyer-qualification-body: #526273;
+  --er-buyer-qualification-muted: #718096;
+  --er-buyer-qualification-light: #f7f9fc;
+  --er-buyer-qualification-white: #ffffff;
+  --er-buyer-qualification-border: #e2e8f0;
+  --er-buyer-qualification-soft-blue: #eaf4fc;
+  --er-buyer-qualification-success: #2e8b57;
+  --er-buyer-qualification-footer: #0e304b;
+  --er-buyer-qualification-heading-font: Poppins, Arial, sans-serif;
+  --er-buyer-qualification-body-font: Inter, Arial, sans-serif;
+  --er-buyer-qualification-container-width: 1200px;
+
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  color: var(--er-buyer-qualification-body);
+  background: var(--er-buyer-qualification-light);
+  font-family: var(--er-buyer-qualification-body-font);
+  font-size: 17px;
+  line-height: 1.65;
+  overflow-x: clip;
+}
+
+.er-buyer-qualification-page *,
+.er-buyer-qualification-page *::before,
+.er-buyer-qualification-page *::after {
+  box-sizing: border-box;
+}
+
+.er-buyer-qualification-page .er-buyer-qualification-container {
+  width: min(
+    calc(100% - 48px),
+    var(--er-buyer-qualification-container-width)
+  );
+  max-width: 100%;
+  margin-inline: auto;
+}
+
+.er-buyer-qualification-page .er-buyer-qualification-sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.er-buyer-qualification-page a:focus-visible {
+  border-radius: 4px;
+  outline: 3px solid var(--er-buyer-qualification-gold);
+  outline-offset: 4px;
+}
+
+/* Minimal Header */
+.er-buyer-qualification-page .er-buyer-qualification-header {
+  border-bottom: 1px solid var(--er-buyer-qualification-border);
+  background: var(--er-buyer-qualification-white);
+}
+
+.er-buyer-qualification-page .er-buyer-qualification-header-inner {
+  display: flex;
+  min-height: 68px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.25rem;
+}
+
+.er-buyer-qualification-page .er-buyer-qualification-logo {
+  margin: 0;
+  color: var(--er-buyer-qualification-primary);
+  font-family: var(--er-buyer-qualification-heading-font);
+  font-size: 1.08rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+.er-buyer-qualification-page .er-buyer-qualification-header-phone {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  color: var(--er-buyer-qualification-body);
+  font-size: 0.9rem;
+  font-weight: 600;
+  line-height: 1.35;
+  text-decoration-color: var(--er-buyer-qualification-muted);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+  white-space: nowrap;
+  transition: color 160ms ease, text-decoration-color 160ms ease;
+}
+
+.er-buyer-qualification-page .er-buyer-qualification-phone-number {
+  color: var(--er-buyer-qualification-secondary-dark);
+  transition: color 160ms ease;
+}
+
+.er-buyer-qualification-page .er-buyer-qualification-header-phone:hover,
+.er-buyer-qualification-page
+  .er-buyer-qualification-header-phone:hover
+  .er-buyer-qualification-phone-number {
+  color: var(--er-buyer-qualification-primary);
+  text-decoration-color: var(--er-buyer-qualification-secondary-dark);
+}
+
+.er-buyer-qualification-page .er-buyer-qualification-support-mobile {
+  display: none;
+}
+
+/* Progress Indicator */
+.er-buyer-qualification-page .er-buyer-qualification-intro-section {
+  background: var(--er-buyer-qualification-light);
+  scroll-margin-top: 20px;
+}
+
+.er-buyer-qualification-page .er-buyer-qualification-progress-region {
+  display: block;
+  padding-block: 26px 28px;
+  border-bottom: 1px solid var(--er-buyer-qualification-border);
+  background: var(--er-buyer-qualification-white);
+}
+
+.er-buyer-qualification-page .er-buyer-qualification-progress-inner {
+  width: min(100%, 720px);
+  margin-inline: auto;
+}
+
+.er-buyer-qualification-page .er-buyer-qualification-progress-summary {
+  margin: 0 0 0.9rem;
+  color: var(--er-buyer-qualification-primary);
+  font-family: var(--er-buyer-qualification-heading-font);
+  font-size: 0.875rem;
+  font-weight: 700;
+  line-height: 1.4;
+  text-align: center;
+}
+
+.er-buyer-qualification-page .er-buyer-qualification-progress-list {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: start;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.er-buyer-qualification-page .er-buyer-qualification-progress-list::before,
+.er-buyer-qualification-page .er-buyer-qualification-progress-list::after {
+  position: absolute;
+  top: 18px;
+  left: 16.667%;
+  height: 2px;
+  content: "";
+  pointer-events: none;
+}
+
+.er-buyer-qualification-page .er-buyer-qualification-progress-list::before {
+  right: 16.667%;
+  background: var(--er-buyer-qualification-border);
+}
+
+.er-buyer-qualification-page .er-buyer-qualification-progress-list::after {
+  z-index: 1;
+  width: 33.333%;
+  background: var(--er-buyer-qualification-secondary);
+}
+
+.er-buyer-qualification-page .er-buyer-qualification-progress-step {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  align-items: center;
+  color: var(--er-buyer-qualification-muted);
+  text-align: center;
+}
+
+.er-buyer-qualification-page .er-buyer-qualification-progress-marker {
+  display: grid;
+  width: 38px;
+  height: 38px;
+  place-items: center;
+  border: 2px solid var(--er-buyer-qualification-border);
+  border-radius: 50%;
+  color: var(--er-buyer-qualification-muted);
+  background: var(--er-buyer-qualification-white);
+  font-family: var(--er-buyer-qualification-heading-font);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.er-buyer-qualification-page .er-buyer-qualification-progress-label {
+  display: block;
+  margin-top: 0.65rem;
+  color: var(--er-buyer-qualification-muted);
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+.er-buyer-qualification-page .er-buyer-qualification-progress-status {
+  display: block;
+  margin-top: 0.2rem;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.er-buyer-qualification-page
+  .er-buyer-qualification-progress-step-completed
+  .er-buyer-qualification-progress-marker {
+  border-color: var(--er-buyer-qualification-success);
+  color: var(--er-buyer-qualification-white);
+  background: var(--er-buyer-qualification-success);
+}
+
+.er-buyer-qualification-page
+  .er-buyer-qualification-progress-step-completed
+  .er-buyer-qualification-progress-label {
+  color: var(--er-buyer-qualification-body);
+}
+
+.er-buyer-qualification-page
+  .er-buyer-qualification-progress-step-completed
+  .er-buyer-qualification-progress-status {
+  color: var(--er-buyer-qualification-success);
+}
+
+.er-buyer-qualification-page
+  .er-buyer-qualification-progress-step-active
+  .er-buyer-qualification-progress-marker {
+  border-color: var(--er-buyer-qualification-secondary);
+  color: var(--er-buyer-qualification-white);
+  background: var(--er-buyer-qualification-secondary);
+  box-shadow: 0 0 0 5px var(--er-buyer-qualification-soft-blue);
+}
+
+.er-buyer-qualification-page
+  .er-buyer-qualification-progress-step-active
+  .er-buyer-qualification-progress-label {
+  color: var(--er-buyer-qualification-primary);
+  font-weight: 700;
+}
+
+.er-buyer-qualification-page
+  .er-buyer-qualification-progress-step-active
+  .er-buyer-qualification-progress-status {
+  color: var(--er-buyer-qualification-secondary-dark);
+}
+
+/* Buyer Qualification Introduction */
+.er-buyer-qualification-page .er-buyer-qualification-introduction {
+  padding-block: clamp(3.25rem, 6vw, 4.125rem) 2.75rem;
+  background: var(--er-buyer-qualification-light);
+}
+
+.er-buyer-qualification-page .er-buyer-qualification-introduction-inner {
+  max-width: 760px;
+  margin-inline: auto;
+  text-align: center;
+}
+
+.er-buyer-qualification-page .er-buyer-qualification-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  margin: 0 0 1rem;
+  color: var(--er-buyer-qualification-primary);
+  font-family: var(--er-buyer-qualification-heading-font);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+.er-buyer-qualification-page .er-buyer-qualification-eyebrow::before {
+  width: 30px;
+  height: 2px;
+  background: var(--er-buyer-qualification-gold);
+  content: "";
+}
+
+.er-buyer-qualification-page .er-buyer-qualification-title {
+  max-width: 720px;
+  margin: 0 auto 1.15rem;
+  color: var(--er-buyer-qualification-primary);
+  font-family: var(--er-buyer-qualification-heading-font);
+  font-size: clamp(2.25rem, 4vw, 3.1rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.12;
+}
+
+.er-buyer-qualification-page .er-buyer-qualification-supporting {
+  max-width: 720px;
+  margin: 0 auto;
+  color: var(--er-buyer-qualification-body);
+  font-size: 1.0625rem;
+  line-height: 1.68;
+}
+
+.er-buyer-qualification-page .er-buyer-qualification-reassurance-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  justify-content: center;
+  gap: 0.85rem 1.15rem;
+  margin: 1.75rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.er-buyer-qualification-page .er-buyer-qualification-reassurance-item {
+  display: flex;
+  min-width: 0;
+  flex: 1 1 210px;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55rem;
+  color: var(--er-buyer-qualification-body);
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.4;
+  text-align: left;
+}
+
+.er-buyer-qualification-page .er-buyer-qualification-reassurance-icon {
+  display: grid;
+  width: 30px;
+  height: 30px;
+  flex: 0 0 30px;
+  place-items: center;
+  border-radius: 9px;
+  color: var(--er-buyer-qualification-primary);
+  background: var(--er-buyer-qualification-soft-blue);
+  font-family: var(--er-buyer-qualification-heading-font);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+@media (max-width: 700px) {
+  .er-buyer-qualification-page {
+    font-size: 16px;
+  }
+
+  .er-buyer-qualification-page .er-buyer-qualification-container {
+    width: min(
+      calc(100% - 36px),
+      var(--er-buyer-qualification-container-width)
+    );
+  }
+
+  .er-buyer-qualification-page .er-buyer-qualification-header-inner {
+    min-height: 66px;
+    gap: 0.75rem;
+  }
+
+  .er-buyer-qualification-page .er-buyer-qualification-logo {
+    font-size: 1rem;
+  }
+
+  .er-buyer-qualification-page .er-buyer-qualification-header-phone {
+    font-size: 0.8125rem;
+  }
+
+  .er-buyer-qualification-page .er-buyer-qualification-support-desktop {
+    display: none;
+  }
+
+  .er-buyer-qualification-page .er-buyer-qualification-support-mobile {
+    display: inline;
+  }
+
+  .er-buyer-qualification-page .er-buyer-qualification-progress-region {
+    padding-block: 22px 24px;
+  }
+
+  .er-buyer-qualification-page .er-buyer-qualification-progress-summary {
+    margin-bottom: 0.8rem;
+    font-size: 0.8125rem;
+  }
+
+  .er-buyer-qualification-page .er-buyer-qualification-progress-list {
+    gap: 0.45rem;
+  }
+
+  .er-buyer-qualification-page
+    .er-buyer-qualification-progress-list::before,
+  .er-buyer-qualification-page
+    .er-buyer-qualification-progress-list::after {
+    top: 17px;
+    height: 1px;
+  }
+
+  .er-buyer-qualification-page .er-buyer-qualification-progress-marker {
+    width: 34px;
+    height: 34px;
+  }
+
+  .er-buyer-qualification-page .er-buyer-qualification-progress-label {
+    max-width: 105px;
+    margin-top: 0.55rem;
+    font-size: 0.8125rem;
+  }
+
+  .er-buyer-qualification-page .er-buyer-qualification-progress-status {
+    font-size: 0.8125rem;
+  }
+
+  .er-buyer-qualification-page .er-buyer-qualification-introduction {
+    padding-block: clamp(2.375rem, 11vw, 2.875rem) 2.125rem;
+  }
+
+  .er-buyer-qualification-page .er-buyer-qualification-title {
+    font-size: clamp(1.9rem, 9vw, 2.15rem);
+  }
+
+  .er-buyer-qualification-page .er-buyer-qualification-supporting {
+    font-size: 1rem;
+  }
+
+  .er-buyer-qualification-page
+    .er-buyer-qualification-reassurance-list {
+    gap: 0.8rem;
+    margin-top: 1.5rem;
+  }
+
+  .er-buyer-qualification-page
+    .er-buyer-qualification-reassurance-item {
+    flex-basis: 190px;
+  }
+}
+
+@media (max-width: 420px) {
+  .er-buyer-qualification-page .er-buyer-qualification-progress-label {
+    max-width: 88px;
+  }
+
+  .er-buyer-qualification-page
+    .er-buyer-qualification-reassurance-item {
+    max-width: 310px;
+    flex-basis: 100%;
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 340px) {
+  .er-buyer-qualification-page .er-buyer-qualification-container {
+    width: min(
+      calc(100% - 28px),
+      var(--er-buyer-qualification-container-width)
+    );
+  }
+
+  .er-buyer-qualification-page .er-buyer-qualification-logo {
+    font-size: 0.94rem;
+  }
+
+  .er-buyer-qualification-page .er-buyer-qualification-header-phone {
+    font-size: 0.8125rem;
+  }
+
+  .er-buyer-qualification-page .er-buyer-qualification-progress-label {
+    max-width: 78px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .er-buyer-qualification-page *,
+  .er-buyer-qualification-page *::before,
+  .er-buyer-qualification-page *::after {
+    transition-duration: 0.01ms !important;
+  }
+}
+/* Elite Realty Buyer Qualification | Section 1 Styles: End */
+  
+  /* Elite Realty Buyer Qualification | Section 2 Styles: Begin */
+.er-buyer-qualification-page .er-buyer-qualification-survey-section {
+  padding-block: 1.75rem 5.125rem;
+  background: var(--er-buyer-qualification-light);
+  scroll-margin-top: 20px;
+}
+
+.er-buyer-qualification-page .er-buyer-qualification-survey-card {
+  width: min(100%, 900px);
+  max-width: 900px;
+  min-width: 0;
+  margin-inline: auto;
+  padding: 46px;
+  border: 1px solid var(--er-buyer-qualification-border);
+  border-radius: 18px;
+  background: var(--er-buyer-qualification-white);
+  box-shadow: 0 14px 34px var(--er-buyer-qualification-border);
+  overflow: visible;
+}
+
+.er-buyer-qualification-page .er-buyer-qualification-survey-card > * {
+  max-width: 100%;
+}
+
+.er-buyer-qualification-page .er-buyer-qualification-survey-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin: 0 0 0.8rem;
+  color: var(--er-buyer-qualification-primary);
+  font-family: var(--er-buyer-qualification-heading-font);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+.er-buyer-qualification-page
+  .er-buyer-qualification-survey-label::before {
+  width: 30px;
+  height: 2px;
+  background: var(--er-buyer-qualification-gold);
+  content: "";
+}
+
+.er-buyer-qualification-page .er-buyer-qualification-survey-title {
+  margin: 0 0 0.85rem;
+  color: var(--er-buyer-qualification-primary);
+  font-family: var(--er-buyer-qualification-heading-font);
+  font-size: clamp(1.7rem, 3vw, 2rem);
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  line-height: 1.16;
+}
+
+.er-buyer-qualification-page .er-buyer-qualification-survey-supporting {
+  max-width: 700px;
+  margin: 0;
+  color: var(--er-buyer-qualification-body);
+  font-size: 1.0625rem;
+  line-height: 1.65;
+}
+
+.er-buyer-qualification-page .er-buyer-qualification-agent-note {
+  display: grid;
+  max-width: 700px;
+  grid-template-columns: auto minmax(0, 1fr);
+  align-items: start;
+  gap: 0.75rem;
+  margin-top: 20px;
+  padding: 14px 16px;
+  border: 1px solid var(--er-buyer-qualification-border);
+  border-radius: 12px;
+  background: var(--er-buyer-qualification-soft-blue);
+}
+
+.er-buyer-qualification-page
+  .er-buyer-qualification-agent-note-icon,
+.er-buyer-qualification-page
+  .er-buyer-qualification-privacy-icon {
+  display: grid;
+  width: 30px;
+  height: 30px;
+  flex: 0 0 30px;
+  place-items: center;
+  border-radius: 9px;
+  color: var(--er-buyer-qualification-primary);
+  background: var(--er-buyer-qualification-white);
+  font-family: var(--er-buyer-qualification-heading-font);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.er-buyer-qualification-page
+  .er-buyer-qualification-agent-note-copy {
+  margin: 0;
+  color: var(--er-buyer-qualification-body);
+  font-size: 0.875rem;
+  line-height: 1.58;
+}
+
+/* Standalone Survey Area */
+/* Standalone Survey Area */
+.er-buyer-qualification-page
+  .er-buyer-qualification-survey-embed {
+  display: block;
+  width: 100%;
+  max-width: 800px;
+  min-width: 0;
+  margin: 30px auto 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  overflow: visible;
+}
+
+@media (max-width: 700px) {
+  .er-buyer-qualification-page
+    .er-buyer-qualification-survey-embed {
+    width: 100%;
+    max-width: 100%;
+    margin-top: 24px;
+  }
+
+  }
+
+/* Privacy and Completion Note */
+.er-buyer-qualification-page .er-buyer-qualification-privacy-area {
+  display: grid;
+  width: 100%;
+  max-width: 800px;
+  grid-template-columns: auto minmax(0, 1fr);
+  align-items: start;
+  gap: 0.75rem;
+  margin: 28px auto 0;
+  padding-top: 20px;
+  border-top: 1px solid var(--er-buyer-qualification-border);
+}
+
+.er-buyer-qualification-page .er-buyer-qualification-privacy-icon {
+  background: var(--er-buyer-qualification-soft-blue);
+}
+
+.er-buyer-qualification-page .er-buyer-qualification-privacy-copy {
+  margin: 0;
+  color: var(--er-buyer-qualification-muted);
+  font-size: 0.875rem;
+  line-height: 1.58;
+}
+
+.er-buyer-qualification-page .er-buyer-qualification-update-copy {
+  margin: 0.4rem 0 0;
+  color: var(--er-buyer-qualification-muted);
+  font-size: 0.8125rem;
+  line-height: 1.55;
+}
+
+/* Support Box */
+.er-buyer-qualification-page .er-buyer-qualification-support-box {
+  display: grid;
+  width: min(100%, 900px);
+  max-width: 900px;
+  min-width: 0;
+  grid-template-columns: auto minmax(0, 1fr);
+  align-items: start;
+  gap: 1rem;
+  margin: 24px auto 0;
+  padding: 22px;
+  border: 1px solid var(--er-buyer-qualification-border);
+  border-radius: 15px;
+  background: var(--er-buyer-qualification-soft-blue);
+}
+
+.er-buyer-qualification-page .er-buyer-qualification-support-icon {
+  display: grid;
+  width: 42px;
+  height: 42px;
+  place-items: center;
+  border-radius: 12px;
+  color: var(--er-buyer-qualification-white);
+  background: var(--er-buyer-qualification-primary);
+  font-family: var(--er-buyer-qualification-heading-font);
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.er-buyer-qualification-page .er-buyer-qualification-support-content {
+  min-width: 0;
+}
+
+.er-buyer-qualification-page .er-buyer-qualification-support-title {
+  margin: 0 0 0.25rem;
+  color: var(--er-buyer-qualification-primary);
+  font-family: var(--er-buyer-qualification-heading-font);
+  font-size: 1.05rem;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.er-buyer-qualification-page .er-buyer-qualification-support-copy,
+.er-buyer-qualification-page
+  .er-buyer-qualification-support-additional {
+  margin: 0;
+  color: var(--er-buyer-qualification-body);
+  font-size: 0.9375rem;
+  line-height: 1.6;
+}
+
+.er-buyer-qualification-page
+  .er-buyer-qualification-support-additional {
+  margin-top: 0.35rem;
+  color: var(--er-buyer-qualification-muted);
+  font-size: 0.875rem;
+}
+
+.er-buyer-qualification-page .er-buyer-qualification-support-link {
+  display: inline-flex;
+  min-height: 44px;
+  max-width: 100%;
+  min-width: 0;
+  align-items: center;
+  color: var(--er-buyer-qualification-secondary-dark);
+  font-weight: 700;
+  text-decoration-color: var(--er-buyer-qualification-secondary-dark);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+  transition: color 160ms ease, text-decoration-color 160ms ease;
+}
+
+.er-buyer-qualification-page
+  .er-buyer-qualification-support-link:hover {
+  color: var(--er-buyer-qualification-primary);
+  text-decoration-color: var(--er-buyer-qualification-primary);
+}
+
+/* Compact Footer */
+.er-buyer-qualification-page .er-buyer-qualification-footer {
+  padding-block: 32px 26px;
+  border-top: 1px solid var(--er-buyer-qualification-border);
+  color: var(--er-buyer-qualification-white);
+  background: var(--er-buyer-qualification-footer);
+  font-size: 0.875rem;
+  line-height: 1.55;
+}
+
+.er-buyer-qualification-page .er-buyer-qualification-footer-main {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.er-buyer-qualification-page .er-buyer-qualification-footer-brand {
+  margin: 0 0 0.2rem;
+  color: var(--er-buyer-qualification-white);
+  font-family: var(--er-buyer-qualification-heading-font);
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.er-buyer-qualification-page
+  .er-buyer-qualification-footer-location {
+  margin: 0;
+  color: var(--er-buyer-qualification-white);
+  opacity: 0.8;
+}
+
+.er-buyer-qualification-page .er-buyer-qualification-footer-legal {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 0.4rem 1.15rem;
+}
+
+.er-buyer-qualification-page .er-buyer-qualification-footer-link {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  color: var(--er-buyer-qualification-white);
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-decoration-color: var(--er-buyer-qualification-white);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+  transition: color 160ms ease, text-decoration-color 160ms ease;
+}
+
+.er-buyer-qualification-page
+  .er-buyer-qualification-footer-link:hover {
+  color: var(--er-buyer-qualification-white);
+  text-decoration-color: var(--er-buyer-qualification-gold);
+}
+
+.er-buyer-qualification-page
+  .er-buyer-qualification-footer-copyright {
+  margin: 18px 0 0;
+  padding-top: 16px;
+  border-top: 1px solid var(--er-buyer-qualification-border);
+  color: var(--er-buyer-qualification-white);
+  font-size: 0.8125rem;
+  line-height: 1.5;
+  opacity: 0.76;
+}
+
+@media (max-width: 900px) {
+  .er-buyer-qualification-page
+    .er-buyer-qualification-survey-card {
+    padding: 36px;
+  }
+}
+
+@media (max-width: 700px) {
+  .er-buyer-qualification-page
+    .er-buyer-qualification-survey-section {
+    padding-block: 1.375rem 3.75rem;
+  }
+
+  .er-buyer-qualification-page
+    .er-buyer-qualification-survey-card {
+    padding: 24px;
+  }
+
+  .er-buyer-qualification-page
+    .er-buyer-qualification-survey-title {
+    font-size: clamp(1.45rem, 7vw, 1.7rem);
+  }
+
+  .er-buyer-qualification-page
+    .er-buyer-qualification-survey-supporting {
+    font-size: 1rem;
+  }
+
+  .er-buyer-qualification-page
+    .er-buyer-qualification-survey-embed {
+    margin-top: 24px;
+  }
+
+  .er-buyer-qualification-page
+    .er-buyer-qualification-survey-placeholder {
+    min-height: 350px;
+    padding: 1.1rem;
+  }
+
+  .er-buyer-qualification-page
+    .er-buyer-qualification-support-box {
+    padding: 20px;
+  }
+
+  .er-buyer-qualification-page .er-buyer-qualification-footer {
+    padding-block: 28px 24px;
+  }
+
+  .er-buyer-qualification-page
+    .er-buyer-qualification-footer-main {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .er-buyer-qualification-page
+    .er-buyer-qualification-footer-legal {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 420px) {
+  .er-buyer-qualification-page
+    .er-buyer-qualification-agent-note,
+  .er-buyer-qualification-page
+    .er-buyer-qualification-privacy-area,
+  .er-buyer-qualification-page
+    .er-buyer-qualification-support-box {
+    grid-template-columns: 1fr;
+  }
+}
+/* Elite Realty Buyer Qualification | Section 2 Styles: End */
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap");
+
+html { scroll-behavior: smooth; }
+body { margin: 0; min-width: 320px; background: #f7f9fc; }
+
+.er-buyer-qualification-page .er-buyer-qualification-survey-card { max-width: 900px; }
+
+.er-buyer-survey {
+  width: 100%;
+  max-width: 800px;
+  margin: 28px auto 0;
+}
+
+.er-buyer-survey-list-icon {
+  display: block;
+  margin: 0 0 8px 3px;
+  color: var(--er-buyer-qualification-primary);
+  font-size: 14px;
+  line-height: 1;
+}
+
+.er-buyer-survey-panel {
+  border: 1px solid #dce3eb;
+  border-radius: 11px;
+  background: #fff;
+  box-shadow: 0 15px 28px rgba(24, 36, 51, 0.15);
+  overflow: hidden;
+}
+
+.er-buyer-survey-step {
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.er-buyer-survey-step[hidden] { display: none; }
+.er-buyer-survey-step.is-entering { animation: erSurveyIn 220ms ease both; }
+
+.er-buyer-survey-fields {
+  display: grid;
+  gap: 34px;
+  padding: 38px 28px 30px;
+}
+
+.er-buyer-survey-field {
+  display: grid;
+  min-width: 0;
+  gap: 8px;
+  color: #35445a;
+  font: 600 15px/1.4 Inter, Arial, sans-serif;
+}
+
+.er-buyer-survey-field input,
+.er-buyer-survey-field select,
+.er-buyer-survey-field textarea {
+  width: 100%;
+  border: 1px solid #c4cfdb;
+  border-radius: 5px;
+  color: #35445a;
+  background: #fff;
+  font: 400 15px/1.35 Inter, Arial, sans-serif;
+  outline: 0;
+  transition: border-color 160ms ease, box-shadow 160ms ease;
+}
+
+.er-buyer-survey-field input,
+.er-buyer-survey-field select {
+  height: 52px;
+  padding: 0 12px;
+}
+
+.er-buyer-survey-field textarea {
+  min-height: 98px;
+  padding: 12px;
+  resize: vertical;
+}
+
+.er-buyer-survey-field input::placeholder,
+.er-buyer-survey-field textarea::placeholder {
+  color: #68758d;
+  opacity: 1;
+}
+
+.er-buyer-survey-field input:focus,
+.er-buyer-survey-field select:focus,
+.er-buyer-survey-field textarea:focus {
+  border-color: var(--er-buyer-qualification-secondary);
+  box-shadow: 0 0 0 3px rgba(30, 136, 229, 0.13);
+}
+
+.er-buyer-survey-budget { position: relative; display: block; }
+.er-buyer-survey-budget > span {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 14px;
+  color: #68758d;
+  font-weight: 400;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+.er-buyer-survey-budget input { padding-left: 34px; }
+
+.er-buyer-survey-actions {
+  display: flex;
+  min-height: 64px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 12px 28px;
+  border-top: 1px solid #e3e8ee;
+  background: #fff;
+}
+
+.er-buyer-survey-actions--first { justify-content: flex-end; }
+
+.er-buyer-survey-actions button {
+  display: inline-flex;
+  min-height: 40px;
+  align-items: center;
+  gap: 5px;
+  padding: 0;
+  border: 0;
+  color: #075cff;
+  background: transparent;
+  font: 700 15px/1 Inter, Arial, sans-serif;
+  cursor: pointer;
+}
+
+.er-buyer-survey-actions button:hover { color: #0648c7; }
+.er-buyer-survey-actions button:focus-visible {
+  border-radius: 4px;
+  outline: 3px solid rgba(30, 136, 229, 0.3);
+  outline-offset: 4px;
+}
+
+.funnel-next-button {
+  position: fixed;
+  z-index: 9999;
+  right: 24px;
+  bottom: 24px;
+  display: inline-flex;
+  min-height: 56px;
+  align-items: center;
+  justify-content: center;
+  gap: .65rem;
+  padding: .85rem 1.25rem;
+  border: 1px solid rgba(255,255,255,.3);
+  border-radius: 999px;
+  color: #fff;
+  background: #1565c0;
+  box-shadow: 0 14px 34px rgba(18,59,93,.3);
+  font: 700 .92rem/1 Poppins, Arial, sans-serif;
+  text-decoration: none;
+  transition: transform 180ms ease, background-color 180ms ease, box-shadow 180ms ease;
+}
+.funnel-next-button:hover { background: #0d4f9a; box-shadow: 0 18px 40px rgba(18,59,93,.36); transform: translateY(-3px); }
+.funnel-next-button:focus-visible { outline: 3px solid #d6a84b; outline-offset: 4px; }
+.funnel-next-button__arrow { font-size: 1.2rem; line-height: 0; }
+
+@keyframes erSurveyIn {
+  from { opacity: 0; transform: translateX(10px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@media (max-width: 700px) {
+  .er-buyer-survey-fields { gap: 26px; padding: 28px 20px 24px; }
+  .er-buyer-survey-field { font-size: 14px; }
+  .er-buyer-survey-field input, .er-buyer-survey-field select { height: 48px; font-size: 16px; }
+  .er-buyer-survey-field textarea { font-size: 16px; }
+  .er-buyer-survey-actions { padding-inline: 20px; }
+  .funnel-next-button { right: 16px; bottom: 16px; min-height: 52px; padding: .78rem 1.05rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .er-buyer-survey-step.is-entering { animation: none; }
+  .funnel-next-button { transition: none; }
+}
+  </style>
+</head>
+<body>
+<div class="er-buyer-qualification-page">
+<!-- Minimal Header: Begin -->
+  <header class="er-buyer-qualification-header">
+    <div class="er-buyer-qualification-container er-buyer-qualification-header-inner">
+      <p class="er-buyer-qualification-logo">Elite Realty</p>
+
+      <a
+        class="er-buyer-qualification-header-phone"
+        href="tel:+15125550147"
+        aria-label="Call Elite Realty for help at 512-555-0147"
+      >
+        <span class="er-buyer-qualification-support-desktop" aria-hidden="true">
+          Need help?
+          <span class="er-buyer-qualification-phone-number">(512) 555-0147</span>
+        </span>
+        <span class="er-buyer-qualification-support-mobile" aria-hidden="true">
+          Call
+          <span class="er-buyer-qualification-phone-number">(512) 555-0147</span>
+        </span>
+      </a>
+    </div>
+  </header>
+  <!-- Minimal Header: End -->
+
+  <!-- Buyer Qualification Introduction Section: Begin -->
+  <section
+    class="er-buyer-qualification-intro-section"
+    id="buyer-qualification-intro"
+    aria-labelledby="er-buyer-qualification-title"
+  >
+    <!-- Progress Indicator: Begin -->
+    <nav
+      class="er-buyer-qualification-progress-region"
+      aria-label="Buyer consultation progress"
+    >
+      <div class="er-buyer-qualification-container">
+        <div class="er-buyer-qualification-progress-inner">
+          <p class="er-buyer-qualification-progress-summary">Step 2 of 3</p>
+
+          <ol class="er-buyer-qualification-progress-list">
+            <li class="er-buyer-qualification-progress-step er-buyer-qualification-progress-step-completed">
+              <span class="er-buyer-qualification-progress-marker" aria-hidden="true">✓</span>
+              <span class="er-buyer-qualification-sr-only">Step 1, completed.</span>
+              <span class="er-buyer-qualification-progress-label">Contact Details</span>
+              <span class="er-buyer-qualification-progress-status">Complete</span>
+            </li>
+
+            <li
+              class="er-buyer-qualification-progress-step er-buyer-qualification-progress-step-active"
+              aria-current="step"
+            >
+              <span class="er-buyer-qualification-progress-marker" aria-hidden="true">2</span>
+              <span class="er-buyer-qualification-sr-only">Step 2, current step.</span>
+              <span class="er-buyer-qualification-progress-label">Buyer Assessment</span>
+              <span class="er-buyer-qualification-progress-status">Current</span>
+            </li>
+
+            <li class="er-buyer-qualification-progress-step er-buyer-qualification-progress-step-inactive">
+              <span class="er-buyer-qualification-progress-marker" aria-hidden="true">3</span>
+              <span class="er-buyer-qualification-sr-only">Step 3, not started.</span>
+              <span class="er-buyer-qualification-progress-label">Book Consultation</span>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </nav>
+    <!-- Progress Indicator: End -->
+
+    <!-- Buyer Qualification Introduction: Begin -->
+    <div class="er-buyer-qualification-introduction">
+      <div class="er-buyer-qualification-container er-buyer-qualification-introduction-inner">
+        <p class="er-buyer-qualification-eyebrow">
+          Personalize Your Home Search
+        </p>
+
+        <h1 class="er-buyer-qualification-title" id="er-buyer-qualification-title">
+          Tell Us What You’re Looking For
+        </h1>
+
+        <p class="er-buyer-qualification-supporting">
+          Your answers will help your buyer specialist understand your timeline,
+          financing readiness, budget, preferred locations, and property needs
+          before your consultation.
+        </p>
+
+        <ul
+          class="er-buyer-qualification-reassurance-list"
+          aria-label="Buyer assessment reassurance"
+        >
+          <li class="er-buyer-qualification-reassurance-item">
+            <span class="er-buyer-qualification-reassurance-icon" aria-hidden="true">◷</span>
+            <span>Takes about 3 minutes</span>
+          </li>
+
+          <li class="er-buyer-qualification-reassurance-item">
+            <span class="er-buyer-qualification-reassurance-icon" aria-hidden="true">✓</span>
+            <span>Your answers help us prepare</span>
+          </li>
+
+          <li class="er-buyer-qualification-reassurance-item">
+            <span class="er-buyer-qualification-reassurance-icon" aria-hidden="true">↔</span>
+            <span>You can review your goals during the consultation</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- Buyer Qualification Introduction: End -->
+  </section>
+  <!-- Buyer Qualification Introduction Section: End -->
+
+<!-- Buyer Qualification Survey Section: Begin -->
+  <section
+    class="er-buyer-qualification-survey-section"
+    id="buyer-qualification-survey"
+    aria-labelledby="er-buyer-qualification-survey-title"
+  >
+    <div class="er-buyer-qualification-container">
+      <!-- Survey Card: Begin -->
+      <article class="er-buyer-qualification-survey-card">
+        <!-- Survey Introduction: Begin -->
+        <p class="er-buyer-qualification-survey-label">Buyer Assessment</p>
+
+        <h2
+          class="er-buyer-qualification-survey-title"
+          id="er-buyer-qualification-survey-title"
+        >
+          Help Us Understand Your Buying Goals
+        </h2>
+
+        <p class="er-buyer-qualification-survey-supporting">
+          Complete the assessment below so Ethan Brooks can review your buying
+          goals before the consultation.
+        </p>
+
+        <div class="er-buyer-qualification-agent-note">
+          <span
+            class="er-buyer-qualification-agent-note-icon"
+            aria-hidden="true"
+          >i</span>
+          <p class="er-buyer-qualification-agent-note-copy">
+            Ethan will review your timeline, financing status, budget, preferred
+            areas, and property criteria before the meeting.
+          </p>
+        </div>
+        <!-- Survey Introduction: End -->
+
+        <!-- Standalone Buyer Qualification Survey: Begin -->
+        <form class="er-buyer-survey" id="buyer-qualification-form" action="../step-04/index.html" method="get">
+          <span class="er-buyer-survey-list-icon" aria-hidden="true">▤</span>
+          <p class="er-buyer-qualification-sr-only" id="buyer-survey-status" aria-live="polite">Survey page 1 of 4</p>
+
+          <div class="er-buyer-survey-panel">
+            <fieldset class="er-buyer-survey-step" data-survey-step="0">
+              <legend class="er-buyer-qualification-sr-only">Timeline and current buying situation</legend>
+              <div class="er-buyer-survey-fields">
+                <label class="er-buyer-survey-field">
+                  <span>When are you planning to buy?</span>
+                  <select name="timeline">
+                    <option value="" selected>Select a timeframe</option>
+                    <option>Immediately</option>
+                    <option>Within 1–3 months</option>
+                    <option>Within 3–6 months</option>
+                    <option>Within 6–12 months</option>
+                    <option>More than 12 months</option>
+                    <option>Just exploring</option>
+                  </select>
+                </label>
+
+                <label class="er-buyer-survey-field">
+                  <span>Why are you planning to buy or move?</span>
+                  <textarea name="buying_reason" rows="3" placeholder="Example: Growing family, relocation, investment"></textarea>
+                </label>
+
+                <label class="er-buyer-survey-field">
+                  <span>Are you a first-time buyer?</span>
+                  <select name="first_time_buyer">
+                    <option value="" selected>Select an answer</option>
+                    <option>Yes</option>
+                    <option>No</option>
+                  </select>
+                </label>
+
+                <label class="er-buyer-survey-field">
+                  <span>Do you need to sell a home before buying?</span>
+                  <select name="home_to_sell">
+                    <option value="" selected>Do you need to sell a home before buying?</option>
+                    <option>Yes</option>
+                    <option>No</option>
+                    <option>Not sure</option>
+                  </select>
+                </label>
+
+                <label class="er-buyer-survey-field">
+                  <span>Are you currently represented by another agent?</span>
+                  <select name="represented_by_agent">
+                    <option value="" selected>Select an answer</option>
+                    <option>Yes</option>
+                    <option>No</option>
+                  </select>
+                </label>
+              </div>
+              <div class="er-buyer-survey-actions er-buyer-survey-actions--first">
+                <button type="button" data-survey-next>Next <span aria-hidden="true">→</span></button>
+              </div>
+            </fieldset>
+
+            <fieldset class="er-buyer-survey-step" data-survey-step="1" hidden>
+              <legend class="er-buyer-qualification-sr-only">Financing and budget</legend>
+              <div class="er-buyer-survey-fields">
+                <label class="er-buyer-survey-field">
+                  <span>How do you plan to purchase?</span>
+                  <select name="purchase_method">
+                    <option value="" selected>Select a purchase method</option>
+                    <option>Mortgage financing</option>
+                    <option>Cash purchase</option>
+                    <option>Not sure yet</option>
+                  </select>
+                </label>
+
+                <label class="er-buyer-survey-field">
+                  <span>What is your maximum purchase budget?</span>
+                  <span class="er-buyer-survey-budget">
+                    <span aria-hidden="true">$</span>
+                    <input name="maximum_budget" type="number" min="0" step="1000" inputmode="numeric" placeholder="500000">
+                  </span>
+                </label>
+
+                <label class="er-buyer-survey-field">
+                  <span>What is your current pre-approval status?</span>
+                  <select name="preapproval_status">
+                    <option value="" selected>Select your pre-approval status</option>
+                    <option>Pre-approved</option>
+                    <option>Working with a lender</option>
+                    <option>Not started</option>
+                    <option>Purchasing with cash</option>
+                  </select>
+                </label>
+              </div>
+              <div class="er-buyer-survey-actions">
+                <button type="button" data-survey-back><span aria-hidden="true">←</span> Go Back</button>
+                <button type="button" data-survey-next>Next <span aria-hidden="true">→</span></button>
+              </div>
+            </fieldset>
+
+            <fieldset class="er-buyer-survey-step" data-survey-step="2" hidden>
+              <legend class="er-buyer-qualification-sr-only">Property preferences</legend>
+              <div class="er-buyer-survey-fields">
+                <label class="er-buyer-survey-field">
+                  <span>What type of property are you looking for?</span>
+                  <select name="property_type">
+                    <option value="" selected>Select a property</option>
+                    <option>Single-family home</option>
+                    <option>Condo</option>
+                    <option>Townhome</option>
+                    <option>Multi-family property</option>
+                    <option>Land</option>
+                    <option>Not sure yet</option>
+                  </select>
+                </label>
+
+                <label class="er-buyer-survey-field">
+                  <span>Minimum number of bedrooms</span>
+                  <input name="minimum_bedrooms" type="number" min="0" step="1" inputmode="numeric" placeholder="Example: 2">
+                </label>
+
+                <label class="er-buyer-survey-field">
+                  <span>Minimum number of bathrooms</span>
+                  <input name="minimum_bathrooms" type="number" min="0" step="0.5" inputmode="decimal" placeholder="Example: 3">
+                </label>
+
+                <label class="er-buyer-survey-field">
+                  <span>Which areas are you interested in?</span>
+                  <textarea name="preferred_areas" rows="4" placeholder="Example: South Austin, Buda, Kyle"></textarea>
+                </label>
+
+                <label class="er-buyer-survey-field">
+                  <span>What features are essential?</span>
+                  <textarea name="essential_features" rows="4" placeholder="Example: Garage, fenced yard, home office"></textarea>
+                </label>
+              </div>
+              <div class="er-buyer-survey-actions">
+                <button type="button" data-survey-back><span aria-hidden="true">←</span> Go Back</button>
+                <button type="button" data-survey-next>Next <span aria-hidden="true">→</span></button>
+              </div>
+            </fieldset>
+
+            <fieldset class="er-buyer-survey-step" data-survey-step="3" hidden>
+              <legend class="er-buyer-qualification-sr-only">Consultation preferences</legend>
+              <div class="er-buyer-survey-fields">
+                <label class="er-buyer-survey-field">
+                  <span>How would you prefer to meet?</span>
+                  <select name="meeting_preference">
+                    <option value="" selected>Select a meeting preference</option>
+                    <option>Phone call</option>
+                    <option>Video call</option>
+                    <option>In person</option>
+                    <option>No preference</option>
+                  </select>
+                </label>
+
+                <label class="er-buyer-survey-field">
+                  <span>Is there anything else your agent should know?</span>
+                  <textarea name="additional_notes" rows="4" placeholder="Tell us anything we should know before the appointment"></textarea>
+                </label>
+              </div>
+              <div class="er-buyer-survey-actions">
+                <button type="button" data-survey-back><span aria-hidden="true">←</span> Go Back</button>
+                <button type="submit">Submit</button>
+              </div>
+            </fieldset>
+          </div>
+        </form>
+        <!-- Standalone Buyer Qualification Survey: End -->
+
+        <!-- Privacy and Completion Note: Begin -->
+        <div class="er-buyer-qualification-privacy-area">
+          <span
+            class="er-buyer-qualification-privacy-icon"
+            aria-hidden="true"
+          >◆</span>
+          <div>
+            <p class="er-buyer-qualification-privacy-copy">
+              Your answers will only be used to understand your home-buying needs
+              and prepare for your consultation.
+            </p>
+            <p class="er-buyer-qualification-update-copy">
+              If you need to update your answers, you can discuss any changes
+              during your consultation.
+            </p>
+          </div>
+        </div>
+        <!-- Privacy and Completion Note: End -->
+      </article>
+      <!-- Survey Card: End -->
+
+      <!-- Support Box: Begin -->
+      <aside
+        class="er-buyer-qualification-support-box"
+        aria-labelledby="er-buyer-qualification-support-title"
+      >
+        <span
+          class="er-buyer-qualification-support-icon"
+          aria-hidden="true"
+        >?</span>
+
+        <div class="er-buyer-qualification-support-content">
+          <h3
+            class="er-buyer-qualification-support-title"
+            id="er-buyer-qualification-support-title"
+          >
+            Need help completing the assessment?
+          </h3>
+
+          <p class="er-buyer-qualification-support-copy">
+            Call Elite Realty at
+            <a
+              class="er-buyer-qualification-support-link"
+              href="tel:+15125550147"
+              aria-label="Call Elite Realty at 512-555-0147"
+            >(512) 555-0147</a>
+            or email
+            <a
+              class="er-buyer-qualification-support-link"
+              href="mailto:eliterealty.crm@gmail.com"
+              aria-label="Email Elite Realty at eliterealty.crm@gmail.com"
+            >eliterealty.crm@gmail.com</a>.
+          </p>
+
+          <p class="er-buyer-qualification-support-additional">
+            You can also bring questions or updated information to your scheduled
+            consultation.
+          </p>
+        </div>
+      </aside>
+      <!-- Support Box: End -->
+    </div>
+  </section>
+  <!-- Buyer Qualification Survey Section: End -->
+
+  <!-- Compact Footer: Begin -->
+  <footer class="er-buyer-qualification-footer">
+    <div class="er-buyer-qualification-container">
+      <div class="er-buyer-qualification-footer-main">
+        <div>
+          <p class="er-buyer-qualification-footer-brand">
+            Elite Realty Group
+          </p>
+          <p class="er-buyer-qualification-footer-location">
+            Austin, TX 78704
+          </p>
+        </div>
+
+        <nav
+          class="er-buyer-qualification-footer-legal"
+          aria-label="Legal links"
+        >
+          <a
+            class="er-buyer-qualification-footer-link"
+            href="#privacy-policy"
+          >
+            Privacy Policy
+          </a>
+          <a
+            class="er-buyer-qualification-footer-link"
+            href="#terms-of-service"
+          >
+            Terms of Service
+          </a>
+        </nav>
+      </div>
+
+      <p class="er-buyer-qualification-footer-copyright">
+        © 2026 Elite Realty Group
+      </p>
+    </div>
+  </footer>
+  <!-- Compact Footer: End -->
+</div>
+
+<a class="funnel-next-button" href="../step-04/index.html" aria-label="Go to Step 04">
+  <span>Next Page</span>
+  <span class="funnel-next-button__arrow" aria-hidden="true">→</span>
+</a>
+
+<script>
+(function () {
+  const form = document.getElementById("buyer-qualification-form");
+  if (!form) return;
+
+  const steps = Array.from(form.querySelectorAll("[data-survey-step]"));
+  const status = document.getElementById("buyer-survey-status");
+  let current = 0;
+
+  function showStep(index, moveFocus) {
+    current = Math.max(0, Math.min(index, steps.length - 1));
+    steps.forEach((step, stepIndex) => {
+      const active = stepIndex === current;
+      step.hidden = !active;
+      step.classList.toggle("is-entering", active);
+      step.setAttribute("aria-hidden", String(!active));
+    });
+    status.textContent = "Survey page " + (current + 1) + " of " + steps.length;
+    if (moveFocus) {
+      const firstControl = steps[current].querySelector("select, input, textarea, button");
+      if (firstControl) firstControl.focus({ preventScroll: true });
+    }
+  }
+
+  form.addEventListener("click", function (event) {
+    const next = event.target.closest("[data-survey-next]");
+    const back = event.target.closest("[data-survey-back]");
+    if (next) showStep(current + 1, true);
+    if (back) showStep(current - 1, true);
+  });
+
+  form.addEventListener("submit", function (event) {
+    event.preventDefault();
+    window.location.href = "../step-04/index.html";
+  });
+
+  showStep(0, false);
+})();
+</script>
+</body>
+</html>
