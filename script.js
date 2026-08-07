@@ -624,7 +624,10 @@ function initCardEffects() {
     });
   });
   document.querySelectorAll(".play-button").forEach((button) => {
-    button.addEventListener("click", () => button.closest(".project-card")?.querySelector(".project-content .button")?.click());
+    button.addEventListener("click", () => {
+      if (button.dataset.videoUrl) return;
+      button.closest(".project-card")?.querySelector(".project-content .button")?.click();
+    });
   });
   initImageFallbacks(document);
 }
@@ -696,9 +699,12 @@ function initAnalyticsEvents() {
 function initProjectPreviewImages() {
   document.querySelectorAll(".project-preview-image").forEach((image) => {
     const revealImage = () => image.classList.add("is-loaded");
+    const fallbackSources = [image.dataset.fallbackSrc, image.dataset.youtubeThumbnail].filter(Boolean);
+    let fallbackIndex = 0;
     const handleError = () => {
-      const fallbackSource = image.dataset.fallbackSrc;
-      if (fallbackSource && image.src !== new URL(fallbackSource, document.baseURI).href) {
+      const fallbackSource = fallbackSources[fallbackIndex];
+      fallbackIndex += 1;
+      if (fallbackSource) {
         image.src = fallbackSource;
         return;
       }
@@ -790,7 +796,7 @@ function initVideoModal() {
     if (type === "youtube") {
       mediaElement.src = url;
       mediaElement.title = trigger.dataset.videoTitle || "Project video walkthrough";
-      mediaElement.allow = "accelerometer; encrypted-media; gyroscope; picture-in-picture";
+      mediaElement.allow = "autoplay; accelerometer; encrypted-media; gyroscope; picture-in-picture";
       mediaElement.allowFullscreen = true;
     } else {
       mediaElement.src = url;
