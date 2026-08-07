@@ -480,6 +480,8 @@ document.addEventListener("DOMContentLoaded", () => {
   initCardEffects();
   initRippleEffects();
   initAnalyticsEvents();
+  initProjectPreviewImages();
+  initResponsiveProjectWalkthroughButtons();
   initVideoModal();
   initFunnelCarousel();
   initFunnelModal();
@@ -686,6 +688,59 @@ function initAnalyticsEvents() {
       trackPortfolioInteraction(element.dataset.interaction, element.dataset.interactionLabel);
     });
   });
+}
+
+/* =============================================
+   Featured project previews and responsive CTA
+   ============================================= */
+function initProjectPreviewImages() {
+  document.querySelectorAll(".project-preview-image").forEach((image) => {
+    const revealImage = () => image.classList.add("is-loaded");
+    const handleError = () => {
+      const fallbackSource = image.dataset.fallbackSrc;
+      if (fallbackSource && image.src !== new URL(fallbackSource, document.baseURI).href) {
+        image.src = fallbackSource;
+        return;
+      }
+
+      image.hidden = true;
+    };
+
+    image.addEventListener("load", revealImage);
+    image.addEventListener("error", handleError);
+
+    if (image.complete) {
+      if (image.naturalWidth > 0) revealImage();
+      else handleError();
+    }
+  });
+}
+
+function initResponsiveProjectWalkthroughButtons() {
+  const mobileQuery = window.matchMedia("(max-width: 820px)");
+  const projects = [...document.querySelectorAll(".project-card")]
+    .map((card) => {
+      const content = card.querySelector(".project-content");
+      const button = content?.querySelector(".video-trigger");
+      return content && button ? { card, content, button } : null;
+    })
+    .filter(Boolean);
+
+  if (!projects.length) return;
+
+  const updateButtonPositions = () => {
+    projects.forEach(({ card, content, button }) => {
+      if (mobileQuery.matches) card.insertBefore(button, content);
+      else content.appendChild(button);
+    });
+  };
+
+  updateButtonPositions();
+  if (typeof mobileQuery.addEventListener === "function") {
+    mobileQuery.addEventListener("change", updateButtonPositions);
+  } else {
+    mobileQuery.addListener(updateButtonPositions);
+  }
 }
 
 /* =============================================
