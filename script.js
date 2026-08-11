@@ -481,14 +481,10 @@ document.addEventListener("DOMContentLoaded", () => {
   initRippleEffects();
   initAnalyticsEvents();
   initProjectPreviewImages();
-  initResponsiveProjectWalkthroughButtons();
   initVideoModal();
   initFunnelCarousel();
   initFunnelModal();
   initSystemTabs();
-  initPlanSelection();
-  initServiceSelection();
-  initContactForm();
   initMobileProjectCta();
   initDynamicYear();
   initBackToTop();
@@ -720,33 +716,6 @@ function initProjectPreviewImages() {
       else handleError();
     }
   });
-}
-
-function initResponsiveProjectWalkthroughButtons() {
-  const mobileQuery = window.matchMedia("(max-width: 820px)");
-  const projects = [...document.querySelectorAll(".project-card")]
-    .map((card) => {
-      const content = card.querySelector(".project-content");
-      const button = content?.querySelector(".video-trigger");
-      return content && button ? { card, content, button } : null;
-    })
-    .filter(Boolean);
-
-  if (!projects.length) return;
-
-  const updateButtonPositions = () => {
-    projects.forEach(({ card, content, button }) => {
-      if (mobileQuery.matches) card.insertBefore(button, content);
-      else content.appendChild(button);
-    });
-  };
-
-  updateButtonPositions();
-  if (typeof mobileQuery.addEventListener === "function") {
-    mobileQuery.addEventListener("change", updateButtonPositions);
-  } else {
-    mobileQuery.addListener(updateButtonPositions);
-  }
 }
 
 /* =============================================
