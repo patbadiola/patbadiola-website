@@ -1,5 +1,31 @@
 "use strict";
 
+// This ticker is explicitly requested to autoplay; its pause control stays available.
+(() => {
+  const strip = document.querySelector(".capability-strip");
+  if (!strip) return;
+  const track = strip.querySelector('.capability-strip__track');
+  const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
+  strip.dataset.tickerEngine = 'waapi';
+  const animation = track.animate([
+    { transform: 'translate3d(0,0,0)' },
+    { transform: 'translate3d(-50%,0,0)' }
+  ], { duration: 24000, iterations: Infinity, easing: 'linear' });
+  const button = document.createElement("button");
+  button.className = "ticker-toggle";
+  button.type = "button";
+  const setPlaying = (playing) => {
+    playing ? animation.play() : animation.pause();
+    strip.dataset.playing = String(playing);
+    button.textContent = playing ? "Pause" : "Play";
+    button.setAttribute("aria-label", playing ? "Pause capabilities ticker" : "Play capabilities ticker");
+  };
+  button.addEventListener("click", () => setPlaying(strip.dataset.playing !== "true"));
+  strip.append(button);
+  setPlaying(!reducedMotion.matches);
+  reducedMotion.addEventListener('change', () => setPlaying(!reducedMotion.matches));
+})();
+
 /*
 FUNNEL IMAGE NAMING:
 assets/images/funnels/[project-slug]/cover.webp
@@ -472,160 +498,167 @@ const funnelProjects = [
 document.documentElement.classList.add("js");
 
 document.addEventListener("DOMContentLoaded", () => {
-  initNavigation();
-  initRevealAnimations();
-  initTypingEffect();
-  initProofCount();
-  initCounters();
-  initCardEffects();
-  initRippleEffects();
+  document.documentElement.classList.add("page-ready");
+  initEditorialReveals();
+  initDiscoveryMap();
+  initPointerEnhancements();
   initAnalyticsEvents();
   initProjectPreviewImages();
   initVideoModal();
   initFunnelCarousel();
   initFunnelModal();
-  initSystemTabs();
-  initMobileProjectCta();
   initDynamicYear();
-  initBackToTop();
 });
 
-function initProofCount() {
-  const output = document.querySelector("[data-project-count]");
-  if (!output) return;
-  const crmProjects = document.querySelectorAll(".projects-stack .project-card").length;
-  output.textContent = String(crmProjects + funnelProjects.length);
-}
-
-/* =============================================
-   Navigation: sticky state, mobile menu, scroll spy
-   ============================================= */
-function initNavigation() {
-  const header = document.querySelector(".site-header");
-  const menuButton = document.querySelector(".menu-toggle");
-  const navigation = document.querySelector(".primary-nav");
-  if (!header || !menuButton || !navigation) return;
-
-  const navLinks = [...document.querySelectorAll(".primary-nav a")];
-  const trackedSections = navLinks.map((link) => document.querySelector(link.getAttribute("href"))).filter(Boolean);
-  const updateHeader = () => header.classList.toggle("scrolled", window.scrollY > 24);
-  const closeMenu = () => {
-    navigation.classList.remove("open");
-    menuButton.classList.remove("active");
-    menuButton.setAttribute("aria-expanded", "false");
-    menuButton.setAttribute("aria-label", "Open navigation");
-  };
-
-  menuButton.addEventListener("click", () => {
-    const isOpen = navigation.classList.toggle("open");
-    menuButton.classList.toggle("active", isOpen);
-    menuButton.setAttribute("aria-expanded", String(isOpen));
-    menuButton.setAttribute("aria-label", isOpen ? "Close navigation" : "Open navigation");
-  });
-  navLinks.forEach((link) => link.addEventListener("click", closeMenu));
-  document.addEventListener("keydown", (event) => { if (event.key === "Escape") closeMenu(); });
-  document.addEventListener("click", (event) => {
-    if (!navigation.contains(event.target) && !menuButton.contains(event.target)) closeMenu();
-  });
-
-  if ("IntersectionObserver" in window) {
-    const spyObserver = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (!entry.isIntersecting) return;
-        navLinks.forEach((link) => link.classList.toggle("active", link.getAttribute("href") === `#${entry.target.id}`));
-      });
-    }, { rootMargin: "-36% 0px -56% 0px", threshold: 0 });
-    trackedSections.forEach((section) => spyObserver.observe(section));
-  }
-
-  window.addEventListener("scroll", updateHeader, { passive: true });
-  updateHeader();
-}
-
-/* =============================================
-   Animations: viewport reveals
-   ============================================= */
-function initRevealAnimations() {
-  const elements = document.querySelectorAll(".reveal");
-  if (!elements.length) return;
-  if (!("IntersectionObserver" in window) || prefersReducedMotion()) {
-    elements.forEach((element) => element.classList.add("in-view"));
+function initEditorialReveals() {
+  const elements = [...document.querySelectorAll(".reveal")];
+  if (prefersReducedMotion() || !("IntersectionObserver" in window)) {
+    elements.forEach(element => element.classList.add("in-view"));
     return;
   }
-  const observer = new IntersectionObserver((entries, revealObserver) => {
-    entries.forEach((entry) => {
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
       if (!entry.isIntersecting) return;
       entry.target.classList.add("in-view");
-      revealObserver.unobserve(entry.target);
+      observer.unobserve(entry.target);
     });
-  }, { threshold: 0.12, rootMargin: "0px 0px -45px" });
-  elements.forEach((element) => observer.observe(element));
+  }, { rootMargin: "0px 0px -5% 0px" });
+  elements.forEach(element => observer.observe(element));
 }
 
-/* =============================================
-   Hero: accessible typing treatment
-   ============================================= */
-function initTypingEffect() {
-  const target = document.querySelector(".typing-text");
-  if (!target || prefersReducedMotion()) return;
-  const phrase = target.textContent.trim();
-  let index = 0;
-  target.textContent = "";
-  const type = () => {
-    target.textContent = phrase.slice(0, index);
-    index += 1;
-    if (index <= phrase.length) window.setTimeout(type, 42);
-  };
-  window.setTimeout(type, 450);
-}
+function initDiscoveryMap() {
+  const questions = [...document.querySelectorAll(".discovery-question")];
+  if (!questions.length) return;
 
-/* =============================================
-   Counters: optional animated metrics
-   ============================================= */
-function initCounters() {
-  const counters = document.querySelectorAll(".counter");
-  if (!counters.length || !("IntersectionObserver" in window)) return;
-  const observer = new IntersectionObserver((entries, counterObserver) => {
-    entries.forEach((entry) => {
-      if (!entry.isIntersecting) return;
-      animateCounter(entry.target);
-      counterObserver.unobserve(entry.target);
-    });
-  }, { threshold: 0.8 });
-  counters.forEach((counter) => observer.observe(counter));
-}
+  questions.forEach((question) => {
+    const button = question.querySelector("button[aria-controls]");
+    const answer = document.getElementById(button?.getAttribute("aria-controls") || "");
+    if (!button || !answer) return;
 
-function animateCounter(element) {
-  const target = Number(element.dataset.target || 0);
-  if (prefersReducedMotion()) { element.textContent = String(target); return; }
-  const start = performance.now();
-  const duration = 1100;
-  const tick = (now) => {
-    const progress = Math.min((now - start) / duration, 1);
-    element.textContent = String(Math.round(target * (1 - Math.pow(1 - progress, 3))));
-    if (progress < 1) requestAnimationFrame(tick);
-  };
-  requestAnimationFrame(tick);
-}
-
-/* =============================================
-   Cards and media: glow, project actions, fallbacks
-   ============================================= */
-function initCardEffects() {
-  document.querySelectorAll("[data-glow]").forEach((card) => {
-    card.addEventListener("pointermove", (event) => {
-      const rect = card.getBoundingClientRect();
-      card.style.setProperty("--mouse-x", `${event.clientX - rect.left}px`);
-      card.style.setProperty("--mouse-y", `${event.clientY - rect.top}px`);
-    });
-  });
-  document.querySelectorAll(".play-button").forEach((button) => {
     button.addEventListener("click", () => {
-      if (button.dataset.videoUrl) return;
-      button.closest(".project-card")?.querySelector(".project-content .button")?.click();
+      const willOpen = button.getAttribute("aria-expanded") !== "true";
+      questions.forEach((item) => {
+        const itemButton = item.querySelector("button[aria-controls]");
+        const itemAnswer = document.getElementById(itemButton?.getAttribute("aria-controls") || "");
+        item.classList.remove("is-active");
+        itemButton?.setAttribute("aria-expanded", "false");
+        if (itemAnswer) itemAnswer.hidden = true;
+      });
+
+      if (willOpen) {
+        question.classList.add("is-active");
+        button.setAttribute("aria-expanded", "true");
+        answer.hidden = false;
+      }
     });
   });
-  initImageFallbacks(document);
+}
+
+function initPointerEnhancements() {
+  if (prefersReducedMotion() || !window.matchMedia("(hover: hover) and (pointer: fine)").matches) return;
+  const cursor = document.querySelector(".cursor-follower");
+  const pointerLight = document.querySelector(".pointer-light");
+  if (cursor) {
+    let targetX = -120;
+    let targetY = -120;
+    let cursorX = targetX;
+    let cursorY = targetY;
+    let lightX = targetX;
+    let lightY = targetY;
+    let motionFrame = 0;
+
+    const renderPointer = () => {
+      cursorX += (targetX - cursorX) * .24;
+      cursorY += (targetY - cursorY) * .24;
+      lightX += (targetX - lightX) * .08;
+      lightY += (targetY - lightY) * .08;
+      cursor.style.transform = `translate3d(${cursorX - cursor.offsetWidth / 2}px, ${cursorY - cursor.offsetHeight / 2}px, 0)`;
+      if (pointerLight) pointerLight.style.transform = `translate3d(${lightX - 220}px, ${lightY - 220}px, 0)`;
+
+      const unsettled = Math.abs(targetX - cursorX) > .1 || Math.abs(targetY - cursorY) > .1 || Math.abs(targetX - lightX) > .1 || Math.abs(targetY - lightY) > .1;
+      motionFrame = unsettled ? window.requestAnimationFrame(renderPointer) : 0;
+    };
+    const schedulePointer = () => {
+      if (!motionFrame) motionFrame = window.requestAnimationFrame(renderPointer);
+    };
+
+    document.addEventListener("pointermove", (event) => {
+      targetX = event.clientX;
+      targetY = event.clientY;
+      cursor.classList.add("is-visible");
+      pointerLight?.classList.add("is-visible");
+      schedulePointer();
+    });
+    document.addEventListener("pointerleave", () => {
+      cursor.classList.remove("is-visible", "is-interactive", "is-label");
+      pointerLight?.classList.remove("is-visible");
+    });
+
+    document.querySelectorAll("a, button, summary, [role='button']").forEach((element) => {
+      element.addEventListener("pointerenter", () => {
+        cursor.classList.add("is-interactive");
+        schedulePointer();
+      });
+      element.addEventListener("pointerleave", () => {
+        cursor.classList.remove("is-interactive");
+        schedulePointer();
+      });
+    });
+    document.querySelectorAll("[data-cursor-label]").forEach((element) => {
+      element.addEventListener("pointerenter", () => {
+        cursor.querySelector("span").textContent = element.dataset.cursorLabel || "View system";
+        cursor.classList.add("is-label");
+        schedulePointer();
+      });
+      element.addEventListener("pointerleave", () => {
+        cursor.classList.remove("is-label");
+        schedulePointer();
+      });
+    });
+  }
+
+  document.querySelectorAll("[data-parallax-zone]").forEach((zone) => {
+    const items = [...zone.querySelectorAll("[data-depth]")];
+    if (!items.length) return;
+    zone.addEventListener("pointermove", (event) => {
+      const rect = zone.getBoundingClientRect();
+      const x = (event.clientX - rect.left) / rect.width - .5;
+      const y = (event.clientY - rect.top) / rect.height - .5;
+      items.forEach((item) => {
+        const depth = Number(item.dataset.depth || 1);
+        item.style.transform = `translate3d(${x * 10 * depth}px, ${y * 10 * depth}px, 0)`;
+      });
+    });
+    zone.addEventListener("pointerleave", () => items.forEach((item) => { item.style.transform = "translate3d(0,0,0)"; }));
+  });
+
+  document.querySelectorAll(".magnetic").forEach((button) => {
+    button.addEventListener("pointermove", (event) => {
+      const rect = button.getBoundingClientRect();
+      const x = (event.clientX - rect.left - rect.width / 2) * .08;
+      const y = (event.clientY - rect.top - rect.height / 2) * .1;
+      button.style.transform = `translate3d(${x}px, ${y}px, 0)`;
+    });
+    button.addEventListener("pointerleave", () => { button.style.transform = "translate3d(0,0,0)"; });
+  });
+
+  document.querySelectorAll(".case-study__media").forEach((media) => {
+    media.addEventListener("pointermove", (event) => {
+      const bounds = media.getBoundingClientRect();
+      const x = (event.clientX - bounds.left) / bounds.width - .5;
+      const y = (event.clientY - bounds.top) / bounds.height - .5;
+      media.style.transform = `perspective(1200px) rotateX(${(-y * 1.6).toFixed(2)}deg) rotateY(${(x * 1.6).toFixed(2)}deg) translateY(-4px)`;
+    });
+    media.addEventListener("pointerleave", () => { media.style.transform = "perspective(1200px) rotateX(0deg) rotateY(0deg) translateY(0)"; });
+  });
+
+  document.querySelectorAll(".automation-panel").forEach((panel) => {
+    panel.addEventListener("pointermove", (event) => {
+      const bounds = panel.getBoundingClientRect();
+      panel.style.setProperty("--panel-x", `${((event.clientX - bounds.left) / bounds.width * 100).toFixed(1)}%`);
+      panel.style.setProperty("--panel-y", `${((event.clientY - bounds.top) / bounds.height * 100).toFixed(1)}%`);
+    });
+  });
 }
 
 function initImageFallbacks(root) {
@@ -644,26 +677,6 @@ function initImageFallbacks(root) {
 
 /* =============================================
    Buttons: reusable ripple interaction
-   ============================================= */
-function initRippleEffects() {
-  document.querySelectorAll(".ripple").forEach((button) => {
-    button.addEventListener("pointerdown", (event) => {
-      const rect = button.getBoundingClientRect();
-      const diameter = Math.max(rect.width, rect.height);
-      const ripple = document.createElement("span");
-      ripple.className = "ripple-wave";
-      ripple.style.width = ripple.style.height = `${diameter}px`;
-      ripple.style.left = `${event.clientX - rect.left - diameter / 2}px`;
-      ripple.style.top = `${event.clientY - rect.top - diameter / 2}px`;
-      button.querySelector(".ripple-wave")?.remove();
-      button.appendChild(ripple);
-      ripple.addEventListener("animationend", () => ripple.remove());
-    });
-  });
-}
-
-/* =============================================
-   Analytics: privacy-safe portfolio interactions
    ============================================= */
 function trackPortfolioInteraction(interactionType, interactionLabel) {
   if (!interactionType) return;
@@ -797,6 +810,7 @@ function initVideoModal() {
     window.requestAnimationFrame(() => closeButton.focus());
   };
 
+  window.addEventListener("portfolio:before-route", closeModal);
   triggers.forEach((trigger) => trigger.addEventListener("click", () => openModal(trigger)));
   closeButton.addEventListener("click", closeModal);
   backdrop.addEventListener("click", closeModal);
@@ -813,40 +827,6 @@ function initVideoModal() {
 
 /* =============================================
    Consolidated system explanation tabs
-   ============================================= */
-function initSystemTabs() {
-  const tabList = document.querySelector(".system-tabs__list");
-  const tabs = [...tabList?.querySelectorAll('[role="tab"]') || []];
-  if (!tabList || !tabs.length) return;
-
-  const activateTab = (activeTab, { focus = false } = {}) => {
-    tabs.forEach((tab) => {
-      const selected = tab === activeTab;
-      const panel = document.getElementById(tab.getAttribute("aria-controls"));
-      tab.setAttribute("aria-selected", String(selected));
-      tab.tabIndex = selected ? 0 : -1;
-      if (panel) panel.hidden = !selected;
-    });
-    if (focus) activeTab.focus();
-  };
-
-  tabs.forEach((tab) => tab.addEventListener("click", () => activateTab(tab)));
-  tabList.addEventListener("keydown", (event) => {
-    const currentIndex = tabs.indexOf(document.activeElement);
-    if (currentIndex < 0) return;
-    let nextIndex = null;
-    if (event.key === "ArrowRight") nextIndex = (currentIndex + 1) % tabs.length;
-    if (event.key === "ArrowLeft") nextIndex = (currentIndex - 1 + tabs.length) % tabs.length;
-    if (event.key === "Home") nextIndex = 0;
-    if (event.key === "End") nextIndex = tabs.length - 1;
-    if (nextIndex === null) return;
-    event.preventDefault();
-    activateTab(tabs[nextIndex], { focus: true });
-  });
-}
-
-/* =============================================
-   Funnel portfolio carousel
    ============================================= */
 let funnelModalController = null;
 
@@ -1081,6 +1061,11 @@ function initFunnelCarousel() {
     });
   }, { passive: true });
 
+  window.addEventListener("portfolio:routechange", ({ detail }) => {
+    if (detail.page !== "funnels") return;
+    cancelGlide();
+    requestAnimationFrame(() => { refreshLoopMetrics(); jumpWithoutAnimation(middleStart); });
+  });
   previousButton.disabled = false;
   nextButton.disabled = false;
   requestAnimationFrame(() => {
@@ -1268,6 +1253,7 @@ function initFunnelModal() {
     }
   };
 
+  window.addEventListener("portfolio:before-route", () => closeModal({ returnFocus: false }));
   funnelModalController = { open: openModal };
   image.addEventListener("load", () => stage.classList.remove("image-fallback"));
   image.addEventListener("error", () => stage.classList.add("image-fallback"));
@@ -1296,7 +1282,7 @@ function initFunnelModal() {
   cta.addEventListener("click", (event) => {
     event.preventDefault();
     closeModal({ returnFocus: false });
-    document.querySelector("#connect")?.scrollIntoView({ behavior: prefersReducedMotion() ? "auto" : "smooth" });
+    window.portfolioRouter.navigate("#contact");
   });
   walkthroughLink.addEventListener("click", () => {
     if (currentProject) trackPortfolioInteraction("project_video_open", currentProject.title);
@@ -1321,203 +1307,6 @@ function initFunnelModal() {
 /* =============================================
    Contact form: client-side validation and feedback
    ============================================= */
-function initContactForm() {
-  const inquiryForm = document.getElementById("inquiry-form");
-  if (!inquiryForm || inquiryForm.dataset.formspreeInitialized === "true") return;
-
-  inquiryForm.dataset.formspreeInitialized = "true";
-
-  const fields = [
-    ...inquiryForm.querySelectorAll(
-      'input:not([type="hidden"]):not([name="_gotcha"]), select, textarea'
-    )
-  ];
-  const submitButton = inquiryForm.querySelector('button[type="submit"]');
-  const formStatus = document.getElementById("form-status");
-
-  fields.forEach((field) => {
-    const error = field.parentElement?.querySelector(".field-error");
-    if (error && field.name) {
-      error.id = `${field.name}-error`;
-      field.setAttribute("aria-describedby", error.id);
-    }
-    field.addEventListener("blur", () => validateField(field));
-    field.addEventListener("input", () => { if (field.classList.contains("invalid")) validateField(field); });
-  });
-
-  inquiryForm.addEventListener("submit", async (event) => {
-    event.preventDefault();
-
-    const isValid = fields.every(validateField);
-
-    if (!isValid) {
-      if (formStatus) {
-        formStatus.textContent = "Please review the highlighted fields before sending.";
-        formStatus.className = "form-status error";
-      }
-
-      inquiryForm.querySelector(".invalid")?.focus();
-      return;
-    }
-
-    const originalButtonContent = submitButton ? submitButton.innerHTML : "";
-
-    if (submitButton) {
-      submitButton.disabled = true;
-      submitButton.textContent = "Sending…";
-    }
-
-    if (formStatus) {
-      formStatus.textContent = "";
-      formStatus.className = "form-status";
-    }
-
-    try {
-      const response = await fetch(inquiryForm.action, {
-        method: "POST",
-        body: new FormData(inquiryForm),
-        headers: {
-          Accept: "application/json"
-        }
-      });
-
-      if (!response.ok) {
-        throw new Error("Form submission failed.");
-      }
-
-      inquiryForm.reset();
-      fields.forEach((field) => {
-        field.classList.remove("invalid");
-        field.setAttribute("aria-invalid", "false");
-        const error = field.parentElement?.querySelector(".field-error");
-        if (error) error.textContent = "";
-      });
-
-      if (formStatus) {
-        formStatus.textContent =
-          "Thank you! Your inquiry has been sent. I’ll respond within 24 hours.";
-        formStatus.className = "form-status success";
-      }
-      trackPortfolioInteraction("inquiry_form_success", "Connect inquiry form");
-    } catch (error) {
-      console.error("Inquiry form error:", error);
-
-      if (formStatus) {
-        formStatus.textContent =
-          "Sorry, your inquiry could not be sent. Please email contact@patbadiola.com.";
-        formStatus.className = "form-status error";
-      }
-      trackPortfolioInteraction("inquiry_form_error", "Connect inquiry form");
-    } finally {
-      if (submitButton) {
-        submitButton.disabled = false;
-        submitButton.innerHTML = originalButtonContent;
-      }
-    }
-  });
-}
-
-/* =============================================
-   Service plans: preselect the relevant inquiry
-   ============================================= */
-function initPlanSelection() {
-  const planButtons = [...document.querySelectorAll("#plans [data-plan]")];
-  const form = document.getElementById("inquiry-form");
-  if (!planButtons.length || !form) return;
-
-  const serviceSelect = form.querySelector('select[name="service"]');
-  const messageField = form.querySelector('textarea[name="message"]');
-  if (!serviceSelect || !messageField) return;
-
-  const serviceByPlan = {
-    "High-Converting Landing Page": "Funnel Design",
-    "Lead Generation System": "Funnel + CRM Setup",
-    "Client Journey System": "Funnel + CRM Setup"
-  };
-
-  planButtons.forEach((button) => {
-    button.addEventListener("click", () => {
-      const planName = button.dataset.plan;
-      const serviceName = serviceByPlan[planName];
-      const matchingOption = [...serviceSelect.options].some((option) => option.value === serviceName);
-
-      if (matchingOption) {
-        serviceSelect.value = serviceName;
-        serviceSelect.dispatchEvent(new Event("input", { bubbles: true }));
-        serviceSelect.dispatchEvent(new Event("change", { bubbles: true }));
-      }
-
-      if (!messageField.value.trim()) {
-        messageField.value = `I’m interested in the ${planName} plan.`;
-        messageField.dispatchEvent(new Event("input", { bubbles: true }));
-      }
-    });
-  });
-}
-
-function initServiceSelection() {
-  const buttons = [...document.querySelectorAll("[data-service]")];
-  const form = document.getElementById("inquiry-form");
-  if (!buttons.length || !form) return;
-  const serviceSelect = form.querySelector('select[name="service"]');
-  const messageField = form.querySelector('textarea[name="message"]');
-  if (!serviceSelect || !messageField) return;
-
-  buttons.forEach((button) => {
-    button.addEventListener("click", () => {
-      const service = button.dataset.service || "";
-      if ([...serviceSelect.options].some((option) => option.value === service)) {
-        serviceSelect.value = service;
-        serviceSelect.dispatchEvent(new Event("change", { bubbles: true }));
-      }
-      if (!messageField.value.trim()) {
-        const label = button.dataset.serviceLabel || button.textContent.replace("↗", "").trim();
-        messageField.value = `I’m interested in this service: ${label}.`;
-        messageField.dispatchEvent(new Event("input", { bubbles: true }));
-      }
-    });
-  });
-}
-
-function validateField(field) {
-  if (!field.required) return true;
-  const error = field.parentElement.querySelector(".field-error");
-  let message = "";
-  if (!field.value.trim()) message = "This field is required.";
-  else if (field.type === "email" && !isValidEmail(field.value)) message = "Enter a valid email address.";
-  else if (field.name === "message" && field.value.trim().length < 12) message = "Please add a little more detail (12 characters minimum).";
-  field.classList.toggle("invalid", Boolean(message));
-  field.setAttribute("aria-invalid", String(Boolean(message)));
-  if (error) error.textContent = message;
-  return !message;
-}
-
-function isValidEmail(value) {
-  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value.trim());
-}
-
-/* =============================================
-   Utilities
-   ============================================= */
-function initBackToTop() {
-  const button = document.querySelector(".back-to-top");
-  if (!button) return;
-  const update = () => button.classList.toggle("visible", window.scrollY > 700);
-  button.addEventListener("click", () => window.scrollTo({ top: 0, behavior: prefersReducedMotion() ? "auto" : "smooth" }));
-  window.addEventListener("scroll", update, { passive: true });
-  update();
-}
-
-function initMobileProjectCta() {
-  const cta = document.querySelector(".mobile-project-cta");
-  const contact = document.querySelector("#connect");
-  if (!cta || !contact || !("IntersectionObserver" in window)) return;
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => cta.classList.toggle("is-hidden", entry.isIntersecting));
-  }, { threshold: .08 });
-  observer.observe(contact);
-}
-
 function initDynamicYear() {
   document.querySelectorAll("[data-current-year]").forEach((element) => {
     element.textContent = String(new Date().getFullYear());

@@ -1,0 +1,3 @@
+# Raw recordings are not website assets. Keep source recordings local.
+assets/images/automation-systems/**/source/*.mp4
+assets/videos/crm/
