@@ -3,8 +3,8 @@
   'use strict';
   const pages = {
     websites: ["Websites | Pat Badiola", "Explore websites built by Pat Badiola."],
-    home: ['Pat Badiola | CRM & Automation Architect', 'CRM and automation systems designed around how your business operates. Explore Pat Badiola’s work and start a systems consultation.'],
-    automations: ['Automations | Pat Badiola', 'Open a business system to explore its CRM pipeline, workflows, integrations, websites, and funnels.'],
+    home: ['Pat Badiola | CRM & Automation Architect', 'Turn more leads into customers with websites, booking pages, and automated follow-ups. Built by Pat Badiola, HighLevel Certified Admin.'],
+    automations: ['Automations | Pat Badiola', 'Explore demonstration builds for lead follow-ups, appointment reminders, bookings, and customer management.'],
     funnels: ['Funnels | Pat Badiola', 'Explore complete landing, booking, application, and feedback funnels built by Pat Badiola.'],
     about: ['About | Pat Badiola', 'Meet Pat Badiola, a Philippines-based CRM and Automation Architect working remotely with businesses and teams.'],
     contact: ['Contact | Pat Badiola', 'Tell Pat Badiola what is not working in your CRM or business process. Connect by email or WhatsApp for a systems consultation.']

@@ -1,45 +1,5 @@
 const aquaFixSystemFiles = [
   {
-    "id": "aquafix-1",
-    "type": "SYSTEM MAP",
-    "name": "Gemini_Generated_Image_1r7sr71r7sr71r7s",
-    "image": "assets/images/automation-systems/aquafix-pros/source/Gemini_Generated_Image_1r7sr71r7sr71r7s.jpg",
-    "shortDescription": "AquaFix Pros system map demonstration: Gemini_Generated_Image_1r7sr71r7sr71r7s.",
-    "technologies": [
-      "GoHighLevel"
-    ]
-  },
-  {
-    "id": "aquafix-2",
-    "type": "SYSTEM MAP",
-    "name": "Gemini_Generated_Image_ac4fycac4fycac4f",
-    "image": "assets/images/automation-systems/aquafix-pros/source/Gemini_Generated_Image_ac4fycac4fycac4f.jpg",
-    "shortDescription": "AquaFix Pros system map demonstration: Gemini_Generated_Image_ac4fycac4fycac4f.",
-    "technologies": [
-      "GoHighLevel"
-    ]
-  },
-  {
-    "id": "aquafix-3",
-    "type": "SYSTEM MAP",
-    "name": "Untitled design (13)",
-    "image": "assets/images/automation-systems/aquafix-pros/source/Untitled design (13).png",
-    "shortDescription": "AquaFix Pros system map demonstration: Untitled design (13).",
-    "technologies": [
-      "GoHighLevel"
-    ]
-  },
-  {
-    "id": "aquafix-4",
-    "type": "SYSTEM MAP",
-    "name": "Untitled design (14)",
-    "image": "assets/images/automation-systems/aquafix-pros/source/Untitled design (14).png",
-    "shortDescription": "AquaFix Pros system map demonstration: Untitled design (14).",
-    "technologies": [
-      "GoHighLevel"
-    ]
-  },
-  {
     "id": "aquafix-5",
     "type": "FUNNEL",
     "name": "booking page",
